@@ -1,0 +1,106 @@
+.nav
+{
+
+  display: grid;
+  height: 8vh;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  background: #FFFFFF;
+}
+
+.separador
+{
+  size: 1px;
+  top:50px;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 0;
+
+}
+
+
+.Boton1
+{
+  padding: 0px 0px;
+  width: 20vw;
+  height: 8vh;
+  border: 0;
+  background: #FFFFFF;
+}
+
+.menu1logo
+{
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 3.84vh;
+  width:  6.66vw;
+}
+
+.Boton2
+{
+  padding: 0px 0px;
+  width: 20vw;
+  height: 8vh;
+  border: 0;
+  background: #FFFFFF;
+}
+
+.menu2logo
+{
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 3.84vh;
+  width:  6.66vw;
+}
+
+.Boton3
+{
+  padding: 0px 0px;
+  width: 20vw;
+  height: 8vh;
+  border: 0;
+  background: #FFFFFF;
+}
+
+.menu3logo
+{
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 3.84vh;
+  width:  6.66vw;
+}
+
+.Boton4
+{
+  padding: 0px 0px;
+  width: 20vw;
+  height: 8vh;
+  border: 0;
+  background: #FFFFFF;
+}
+
+.menu4logo
+{
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 3.84vh;
+  width:  6.66vw;
+}
+
+.Boton5
+{
+
+  padding: 0px 0px;
+  width: 20vw;
+  height: 8vh;
+  border: 0;
+  background: #FFFFFF;
+}
+
+.menu5logo
+{
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 3.84vh;
+  width:  6.66vw;
+}

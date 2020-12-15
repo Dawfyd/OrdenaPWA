@@ -1,0 +1,17 @@
+//360px a 980px de ancho
+.App-logo {
+  padding: 0.5vh;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+//si se quitan las siguientes 2 lineas de codigo, la imagen deja de ser responsive
+  height: 9.4vh;
+  width:  58.34vw;
+}
+
+.header{
+  height: 60px;
+  width: 100vw;
+  background-color: #FFFFFF;
+
+}
