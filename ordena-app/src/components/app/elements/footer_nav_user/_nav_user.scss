@@ -1,4 +1,4 @@
-.nav
+.nav_user
 {
 
   display: grid;
@@ -9,7 +9,7 @@
   background: #FFFFFF;
 }
 
-.separador
+.separator
 {
   size: 1px;
   top:50px;
@@ -26,58 +26,58 @@
   background: #FFFFFF;
 }
 
-@mixin logos {
+@mixin icon {
   background-repeat: no-repeat;
   background-position: center center;
   height: 3.84vh;
   width:  6.66vw;
 }
-.Boton1
+.button_home
 {
   @include button;
 }
 
-.menu1logo
+.icon_home
 {
-  @include logos;
+  @include icon;
 }
 
-.Boton2
+.button_menu
 {
   @include button;
 }
 
-.menu2logo
+.icon_menu
 {
-  @include logos;
+  @include icon;
 }
 
-.Boton3
+.button_chat
 {
   @include button;
 }
 
-.menu3logo
+.icon_chat
 {
-  @include logos;
+  @include icon;
 }
 
-.Boton4
+.button_payment
 {
   @include button;
 }
 
-.menu4logo
+.icon_payment
 {
-  @include logos;
+  @include icon;
 }
 
-.Boton5
+.button_account
 {
   @include button;
 }
 
-.menu5logo
+.icon_account
 {
-  @include logos;
+  @include icon;
 }

@@ -3,15 +3,15 @@ import {Provider} from 'react-redux'
 import store from './store'
 import {Switch, Route} from 'react-router-dom'
 
-import Home from './PagesUser/Home'
-import Menu from './PagesUser/Menu'
-import Chat from './PagesUser/Chat'
-import Pago from './PagesUser/Pago'
-import Cuenta from './PagesUser/Cuenta'
-import Turno from './PagesUser/Turno'
+import home from './pages_user/home'
+import menu from './pages_user/menu'
+import chat from './pages_user/chat'
+import payment from './pages_user/payment'
+import account from './pages_user/account'
+import turn from './pages_user/turn'
 
-import LogoOrdena from './elements/LogoOrdena/Logo'
-import Navegador from './elements/BarraNavUsers/Navegador'
+import LogoOrdena from './elements/logo_ordena/logo'
+import NavUser from './elements/footer_nav_user/nav_user'
 
 const App = () => (
 
@@ -22,15 +22,15 @@ const App = () => (
       <LogoOrdena/>
       <div>
       <Switch>
-        <Route exact path= '/Turno' component={Turno}/>
-        <Route path= '/Home' component={Home}/>
-        <Route path= '/Menu' component={Menu}/>
-        <Route path= '/Chat' component={Chat}/>
-        <Route path= '/Pago' component={Pago}/>
-        <Route path= '/Cuenta' component={Cuenta}/>
+        <Route exact path= '/turn' component={turn}/>
+        <Route path= '/home' component={home}/>
+        <Route path= '/menu' component={menu}/>
+        <Route path= '/chat' component={chat}/>
+        <Route path= '/payment' component={payment}/>
+        <Route path= '/account' component={account}/>
       </Switch>
       </div>
-      <Navegador/>
+      <NavUser/>
     </div>
 
 
