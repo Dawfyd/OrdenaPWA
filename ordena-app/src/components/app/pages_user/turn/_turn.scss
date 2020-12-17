@@ -1,0 +1,31 @@
+.header_turn
+{
+    display:contents;
+}
+
+
+.footer_turn
+{
+    display:none;
+}
+
+.page_turn
+{
+  text-align: center;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  left: 0px;
+  top: 0px;
+
+  grid-template-rows: 12fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+.pre_order_turn
+{
+  position: absolute;
+
+  left: 23.6vw;
+  top: 81.5vh;
+}

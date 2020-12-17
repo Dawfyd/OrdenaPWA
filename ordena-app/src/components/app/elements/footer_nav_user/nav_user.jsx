@@ -8,7 +8,7 @@ import icon_account from '../../../../assets/images/nav_user/icon_account.svg';
 
 const Nav_user = () => (
 
-    <body>
+    <div>
     <hr className='separator'/>
       <nav className= 'nav_user'>
 
@@ -53,7 +53,7 @@ const Nav_user = () => (
         </div>
 
       </nav>
-    </body>
+    </div>
   )
 
 

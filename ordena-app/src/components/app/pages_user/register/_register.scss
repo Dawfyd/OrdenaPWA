@@ -1,15 +1,15 @@
-.header_chat
+.header_register
 {
     display:contents;
 }
 
 
-.footer_chat
+.footer_register
 {
-    display:contents;
+    display:none;
 }
 
-.page_chat
+.page_register
 {
   text-align: center;
   display: grid;
@@ -21,10 +21,10 @@
   grid-template-rows: 12fr 1fr;
   grid-template-columns: 1fr;
 }
-.container_chat
+
+.login_register
 {
   position: absolute;
-  height: 82.6vh;
-  width: 100vw;
-  bottom: 8vh;
+  top: 3vh;
+
 }

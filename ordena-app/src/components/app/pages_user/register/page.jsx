@@ -1,30 +1,29 @@
 import React, {Fragment} from 'react';
-import TableNum from '../../elements/table_num/table_num';
-import PreOrder from '../../elements/pre_order/pre_order';
+import Register from '../../elements/register/register';
+import Login from '../../elements/login/login';
 import LogoOrdena from '../../elements/logo_ordena/logo';
 import NavUser from '../../elements/footer_nav_user/nav_user';
 import '../../styles.scss';
 
 function page(props) {
   return (
-
     <Fragment>
-      <div className="page_turn">
+      <div className="page_register">
 
-        <header className = 'header_turn'>
+        <header className = 'header_register'>
           <LogoOrdena/>
         </header>
 
         <div>
-          <TableNum/>
+          <Register/>
         </div>
 
-        <div className='pre_order_turn'>
-          <PreOrder/>
+        <div className='login_register'>
+          <Login/>
         </div>
 
 
-        <footer className = 'footer_turn'>
+        <footer className = 'footer_register'>
           <NavUser/>
         </footer>
 

@@ -1,14 +1,13 @@
 @import 'elements/footer_nav_user/_nav_user.scss';
 @import 'elements/logo_ordena/_logo_ordena.scss';
-
-.styles {
-  text-align: center;
-  display: grid;
-  height: 100vh;
-  width: 100vw;
-  left: 0px;
-  top: 0px;
-
-  grid-template-rows: 12fr 1fr;
-  grid-template-columns: 1fr;
-}
+@import 'elements/table_num/_table_num.scss';
+@import 'elements/register/_register.scss';
+@import 'elements/pre_order/_pre_order.scss';
+@import 'elements/login/_login.scss';
+@import 'pages_user/turn/_turn.scss';
+@import 'pages_user/register/_register.scss';
+@import 'pages_user/home/_home.scss';
+@import 'pages_user/chat/_chat.scss';
+@import 'pages_user/menu/_menu.scss';
+@import 'pages_user/payment/_payment.scss';
+@import 'pages_user/account/_account.scss';
