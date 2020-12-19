@@ -3,6 +3,7 @@ import TableNum from '../../elements/table_num/table_num';
 import PreOrder from '../../elements/pre_order/pre_order';
 import LogoOrdena from '../../elements/logo_ordena/logo';
 import NavUser from '../../elements/footer_nav_user/nav_user';
+import QrReader from '../../elements/reader_qr/reader_qr';
 import '../../styles.scss';
 
 function page(props) {
@@ -14,8 +15,11 @@ function page(props) {
         <header className = 'header_turn'>
           <LogoOrdena/>
         </header>
+        <div className ='container_qr'>
+          <QrReader/>
+        </div>
 
-        <div>
+        <div className = 'table_num'>
           <TableNum/>
         </div>
 

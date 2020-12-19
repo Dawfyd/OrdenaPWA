@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import Register from '../../elements/register/register';
-import Login from '../../elements/login/login';
+import LoginFacebook from '../../elements/login/login_facebook';
+import LoginGoogle from '../../elements/login/login_google';
 import LogoOrdena from '../../elements/logo_ordena/logo';
 import NavUser from '../../elements/footer_nav_user/nav_user';
 import '../../styles.scss';
@@ -19,7 +20,8 @@ function page(props) {
         </div>
 
         <div className='login_register'>
-          <Login/>
+          <LoginFacebook/>
+          <LoginGoogle/>
         </div>
 
 
