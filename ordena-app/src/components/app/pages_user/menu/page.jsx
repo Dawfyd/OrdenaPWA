@@ -1,6 +1,8 @@
 import React, {Fragment} from 'react';
 import LogoOrdena from '../../elements/logo_ordena/logo';
 import NavUser from '../../elements/footer_nav_user/nav_user';
+import Search from '../../elements/search_bar/search.js';
+import FoodMenu from '../../elements/food_menu/menu_bar/menu_bar.jsx';
 import '../../styles.scss';
 
 function page(props) {
@@ -13,9 +15,13 @@ function page(props) {
         </header>
 
         <div className ='container_menu'>
-        <h1>Menu - poner los elementos de esta pagina aqui</h1>
+          <div>
+            <Search/>
+          </div>
+          <div className ='food_menu'>
+            <FoodMenu/>
+          </div>
         </div>
-
 
         <footer className = 'footer_menu'>
           <NavUser/>

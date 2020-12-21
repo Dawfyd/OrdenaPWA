@@ -1,6 +1,6 @@
 .header_menu
 {
-    display:contents;
+    display:none;
 }
 
 
@@ -24,7 +24,13 @@
 .container_menu
 {
   position: absolute;
-  height: 82.6vh;
+  height: 92vh;
   width: 100vw;
   bottom: 8vh;
+}
+
+.food_menu {
+  position: absolute;
+  top: 6vh;
+  width: 100vw;
 }
