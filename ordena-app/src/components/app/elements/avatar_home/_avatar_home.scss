@@ -1,0 +1,192 @@
+#separator_avatar
+{
+  position: absolute;
+  width: 100vw;
+  top: 38vh;
+  height: 1px;
+  background: rgba(200,201,199,1);
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+#separator_avatar_bottom {
+  position: absolute;
+  width: 100vw;
+  top:66.5vh;
+  height: 1px;
+  background: rgba(200,201,199,1);
+  margin: 0;
+  border: 0;
+
+
+}
+
+.avatar_list {
+
+  position: absolute;
+  top: 38.5vh;
+  width: 100vw;
+  height: 28vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background: #FFFFFF;
+  overflow: auto;
+}
+
+.order_avatar {
+
+  height: 14vh;
+
+}
+
+.avatar {
+
+  position: relative;
+  width: 13.5vw;
+  height: auto;
+  top: 2vh;
+}
+
+.text_name {
+  top: 2.5vh;
+  left: auto;
+  position: relative;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5vw;
+  line-height: 2vh;
+  /* identical to box height */
+
+  display: grid;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+.text_service
+{
+  left: 27.5vw;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 5vw;
+  line-height: 3.2vh;
+  text-align: center;
+  width: 45vw;
+  color: #7C878E;
+  bottom: 9vh;
+  margin: 0;
+}
+.text_service_box
+{
+
+  position:absolute;
+  height: 15vh;
+  width: 100vw;
+  top: 67vh;
+  background: #ffffff;
+  background-color: white;
+
+}
+@media only screen and (min-width: 600px) {
+
+  #separator_avatar
+  {
+    position: absolute;
+    width: 100vw;
+    top: 41vh;
+    height: 1px;
+    background: rgba(200,201,199,1);
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+  #separator_avatar_bottom {
+    position: absolute;
+    width: 100vw;
+    top:69.5vh;
+    height: 1px;
+    background: rgba(200,201,199,1);
+    margin: 0;
+    border: 0;
+
+
+  }
+  .avatar_list {
+
+    position: absolute;
+    top: 41.5vh;
+    width: 100vw;
+    height: 28vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background: #FFFFFF;
+    overflow: auto;
+  }
+  .text_service_box
+  {
+
+    position:absolute;
+    height: 12.5vh;
+    width: 100vw;
+    top: 70vh;
+    background: #ffffff;
+    background-color: white;
+
+  }
+  .order_avatar {
+
+    height: 14vh;
+
+  }
+
+  .avatar {
+
+    position: relative;
+    width: 12vw;
+    height: auto;
+    top: 1vh;
+  }
+  .text_service
+  {
+    left: 27.5vw;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 5vw;
+    line-height: 3.2vh;
+    text-align: center;
+    width: 45vw;
+    color: #7C878E;
+    bottom: 11vh;
+    margin: 0;
+  }
+  .text_name {
+    top: 2vh;
+    left: auto;
+    position: relative;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.5vw;
+    line-height: 2vh;
+    /* identical to box height */
+
+    display: grid;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+  }
+}

@@ -1,0 +1,46 @@
+.header_menu
+{
+    display:none;
+    position: fixed;
+}
+
+
+.footer_menu
+{
+    position: fixed;
+    display:block;
+    bottom: 0px;
+}
+
+.page_menu
+{
+  display: grid;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+
+  height: 100vh;
+  width: 100vw;
+  left: 0px;
+  top: 0px;
+
+  grid-template-rows: 12fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+.container_menu
+{
+  overflow: auto;
+  flex-grow: 1;
+  position: absolute;
+  height: 92vh;
+  width: 100vw;
+  bottom: 8vh;
+}
+
+.food_menu {
+  position: absolute;
+  display: block;
+  top: 6vh;
+  width: 100vw;
+}

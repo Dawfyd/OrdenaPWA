@@ -1,0 +1,95 @@
+#button
+{
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 20vh;
+}
+
+#button li
+{
+  display: inline-flex;
+}
+
+.letter
+{
+  width: 80vw;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4.5vw;
+  line-height: 4vh;
+  color: #7C878E;
+  margin: 0;
+}
+
+.navbar
+{
+  width: 9vw;
+  height: 4vh;
+  padding-left: 0.5vw;
+}
+.num
+{
+  width: 10vw;
+  height: 5vh;
+  font-size: 4vw;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  border: 1px solid #C8C9C7;
+  box-sizing: border-box;
+}
+
+#turn
+{
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 30vh;
+}
+.letter_turn
+{
+  position: absolute;
+  left: 27vw;
+  width: 42vw;
+  height: 5vh;
+  background-position: center center;
+}
+
+#ellipse
+{
+  top: 38vh;
+  width: 100vw;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  left: 0;
+  background: #FFFFFF;
+
+}
+
+.ellipse_turn
+{
+  background-position: center center;
+  height: 40vh;
+  width:  70vw;
+
+}
+
+.letter_ellipse
+{
+  position: absolute;
+  top: 15vh;
+  left: 45vw;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20vw;
+  line-height: 10vh;
+  text-align: center;
+  color: #E6D9EF;
+  margin: 0;
+}

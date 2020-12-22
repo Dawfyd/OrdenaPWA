@@ -1,0 +1,87 @@
+.separator
+{
+  position: absolute;
+  width: 100vw;
+  size: 1px;
+  bottom: 8vh;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 0;
+
+}
+
+.nav_user
+{
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  height: 8vh;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  background: #FFFFFF;
+
+}
+
+@mixin button {
+  padding: 0px 0px;
+  width: 20vw;
+  height: 8vh;
+  border: 0;
+  background: #FFFFFF;
+}
+
+@mixin icon {
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 3.84vh;
+  width:  6.66vw;
+}
+.button_home
+{
+  @include button;
+}
+
+.icon_home
+{
+  @include icon;
+}
+
+.button_menu
+{
+  @include button;
+}
+
+.icon_menu
+{
+  @include icon;
+}
+
+.button_chat
+{
+  @include button;
+}
+
+.icon_chat
+{
+  @include icon;
+}
+
+.button_payment
+{
+  @include button;
+}
+
+.icon_payment
+{
+  @include icon;
+}
+
+.button_account
+{
+  @include button;
+}
+
+.icon_account
+{
+  @include icon;
+}

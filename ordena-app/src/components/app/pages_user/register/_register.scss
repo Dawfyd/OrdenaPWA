@@ -1,0 +1,36 @@
+.header_register
+{
+    display:contents;
+    position: fixed;
+}
+
+
+.footer_register
+{
+  position: fixed;
+  display:none;
+  bottom: 0px;
+}
+
+.page_register
+{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  text-align: center;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  left: 0px;
+  top: 0px;
+
+  grid-template-rows: 12fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+.login_register
+{
+  position: absolute;
+  top: 3vh;
+
+}

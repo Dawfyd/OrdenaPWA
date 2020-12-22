@@ -1,0 +1,89 @@
+@import '~antd/dist/antd.css';
+
+.ant-tabs-card.ant-tabs-large > .ant-tabs-nav .ant-tabs-tab {
+  padding-top: 7px;
+  padding-right: 10px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+}
+
+.card-container p {
+  margin: 0;
+
+}
+.card-container > .ant-tabs-card .ant-tabs-content {
+  height: auto;
+
+
+}
+.card-container > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+  background: #ffffff;
+
+}
+.card-container > .ant-tabs-card > .ant-tabs-nav::before {
+  display: none;
+
+}
+.card-container > .ant-tabs-card .ant-tabs-tab,
+[data-theme="compact"] .card-container > .ant-tabs-card .ant-tabs-tab {
+  border-color: transparent;
+  background: transparent;
+
+}
+.card-container > .ant-tabs-card .ant-tabs-tab-active,
+[data-theme="compact"] .card-container > .ant-tabs-card .ant-tabs-tab-active {
+  border-color: #ffffff;
+  background: #ffffff;
+
+}
+
+
+#text_menu
+{
+  font-size: 2.5vh;
+  text-align: center;
+  text-align: justify;
+  color: rgba(0,0,0,0.6);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 3vh;
+  font-weight: 500;
+  line-height: 3vh;
+
+
+}
+
+#text_menu:hover{
+  margin: 0;
+  border: 0;
+  color: #9B26B6;
+  font-weight: normal;
+}
+#text_menu:active{
+  margin: 0;
+  border: 0;
+  color: #9B26B6;
+  font-weight: normal;
+}
+
+#text_menu:target{
+  color: #9B26B6;
+
+}
+#separator_menu_top
+{
+
+  position: absolute;
+  width: 100vw;
+  height: 1px;
+  top: 6vh;
+  background: rgba(200,201,199,1);
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.content {
+
+}
