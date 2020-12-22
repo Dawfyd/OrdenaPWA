@@ -1,0 +1,115 @@
+.num_table
+{
+position: absolute;
+width: 34.7vw;
+height: auto;
+left: 32.65vw;
+top: 10vh;
+}
+
+.text_num_table
+{
+  position: fixed;
+  width: 12.2vw;
+
+  left: 42vw;
+  top: 22vh;
+  margin: 0;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14vw;
+  line-height: 10vh;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.text_user
+{
+  position: absolute;
+  width: 53.8vw;
+  height: 6.6vh;
+  left: 26vw;
+  top: 35vh;
+  margin: 0;
+
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 5vw;
+  line-height: 3vh;
+
+  color: #7C878E;
+}
+
+.icon_text
+{
+
+  position: absolute;
+  width: 6.4vw;
+  height: 3.6vh;
+  left: 21vw;
+  top: 34.6vh;
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    .num_table
+    {
+    position: absolute;
+    width: 34.7vw;
+    height: auto;
+    left: 32.65vw;
+    top: 8vh;
+    }
+    .text_num_table
+    {
+    position: fixed;
+    width: 12.2vw;
+
+    left: 43vw;
+    top: 25vh;
+    margin: 0;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14vw;
+    line-height: 10vh;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+  .text_user
+  {
+    position: absolute;
+    width: 53.8vw;
+    height: 6.6vh;
+    left: 26vw;
+    top: 37vh;
+    margin: 0;
+
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.8vw;
+    line-height: 3vh;
+
+    color: #7C878E;
+  }
+  .icon_text
+  {
+
+    position: absolute;
+    width: 6.4vw;
+    height: 3.6vh;
+    left: 23vw;
+    top: 36.6vh;
+
+  }
+}

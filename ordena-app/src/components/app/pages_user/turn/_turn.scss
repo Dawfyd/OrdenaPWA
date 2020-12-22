@@ -1,16 +1,23 @@
 .header_turn
 {
     display:contents;
+    position: fixed;
 }
 
 
 .footer_turn
 {
-    display:none;
+
+  display:none;
+
 }
 
 .page_turn
 {
+
+  display: flex;
+  flex-direction: column;
+  position: fixed;
   text-align: center;
   display: grid;
   height: 100vh;
@@ -25,6 +32,8 @@
 .table_num
 {
   display: block;
+  position: relative;
+
 
 }
 .pre_order_turn
@@ -33,7 +42,7 @@
   display: block;
   position: absolute;
   left: 23.6vw;
-  top: 81.5vh;
+  top: 80vh;
 
 }
 

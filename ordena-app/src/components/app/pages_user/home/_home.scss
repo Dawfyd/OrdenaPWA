@@ -1,16 +1,22 @@
 .header_home
 {
     display:contents;
+    position: fixed;
 }
 
 
 .footer_home
 {
-    display:contents;
+    position: fixed;
+    display:block;
+    bottom: 0px;
 }
 
 .page_home
 {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
   text-align: center;
   display: grid;
   height: 100vh;
@@ -27,4 +33,12 @@
   height: 82.6vh;
   width: 100vw;
   bottom: 8vh;
+}
+.avatar_home {
+  display: block;
+  position: absolute;
+}
+.num_home{
+  position: absolute;
+  bottom: 85vh;
 }

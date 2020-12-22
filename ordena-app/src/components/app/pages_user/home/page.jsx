@@ -1,6 +1,8 @@
 import React, {Fragment} from 'react';
 import LogoOrdena from '../../elements/logo_ordena/logo';
 import NavUser from '../../elements/footer_nav_user/nav_user';
+import NumTable from '../../elements/num_table_home/num_table_home';
+import AvatarHome from '../../elements/avatar_home/avatar_home';
 import '../../styles.scss';
 
 function page(props) {
@@ -13,7 +15,12 @@ function page(props) {
         </header>
 
         <div className ='container_home'>
-        <h1>Home - poner los elementos de esta pagina aqui</h1>
+          <div className ='num_home'>
+            <NumTable/>
+          </div>
+          <div className='avatar_home'>
+            <AvatarHome/>
+          </div>
         </div>
 
 

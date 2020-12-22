@@ -1,11 +1,19 @@
 @import '~antd/dist/antd.css';
 
+.ant-tabs-card.ant-tabs-large > .ant-tabs-nav .ant-tabs-tab {
+  padding-top: 7px;
+  padding-right: 10px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+}
 
 .card-container p {
   margin: 0;
+
 }
 .card-container > .ant-tabs-card .ant-tabs-content {
   height: auto;
+
 
 }
 .card-container > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
@@ -14,16 +22,19 @@
 }
 .card-container > .ant-tabs-card > .ant-tabs-nav::before {
   display: none;
+
 }
 .card-container > .ant-tabs-card .ant-tabs-tab,
 [data-theme="compact"] .card-container > .ant-tabs-card .ant-tabs-tab {
   border-color: transparent;
   background: transparent;
+
 }
 .card-container > .ant-tabs-card .ant-tabs-tab-active,
 [data-theme="compact"] .card-container > .ant-tabs-card .ant-tabs-tab-active {
   border-color: #ffffff;
   background: #ffffff;
+
 }
 
 
@@ -39,7 +50,7 @@
   height: 3vh;
   font-weight: 500;
   line-height: 3vh;
-  padding-left: 2vw;
+
 
 }
 
@@ -71,4 +82,8 @@
   margin: 0;
   border: 0;
   padding: 0;
+}
+
+.content {
+
 }

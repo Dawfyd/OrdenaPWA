@@ -1,16 +1,22 @@
 .header_chat
 {
-    display:contents;
+  display:contents;
 }
 
 
 .footer_chat
 {
-    display:contents;
+  position: fixed;
+  display:block;
+  bottom: 0px;
 }
 
 .page_chat
 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  position: absolute;
   text-align: center;
   display: grid;
   height: 100vh;

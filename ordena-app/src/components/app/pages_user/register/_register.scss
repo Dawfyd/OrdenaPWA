@@ -1,16 +1,22 @@
 .header_register
 {
     display:contents;
+    position: fixed;
 }
 
 
 .footer_register
 {
-    display:none;
+  position: fixed;
+  display:none;
+  bottom: 0px;
 }
 
 .page_register
 {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
   text-align: center;
   display: grid;
   height: 100vh;

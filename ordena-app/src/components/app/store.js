@@ -1,9 +1,50 @@
 import {createStore} from 'redux'
 import foto from '../../assets/images/tarjets/Image.svg';
+import kathryn from '../../assets/images/avatars/kathryn.png';
+import robert from '../../assets/images/avatars/robert.png';
+import cameron from '../../assets/images/avatars/cameron.png';
+import darrell from '../../assets/images/avatars/darrell.png';
+import jane  from '../../assets/images/avatars/jane.png';
 
 const initialState = {
   menu: [],
   navegador:[],
+
+  data_user: [
+
+    {id: 1,
+    name: 'Jane Cooper',
+    icon: jane
+
+    },
+    {id: 2,
+    name: 'David Hoyos',
+    icon: "https://lh3.googleusercontent.com/a-/AOh14GhYx-n5PDPFGmemzdi06rBLEpQt1Rc7y0iI93ZwzA=s96-c",
+
+    },
+    {id: 3,
+    name: 'Robert Fox',
+    icon: robert
+
+    },
+    {id: 4,
+    name: 'Darrell Steward',
+    icon: darrell
+    },
+    {id: 5,
+    name: 'Kathryn Murphy',
+    icon: kathryn
+    },
+    {id: 6,
+    name: 'Leslie Alexander',
+    icon: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    },
+    {id: 7,
+    name: 'Cameron Williamson',
+    icon: cameron
+    },
+  ],
+
 
   data_menu: [
       {id: 1,

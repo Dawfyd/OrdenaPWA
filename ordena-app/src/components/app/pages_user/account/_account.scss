@@ -6,11 +6,16 @@
 
 .footer_account
 {
-    display:contents;
+  position: fixed;
+  display:block;
+  bottom: 0px;
 }
 
 .page_account
 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   text-align: center;
   display: grid;
   height: 100vh;
