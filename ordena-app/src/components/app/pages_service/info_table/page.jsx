@@ -3,7 +3,7 @@ import React, {Fragment} from 'react';
 function page(props) {
   return (
     <Fragment>
-        Menu
+        <h1>Menu</h1>
     </Fragment>
 
   );

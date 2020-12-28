@@ -6,7 +6,7 @@
   left: 15vw;
   width: 70vw;
   height: 10vh;
-  font-family: sans-serif;
+  font-family: Quicksand;
   font-style: normal;
   font-weight: 500;
   font-size: 4.5vw;
@@ -84,17 +84,14 @@
 
   .ellipse_reader
   {
-
     background-position: center center;
     height: 40vh;
     width:  70vw;
     z-index: -1;
-
   }
 
   .qr_reader
   {
-
     position: fixed;
     bottom: 31vh;
     left: 25vw;

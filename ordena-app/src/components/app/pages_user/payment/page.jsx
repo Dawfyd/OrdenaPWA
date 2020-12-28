@@ -13,7 +13,7 @@ function page(props) {
         </header>
 
         <div className ='container_payment'>
-        <h1>Payment - poner los elementos de esta pagina aqui</h1>
+        <h1>Payment - Proximamente!</h1>
         </div>
 
 

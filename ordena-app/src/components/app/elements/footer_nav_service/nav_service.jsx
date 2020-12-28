@@ -1,60 +1,67 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import icon_home from '../../../../assets/images/nav_user/icon_home.svg';
-import icon_menu from '../../../../assets/images/nav_user/icon_menu.svg';
-import icon_chat from '../../../../assets/images/nav_user/icon_chat.svg';
-import icon_payment from '../../../../assets/images/nav_user/icon_payment.svg';
-import icon_account from '../../../../assets/images/nav_user/icon_account.svg';
+import icon_tables from '../../../../assets/images/nav_user/icon_home.svg';
+import icon_tables_active from '../../../../assets/images/nav_user/icon_home_active.svg';
+import icon_info_table from '../../../../assets/images/nav_service/icon_info_table.svg';
+import icon_chat_service from '../../../../assets/images/nav_user/icon_chat.svg';
+import icon_code_qr from '../../../../assets/images/nav_service/icon_code_qr.svg';
+import icon_account_service from '../../../../assets/images/nav_user/icon_account.svg';
+import { connect } from 'react-redux';
 
-const Nav_user = () => (
+var currentRoute= window.location.pathname;
 
-    <body>
-    <hr className='separator'/>
-      <nav className= 'nav_user'>
+
+const NavService = () => (
+
+    <div>
+    <hr className='separator_nav_service'/>
+      <nav className= 'nav_service'>
 
         <div>
-          <Link to={'/Home'}>
-            <button className='button_home' id="B1">
-              <img src={icon_home} className="icon_home" alt="logo1" />
+          <Link to={'/service/tables'}>
+            <button className='button_tables' id="B1">
+              <img src ={currentRoute === '/service/tables' ? icon_tables_active : icon_tables}
+              className="icon_tables"
+              alt="logo1" />
             </button>
           </Link>
         </div>
 
         <div>
-          <Link to={'/Menu'}>
-            <button className='button_menu' id="B2">
-              <img src={icon_menu} className="icon_menu" alt="logo2" />
+          <Link to={'/service/info_table'}>
+            <button className='button_info_table' id="B2">
+              <img src={icon_info_table} className="icon_info_table" alt="logo2" />
             </button>
           </Link>
         </div>
 
         <div>
-          <Link to={'/Chat'}>
-            <button className='button_chat' id="B3">
-              <img src={icon_chat} className="icon_chat" alt="logo3" />
+          <Link to={'/service/chat_service'}>
+            <button className='button_chat_service' id="B3">
+              <img src={icon_chat_service} className="icon_chat_service" alt="logo3" />
             </button>
           </Link>
         </div>
 
         <div>
-          <Link to={'/payment'}>
-            <button className='button_payment' id="B4">
-              <img src={icon_payment} className="icon_payment" alt="logo4" />
+          <Link to={'/service/code_qr'}>
+            <button className='button_code_qr' id="B4">
+              <img src={icon_code_qr} className="icon_code_qr" alt="logo4" />
             </button>
           </Link>
         </div>
 
         <div>
-          <Link to={'/account'}>
-            <button className='button_account' id="B5">
-              <img src={icon_account} className="icon_account" alt="logo5" />
+          <Link to={'/service/account_service'}>
+            <button className='button_account_service' id="B5">
+              <img src={icon_account_service} className="icon_account_service" alt="logo5" />
             </button>
           </Link>
         </div>
 
       </nav>
-    </body>
+    </div>
   )
 
 
-  export default (Nav_user)
+  export default connect()(NavService);

@@ -1,21 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import icon_home from '../../../../assets/images/nav_user/icon_home.svg';
+import icon_home_active from '../../../../assets/images/nav_user/icon_home_active.svg';
 import icon_menu from '../../../../assets/images/nav_user/icon_menu.svg';
+import icon_menu_active from '../../../../assets/images/nav_user/icon_menu_active.svg';
 import icon_chat from '../../../../assets/images/nav_user/icon_chat.svg';
 import icon_payment from '../../../../assets/images/nav_user/icon_payment.svg';
 import icon_account from '../../../../assets/images/nav_user/icon_account.svg';
+import icon_account_active from '../../../../assets/images/nav_user/icon_account_active.svg';
 
-const Nav_user = () => (
+const currentRoute= window.location.pathname;
+
+const NavUser = () => (
 
     <div>
-    <hr className='separator'/>
+    <hr className='separator_nav_user'/>
       <nav className= 'nav_user'>
 
         <div>
           <Link to={'/home'}>
             <button className='button_home' id="B1">
-              <img src={icon_home} className="icon_home" alt="logo1" />
+              <img src ={currentRoute === '/home' ? icon_home_active : icon_home}
+                   className="icon_home"
+                   alt="logo1" />
             </button>
           </Link>
         </div>
@@ -23,7 +31,9 @@ const Nav_user = () => (
         <div>
           <Link to={'/menu'}>
             <button className='button_menu' id="B2">
-              <img src={icon_menu} className="icon_menu" alt="logo2" />
+              <img src ={currentRoute === '/menu' ? icon_menu_active : icon_menu}
+                   className="icon_menu"
+                   alt="logo2" />
             </button>
           </Link>
         </div>
@@ -47,7 +57,9 @@ const Nav_user = () => (
         <div>
           <Link to={'/account'}>
             <button className='button_account' id="B5">
-              <img src={icon_account} className="icon_account" alt="logo5" />
+              <img src ={currentRoute === '/account' ? icon_account_active : icon_account}
+                   className="icon_account"
+                   alt="logo5" />
             </button>
           </Link>
         </div>
@@ -57,4 +69,4 @@ const Nav_user = () => (
   )
 
 
-  export default (Nav_user)
+  export default connect()(NavUser);

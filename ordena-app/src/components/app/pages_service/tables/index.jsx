@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
 import Page from './page';
 
-class Home extends Component {
+class Tables extends Component {
   render() {
     return (
       <Page/>
     );
   }
 }
-export default Home;
+export default Tables;

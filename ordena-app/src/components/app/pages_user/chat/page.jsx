@@ -14,7 +14,7 @@ function page(props) {
         </header>
 
         <div className ='container_chat'>
-        <h1>Chat - poner los elementos de esta pagina aqui</h1>
+        <h1>Chat - Proximamente!</h1>
         </div>
 
 

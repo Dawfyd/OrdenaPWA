@@ -8,7 +8,9 @@ const TableNum = () => (
   <div className ='drop'>
         <ul id='button'>
           <li>
-            <p className = 'letter'>¿Mesa para cuántas personas?</p>
+            <p className = 'letter'>¿</p>
+            <p className = 'letter_1'>Mesa para cuántas personas</p>
+            <p className = 'letter_2'>?</p>
           </li>
           <li>
             <form className = 'navbar'>

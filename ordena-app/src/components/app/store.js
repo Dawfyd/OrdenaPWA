@@ -9,6 +9,75 @@ import jane  from '../../assets/images/avatars/jane.png';
 const initialState = {
   menu: [],
   navegador:[],
+  data_tables: [
+
+    {id: 1,
+    statetable: 1,
+    number: 1
+
+    },
+    {id: 2,
+    statetable: 2,
+    number: 2
+
+    },
+    {id: 1,
+    statetable: 1,
+    number: 3
+
+    },
+    {id: 2,
+    statetable: 2,
+    number: 4
+
+    },
+    {id: 1,
+    statetable: 1,
+    number: 5
+
+    },
+    {id: 2,
+    statetable: 3,
+    number: 6
+
+    },
+    {id: 1,
+    statetable: 1,
+    number: 1
+
+    },
+    {id: 2,
+    statetable: 2,
+    number: 2
+
+    },
+    {id: 1,
+    statetable: 1,
+    number: 3
+
+    },
+    {id: 2,
+    statetable: 2,
+    number: 4
+
+    },
+    {id: 1,
+    statetable: 1,
+    number: 5
+
+    },
+    {id: 2,
+    statetable: 3,
+    number: 6
+
+    },
+    {id: 1,
+    statetable: 1,
+    number: 1
+
+    },
+
+],
 
   data_user: [
 
