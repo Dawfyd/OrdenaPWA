@@ -10,10 +10,12 @@ import icon_payment from '../../../../assets/images/nav_user/icon_payment.svg';
 import icon_account from '../../../../assets/images/nav_user/icon_account.svg';
 import icon_account_active from '../../../../assets/images/nav_user/icon_account_active.svg';
 
+
+function NavUser() {
+
 const currentRoute= window.location.pathname;
 
-const NavUser = () => (
-
+    return(
     <div>
     <hr className='separator_nav_user'/>
       <nav className= 'nav_user'>
@@ -23,7 +25,7 @@ const NavUser = () => (
             <button className='button_home' id="B1">
               <img src ={currentRoute === '/home' ? icon_home_active : icon_home}
                    className="icon_home"
-                   alt="logo1" />
+                   alt="icon_home" />
             </button>
           </Link>
         </div>
@@ -33,7 +35,7 @@ const NavUser = () => (
             <button className='button_menu' id="B2">
               <img src ={currentRoute === '/menu' ? icon_menu_active : icon_menu}
                    className="icon_menu"
-                   alt="logo2" />
+                   alt="icon_menu" />
             </button>
           </Link>
         </div>
@@ -41,7 +43,7 @@ const NavUser = () => (
         <div>
           <Link to={'/chat'}>
             <button className='button_chat' id="B3">
-              <img src={icon_chat} className="icon_chat" alt="logo3" />
+              <img src={icon_chat} className="icon_chat" alt="icon_chat" />
             </button>
           </Link>
         </div>
@@ -49,7 +51,7 @@ const NavUser = () => (
         <div>
           <Link to={'/payment'}>
             <button className='button_payment' id="B4">
-              <img src={icon_payment} className="icon_payment" alt="logo4" />
+              <img src={icon_payment} className="icon_payment" alt="icon_payment" />
             </button>
           </Link>
         </div>
@@ -59,14 +61,18 @@ const NavUser = () => (
             <button className='button_account' id="B5">
               <img src ={currentRoute === '/account' ? icon_account_active : icon_account}
                    className="icon_account"
-                   alt="logo5" />
+                   alt="icon_account" />
             </button>
           </Link>
         </div>
 
       </nav>
     </div>
-  )
+   )
+  }
 
+  const mapStateToProps = state => ({})
 
-  export default connect()(NavUser);
+  const mapDispatchToProps = dispatch => ({})
+
+  export default connect(mapStateToProps, mapDispatchToProps)(NavUser);
