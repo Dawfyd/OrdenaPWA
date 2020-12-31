@@ -8,7 +8,7 @@ export class MenuCont extends Component {
 
 
   static propTypes ={
-    page_menu: PropTypes.string,
+    page_menu: PropTypes.number,
 
   }
 

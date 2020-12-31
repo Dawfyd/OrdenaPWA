@@ -13,10 +13,33 @@
 
 .letter
 {
-  width: 80vw;
+  width: auto;
   font-family: sans-serif;
   font-style: normal;
+  font-weight: 300;
+  font-size: 4.5vw;
+  line-height: 4vh;
+  color: #7C878E;
+  margin: 0;
+  padding-left: 8vw;
+}
+.letter_1
+{
+  width: auto;
+  font-family: Quicksand;
+  font-style: normal;
   font-weight: 500;
+  font-size: 4.5vw;
+  line-height: 4vh;
+  color: #7C878E;
+  margin: 0;
+}
+.letter_2
+{
+  width: auto;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 300;
   font-size: 4.5vw;
   line-height: 4vh;
   color: #7C878E;
@@ -27,19 +50,21 @@
 {
   width: 9vw;
   height: 4vh;
-  padding-left: 0.5vw;
+  padding-left: 5vw;
 }
 .num
 {
   width: 10vw;
   height: 5vh;
   font-size: 4vw;
-  font-family: sans-serif;
+  font-family: Quicksand;
   font-style: normal;
   font-weight: normal;
   text-align: center;
   border: 1px solid #C8C9C7;
   box-sizing: border-box;
+  background: white;
+
 }
 
 #turn
