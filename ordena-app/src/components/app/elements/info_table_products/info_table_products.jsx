@@ -20,42 +20,43 @@ function InfoTable({data_tables,data_order,data_products,order_ready,select_tabl
           {
             data_order.filter(b => b.id_table === d.id)
                       .map(o => (
-            <div className= 'container_grid_table'>
+            <div className= 'container_grid_table' key={o.id}>
 
 
-            {
-              data_products.filter(e => e.state_served === true)
-                             .map(p => (
-              <div className='container_product' key={p.id}>
-                <li className ='unit_item'>{p.unit_item} ud - {p.product}</li>
-                <li className ='price_item'>${formatNumber(p.price_item)}</li>
-              </div>
-              ))
+                {
+                  data_products.filter(e => e.state_served === true).filter(e => e.id_order === o.id)
+                               .map(p => (
+                  <div className='container_product' key={p.id}>
+                    <li className ='unit_item'>{p.unit_item} ud - {p.product}</li>
+                    <li className ='price_item'>${formatNumber(p.price_item)}</li>
+                  </div>
+                  ))
 
-            }
+                }
 
-            <p className='pending_order'
-               style={data_products.filter(f => f.state_served === false).length === 0
-                                                                  ? {display: 'none'} :
-                                                                    {display: 'flex'}}>
-               Pedido Pendiente</p>
+                <p className='pending_order'
+                   style={data_products.filter(e => e.state_served === false).filter(e => e.id_order === o.id).length === 0
+                                                                      ? {display: 'none'} :
+                                                                        {display: 'flex'}}>
+                   Pedido Pendiente</p>
 
-            {
-              data_products.filter(f => f.state_served === false)
-                           .map(p => (
+                {
+                  data_products.filter(f => f.state_served === false).filter(e => e.id_order === o.id)
+                               .map(p => (
 
-              <div className='container_product' key={p.id}>
-                <li className ='unit_item'>{p.unit_item} ud - {p.product}</li>
-                <li className ='price_item'>
-                <input
-                    className='check_pending_order'
-                    onClick={()=>order_ready(p)}
-                    type="checkbox"
-                    value=''/>
-                </li>
-              </div>
-              ))
-            }
+                  <div className='container_product' key={p.id}>
+                    <li className ='unit_item'>{p.unit_item} ud - {p.product}</li>
+                    <li className ='price_item'>
+                    <input
+                        className='check_pending_order'
+                        onClick={()=>order_ready(p)}
+                        type="checkbox"
+                        value=''/>
+                    </li>
+                  </div>
+                  ))
+                }
+
             <p className='product_total'>Total Mesa {d.number}</p>
             <p className='price_total'
                style={o.state_paid === false ? {color: 'rgba(0, 0, 0, 0.7)'} :
@@ -63,6 +64,7 @@ function InfoTable({data_tables,data_order,data_products,order_ready,select_tabl
 
             >${o.total_price}</p>
             </div>
+
             ))
           }
         </div>
