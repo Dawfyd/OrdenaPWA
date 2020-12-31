@@ -1,4 +1,5 @@
 @import 'elements/footer_nav_user/_nav_user.scss';
+@import 'elements/footer_nav_service/_nav_service.scss';
 @import 'elements/logo_ordena/_logo_ordena.scss';
 @import 'elements/table_num/_table_num.scss';
 @import 'elements/register/_register.scss';
@@ -11,6 +12,9 @@
 @import 'elements/food_menu/menu_container/_menu_container.scss';
 @import 'elements/num_table_home/_num_table_home.scss';
 @import 'elements/avatar_home/_avatar_home.scss';
+@import 'elements/account_list/_account_list.scss';
+@import 'elements/tables_list/_tables_list.scss';
+@import 'elements/info_table_products/_info_table_products.scss';
 @import 'pages_user/turn/_turn.scss';
 @import 'pages_user/register/_register.scss';
 @import 'pages_user/home/_home.scss';
@@ -18,3 +22,15 @@
 @import 'pages_user/menu/_menu.scss';
 @import 'pages_user/payment/_payment.scss';
 @import 'pages_user/account/_account.scss';
+@import './pages_service/tables/_tables.scss';
+@import './pages_service/info_table/_info_table.scss';
+@import './pages_service/chat_service/_chat_service.scss';
+@import './pages_service/code_qr/_code_qr';
+@import './pages_service/account_service/_account_service.scss';
+@import './pages_admin/tables_admin/_tables_admin.scss';
+@import './pages_admin/info_table_admin/_info_table_admin.scss';
+@import './pages_admin/chat_admin/_chat_admin.scss';
+@import './pages_admin/code_qr_admin/_code_qr_admin.scss';
+@import './pages_admin/account_admin/_account_admin.scss';
+@import './pages_admin/menu_admin/_menu_admin.scss';
+@import './pages_admin/menu_setup/_menu_setup.scss';

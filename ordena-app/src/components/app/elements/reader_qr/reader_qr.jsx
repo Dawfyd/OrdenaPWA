@@ -29,8 +29,8 @@ class Test extends Component {
         <p className = 'qr_ready'>Tú mesa esta lista, escanea el QR asignado</p>
         <ul id='ellipse_qr'>
 
-          <img src={turn_qr} className="ellipse_turn_qr" alt="logo2" />
-          <img src={ellipse_turn} className="ellipse_reader" alt="logo2" />
+          <img src={turn_qr} className="ellipse_turn_qr" alt="turn" />
+          <img src={ellipse_turn} className="ellipse_reader" alt="ellipse" />
           <p>
 
             <QrReader className = 'qr_reader'

@@ -1,0 +1,177 @@
+.info_table {
+
+  position: absolute;
+  bottom: 0vh;
+  width: 100vw;
+  height: 92vh;
+  left: 0vw;
+}
+
+.number_info_table
+{
+  position: absolute;
+  left: 3vw;
+  width: 94vw;
+  text-align: left;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 5.6vw;
+  line-height: 6vh;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.separator_info_table
+{
+  position: absolute;
+  width: 100vw;
+  margin: 0;
+  top: 6vh;
+  border: 1px solid rgba(200, 201, 199, 1)
+
+}
+.container_grid_info
+{
+  position: absolute;
+  width: 94vw;
+  left: 3vw;
+  top: 6vh;
+  height: 86vh;
+
+}
+.container_grid_table
+{
+  position: absolute;
+  display: grid;
+  grid-gap: 1px;
+  width: 94vw;
+  left: 0vw;
+  top: 9.5vh;
+  height: 86.5vh;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: repeat(auto-fit,minmax(auto, 6.25vh));
+
+}
+
+.product_info
+{
+  position: absolute;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 5vw;
+  line-height: 3vh;
+  display: flex;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.7);
+  justify-content: flex-start;
+  align-items: center;
+  height: 9.5vh;
+  width: 47vw;
+  left: 0;
+}
+.price_info
+{
+  position: absolute;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 5vw;
+  line-height: 3vh;
+  display: flex;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.7);
+  justify-content: flex-end;
+  align-items: center;
+  height: 9.5vh;
+  width: 47vw;
+  right: 0;
+}
+
+.container_product{
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 0;
+  margin: 0;
+
+  height: 40px;
+  width: 100%;
+}
+.container_product li {
+  position: relative;
+  display: grid;
+  height: 6.25vh;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4.4vw;
+  line-height: 3vh;
+  display: flex;
+  align-items: center;
+
+}
+
+.unit_item{
+  color: rgba(0, 0, 0, 0.7);
+  justify-content: flex-start;
+  width: 75%;
+}
+.price_item{
+  color: rgba(0, 0, 0, 0.7);
+  justify-content: flex-end;
+  width: 25%;
+}
+.pending_order {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 5vw;
+  line-height: 3vh;
+  display: flex;
+  margin: 0;
+  justify-content: flex-start;
+  align-items: center;
+  height: 9.5vh;
+  color: #9B26B6;
+
+
+}
+.unit_item_pending{
+  justify-content: flex-start;
+  width: 75%;
+  color: #9B26B6;
+}
+.check_pending_order{
+  width: 5vw;
+  height: 3vh;
+
+}
+
+.price_total
+{
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 5vw;
+  line-height: 3vh;
+  display: flex;
+  margin: 0;
+  justify-content: flex-end;
+  align-items: center;
+  height: 9.5vh;
+}
+.product_total
+{
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 5vw;
+  line-height: 3vh;
+  display: flex;
+  margin: 0;
+  justify-content: flex-start;
+  align-items: center;
+  height: 9.5vh;
+}
