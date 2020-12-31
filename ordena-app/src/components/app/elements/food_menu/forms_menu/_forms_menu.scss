@@ -1,0 +1,63 @@
+.alt_foodi{
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.alt_text
+{
+  font-size:2.5vh;
+  padding-left: 5vw;
+  text-align: left;
+  color: gray;
+  width: 85vw;
+}
+.alt_checkbox
+{
+  right: 1vw;
+}
+.button_back{
+  width: 30vw;
+  height: 6vh;
+  color: white;
+  background-color: #9B26B6;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 3px 2px 5px black;
+  font-size: 3.5vh;
+}
+.buttons_order{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 2vh;
+}
+.button_request{
+
+  width: 30vw;
+  height: 6vh;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  background-color: #9B26B6;
+  box-shadow: 2px 2px 5px black;
+  font-size: 3.5vh;
+}
+
+.coments_food
+{
+  width: 98vw;
+  height: 15vh;
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 15px;
+  border: 0;
+  display: flex;
+  align-items: flex-start;
+}
+.plus_food
+{
+  text-align: center;
+  font-weight: bold;
+  font-size:3vh;
+  color: #9B26B6;
+}
