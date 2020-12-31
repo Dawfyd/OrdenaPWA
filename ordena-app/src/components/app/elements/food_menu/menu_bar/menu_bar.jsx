@@ -1,56 +1,83 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Tabs } from 'antd';
-import {MenuCont} from '../menu_container/menu_container.js';
-
+import TargetList from '../list_menu/list_menu.jsx';
+import Page_food from '../page_food/page_food.jsx';
 
 const { TabPane } = Tabs;
 
-
-
-const posts = [
-    {id: 1, text: 'Menú'},
-    {id: 2, text: 'Favoritos'},
-    {id: 3, text: 'Entradas'},
-    {id: 4, text: 'Platos fuertes'},
-    {id: 5, text: 'Para compartir'},
-    {id: 6, text: 'Bebidas'},
-    {id: 7, text: 'Menú'},
-    {id: 8, text: 'Favoritos'},
-    {id: 9, text: 'Entradas'},
-    {id: 10, text: 'Platos fuertes'},
-    {id: 11, text: 'Para compartir'},
-    {id: 12, text: 'Bebidas'},
-
-  ];
-
-class SlidingTabsDemo extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mode: 'top',
-    };
-  }
-
-  render() {
-    return (
-
+function FoodMenu({posts, showMenu, id_category, selectCategory}){
+  if(showMenu===true){
+    return(
         <div className='card-container'>
 
-        <Tabs defaultActiveKey={"0"} tabPosition={'top'} size={'large'} type='card' 	>
-          {[...Array.from({ length: 12 }, (v,i) => i)].map(i => (
+        <Tabs defaultActiveKey={"0"} tabPosition={'top'} size={'large'} type='card'>
+          {[...Array.from({ length: posts.length }, (v,i) => i)].map(i => (
 
-              <TabPane tab={<p id='text_menu'>{posts[i].text}</p>} key={i}>
+              <TabPane tab={<p
+                              id='text_menu'
+                              onClick={() => selectCategory(i)}>
+                              {posts[i].text}
+                            </p>}
+                       key={i}
+                      >
 
                   <div className="content">
-                    <hr id='separator_menu_top'/>
-                      <MenuCont page_menu={i} />
+                    <hr id='separator_menu_top'
+                        style={posts[i].id === 1 ? {display:'none'}:{display:'flex'}}/>
+                    <div className = 'title_bar'
+                         style={posts[i].id === 1 ? {display:'none'}:{display:'flex'}}>
+                      {posts[i].text}
+                    </div>
+                    <hr id='separator_menu_title'/>
+                    <TargetList />
+
                   </div>
               </TabPane>
         ))}
       </Tabs>
     </div>
-    );
+    )
   }
+  return(
+    <div className='card-container'>
+
+    <Tabs defaultActiveKey={"0"} tabPosition={'top'} size={'large'} type='card'>
+      {[...Array.from({ length: posts.length }, (v,i) => i)].map(i => (
+
+          <TabPane tab={<p id='text_menu' onClick={() => selectCategory(i)}>{posts[i].text}</p>}
+                   key={i}
+                   >
+
+              <div className="content">
+                <hr id='separator_menu_top'/>
+
+                <Page_food />
+
+              </div>
+          </TabPane>
+    ))}
+  </Tabs>
+</div>
+  )
 }
 
-export default SlidingTabsDemo;
+const mapStateToProps = state => ({
+  posts: state.posts,
+  showMenu: state.showMenu,
+})
+
+const mapDispatchToProps = dispatch => ({
+  selectCategory(i) {
+    dispatch({
+      type: "SELECT_CATEGORY",
+      id_category: i,
+      showMenu: true,
+
+
+    })
+  }
+})
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(FoodMenu);

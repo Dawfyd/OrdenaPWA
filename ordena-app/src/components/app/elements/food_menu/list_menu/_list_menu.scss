@@ -1,3 +1,12 @@
+.button_plus{
+  border: 0px;
+  background-color: white;
+}
+.button_plus:hover{
+  border: 0px;
+  background-color: gray;
+}
+
 .card_list{
 
   position: relative;
@@ -6,13 +15,29 @@
 
 }
 
-.order_card{
-  position:absolute;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows:  1fr;
-  text-align: left;
+.cost{
+  position: absolute;
+  top: 13vh;
+  line-height: 2vh;
+  font-size: 3.9vw;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+}
 
+.description{
+  position: absolute;
+  line-height: 2.5vh;
+  font-size: 3.9vw;
+  color: rgba(0,0,0,0.6);
+  top: 4vh;
+  width: 50vw;
+}
+
+.group_title{
+  position: absolute;
+  font-size: 4.5vw;
+  color: rgba(0,0,0,0.6);
 }
 
 .img_card
@@ -24,6 +49,31 @@
   top: 2.2vh;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.link_card{
+  background-color: white;
+  border: 0px;
+
+}
+
+
+
+.order_card{
+  position:absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:  1fr;
+  text-align: left;
+
+}
+
+.plus{
+  position: absolute;
+  font-size: 4vh;
+  right: 2vw;
+  top: 10.2vh;
+  color: #9B26B6;
 }
 
 .text{
@@ -38,45 +88,40 @@
 
 .title{
   position: absolute;
-
   color: rgba(0,0,0,1);
   font-style: normal;
   font-weight: 500;
   font-size: 5vw;
   line-height: 3.6vh;
 }
-
-.description{
-  position: absolute;
-  line-height: 2.5vh;
-  font-size: 3.9vw;
-  color: rgba(0,0,0,0.6);
-  top: 4vh;
-  width: 50vw;
-}
-
-.cost{
-  position: absolute;
-  top: 13vh;
-  line-height: 2vh;
-  font-size: 3.9vw;
+.title_cards{
+  position: relative;
+  font-size: 5vw;
   font-weight: bold;
-  font-style: normal;
-}
-.plus{
-  position: absolute;
-  font-size: 4vh;
-  right: 2vw;
-  top: 10.2vh;
-  color: #9B26B6;
+  text-align: left;
+  left: 4vw;
+  color: rgba(0,0,0,0.6);
+
 }
 
 #separator_card{
   position: relative;
-  background: rgba(200,201,199,1);
-  height: 1px;
-  border: 0;
+  border-color: rgba(0,0,0,0.2);
+  border: 1;
   padding: 0;
   margin: 0;
-  top: 20vh;
+  width: 200vw;
+  right: 5vw;
+  top:20vh;
+
+}
+
+#separator_title_card{
+  position: relative;
+  border-color: rgba(0,0,0,0.2);
+  border: 1;
+  padding: 0;
+  margin: 0;
+  top:5vh;
+
 }
