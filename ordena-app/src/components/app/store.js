@@ -15,16 +15,16 @@ const initialState = {
       {id: 1, text: 'Menú'},
       {id: 2, text: 'Favoritos'},
       {id: 3, text: 'Entradas'},
-      {id: 4, text: 'Platos fuertes'},
-      {id: 5, text: 'Para compartir'},
+      {id: 4, text: 'Platos Fuertes'},
+      {id: 5, text: 'Para Compartir'},
       {id: 6, text: 'Bebidas'},
   ],
   categorys_menu:[
       {id: 1, text: 'Descuentos'},
       {id: 2, text: 'Favoritos'},
       {id: 3, text: 'Entradas'},
-      {id: 4, text: 'Platos fuertes'},
-      {id: 5, text: 'Para compartir'},
+      {id: 4, text: 'Platos Fuertes'},
+      {id: 5, text: 'Para Compartir'},
       {id: 6, text: 'Bebidas'},
   ],
   data_tables: [
@@ -44,23 +44,24 @@ const initialState = {
      id: 1,
      id_table: 1,
      id_user: 1,
-     total_price: 77500,
+     total_price: 24500,
      state_paid: false,
      },
      {id: 2,
      id_table: 2,
      id_user: 2,
-     total_price: 20000,
+     total_price: 56000,
      state_paid: false,
      },
   ],
   data_products:[
     {id: 1,
-    product: 'Hamburguesa Doble',
+    product: 'Hamburguesa Doble super mega hiper doble con triple carne de serpiente',
     unit_item: 1,
     price_item: 22000,
     state_served: true,
     id_order:1,
+    state_button: false,
     },
     {id: 2,
     product: 'Hamburguesa Americana',
@@ -68,6 +69,7 @@ const initialState = {
     price_item: 26000,
     state_served: true,
     id_order:2,
+    state_button: false,
     },
     {id: 3,
     product: 'Adicion Tocineta',
@@ -75,6 +77,7 @@ const initialState = {
     price_item: 3000,
     state_served: true,
     id_order:2,
+    state_button: false,
     },
     {id: 4,
     product: 'Coca Cola',
@@ -82,6 +85,7 @@ const initialState = {
     price_item: 5000,
     state_served: true,
     id_order:2,
+    state_button: false,
     },
     {id: 5,
     product: 'Perro Mexicano',
@@ -89,6 +93,7 @@ const initialState = {
     price_item: 22000,
     state_served: false,
     id_order:2,
+    state_button: false,
     },
     {id: 6,
     product: 'Manzana Postobon',
@@ -96,6 +101,7 @@ const initialState = {
     price_item: 2500,
     state_served: false,
     id_order:1,
+    state_button: false,
     },
   ],
   data_user: [
@@ -270,6 +276,7 @@ const initialState = {
     name:'Aros de cebolla'
     },
   ],
+
 }
 
 const reducer = (state = initialState, action) => {
@@ -314,6 +321,23 @@ switch (action.type) {
         showMenu: action.showMenu,
         count_resume: state.count_resume + action.count_resume,
         price_resume: state.price_resume + action.price_resume,
+
+      }
+  case 'DISPLAY_BUTTON':
+
+      const index2 = state.data_products.findIndex(data_products => data_products.id === action.button_display);
+
+      const newArray2 = [...state.data_products];
+
+      if (newArray2[index2].state_button === false) {
+        newArray2[index2].state_button = true
+      } else {
+        newArray2[index2].state_button = false
+      }
+
+     return{
+       ...state,
+       data_products: newArray2
 
       }
   default:

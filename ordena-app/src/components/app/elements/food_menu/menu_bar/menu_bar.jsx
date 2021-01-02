@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Tabs } from 'antd';
 import TargetList from '../list_menu/list_menu.jsx';
-import Page_food from '../page_food/page_food.jsx';
+import PageFood from '../page_food/page_food.jsx';
 
 const { TabPane } = Tabs;
 
@@ -52,7 +52,7 @@ function FoodMenu({posts, showMenu, id_category, selectCategory}){
               <div className="content">
                 <hr id='separator_menu_top'/>
 
-                <Page_food />
+                <PageFood />
 
               </div>
           </TabPane>

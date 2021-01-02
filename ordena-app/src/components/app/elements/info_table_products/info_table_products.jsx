@@ -1,7 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {RightOutlined,DownOutlined} from '@ant-design/icons';
 
-function InfoTable({data_tables,data_order,data_products,order_ready,select_table}) {
+function InfoTable({data_tables,data_order,data_products,order_ready,select_table,display_button}) {
+
+
+
 
     return (
 
@@ -26,9 +30,23 @@ function InfoTable({data_tables,data_order,data_products,order_ready,select_tabl
                 {
                   data_products.filter(e => e.state_served === true).filter(e => e.id_order === o.id)
                                .map(p => (
+
                   <div className='container_product' key={p.id}>
-                    <li className ='unit_item'>{p.unit_item} ud - {p.product}</li>
-                    <li className ='price_item'>${formatNumber(p.price_item)}</li>
+                    <button key={p.id}
+                            type="button"
+                            className="collapsible_info"
+                            onClick={()=>display_button(p)}>
+                            <p  className='icon_collapsible'>
+                                {p.state_button === false ? <RightOutlined /> :
+                                                            <DownOutlined />}</p>
+                      <li className ='unit_item'>{p.unit_item} ud - {p.product}</li>
+                      <li className ='price_item'>${formatNumber(p.price_item)}</li>
+                    </button>
+                    <div className="content_collapsible"
+                         style={p.state_button === false ? {display: 'none'} :
+                                                           {display: 'block'}}>
+                      <p>hola1</p>
+                    </div>
                   </div>
                   ))
 
@@ -45,14 +63,28 @@ function InfoTable({data_tables,data_order,data_products,order_ready,select_tabl
                                .map(p => (
 
                   <div className='container_product' key={p.id}>
+
+                    <button key={p.id}
+                            type="button"
+                            className="collapsible_info"
+                            onClick={()=>display_button(p)}>
+                    <p  className='icon_collapsible'>
+                        {p.state_button === false ? <RightOutlined /> :
+                                                    <DownOutlined />}</p>
                     <li className ='unit_item'>{p.unit_item} ud - {p.product}</li>
                     <li className ='price_item'>
-                    <input
-                        className='check_pending_order'
-                        onClick={()=>order_ready(p)}
-                        type="checkbox"
-                        value=''/>
+                      <input
+                          className='check_pending_order'
+                          onClick={()=>order_ready(p)}
+                          type="checkbox"
+                          value=''/>
                     </li>
+                    </button>
+                    <div className="content_collapsible"
+                         style={p.state_button === false ? {display: 'none'} :
+                                                           {display: 'block'}}>
+                      <p>hola2</p>
+                    </div>
                   </div>
                   ))
                 }
@@ -62,12 +94,14 @@ function InfoTable({data_tables,data_order,data_products,order_ready,select_tabl
                style={o.state_paid === false ? {color: 'rgba(0, 0, 0, 0.7)'} :
                                                {color: '#32C755'}}
 
-            >${o.total_price}</p>
+            >${formatNumber(o.total_price)}</p>
+
             </div>
 
             ))
           }
         </div>
+
       </div>
       ))
     }
@@ -84,15 +118,25 @@ const mapStateToProps = state => ({
   data_products: state.data_products,
   data_order: state.data_order,
   select_table: state.select_table,
+
+
 })
 
-const mapDispatchToProps = dispatch => ({order_ready(p) {
+const mapDispatchToProps = dispatch => ({
+  order_ready(p) {
     dispatch({
       type: 'ORDER_READY',
       id_ready: p.id,
 
     })
-  }})
+  },
+  display_button(p) {
+    dispatch({
+      type: 'DISPLAY_BUTTON',
+      button_display: p.id,
+    })
+  }
+})
 
 
 

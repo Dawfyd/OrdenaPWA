@@ -4,7 +4,7 @@ import LogoOrdena from '../../elements/logo_ordena/logo';
 import NavUser from '../../elements/footer_nav_user/nav_user';
 import Search from '../../elements/search_bar/search.js';
 import FoodMenu from '../../elements/food_menu/menu_bar/menu_bar.jsx';
-import Float_cart from '../../elements/food_menu/float_cart/float_cart.jsx';
+import FloatCart from '../../elements/food_menu/float_cart/float_cart.jsx';
 import '../../styles.scss';
 
 function page({show_cart}) {
@@ -24,7 +24,7 @@ function page({show_cart}) {
             </div>
             <div className='resume_cart' style={show_cart === true ? {display:'flex'}:
                                                                      {display:'none'}}>
-              <Float_cart />
+              <FloatCart />
             </div>
           </div>
 
