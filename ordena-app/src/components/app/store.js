@@ -146,7 +146,9 @@ const initialState = {
     category:3,
     id_fav:true,
     id_desc:true,
-    text: 'Hamburguesa Doble',
+    state_button:false,
+    unit_item:0,
+    product: 'Hamburguesa Doble',
     msg: 'Hamburguesa doble carne angus 400g, salsa de la casa',
     price: 18500,
     price_d:17000,
@@ -157,7 +159,9 @@ const initialState = {
     category:2,
     id_fav:false,
     id_desc:false,
-    text: 'Papas Fritas',
+    state_button:false,
+    unit_item:0,
+    product: 'Papas Fritas',
     msg: 'Deliciosas papas bien crujientes, fritas en aceite de olvia extra virgen',
     price: 20000,
     alt: 'Foto de Papas fritas con paprica y sal',
@@ -167,7 +171,9 @@ const initialState = {
     category:2,
     id_fav:true,
     id_desc:false,
-    text: 'Dedos de queso',
+    state_button:false,
+    unit_item:0,
+    product: 'Dedos de queso',
     msg: 'Exquisitos dedos de queso al horno, con especias finas',
     price: 30000,
     alt: 'Foto de 4 dedos de queso en una canastica',
@@ -177,7 +183,9 @@ const initialState = {
     category:2,
     id_fav:false,
     id_desc:false,
-    text: 'Empanadas Vallunas',
+    state_button:false,
+    unit_item:0,
+    product: 'Empanadas Vallunas',
     msg: 'Deliciosas empanadas fritas en aceite de palma, con aji al gusto',
     price: 17000,
     alt: 'Foto de 4 empanadas en una canasta',
@@ -187,7 +195,9 @@ const initialState = {
     category:3,
     id_fav:false,
     id_desc:false,
-    text: 'Bandeja Paisa',
+    state_button:false,
+    unit_item:0,
+    product: 'Bandeja Paisa',
     msg: 'Deliciosa bandeja paisa, con frijoles, chorizo, huevo frito, arroz, chicharron y aguacate',
     price: 12000,
     alt: 'Foto de 4 empanadas en una canasta',
@@ -197,7 +207,9 @@ const initialState = {
     category:5,
     id_fav:false,
     id_desc:false,
-    text: 'Cerveza ClubColombia',
+    state_button:false,
+    unit_item:0,
+    product: 'Cerveza ClubColombia',
     msg: 'Cerveza nacional, con 3 sabores distintos; Roja, Dorada y Negra',
     price: 7000,
     alt: 'Foto de 4 empanadas en una canasta',
@@ -207,8 +219,9 @@ const initialState = {
     category:5,
     id_fav:false,
     id_desc:false,
-    menu_alt: true,
-    text: 'Jugo de Naranja',
+    state_button:false,
+    unit_item:0,
+    product: 'Jugo de Naranja',
     msg: 'Jugo natural recien exprimido con 1 parte de agua y 2 de fruta.',
     price: 9000,
     alt: 'Foto de 4 empanadas en una canasta',
@@ -217,7 +230,6 @@ const initialState = {
   ],
   select_table:1,
   showMenu: true,
-  showDish: [],
   data_menu_f: [],
   id_category:0,
   id_food:0,
@@ -226,9 +238,9 @@ const initialState = {
   ud_cart:0,
   price_cart:0,
   show_cart: false,
+  showOrder: false,
   count_resume:0,
   price_resume:0,
-  showCart: [],
   temp_category: 0,
   alt_food:[
     {id:1,
@@ -276,12 +288,23 @@ const initialState = {
     name:'Aros de cebolla'
     },
   ],
+  orderList:[],
 
 }
 
 const reducer = (state = initialState, action) => {
 console.log(action)
 switch (action.type) {
+  case 'SHOW_ORDER':
+    return{
+        ...state,
+        showOrder: state.showOrder === true ? false: true,
+    }
+  case 'SHOW_MENU':
+      return{
+          ...state,
+          showOrder: state.showOrder === true ? false: true,
+      }
   case 'ORDER_READY':
     const index = state.data_products.findIndex(data_products => data_products.id === action.id_ready);
 
@@ -318,9 +341,10 @@ switch (action.type) {
       return{
         ...state,
         show_cart: action.show_cart,
-        showMenu: action.showMenu,
+        orderList: state.orderList.concat(state.show_food),
         count_resume: state.count_resume + action.count_resume,
         price_resume: state.price_resume + action.price_resume,
+        
 
       }
   case 'DISPLAY_BUTTON':
@@ -334,7 +358,6 @@ switch (action.type) {
       } else {
         newArray2[index2].state_button = false
       }
-
      return{
        ...state,
        data_products: newArray2
