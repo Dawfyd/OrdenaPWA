@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 
-const Float_cart = ({count_resume, price_resume, show_Order}) =>(
+const Float_cart_top = ({count_resume, price_resume, show_menu}) =>(
   <div>
-    <button className='float_cart' onClick={() => show_Order()}>
+    <button className='float_cart' onClick={()=> show_menu()}>
       <div className='text_cart'>
         Resumen Ordena: {count_resume} ud - ${price_resume} COP
       </div>
@@ -22,12 +22,12 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  show_Order() {
+  show_menu() {
     dispatch({
-      type: "SHOW_ORDER",
-      showOrder:true,
+      type: "SHOW_MENU",
+      showOrder:false,
     })
   },
 })
 
-export default connect(mapStateToProps, mapDispatchToProps) (Float_cart);
+export default connect(mapStateToProps, mapDispatchToProps) (Float_cart_top);

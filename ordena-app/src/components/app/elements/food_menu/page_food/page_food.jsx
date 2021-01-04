@@ -15,7 +15,7 @@ show_food.map(d => (
       </div>
       <div className='text_food'>
         <div className='title_food'>
-          {d.text}
+          {d.product}
         </div>
         <div className='desc_food'>
           {d.msg}
