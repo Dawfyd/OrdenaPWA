@@ -30,3 +30,13 @@ code {
     font-style: oblique;
     src: local('Quicksand'), url(./fonts/Quicksand/Quicksand_Book_Oblique.otf) format('opentype');
 }
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: local('Poppins'), url(./fonts/Poppins/Poppins-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Questrial';
+  font-weight: 400;
+  src: local('Questrial'), url(./fonts/Questrial/Questrial-Regular.ttf) format('truetype');
+}

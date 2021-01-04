@@ -1,0 +1,117 @@
+
+.cashier_register_order{
+  height: 120px;
+  width: auto;
+}
+
+
+.cashier_register_user {
+
+  width: auto;
+  display: grid;
+  width: 41vw;
+  position: absolute;
+  height: auto;
+  grid-template-columns: 1fr;
+
+}
+
+
+
+.cashier_register_products
+{
+  position:relative;
+  height:auto;
+  width: 41vw;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1vh;
+
+}
+.button_icon{
+  position: relative;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  left: 0vw;
+  padding: 0;
+  margin: auto;
+  background: white;
+  border: 3px solid #32C755;
+  border-radius: 5px;
+
+}
+
+.icon_check
+{
+  margin: auto;
+  display: flex;
+  height: auto;
+
+}
+.container_flex {
+  height: auto;
+  width: 37vw;
+  display: grid;
+  grid-template-columns: 80% 20%;
+
+}
+.cashier_item{
+  width: 100%;
+  height:auto;
+  margin: 0;
+  order:1;
+  text-align: left;
+  padding-left: 1vw;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3vmax;
+  line-height: 1.5vmax;
+  display: flex;
+  align-items: center;
+
+  color: rgba(0, 0, 0, 0.7);
+
+}
+.cashier_user{
+  width: 100%;
+  height:auto;
+  margin: 0;
+  order:3;
+  text-align: left;
+  padding-left: 1vw;
+
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1vmax;
+  line-height: 1.5vmax;
+  display: flex;
+  align-items: center;
+
+color: rgba(0, 0, 0, 0.7);
+}
+.cashier_price{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  order:2;
+  text-align: right;
+  padding-right: 1vw;
+  margin: auto;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+
+  display: grid;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vmax;
+  line-height: 2vmax;
+
+  align-items: center;
+
+  color: rgba(0, 0, 0, 0.7);
+}

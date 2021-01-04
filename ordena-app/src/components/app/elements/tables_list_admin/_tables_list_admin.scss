@@ -1,0 +1,49 @@
+.tables_list_admin
+ {
+  position: absolute;
+  bottom: 3vh;
+  width: 53vw;
+  height: 85vh;
+  left: 1.5vw;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  display: grid;
+  grid-gap: 3vh;
+  grid-template-columns: repeat(auto-fit,minmax(11vw, 1fr));
+  grid-template-rows: repeat(auto-fit,minmax(9vh, 1fr));
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background-color: white;
+}
+
+.order_tables_list_admin
+ {
+  position: relative;
+  margin: auto;
+  border: 0;
+  width: 70%;
+  height: auto;
+}
+
+.button_table_admin
+{
+  width: 80%;
+  height: auto;
+}
+.number_table_admin
+ {
+  position: absolute;
+  bottom: 0%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size:calc(100% + 3vmax);
+  line-height: 100%;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+}

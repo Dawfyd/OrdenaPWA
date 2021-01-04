@@ -5,14 +5,10 @@
   width: 84vw;
   height: 82vh;
   left: 8vw;
-
   display: grid;
   grid-gap: 10px;
-
   grid-template-columns: repeat(auto-fit,minmax(18.75vw, 1fr));
   grid-template-rows: repeat(auto-fit,minmax(5.2vh, 1fr));
-
-
   align-items: center;
 
 }

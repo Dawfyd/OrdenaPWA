@@ -31,13 +31,16 @@ const initialState = {
      {id: 1,
      state_table: 1,
      number: 1,
-     //id_service: 1,
+     id_service: 1,
+
      },
      {id: 2,
      state_table: 2,
      number: 2,
-     //id_service: 1,
+     id_service: 1,
+
      },
+
   ],
   data_order:[
      {
@@ -46,12 +49,21 @@ const initialState = {
      id_user: 1,
      total_price: 24500,
      state_paid: false,
+     cashier_display: false,
      },
      {id: 2,
      id_table: 2,
      id_user: 2,
      total_price: 56000,
      state_paid: false,
+     cashier_display: false,
+     },
+     {id: 3,
+     id_table: 1,
+     id_user: 1,
+     total_price: 20000,
+     state_paid: false,
+     cashier_display: false,
      },
   ],
   data_products:[
@@ -61,7 +73,9 @@ const initialState = {
     price_item: 22000,
     state_served: true,
     id_order:1,
+    id_table:1,
     state_button: false,
+    state_check: false,
     },
     {id: 2,
     product: 'Hamburguesa Americana',
@@ -69,7 +83,9 @@ const initialState = {
     price_item: 26000,
     state_served: true,
     id_order:2,
+    id_table:2,
     state_button: false,
+    state_check: false,
     },
     {id: 3,
     product: 'Adicion Tocineta',
@@ -77,23 +93,29 @@ const initialState = {
     price_item: 3000,
     state_served: true,
     id_order:2,
+    id_table:2,
     state_button: false,
+    state_check: false,
     },
     {id: 4,
     product: 'Coca Cola',
     unit_item: 2,
     price_item: 5000,
     state_served: true,
-    id_order:2,
+    id_order:3,
+    id_table:1,
     state_button: false,
+    state_check: false,
     },
     {id: 5,
     product: 'Perro Mexicano',
     unit_item: 1,
     price_item: 22000,
     state_served: false,
-    id_order:2,
+    id_order:3,
+    id_table:1,
     state_button: false,
+    state_check: false,
     },
     {id: 6,
     product: 'Manzana Postobon',
@@ -101,43 +123,52 @@ const initialState = {
     price_item: 2500,
     state_served: false,
     id_order:1,
+    id_table:1,
     state_button: false,
+    state_check: false,
     },
   ],
   data_user: [
     {id: 1,
     name: 'Jane Cooper',
     icon: jane,
+
     //id_table: 1,
     },
     {id: 2,
     name: 'David Hoyos',
     icon: "https://lh3.googleusercontent.com/a-/AOh14GhYx-n5PDPFGmemzdi06rBLEpQt1Rc7y0iI93ZwzA=s96-c",
+
     //id_table: 1,
     },
     {id: 3,
     name: 'Robert Fox',
     icon: robert,
+
     //id_table: 1,
     },
     {id: 4,
     name: 'Darrell Steward',
     icon: darrell,
+
     //id_table: 1,
     },
     {id: 5,
     name: 'Kathryn Murphy',
     icon: kathryn,
+
     //id_table: 1,
     },
     {id: 6,
     name: 'Leslie Alexander',
     icon: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+
     //id_table: 1,
     },
     {id: 7,
     name: 'Cameron Williamson',
     icon: cameron,
+
     //id_table: 1,
     },
   ],
@@ -215,6 +246,7 @@ const initialState = {
     photo: foto
     },
   ],
+  display_category: true,
   select_table:1,
   showMenu: true,
   showDish: [],
@@ -282,16 +314,17 @@ const initialState = {
 const reducer = (state = initialState, action) => {
 console.log(action)
 switch (action.type) {
+
   case 'ORDER_READY':
-    const index = state.data_products.findIndex(data_products => data_products.id === action.id_ready);
+    const index_order = state.data_products.findIndex(data_products => data_products.id === action.id_ready);
 
-    const newArray = [...state.data_products];
+    const newArray_order = [...state.data_products];
 
-    newArray[index].state_served = true
+    newArray_order[index_order].state_served = true
 
     return {
       ...state,
-      data_products: newArray,
+      data_products: newArray_order,
 
     }
   case 'CLICK_TABLE':
@@ -325,19 +358,75 @@ switch (action.type) {
       }
   case 'DISPLAY_BUTTON':
 
-      const index2 = state.data_products.findIndex(data_products => data_products.id === action.button_display);
+      const index_display = state.data_products.findIndex(data_products => data_products.id === action.button_display);
 
-      const newArray2 = [...state.data_products];
+      const newArray_display = [...state.data_products];
 
-      if (newArray2[index2].state_button === false) {
-        newArray2[index2].state_button = true
+      if (newArray_display[index_display].state_button === false) {
+        newArray_display[index_display].state_button = true
       } else {
-        newArray2[index2].state_button = false
+        newArray_display[index_display].state_button = false
       }
 
      return{
        ...state,
-       data_products: newArray2
+       data_products: newArray_display
+
+      }
+      case 'CLICK_ITEM':
+
+        const index_item = state.data_products.findIndex(data_products => data_products.id === action.check_id);
+
+        const newArray_item = [...state.data_products];
+
+        if (newArray_item[index_item].state_check === false) {
+        newArray_item[index_item].state_check = true
+        } else {
+        newArray_item[index_item].state_check = false
+        }
+
+         return{
+           ...state,
+           data_products: newArray_item,
+
+        }
+      case 'CLICK_USER_DETAILS':
+
+        const index_details = state.data_order.findIndex(data_order => data_order.id === action.user_id);
+
+        const newArray_details = [...state.data_order];
+
+        if (newArray_details[index_details].cashier_display === false) {
+                newArray_details[index_details].cashier_display = true
+        } else {
+                newArray_details[index_details].cashier_display = false
+        }
+
+         return{
+           ...state,
+           data_order: newArray_details,
+
+        }
+      case 'CLICK_REGISTER':
+        return {
+          ...state,
+          display_category: action.display_category,
+        }
+      case 'CLICK_ACCOUNT':
+        return {
+          ...state,
+          display_category: action.display_category,
+        }
+  case 'CLICK_PAID':
+      const index_paid = state.data_order.findIndex(data_order => data_order.id === action.user_paid);
+
+      const newArray_paid = [...state.data_order];
+
+      newArray_paid[index_paid].state_paid = true
+
+      return {
+          ...state,
+          data_order: newArray_paid,
 
       }
   default:

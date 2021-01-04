@@ -1,11 +1,14 @@
 @import 'elements/footer_nav_user/_nav_user.scss';
 @import 'elements/footer_nav_service/_nav_service.scss';
+@import 'elements/footer_nav_admin/_nav_admin.scss';
 @import 'elements/logo_ordena/_logo_ordena.scss';
 @import 'elements/table_num/_table_num.scss';
 @import 'elements/register/_register.scss';
 @import 'elements/pre_order/_pre_order.scss';
+@import 'elements/return/_return.scss';
 @import 'elements/login/_login.scss';
 @import 'elements/reader_qr/_reader_qr.scss';
+@import 'elements/reader_qr_service/_reader_qr_service.scss';
 @import 'elements/search_bar/_search.scss';
 @import 'elements/food_menu/menu_bar/_menu_bar.scss';
 @import 'elements/food_menu/list_menu/_list_menu.scss';
@@ -16,7 +19,11 @@
 @import 'elements/avatar_home/_avatar_home.scss';
 @import 'elements/account_list/_account_list.scss';
 @import 'elements/tables_list/_tables_list.scss';
+@import 'elements/tables_list_admin/_tables_list_admin.scss';
 @import 'elements/info_table_products/_info_table_products.scss';
+@import 'elements/cashier_info_tables/_cashier_info_tables.scss';
+@import 'elements/cashier_register/_cashier_register.scss';
+@import 'elements/cashier_account/_cashier_account.scss';
 @import 'pages_user/turn/_turn.scss';
 @import 'pages_user/register/_register.scss';
 @import 'pages_user/home/_home.scss';
@@ -36,3 +43,4 @@
 @import './pages_admin/account_admin/_account_admin.scss';
 @import './pages_admin/menu_admin/_menu_admin.scss';
 @import './pages_admin/menu_setup/_menu_setup.scss';
+@import './pages_admin/cashier_setup/_cashier_admin.scss';
