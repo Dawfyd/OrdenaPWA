@@ -58,9 +58,9 @@ const currentRoute= window.location.pathname;
 
         <div>
           <Link to={'/account'}>
-            <button className='button_account' id="B5">
+            <button className='button_account_nav' id="B5">
               <img src ={currentRoute === '/account' ? icon_account_active : icon_account}
-                   className="icon_account"
+                   className="icon_account_nav"
                    alt="icon_account" />
             </button>
           </Link>

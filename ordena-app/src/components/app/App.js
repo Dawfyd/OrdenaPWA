@@ -28,19 +28,19 @@ const App = () => (
 
       <div>
           <Switch>
-            <Route path= '/turn' component={turn}/>
-            <Route path= '/register' component={register}/>
-            <Route path= '/home' component={home}/>
-            <Route path= '/menu' component={menu}/>
-            <Route path= '/chat' component={chat}/>
-            <Route path= '/payment' component={payment}/>
+            <Route path= '/turn' component={turn} exact/>
+            <Route path= '/register' component={register} exact/>
+            <Route path= '/home' component={home} exact/>
+            <Route path= '/menu' component={menu} exact/>
+            <Route path= '/chat' component={chat} exact/>
+            <Route path= '/payment' component={payment} exact/>
             <Route path= '/account' component={account}/>
 
             <Route path= '/service/tables' component={tables} exact/>
-            <Route path= '/service/info_table' component={info_table}/>
-            <Route path= '/service/chat_service' component={chat_service}/>
+            <Route path= '/service/info_table' component={info_table} exact/>
+            <Route path= '/service/chat_service' component={chat_service} exact/>
             <Route path= '/service/code_qr' component={code_qr}/>
-            <Route path= '/service/account_service' component={account_service}/>
+            <Route path= '/service/account_service' component={account_service} exact/>
 
             <Route path= '/restaurant/tables_admin' component={tables_admin}/>
             <Route path= '/restaurant/info_table_admin' component={info_table_admin}/>

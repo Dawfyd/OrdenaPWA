@@ -19,32 +19,14 @@ const Account = () => (
       </div>
 
       <div>
-        <Link to={'/account/payment-methods'}>
-          <p className='account_title'>Formas de Pago</p>
-        </Link>
-      </div>
-
-      <div>
-        <Link to={'/account/discounts'}>
-          <p className='account_title'>Descuentos</p>
-        </Link>
-      </div>
-
-      <div>
-        <Link to={'/account/setting'}>
-          <p className='account_title'>Configuración</p>
-        </Link>
-      </div>
-
-      <div>
-        <Link to={'/account/help'}>
-          <p className='account_title'>Ayuda</p>
-        </Link>
-      </div>
-
-      <div>
         <Link to={'/account/suggestions'}>
           <p className='account_title'>Sugerencias</p>
+        </Link>
+      </div>
+
+      <div>
+        <Link to={'/service/code_qr'}>
+          <p className='account_title'>Servicio</p>
         </Link>
       </div>
 
