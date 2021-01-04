@@ -6,9 +6,10 @@ import Form_2 from '../form_2/form_2.jsx';
 import Form_3 from '../form_3/form_3.jsx';
 
 
-function Forms_food({id_food}){
+function Forms_food({id_food, showCart, show_food}){
 
-  return(
+  return(    
+    show_food.map(b => (
       <div>
         <div>
           <Form_1 />
@@ -22,20 +23,20 @@ function Forms_food({id_food}){
         <div>
           <Form_0 />
         </div>
-
         <div className='buttons_order'>
           <div className='button_space'>
-            <button className='button_back'>
+            <button className='button_back' >
               Volver
             </button>
           </div>
           <div className='button_space'>
-            <button className='button_request'>
+            <button className='button_request' onClick={() => showCart(b)}>
               Añadir
             </button>
           </div>
         </div>
       </div>
+      ))
   )
 }
 
@@ -44,10 +45,19 @@ const mapStateToProps = state => ({
   id_food: state.id_food,
   opt_food: state.opt_food,
   adds: state.adds,
+  show_food: state.show_food,
+
 })
 
 const mapDispatchToProps = dispatch => ({
-
+  showCart(b) {
+    dispatch({
+      type: "ADD_FOOD",
+      show_cart: true,
+      count_resume: 1,
+      price_resume: b.price,
+    })
+  },
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Forms_food);

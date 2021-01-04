@@ -17,17 +17,20 @@
   display: block;
   bottom: 0px;
 }
-.resume_cart
-{
-  position: fixed;
-  display: block;
-  bottom: 0px;
-}
 .food_menu {
   position: absolute;
   display: block;
   top: 6vh;
   width: 100vw;
+}
+.order
+{
+  background-color: white;
+  overflow: scroll;
+  flex-grow: 1;
+  position: fixed;
+  bottom: 55px;
+  height: 72vh;
 }
 .page_menu
 {
@@ -41,4 +44,21 @@
   top: 0px;
   grid-template-rows: 12fr 1fr;
   grid-template-columns: 1fr;
+}
+.page_order{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 12fr;
+}
+.resume_drop
+{
+    position: fixed;
+    display: grid;
+    grid-template-rows: 1fr;
+    display: block;
+}
+.resume_cart
+{
+  position: fixed;
+  display: block;
 }

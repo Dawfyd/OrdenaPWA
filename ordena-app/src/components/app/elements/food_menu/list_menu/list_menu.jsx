@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-function TargetList({temp_category, categorys_menu,temp_menu, id_category, data_menu_f,data_menu, showDish, posts, showCart}) {
+function TargetList({temp_category, categorys_menu,temp_menu, id_category, data_menu_f,data_menu, showDish, posts}) {
   if( id_category === 0  ){
   return(
     <div>{
@@ -27,17 +27,17 @@ function TargetList({temp_category, categorys_menu,temp_menu, id_category, data_
             <div className='text'>
               <div>
                 <div className='title'>
-                  {d.text}
+                  {d.product}
                 </div>
                 <div className='description'>
                   {d.msg}
                 </div>
                 <div className="cost">
-                  ${d.price} COP
+                  ${formatNumber(d.price)} COP
                 </div>
               </div>
               <div className="plus">
-                <button className='button_plus' onClick={() => showCart(d)}>
+                <button className='button_plus'>
                   +
                 </button>
               </div>
@@ -69,17 +69,17 @@ function TargetList({temp_category, categorys_menu,temp_menu, id_category, data_
             <div className='text'>
               <div>
                 <div className='title'>
-                  {d.text}
+                  {d.product}
                 </div>
                 <div className='description'>
                   {d.msg}
                 </div>
                 <div className="cost">
-                  ${d.price} COP
+                  ${formatNumber(d.price)} COP
                 </div>
               </div>
               <div className="plus">
-                <button className='button_plus'  onClick={() => showCart(d)}>
+                <button className='button_plus'>
                   +
                 </button>
 
@@ -111,6 +111,10 @@ const mapStateToProps = state => ({
   temp_category: state.temp_category,
 })
 
+function formatNumber(price_item){
+  return new Intl.NumberFormat("de-DE").format(price_item)
+}
+
 const mapDispatchToProps = dispatch => ({
   showDish(d) {
     dispatch({
@@ -119,14 +123,6 @@ const mapDispatchToProps = dispatch => ({
       id_food: d.id,
     })
   },
-  showCart(d) {
-    dispatch({
-      type: "ADD_FOOD",
-      show_cart: true,
-      count_resume: 1,
-      price_resume: d.price,
-    })
-  }
 })
 
 

@@ -1,12 +1,102 @@
-.info_table {
+.check_pending_order
+{
+  width: 5vw;
+  height: 3vh;
+}
+.container_product
+{
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.container_product li
+{
+  position: relative;
+  display: flex;
+  height: auto;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4.3vw;
+  line-height: 3vh;
+  left: 3vw;
+  margin-bottom: auto;
+  margin-top: auto;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+}
+.container_grid_info
+{
+  position: absolute;
+  width: 98vw;
+  left: 1vw;
+  top: 6vh;
+  height: 86vh;
+}
+.container_grid_table
+{
+  position: absolute;
+  display: flex;
+  grid-gap: 1px;
+  width: 98vw;
+  left: 0vw;
+  top: 9.5vh;
+  height: auto;
+  flex-wrap: wrap;
+}
+.collapsible_info {
+  background-color: #FAFAFA;
+  cursor: pointer;
+  padding: 0px;
+  width: 98vw;
+  outline: none;
+  height: auto;
+  display: flex;
+  border: 0;
+  border-radius: 3px 3px 0px 0px;
+}
+.content_collapsible {
 
+  padding: 0;
+  margin: 0;
+  display: none;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  width: 98vw;
+  top: 1px;
+  border: 1px solid #F5F5F5;
+  border-radius: 0px 0px 3px 3px;
+}
+.icon_collapsible
+{
+  position: relative;
+  display: block;
+  height: auto;
+  font-size: 2.2vmax;
+  margin: 0;
+  width: 3vw;
+  left: 1vw;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.info_table {
   position: absolute;
   bottom: 0vh;
   width: 100vw;
   height: 92vh;
   left: 0vw;
 }
-
+.name_item
+{
+  color: rgba(0, 0, 0, 0.7);
+  justify-content: flex-start;
+  width:40vw;
+}
 .number_info_table
 {
   position: absolute;
@@ -21,39 +111,6 @@
   margin: 0;
   color: rgba(0, 0, 0, 0.7);
 }
-
-.separator_info_table
-{
-  position: absolute;
-  width: 100vw;
-  margin: 0;
-  top: 6vh;
-  border: 1px solid rgba(200, 201, 199, 1)
-
-}
-.container_grid_info
-{
-  position: absolute;
-  width: 94vw;
-  left: 3vw;
-  top: 6vh;
-  height: 86vh;
-
-}
-.container_grid_table
-{
-  position: absolute;
-  display: grid;
-  grid-gap: 1px;
-  width: 94vw;
-  left: 0vw;
-  top: 9.5vh;
-  height: 86.5vh;
-  grid-template-columns: 75% 25%;
-  grid-template-rows: repeat(auto-fit,minmax(auto, 6.25vh));
-
-}
-
 .product_info
 {
   position: absolute;
@@ -69,7 +126,7 @@
   align-items: center;
   height: 9.5vh;
   width: 47vw;
-  left: 0;
+  left: 2vw;
 }
 .price_info
 {
@@ -86,44 +143,16 @@
   align-items: center;
   height: 9.5vh;
   width: 47vw;
-  right: 0;
+  right: 2vw;
 }
-
-.container_product{
-  display: flex;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  padding: 0;
-  margin: 0;
-
-  height: 40px;
-  width: 100%;
-}
-.container_product li {
-  position: relative;
-  display: grid;
-  height: 6.25vh;
-  font-family: Quicksand;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 4.4vw;
-  line-height: 3vh;
-  display: flex;
-  align-items: center;
-
-}
-
-.unit_item{
-  color: rgba(0, 0, 0, 0.7);
-  justify-content: flex-start;
-  width: 75%;
-}
-.price_item{
+.price_item
+{
   color: rgba(0, 0, 0, 0.7);
   justify-content: flex-end;
-  width: 25%;
+  width: 25vw;
 }
-.pending_order {
+.pending_order
+{
   font-family: Quicksand;
   font-style: normal;
   font-weight: 600;
@@ -135,20 +164,9 @@
   align-items: center;
   height: 9.5vh;
   color: #9B26B6;
-
-
+  position: relative;
+  left: 2vw;
 }
-.unit_item_pending{
-  justify-content: flex-start;
-  width: 75%;
-  color: #9B26B6;
-}
-.check_pending_order{
-  width: 5vw;
-  height: 3vh;
-
-}
-
 .price_total
 {
   font-family: Quicksand;
@@ -161,6 +179,8 @@
   justify-content: flex-end;
   align-items: center;
   height: 9.5vh;
+  width: 25.7vw;
+  padding-right: 2vw;
 }
 .product_total
 {
@@ -174,4 +194,26 @@
   justify-content: flex-start;
   align-items: center;
   height: 9.5vh;
+  width: 72vw;
+  padding-left: 2vw;
+}
+.separator_info_table
+{
+  position: absolute;
+  width: 100vw;
+  margin: 0;
+  top: 6vh;
+  border: 1px solid rgba(200, 201, 199, 1);
+}
+.unit_item
+{
+  color: rgba(0, 0, 0, 0.7);
+  justify-content: flex-end;
+  width: 20vw;
+}
+.unit_item_pending
+{
+  justify-content: flex-start;
+  width: 75%;
+  color: #9B26B6;
 }

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import {Image} from 'antd';
-import Forms_food from '../forms_menu/forms_menu.jsx'
+import FormsFood from '../forms_menu/forms_menu.jsx'
 
 const Page_food= ({foto, show_food}) => (
 show_food.map(d => (
@@ -15,7 +15,7 @@ show_food.map(d => (
       </div>
       <div className='text_food'>
         <div className='title_food'>
-          {d.text}
+          {d.product}
         </div>
         <div className='desc_food'>
           {d.msg}
@@ -26,7 +26,7 @@ show_food.map(d => (
       </div>
       <hr className='line_food'/>
       <div className='form_food'>
-        <Forms_food />
+        <FormsFood />
       </div>
     </div>
   </section>
