@@ -4,7 +4,7 @@ import LogoOrdena from "../../elements/logo_ordena/logo";
 import NavUser from "../../elements/footer_nav_user/nav_user";
 import Search from "../../elements/search_bar/search.js";
 import FoodMenu from "../../elements/food_menu/menu_bar/menu_bar.jsx";
-import FloatCart from "../../elements/food_menu/float_cart/float_cart.jsx";
+import Float_cart from "../../elements/food_menu/float_cart/float_cart.jsx";
 import OrderPage from "../../elements/food_menu/order_page/order_page.jsx";
 import "../../styles.scss";
 
@@ -36,7 +36,7 @@ function page({ show_cart, showOrder, show_Order, show_menu }) {
                   : { bottom: "0vh", display: "flex" }
               }
             >
-              <FloatCart />
+              <Float_cart />
             </div>
             <div
               className="order"

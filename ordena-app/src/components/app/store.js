@@ -184,11 +184,11 @@ const initialState = {
       id_fav: true,
       id_desc: true,
       state_button: false,
-      unit_item: 0,
+      unit_item: 1,
       product: "Hamburguesa Doble",
       msg: "Hamburguesa doble carne angus 400g, salsa de la casa",
-      price: 18500,
-      price_d: 17000,
+      price: 13500,
+      price_d: 12000,
       alt: "Foto de una Hamburguesa con queso",
       photo: foto_1,
     },
@@ -198,11 +198,11 @@ const initialState = {
       id_fav: false,
       id_desc: false,
       state_button: false,
-      unit_item: 0,
+      unit_item: 1,
       product: "Papas Fritas",
       msg:
         "Deliciosas papas bien crujientes, fritas en aceite de olvia extra virgen",
-      price: 20000,
+      price: 7000,
       alt: "Foto de Papas fritas con paprica y sal",
       photo: foto,
     },
@@ -212,10 +212,10 @@ const initialState = {
       id_fav: true,
       id_desc: false,
       state_button: false,
-      unit_item: 0,
+      unit_item: 1,
       product: "Dedos de queso",
       msg: "Exquisitos dedos de queso al horno, con especias finas",
-      price: 30000,
+      price: 8000,
       alt: "Foto de 4 dedos de queso en una canastica",
       photo: foto,
     },
@@ -225,10 +225,10 @@ const initialState = {
       id_fav: false,
       id_desc: false,
       state_button: false,
-      unit_item: 0,
+      unit_item: 1,
       product: "Empanadas Vallunas",
       msg: "Deliciosas empanadas fritas en aceite de palma, con aji al gusto",
-      price: 17000,
+      price: 9000,
       alt: "Foto de 4 empanadas en una canasta",
       photo: foto,
     },
@@ -238,11 +238,11 @@ const initialState = {
       id_fav: false,
       id_desc: false,
       state_button: false,
-      unit_item: 0,
+      unit_item: 1,
       product: "Bandeja Paisa",
       msg:
         "Deliciosa bandeja paisa, con frijoles, chorizo, huevo frito, arroz, chicharron y aguacate",
-      price: 12000,
+      price: 7000,
       alt: "Foto de 4 empanadas en una canasta",
       photo: foto,
     },
@@ -252,7 +252,7 @@ const initialState = {
       id_fav: false,
       id_desc: false,
       state_button: false,
-      unit_item: 0,
+      unit_item: 1,
       product: "Cerveza ClubColombia",
       msg: "Cerveza nacional, con 3 sabores distintos; Roja, Dorada y Negra",
       price: 7000,
@@ -265,7 +265,7 @@ const initialState = {
       id_fav: false,
       id_desc: false,
       state_button: false,
-      unit_item: 0,
+      unit_item: 1,
       product: "Jugo de Naranja",
       msg: "Jugo natural recien exprimido con 1 parte de agua y 2 de fruta.",
       price: 9000,
@@ -315,21 +315,12 @@ const reducer = (state = initialState, action) => {
         ...state,
         showOrder: state.showOrder === true ? false : true,
       };
-    case "SHOW_MENU":
-      return {
-        ...state,
-        showOrder: state.showOrder === true ? false : true,
-      };
-
     case "ORDER_READY":
       const index_order = state.data_products.findIndex(
         (data_products) => data_products.id === action.id_ready
       );
-
       const newArray_order = [...state.data_products];
-
       newArray_order[index_order].state_served = true;
-
       return {
         ...state,
         data_products: newArray_order,
@@ -338,6 +329,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         select_table: action.select_table,
+      };
+    case "BACK_MENU":
+      return {
+        ...state,
+        showMenu: action.showMenu,
       };
     case "SHOW_DISH":
       return {
@@ -355,14 +351,101 @@ const reducer = (state = initialState, action) => {
         ),
         showMenu: action.showMenu,
       };
+    case "LESS_FOOD":
+      const newArray6 = [...state.orderList];
+      const index4 = newArray6.findIndex(
+        (newArray6) => newArray6.product === action.product_resume
+      );
+      console.log(index4);
+      if (newArray6.length > 1) {
+        if (newArray6[index4].unit_item > 1) {
+          newArray6[index4].unit_item = newArray6[index4].unit_item - 1;
+          return {
+            ...state,
+            orderList: newArray6,
+            count_resume: state.count_resume - action.count_resume,
+            price_resume: state.price_resume - action.price_resume,
+          };
+        } else {
+          newArray6.splice(index4, 1);
+          return {
+            ...state,
+            orderList: newArray6,
+            count_resume: state.count_resume - action.count_resume,
+            price_resume: state.price_resume - action.price_resume,
+          };
+        }
+      } else {
+        if (newArray6[index4].unit_item > 1) {
+          newArray6[index4].unit_item = newArray6[index4].unit_item - 1;
+          return {
+            ...state,
+            orderList: newArray6,
+            count_resume: state.count_resume - action.count_resume,
+            price_resume: state.price_resume - action.price_resume,
+          };
+        } else {
+          console.log(newArray6);
+          newArray6.splice(index4, 1);
+          console.log(newArray6);
+          return {
+            ...state,
+            orderList: newArray6,
+            showOrder: action.showOrder,
+            show_cart: action.show_cart,
+            count_resume: state.count_resume - action.count_resume,
+            price_resume: state.price_resume - action.price_resume,
+          };
+        }
+      }
     case "ADD_FOOD":
-      return {
-        ...state,
-        show_cart: action.show_cart,
-        orderList: state.orderList.concat(state.show_food),
-        count_resume: state.count_resume + action.count_resume,
-        price_resume: state.price_resume + action.price_resume,
-      };
+      const newArray4 = [...state.show_food];
+      const newArray5 = [...state.orderList];
+      const index3 = newArray5.findIndex(
+        (newArray5) => newArray5.product === action.product_resume
+      );
+      console.log(newArray5, index3, action.product_resume);
+      if (newArray5.length > 0) {
+        if (index3 === -1) {
+          return {
+            ...state,
+            show_cart: action.show_cart,
+            product_resume: action.product_resume,
+            orderList: state.orderList.concat(newArray4),
+            count_resume: state.count_resume + action.count_resume,
+            price_resume: state.price_resume + action.price_resume,
+          };
+        } else {
+          const product_var = newArray5[index3].product;
+          if (product_var === action.product_resume) {
+            newArray5[index3].unit_item = newArray5[index3].unit_item + 1;
+            return {
+              ...state,
+              orderList: newArray5,
+              count_resume: state.count_resume + action.count_resume,
+              price_resume: state.price_resume + action.price_resume,
+            };
+          } else {
+            return {
+              ...state,
+              show_cart: action.show_cart,
+              product_resume: action.product_resume,
+              orderList: state.orderList.concat(newArray4),
+              count_resume: state.count_resume + action.count_resume,
+              price_resume: state.price_resume + action.price_resume,
+            };
+          }
+        }
+      } else {
+        return {
+          ...state,
+          show_cart: action.show_cart,
+          product_resume: action.product_resume,
+          orderList: state.orderList.concat(newArray4),
+          count_resume: state.count_resume + action.count_resume,
+          price_resume: state.price_resume + action.price_resume,
+        };
+      }
     case "DISPLAY_BUTTON":
       const index_display = state.data_products.findIndex(
         (data_products) => data_products.id === action.button_display

@@ -1,24 +1,21 @@
-.button_order
-{
+.button_order {
   width: 40vw;
   height: 6vh;
   color: white;
-  background-color: #9B26B6;
+  background-color: #9b26b6;
   border: 0;
   border-radius: 10px;
   box-shadow: 3px 2px 5px black;
   font-size: 3.5vh;
 }
-.container_product_order
-{
+.container_product_order {
   display: flex;
   flex-direction: row;
   margin: 0;
   width: 100%;
   flex-wrap: wrap;
 }
-.container_product_order li
-{
+.container_product_order li {
   position: relative;
   display: flex;
   height: auto;
@@ -28,11 +25,9 @@
   left: 3vw;
   margin-bottom: auto;
   margin-top: auto;
-
 }
-.collapsible_info_order
-{
-  background-color: #FAFAFA;
+.collapsible_info_order {
+  background-color: #fafafa;
   cursor: pointer;
   padding: 0px;
   width: 99.5vw;
@@ -41,76 +36,68 @@
   display: flex;
   border: 0;
   border-radius: 3px 3px 0px 0px;
-
 }
-.div_button_order
-{
+.div_button_order {
   position: relative;
   align-content: center;
   margin: auto;
   padding-top: 5vh;
   padding-bottom: 5vh;
 }
-.line_order{
+.line_order {
   border: 1;
-  border-color: rgba(0,0,0,0.15);
-  top:0;
+  border-color: rgba(0, 0, 0, 0.15);
+  top: 0;
 }
-.less_item
-{
-  background-color: rgba(0,0,0,0);
-  color: #9B26B6;
+.less_item {
+  background-color: rgba(0, 0, 0, 0);
+  color: #9b26b6;
   border: 0;
   font-weight: bold;
   font-size: 3.5vh;
   width: auto;
 }
-.more_item
-{
-  background-color: rgba(0,0,0,0);
-  color: #9B26B6;
+.more_item {
+  background-color: rgba(0, 0, 0, 0);
+  color: #9b26b6;
   border: 0;
   font-weight: 400;
   font-size: 3.5vh;
   width: auto;
 }
-.price_order{
-
+.price_order {
 }
-.page_order_1
-{
+.page_order_1 {
   background-color: white;
   display: grid;
   grid-template-columns: 1fr;
 }
-.title_order{
+.title_order {
   font-weight: bold;
-  color: rgba(0,0,0,0.6);
+  color: rgba(0, 0, 0, 0.6);
   font-size: 2.5vh;
   padding-left: 2vw;
   text-align: left;
   margin: 0;
   border: 0;
 }
-.total_order{
+.total_order {
   padding-left: 3vw;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr;
   font-weight: bold;
-  color: rgba(0,0,0,0.6);
+  color: rgba(0, 0, 0, 0.6);
   font-size: 2.5vh;
   text-align: left;
 }
-.unit_item_order
-{
+.unit_item_order {
   color: rgba(0, 0, 0, 0.7);
   justify-content: flex-end;
   width: 25vw;
   padding-left: 5vw;
 }
-.unit_order
-{
+.unit_order {
   margin: auto;
   padding: 1vh;
   width: 10vw;

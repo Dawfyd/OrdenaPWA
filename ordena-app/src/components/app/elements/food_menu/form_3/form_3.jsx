@@ -16,7 +16,7 @@ function Form_3({alt_food, id_food, opt_food, adds}){
     adds.filter(b => b.id_add === id_food)
       .map(j => (
 
-      <div className='alt_foodi'>
+      <div className='alt_foodi' key={j.id}>
         <div className='alt_text'>
           {j.name}
         </div>

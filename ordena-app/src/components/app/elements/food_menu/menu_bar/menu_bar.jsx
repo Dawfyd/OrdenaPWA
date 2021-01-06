@@ -15,6 +15,7 @@ function FoodMenu({posts, showMenu, id_category, selectCategory}){
           {[...Array.from({ length: posts.length }, (v,i) => i)].map(i => (
 
               <TabPane tab={<p
+                              key={i.id}
                               id='text_menu'
                               onClick={() => selectCategory(i)}>
                               {posts[i].text}

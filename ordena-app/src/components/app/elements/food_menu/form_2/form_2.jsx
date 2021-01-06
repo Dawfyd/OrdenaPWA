@@ -16,7 +16,7 @@ function Form_2({alt_food, id_food, opt_food, adds}){
     {
     alt_food.filter(b => b.id_alt === id_food)
       .map(j => (
-        <div className='alt_foodi'>
+        <div className='alt_foodi' key={j.id}>
           <div className='alt_text'>
             <label for='item_1'>
             {j.name}
