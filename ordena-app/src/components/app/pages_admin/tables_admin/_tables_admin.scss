@@ -1,14 +1,10 @@
-.footer_tables_admin
-{
-
+.footer_tables_admin {
   position: fixed;
-  display:block;
+  display: block;
   bottom: 0px;
 }
 
-.page_tables_admin
-{
-
+.page_tables_admin {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -18,12 +14,9 @@
   width: 100vw;
   left: 0px;
   top: 0px;
-
 }
 
-.container_tables_list_admin
-{
-
+.container_tables_list_admin {
   display: block;
   position: absolute;
   height: 87vh;

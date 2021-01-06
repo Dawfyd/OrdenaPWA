@@ -1,20 +1,16 @@
-.header_register
-{
-  display:block;
+.header_register {
+  display: block;
   position: relative;
   top: 0.5vh;
 }
 
-
-.footer_register
-{
+.footer_register {
   position: fixed;
-  display:none;
+  display: none;
   bottom: 0px;
 }
 
-.page_register
-{
+.page_register {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -29,9 +25,7 @@
   grid-template-columns: 1fr;
 }
 
-.login_register
-{
+.login_register {
   position: absolute;
   top: 3vh;
-
 }

@@ -1,5 +1,4 @@
-.info_cashier
-{
+.info_cashier {
   position: absolute;
   top: 0vh;
   width: 45vw;
@@ -7,19 +6,17 @@
   left: 55vw;
 }
 
-.button_cashier
-{
+.button_cashier {
   position: absolute;
   width: 12vw;
   height: 6vh;
   right: 1vw;
   top: 1vw;
-  background: #9B26B6;
+  background: #9b26b6;
   border-radius: 1vmax;
-  border: 1px solid #9B26B6;
+  border: 1px solid #9b26b6;
 }
-.button_register
-{
+.button_register {
   position: absolute;
   width: 19vw;
   height: 10vh;
@@ -32,13 +29,12 @@
   position: absolute;
   width: 19vw;
   height: 10vh;
-  right:  2vw;
+  right: 2vw;
   top: 2vh;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 1.4vmax;
 }
-.text_cashier
-{
+.text_cashier {
   font-family: Quicksand;
   font-style: normal;
   font-weight: bold;
@@ -47,11 +43,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: auto;
 }
-.text_register
-{
+.text_register {
   font-family: Quicksand;
   font-style: normal;
   font-weight: bold;
@@ -60,11 +55,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: auto;
 }
-.text_account
-{
+.text_account {
   font-family: Quicksand;
   font-style: normal;
   font-weight: bold;
@@ -73,12 +67,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: auto;
-
 }
-.container_cashier_tables
-{
+.container_cashier_tables {
   position: absolute;
   width: 44vw;
   right: 1.5vw;
@@ -90,11 +82,11 @@
   display: grid;
   grid-gap: 3vh;
 }
-.cashier_component
-{
+.cashier_component {
   position: absolute;
   width: 44vw;
   height: 72vh;
   padding: 1.5vmax;
   bottom: 0vh;
+  overflow: auto;
 }

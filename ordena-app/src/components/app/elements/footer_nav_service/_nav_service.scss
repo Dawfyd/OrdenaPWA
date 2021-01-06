@@ -1,16 +1,13 @@
-.separator_nav_service
-{
+.separator_nav_service {
   position: absolute;
   width: 100vw;
   size: 1px;
   bottom: 8vh;
   background: rgba(0, 0, 0, 0.25);
   margin: 0;
-
 }
 
-.nav_service
-{
+.nav_service {
   position: absolute;
   bottom: 0;
   display: grid;
@@ -18,8 +15,7 @@
   width: 100vw;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  background: #FFFFFF;
-
+  background: #ffffff;
 }
 
 @mixin button {
@@ -27,61 +23,51 @@
   width: 20vw;
   height: 8vh;
   border: 0;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 @mixin icon {
   background-repeat: no-repeat;
   background-position: center center;
   height: 3.84vh;
-  width:  6.66vw;
+  width: 6.66vw;
 }
-.button_tables
-{
+.button_tables {
   @include button;
 }
 
-.icon_tables
-{
+.icon_tables {
   @include icon;
 }
 
-.button_info_table
-{
+.button_info_table {
   @include button;
 }
 
-.icon_info_table
-{
+.icon_info_table {
   @include icon;
 }
 
-.button_chat_service
-{
+.button_chat_service {
   @include button;
 }
 
-.icon_chat_service
-{
+.icon_chat_service {
   @include icon;
 }
 
-.button_code_qr
-{
+.button_code_qr {
   @include button;
 }
 
-.icon_code_qr
-{
+.icon_code_qr {
   @include icon;
 }
 
-.button_account_service
-{
+.button_account_service {
   @include button;
 }
 
-.icon_account_service
-{
+.icon_account_service {
   @include icon;
 }

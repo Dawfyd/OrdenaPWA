@@ -1,20 +1,16 @@
-.header_chat
-{
-  display:block;
+.header_chat {
+  display: block;
   position: relative;
   top: 0.5vh;
 }
 
-
-.footer_chat
-{
+.footer_chat {
   position: fixed;
-  display:block;
+  display: block;
   bottom: 0px;
 }
 
-.page_chat
-{
+.page_chat {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -29,8 +25,7 @@
   grid-template-rows: 12fr 1fr;
   grid-template-columns: 1fr;
 }
-.container_chat
-{
+.container_chat {
   position: absolute;
   height: 82.6vh;
   width: 100vw;

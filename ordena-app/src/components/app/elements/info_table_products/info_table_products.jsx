@@ -1,135 +1,168 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import {RightOutlined,DownOutlined} from '@ant-design/icons';
+import React from "react";
+import { connect } from "react-redux";
+import { RightOutlined, DownOutlined } from "@ant-design/icons";
 
-function InfoTable({data_tables,data_order,data_products,order_ready,select_table,display_button}) {
+function InfoTable({
+  data_tables,
+  data_order,
+  data_products,
+  order_ready,
+  select_table,
+  display_button,
+}) {
+  return (
+    <div className="info_table">
+      {data_tables
+        .filter((a) => a.id === select_table)
+        .map((d) => (
+          <div key={d.id}>
+            <p className="number_info_table">Mesa {d.number}</p>
+            <hr className="separator_info_table" />
 
-    return (
+            <p className="product_info">Productos</p>
+            <p className="price_info">Precio</p>
 
-    <div className='info_table'>
-    {
-      data_tables.filter(a => a.id === select_table)
-                 .map(d => (
-      <div key= {d.id}>
-        <p className='number_info_table'>Mesa {d.number}</p>
-        <hr className='separator_info_table'/>
-
-        <p className='product_info'>Productos</p>
-        <p className='price_info'>Precio</p>
-
-        <div className= 'container_grid_info'>
-
-          {
-            data_order.filter(b => b.id_table === d.id)
-                      .map(o => (
-            <div className= 'container_grid_table' key={o.id}>
-
-                {
-                  data_products.filter(e => e.state_served === true).filter(e => e.id_table === d.id)
-                               .map(p => (
-
-                  <div className='container_product' key={p.id}>
-
-                    <button type="button"
+            <div className="container_grid_info">
+              {data_order
+                .filter((b) => b.id_table === d.id)
+                .map((o) => (
+                  <div className="container_grid_table" key={o.id}>
+                    {data_products
+                      .filter((e) => e.state_served === true)
+                      .filter((e) => e.id_table === d.id)
+                      .map((p) => (
+                        <div className="container_product" key={p.id}>
+                          <button
+                            type="button"
                             className="collapsible_info"
-                            onClick={()=>display_button(p)}>
-                            <p  className='icon_collapsible'>
-                                {p.state_button === false ? <RightOutlined /> :
-                                                            <DownOutlined />}</p>
-                      <li className ='unit_item'>{p.unit_item} ud - {p.product}</li>
-                      <li className ='price_item'>${formatNumber(p.price_item)}</li>
-                    </button>
-                    <div className="content_collapsible"
-                         style={p.state_button === false ? {display: 'none'} :
-                                                           {display: 'block'}}>
-                      <p>hola1</p>
+                            onClick={() => display_button(p)}
+                          >
+                            <p className="icon_collapsible">
+                              {p.state_button === false ? (
+                                <RightOutlined />
+                              ) : (
+                                <DownOutlined />
+                              )}
+                            </p>
+                            <li className="unit_item">
+                              {p.unit_item} ud - {p.product}
+                            </li>
+                            <li className="price_item">
+                              ${formatNumber(p.price_item)}
+                            </li>
+                          </button>
+                          <div
+                            className="content_collapsible"
+                            style={
+                              p.state_button === false
+                                ? { display: "none" }
+                                : { display: "block" }
+                            }
+                          >
+                            <p>hola1</p>
+                          </div>
+                        </div>
+                      ))}
+
+                    <p
+                      className="pending_order"
+                      style={
+                        data_products
+                          .filter((e) => e.state_served === false)
+                          .filter((e) => e.id_table === d.id).length === 0
+                          ? { display: "none" }
+                          : { display: "flex" }
+                      }
+                    >
+                      Pedido Pendiente
+                    </p>
+
+                    {data_products
+                      .filter((f) => f.state_served === false)
+                      .filter((e) => e.id_table === d.id)
+                      .map((p) => (
+                        <div className="container_product" key={p.id}>
+                          <button
+                            type="button"
+                            className="collapsible_info"
+                            onClick={() => display_button(p)}
+                          >
+                            <p className="icon_collapsible">
+                              {p.state_button === false ? (
+                                <RightOutlined />
+                              ) : (
+                                <DownOutlined />
+                              )}
+                            </p>
+                            <li className="unit_item">
+                              {p.unit_item} ud - {p.product}
+                            </li>
+                            <li className="price_item">
+                              <input
+                                className="check_pending_order"
+                                onClick={() => order_ready(p)}
+                                type="checkbox"
+                                value=""
+                              />
+                            </li>
+                          </button>
+                          <div
+                            className="content_collapsible"
+                            style={
+                              p.state_button === false
+                                ? { display: "none" }
+                                : { display: "block" }
+                            }
+                          >
+                            <p>Hola</p>
+                          </div>
+                        </div>
+                      ))}
+                    <div className="total_table_div">
+                      <p className="product_total">Total Mesa {d.number}</p>
+                      <p className="price_total">
+                        $
+                        {formatNumber(
+                          data_order
+                            .filter((b) => b.id_table === d.id)
+                            .reduce(
+                              (accumulator, b) => accumulator + b.total_price,
+                              0
+                            )
+                        )}
+                      </p>
                     </div>
                   </div>
-                  ))
-
-                }
-
-                <p className='pending_order'
-                   style={data_products.filter(e => e.state_served === false).filter(e => e.id_table === d.id).length === 0
-                                                                      ? {display: 'none'} :
-                                                                        {display: 'flex'}}>
-                   Pedido Pendiente</p>
-
-                {
-                  data_products.filter(f => f.state_served === false).filter(e => e.id_table === d.id)
-                               .map(p => (
-
-                  <div className='container_product' key={p.id}>
-
-                    <button type="button"
-                            className="collapsible_info"
-                            onClick={()=>display_button(p)}>
-                    <p className='icon_collapsible'>
-                       {p.state_button === false ? <RightOutlined /> :
-                                                   <DownOutlined />}</p>
-                    <li className ='unit_item'>{p.unit_item} ud - {p.product}</li>
-                    <li className ='price_item'>
-                      <input
-                          className='check_pending_order'
-                          onClick={()=>order_ready(p)}
-                          type="checkbox"
-                          value=''/>
-                    </li>
-                    </button>
-                    <div className="content_collapsible"
-                         style={p.state_button === false ? {display: 'none'} :
-                                                           {display: 'block'}}>
-                      <p>Hola</p>
-                    </div>
-                  </div>
-                  ))
-                }
-                <div className = 'total_table_div'>
-                  <p className='product_total'>Total Mesa {d.number}</p>
-                  <p className='price_total'>${formatNumber(data_order.filter(b => b.id_table === d.id)
-                                              .reduce((accumulator, b) => accumulator + b.total_price, 0))}</p>
-                </div>
-
+                ))}
             </div>
-          ))
-          }
           </div>
-
-      </div>
-      ))
-    }
+        ))}
     </div>
-
-
-)};
-function formatNumber(price_item){
-  return new Intl.NumberFormat("de-DE").format(price_item)
+  );
+}
+function formatNumber(price_item) {
+  return new Intl.NumberFormat("de-DE").format(price_item);
 }
 
-
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   data_tables: state.data_tables,
   data_products: state.data_products,
   data_order: state.data_order,
   select_table: state.select_table,
+});
 
-
-})
-
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   order_ready(p) {
     dispatch({
-      type: 'ORDER_READY',
+      type: "ORDER_READY",
       id_ready: p.id,
-
-    })
+    });
   },
   display_button(p) {
     dispatch({
-      type: 'DISPLAY_BUTTON',
+      type: "DISPLAY_BUTTON",
       button_display: p.id,
-    })
-
+    });
   },
-})
+});
 export default connect(mapStateToProps, mapDispatchToProps)(InfoTable);

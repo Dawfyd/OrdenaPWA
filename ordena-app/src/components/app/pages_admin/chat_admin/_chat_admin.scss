@@ -1,21 +1,16 @@
-
-.header_chat_admin
-{
-  display:block;
+.header_chat_admin {
+  display: block;
   position: relative;
   top: 0.5vh;
 }
 
-
-.footer_chat_admin
-{
+.footer_chat_admin {
   position: fixed;
-  display:block;
+  display: block;
   bottom: 0px;
 }
 
-.page_chat_admin
-{
+.page_chat_admin {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -30,8 +25,7 @@
   grid-template-rows: 12fr 1fr;
   grid-template-columns: 1fr;
 }
-.container_chat_admin
-{
+.container_chat_admin {
   position: absolute;
   height: 82.6vh;
   width: 100vw;

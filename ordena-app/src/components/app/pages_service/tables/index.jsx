@@ -1,11 +1,9 @@
-import React, {Component} from 'react'
-import Page from './page';
+import React, { Component } from "react";
+import Page from "./page";
 
 class Tables extends Component {
   render() {
-    return (
-      <Page/>
-    );
+    return <Page />;
   }
 }
 export default Tables;

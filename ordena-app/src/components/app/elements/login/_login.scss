@@ -1,6 +1,5 @@
-.separator_login
-{
-  display:block;
+.separator_login {
+  display: block;
   position: absolute;
   background-position: center center;
   background-color: transparent;
@@ -9,8 +8,7 @@
   left: 6.5vw;
 }
 
-.text_facebook
-{
+.text_facebook {
   position: absolute;
   top: 74.5vh;
   left: 25vw;
@@ -18,8 +16,7 @@
   background: transparent;
 }
 
-.icon_facebook
-{
+.icon_facebook {
   position: absolute;
   top: 71vh;
   left: 12.22vw;
@@ -28,18 +25,15 @@
   background: transparent;
 }
 
-.text_google
-{
+.text_google {
   position: absolute;
   top: 83.2vh;
   left: 25vw;
   width: 58.6vw;
   background: transparent;
-
 }
 
-.icon_google
-{
+.icon_google {
   position: absolute;
   top: 79.7vh;
   left: 12.22vw;

@@ -1,44 +1,41 @@
-.browser{
+.browser {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   position: absolute;
   left: 3vw;
   top: 1vh;
-
 }
 
 #search_input {
   background-color: white;
   height: 5vh;
-  width:  84vw;
+  width: 84vw;
 
   font-size: 2.2vh;
   font-family: Quicksand;
-  border-top: 1px solid rgba(200,201,199,1);
-  border-left: 1px solid rgba(200,201,199,1);
-  border-bottom: 1px solid rgba(200,201,199,1);
+  border-top: 1px solid rgba(200, 201, 199, 1);
+  border-left: 1px solid rgba(200, 201, 199, 1);
+  border-bottom: 1px solid rgba(200, 201, 199, 1);
   border-right: 0;
   border-top-left-radius: 3vw;
   border-bottom-left-radius: 3vw;
-
 }
 
-#search_button{
+#search_button {
   background-color: white;
   background-position: 50% 45%;
   background-size: 2.5vh;
   background-repeat: no-repeat;
-  background-image: url('../../../../assets/images/menu/search.svg');
+  background-image: url("../../../../assets/images/menu/search.svg");
   height: 5vh;
-  width:  10vw;
+  width: 10vw;
 
-  border-top: 1px solid rgba(200,201,199,1);
-  border-right: 1px solid rgba(200,201,199,1);
-  border-bottom: 1px solid rgba(200,201,199,1);
+  border-top: 1px solid rgba(200, 201, 199, 1);
+  border-right: 1px solid rgba(200, 201, 199, 1);
+  border-bottom: 1px solid rgba(200, 201, 199, 1);
   border-left: 0;
   border-top-right-radius: 3vw;
   border-bottom-right-radius: 3vw;
   padding: 0;
-
 }

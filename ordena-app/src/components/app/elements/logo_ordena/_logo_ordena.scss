@@ -1,37 +1,28 @@
 //360px a 980px
-.App-logo
-{
-
+.App-logo {
   padding: 5px;
   height: 9.4vh;
-  width:  58.34vw;
-
+  width: 58.34vw;
 }
 
-.header_logo
-{
+.header_logo {
   position: relative;
   width: auto;
   height: auto;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 @media only screen and (min-width: 900px) {
-
-  .App-logo
-  {
-
+  .App-logo {
     padding: 5px;
     height: 7.2vh;
-    width:  16.5vw;
-
+    width: 16.5vw;
   }
 
-  .header_logo
-  {
+  .header_logo {
     position: relative;
     width: auto;
     height: auto;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 }

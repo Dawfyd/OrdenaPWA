@@ -1,21 +1,13 @@
-.header_turn
-{
-  display:block;
+.header_turn {
+  display: block;
   position: relative;
   top: 0.5vh;
 }
-
-
-.footer_turn
-{
-
-  display:none;
-
+.footer_turn {
+  display: none;
 }
 
-.page_turn
-{
-
+.page_turn {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -25,30 +17,21 @@
   width: 100vw;
   left: 0px;
   top: 0px;
-
   grid-template-rows: 12fr 1fr;
   grid-template-columns: 1fr;
 }
 
-.table_num
-{
+.table_num {
   display: contents;
   position: absolute;
-
-
 }
-.pre_order_turn
-{
-
+.pre_order_turn {
   display: block;
   position: absolute;
   left: 23.6vw;
   top: 80vh;
-
 }
-
-.container_qr
-{
+.container_qr {
   //display none o block
   display: none;
   position: absolute;

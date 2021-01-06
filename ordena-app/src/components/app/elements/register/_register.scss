@@ -1,5 +1,4 @@
-.username
-{
+.username {
   position: absolute;
   width: 94vw;
   height: 7.8vh;
@@ -9,7 +8,7 @@
   padding-right: 2.5vw;
   margin: 0;
 
-  border: 1px solid #C8C9C7;
+  border: 1px solid #c8c9c7;
   box-sizing: border-box;
   border-radius: 10px;
   font-family: Poppins;
@@ -18,11 +17,9 @@
   font-size: 5vw;
   line-height: 3.5vh;
   text-align: left;
-
 }
 
-.cellphone
-{
+.cellphone {
   position: absolute;
   width: 94vw;
   height: 7.8vh;
@@ -32,7 +29,7 @@
   padding-right: 2.5vw;
   margin: 0;
 
-  border: 1px solid #C8C9C7;
+  border: 1px solid #c8c9c7;
   box-sizing: border-box;
   border-radius: 10px;
   font-family: Poppins;
@@ -43,36 +40,31 @@
   text-align: left;
 }
 
-.form_group
-{
+.form_group {
   position: absolute;
   padding: 0;
   margin: 0;
   top: 42vh;
 }
 
-.form_group li
-{
+.form_group li {
   position: relative;
   display: inline-table;
 }
 
-.check
-{
+.check {
   vertical-align: top;
   width: 3.5vw;
   height: 2.5vh;
   margin: 1vh 3vw 2vh 3vw;
 }
 
-input [type='checkbox']:checked
-{
+input [type="checkbox"]:checked {
   display: inline-block;
   width: auto;
   margin: 0 10px 0 0;
 }
-.article
-{
+.article {
   width: 86vw;
   font-family: Poppins;
   font-style: normal;
@@ -81,12 +73,11 @@ input [type='checkbox']:checked
   line-height: 3.5vh;
   text-align: left;
   margin: 0;
-  color: #7C878E;
+  color: #7c878e;
 }
 
-.img_register
-{
-  display:block;
+.img_register {
+  display: block;
   position: absolute;
   background-position: center center;
   width: 50vw;

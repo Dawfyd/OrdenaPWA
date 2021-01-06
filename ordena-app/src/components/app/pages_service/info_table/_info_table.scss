@@ -1,14 +1,10 @@
-.footer_info_table
-{
-
+.footer_info_table {
   position: fixed;
-  display:block;
+  display: block;
   bottom: 0px;
 }
 
-.page_info_table
-{
-
+.page_info_table {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -18,12 +14,9 @@
   width: 100vw;
   left: 0px;
   top: 0px;
-
 }
 
-.container_info_table
-{
-
+.container_info_table {
   display: block;
   position: absolute;
   height: 87vh;
