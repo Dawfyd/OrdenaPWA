@@ -1,5 +1,4 @@
 .tables_list {
-
   position: absolute;
   bottom: 5vh;
   width: 84vw;
@@ -7,31 +6,26 @@
   left: 8vw;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit,minmax(18.75vw, 1fr));
-  grid-template-rows: repeat(auto-fit,minmax(5.2vh, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(18.75vw, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(5.2vh, 1fr));
   align-items: center;
-
+  overflow: auto;
 }
 
 .order_tables_list {
-
   position: relative;
   margin: 0;
   border: 0;
   width: 98%;
   height: auto;
-
 }
 
 .button_table {
-
   width: 100%;
   height: auto;
-
 }
 
 .number_table {
-
   position: absolute;
 
   bottom: 0%;
@@ -44,7 +38,7 @@
   font-family: Quicksand;
   font-style: normal;
   font-weight: bold;
-  font-size:calc(200% + 3vmax);
+  font-size: calc(200% + 3vmax);
   line-height: 100%;
   color: #000000;
   margin: 0;

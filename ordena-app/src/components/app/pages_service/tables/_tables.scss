@@ -1,14 +1,10 @@
-.footer_tables
-{
-
+.footer_tables {
   position: fixed;
-  display:block;
+  display: block;
   bottom: 0px;
 }
 
-.page_tables
-{
-
+.page_tables {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -18,12 +14,9 @@
   width: 100vw;
   left: 0px;
   top: 0px;
-
 }
 
-.container_tables_list
-{
-
+.container_tables_list {
   display: block;
   position: absolute;
   height: 87vh;

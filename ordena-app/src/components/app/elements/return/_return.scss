@@ -1,28 +1,25 @@
-.button_return
-{
+.button_return {
   width: 30vw;
   height: 8vh;
   z-index: 1;
   position: absolute;
-  background: #9B26B6;
+  background: #9b26b6;
   border-radius: 10px;
-  border: 1px solid #E6D9EF;
+  border: 1px solid #e6d9ef;
 }
 
-.text_return
-{
-
-font-family: Quicksand;
-font-style: normal;
-font-weight: bold;
-font-size: 7.8vw;
-line-height: 5vh;
-display: flex;
-align-items: center;
-text-align: center;
-height: auto;
-width: 100%;
-margin: auto;
-color: #E6D9EF;
-padding: auto;
+.text_return {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 7.8vw;
+  line-height: 5vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  width: 100%;
+  margin: auto;
+  color: #e6d9ef;
+  padding: auto;
 }

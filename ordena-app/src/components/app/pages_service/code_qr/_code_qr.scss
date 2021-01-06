@@ -1,21 +1,14 @@
-.header_code_qr
-{
-  display:block;
+.header_code_qr {
+  display: block;
   position: relative;
   top: 0.5vh;
 }
 
-
-.footer_code_qr
-{
-
-  display:block;
-
+.footer_code_qr {
+  display: block;
 }
 
-.page_code_qr
-{
-
+.page_code_qr {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -29,19 +22,15 @@
   grid-template-rows: 12fr 1fr;
   grid-template-columns: 1fr;
 }
-.return_button
-{
-
+.return_button {
   display: flex;
   position: absolute;
   height: auto;
   top: 80vh;
   left: 35vw;
-
 }
 
-.container_code_qr
-{
+.container_code_qr {
   //display none o block
   display: block;
   position: absolute;

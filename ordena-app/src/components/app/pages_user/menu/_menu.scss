@@ -1,18 +1,15 @@
-.container_menu
-{
+.container_menu {
   overflow: scroll;
   flex-grow: 1;
   position: absolute;
   display: block;
   width: 100vw;
 }
-.header_menu
-{
+.header_menu {
   position: fixed;
-  display:none;
+  display: none;
 }
-.footer_menu
-{
+.footer_menu {
   position: fixed;
   display: block;
   bottom: 0px;
@@ -23,8 +20,7 @@
   top: 6vh;
   width: 100vw;
 }
-.order
-{
+.order {
   background-color: white;
   overflow: scroll;
   flex-grow: 1;
@@ -32,8 +28,7 @@
   bottom: 55px;
   height: 72vh;
 }
-.page_menu
-{
+.page_menu {
   flex-direction: column;
   position: absolute;
   text-align: center;
@@ -45,20 +40,18 @@
   grid-template-rows: 12fr 1fr;
   grid-template-columns: 1fr;
 }
-.page_order{
+.page_order {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 12fr;
 }
-.resume_drop
-{
-    position: fixed;
-    display: grid;
-    grid-template-rows: 1fr;
-    display: block;
+.resume_drop {
+  position: fixed;
+  display: grid;
+  grid-template-rows: 1fr;
+  display: block;
 }
-.resume_cart
-{
+.resume_cart {
   position: fixed;
   display: block;
 }

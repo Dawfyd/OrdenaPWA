@@ -1,23 +1,19 @@
-.container_account_list
-{
-
+.container_account_list {
   position: absolute;
   width: 100vw;
   height: 61vh;
   left: 0px;
   top: 2vh;
   background: rgba(0, 0, 0, 0.05);
-  border-top: 1px solid rgba(200,201,199,1);
-  border-bottom: 1px solid rgba(200,201,199,1);
+  border-top: 1px solid rgba(200, 201, 199, 1);
+  border-bottom: 1px solid rgba(200, 201, 199, 1);
 }
 
-.container_list
-{
+.container_list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-
 
   position: absolute;
   width: 55vw;
@@ -26,8 +22,7 @@
   top: 5vh;
 }
 
-.account_title
-{
+.account_title {
   margin: 0 0 3.12vh 0;
   font-family: Quicksand;
   font-style: normal;

@@ -1,30 +1,26 @@
-import React, {Fragment} from 'react';
-import LogoOrdena from '../../elements/logo_ordena/logo';
-import NavUser from '../../elements/footer_nav_user/nav_user';
+import React, { Fragment } from "react";
+import LogoOrdena from "../../elements/logo_ordena/logo";
+import NavUser from "../../elements/footer_nav_user/nav_user";
 
-import '../../styles.scss';
+import "../../styles.scss";
 
 function page(props) {
   return (
     <Fragment>
       <div className="page_chat">
-
-        <header className = 'header_chat'>
-          <LogoOrdena/>
+        <header className="header_chat">
+          <LogoOrdena />
         </header>
 
-        <div className ='container_chat'>
-        <h1>Chat - Proximamente!</h1>
+        <div className="container_chat">
+          <h1>Chat - Proximamente!</h1>
         </div>
 
-
-        <footer className = 'footer_chat'>
-          <NavUser/>
+        <footer className="footer_chat">
+          <NavUser />
         </footer>
-
       </div>
     </Fragment>
-
   );
 }
 

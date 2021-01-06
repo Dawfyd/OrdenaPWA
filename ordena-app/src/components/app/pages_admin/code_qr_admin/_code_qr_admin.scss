@@ -1,21 +1,16 @@
-
-.header_qr_admin
-{
-  display:block;
+.header_qr_admin {
+  display: block;
   position: relative;
   top: 0.5vh;
 }
 
-
-.footer_qr_admin
-{
+.footer_qr_admin {
   position: fixed;
-  display:block;
+  display: block;
   bottom: 0px;
 }
 
-.page_qr_admin
-{
+.page_qr_admin {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -30,8 +25,7 @@
   grid-template-rows: 12fr 1fr;
   grid-template-columns: 1fr;
 }
-.container_qr_admin
-{
+.container_qr_admin {
   position: absolute;
   height: 82.6vh;
   width: 100vw;

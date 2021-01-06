@@ -1,37 +1,44 @@
-import React from 'react';
-import Separator from '../../../../assets/images/login/separator.svg';
-import TextGoogle from '../../../../assets/images/login/text_google.svg';
-import IconGoogle from '../../../../assets/images/login/icon_google.svg';
-import GoogleLogin from 'react-google-login';
-
+import React from "react";
+import Separator from "../../../../assets/images/login/separator.svg";
+import TextGoogle from "../../../../assets/images/login/text_google.svg";
+import IconGoogle from "../../../../assets/images/login/icon_google.svg";
+import GoogleLogin from "react-google-login";
 
 function LoginGoogle() {
-
-  const responseGoogle=(response_google)=>{
+  const responseGoogle = (response_google) => {
     console.log(response_google);
     console.log(response_google.profileObj);
-    
-  }
+  };
 
-return (
-  <div>
-
-    <GoogleLogin
-    clientId="796744460100-9603gngteoerk8kci3v64kj81kk1ef7p.apps.googleusercontent.com"
-    render={renderProps => (
-     <div>
-     <img onClick={renderProps.onClick} disabled={renderProps.disabled} src={TextGoogle} className="text_google" alt="logo" />
-     <img onClick={renderProps.onClick} disabled={renderProps.disabled} src={IconGoogle} className="icon_google" alt="logo" />
-     </div>
-   )}
+  return (
+    <div>
+      <GoogleLogin
+        clientId="796744460100-9603gngteoerk8kci3v64kj81kk1ef7p.apps.googleusercontent.com"
+        render={(renderProps) => (
+          <div>
+            <img
+              onClick={renderProps.onClick}
+              disabled={renderProps.disabled}
+              src={TextGoogle}
+              className="text_google"
+              alt="logo"
+            />
+            <img
+              onClick={renderProps.onClick}
+              disabled={renderProps.disabled}
+              src={IconGoogle}
+              className="icon_google"
+              alt="logo"
+            />
+          </div>
+        )}
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
-        cookiePolicy={'single_host_origin'}/>
+        cookiePolicy={"single_host_origin"}
+      />
 
-    <img src={Separator} className="separator_login" alt="logo" />
-
-
-  </div>
+      <img src={Separator} className="separator_login" alt="logo" />
+    </div>
   );
 }
 
