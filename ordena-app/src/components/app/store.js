@@ -16,7 +16,7 @@ const initialState = {
     { id: 3, text: "Entradas" },
     { id: 4, text: "Platos Fuertes" },
     { id: 5, text: "Para Compartir" },
-    { id: 6, text: "Bebidas" },
+    { id: 6, text: "Bebidas" }
   ],
   categorys_menu: [
     { id: 1, text: "Descuentos" },
@@ -24,11 +24,11 @@ const initialState = {
     { id: 3, text: "Entradas" },
     { id: 4, text: "Platos Fuertes" },
     { id: 5, text: "Para Compartir" },
-    { id: 6, text: "Bebidas" },
+    { id: 6, text: "Bebidas" }
   ],
   data_tables: [
     { id: 1, state_table: 1, number: 1, id_service: 1 },
-    { id: 2, state_table: 2, number: 2, id_service: 1 },
+    { id: 2, state_table: 2, number: 2, id_service: 1 }
   ],
   data_order: [
     {
@@ -37,7 +37,7 @@ const initialState = {
       id_user: 1,
       total_price: 24500,
       state_paid: false,
-      cashier_display: false,
+      cashier_display: false
     },
     {
       id: 2,
@@ -45,7 +45,7 @@ const initialState = {
       id_user: 2,
       total_price: 56000,
       state_paid: false,
-      cashier_display: false,
+      cashier_display: false
     },
     {
       id: 3,
@@ -53,8 +53,8 @@ const initialState = {
       id_user: 3,
       total_price: 20000,
       state_paid: false,
-      cashier_display: false,
-    },
+      cashier_display: false
+    }
   ],
   data_products: [
     {
@@ -67,7 +67,7 @@ const initialState = {
       id_order: 1,
       id_table: 1,
       state_button: false,
-      state_check: false,
+      state_check: false
     },
     {
       id: 2,
@@ -78,7 +78,7 @@ const initialState = {
       id_order: 2,
       id_table: 2,
       state_button: false,
-      state_check: false,
+      state_check: false
     },
     {
       id: 3,
@@ -89,7 +89,7 @@ const initialState = {
       id_order: 2,
       id_table: 2,
       state_button: false,
-      state_check: false,
+      state_check: false
     },
     {
       id: 4,
@@ -100,7 +100,7 @@ const initialState = {
       id_order: 3,
       id_table: 1,
       state_button: false,
-      state_check: false,
+      state_check: false
     },
     {
       id: 5,
@@ -111,7 +111,7 @@ const initialState = {
       id_order: 3,
       id_table: 1,
       state_button: false,
-      state_check: false,
+      state_check: false
     },
     {
       id: 6,
@@ -122,14 +122,14 @@ const initialState = {
       id_order: 1,
       id_table: 1,
       state_button: false,
-      state_check: false,
-    },
+      state_check: false
+    }
   ],
   data_user: [
     {
       id: 1,
       name: "Jane Cooper",
-      icon: jane,
+      icon: jane
 
       //id_table: 1,
     },
@@ -137,45 +137,45 @@ const initialState = {
       id: 2,
       name: "David Hoyos",
       icon:
-        "https://lh3.googleusercontent.com/a-/AOh14GhYx-n5PDPFGmemzdi06rBLEpQt1Rc7y0iI93ZwzA=s96-c",
+        "https://lh3.googleusercontent.com/a-/AOh14GhYx-n5PDPFGmemzdi06rBLEpQt1Rc7y0iI93ZwzA=s96-c"
 
       //id_table: 1,
     },
     {
       id: 3,
       name: "Robert Fox",
-      icon: robert,
+      icon: robert
 
       //id_table: 1,
     },
     {
       id: 4,
       name: "Darrell Steward",
-      icon: darrell,
+      icon: darrell
 
       //id_table: 1,
     },
     {
       id: 5,
       name: "Kathryn Murphy",
-      icon: kathryn,
+      icon: kathryn
 
       //id_table: 1,
     },
     {
       id: 6,
       name: "Leslie Alexander",
-      icon: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+      icon: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
 
       //id_table: 1,
     },
     {
       id: 7,
       name: "Cameron Williamson",
-      icon: cameron,
+      icon: cameron
 
       //id_table: 1,
-    },
+    }
   ],
   data_menu: [
     {
@@ -190,7 +190,7 @@ const initialState = {
       price: 13500,
       price_d: 12000,
       alt: "Foto de una Hamburguesa con queso",
-      photo: foto_1,
+      photo: foto_1
     },
     {
       id: 2,
@@ -204,7 +204,7 @@ const initialState = {
         "Deliciosas papas bien crujientes, fritas en aceite de olvia extra virgen",
       price: 7000,
       alt: "Foto de Papas fritas con paprica y sal",
-      photo: foto,
+      photo: foto
     },
     {
       id: 3,
@@ -217,7 +217,7 @@ const initialState = {
       msg: "Exquisitos dedos de queso al horno, con especias finas",
       price: 8000,
       alt: "Foto de 4 dedos de queso en una canastica",
-      photo: foto,
+      photo: foto
     },
     {
       id: 4,
@@ -230,7 +230,7 @@ const initialState = {
       msg: "Deliciosas empanadas fritas en aceite de palma, con aji al gusto",
       price: 9000,
       alt: "Foto de 4 empanadas en una canasta",
-      photo: foto,
+      photo: foto
     },
     {
       id: 5,
@@ -244,7 +244,7 @@ const initialState = {
         "Deliciosa bandeja paisa, con frijoles, chorizo, huevo frito, arroz, chicharron y aguacate",
       price: 7000,
       alt: "Foto de 4 empanadas en una canasta",
-      photo: foto,
+      photo: foto
     },
     {
       id: 6,
@@ -257,7 +257,7 @@ const initialState = {
       msg: "Cerveza nacional, con 3 sabores distintos; Roja, Dorada y Negra",
       price: 7000,
       alt: "Foto de 4 empanadas en una canasta",
-      photo: foto,
+      photo: foto
     },
     {
       id: 7,
@@ -270,8 +270,8 @@ const initialState = {
       msg: "Jugo natural recien exprimido con 1 parte de agua y 2 de fruta.",
       price: 9000,
       alt: "Foto de 4 empanadas en una canasta",
-      photo: foto,
-    },
+      photo: foto
+    }
   ],
   display_category: true,
   select_table: 1,
@@ -292,19 +292,21 @@ const initialState = {
     { id: 1, id_alt: 2, name: "Sal" },
     { id: 2, id_alt: 2, name: "Pimienta" },
     { id: 3, id_alt: 1, name: "Tomate" },
-    { id: 4, id_alt: 1, name: "Lechuga" },
+    { id: 4, id_alt: 1, name: "Lechuga" }
   ],
   opt_food: [
     { id: 1, id_opt: 1, name: "Medio (1/2)" },
     { id: 2, id_opt: 1, name: "Tres cuartos (3/4)" },
-    { id: 3, id_opt: 1, name: "Bien asado" },
+    { id: 3, id_opt: 1, name: "Bien asado" }
   ],
   adds: [
     { id: 1, id_add: 1, name: "Salsa de tomate" },
     { id: 2, id_add: 1, name: "Papas fritas" },
-    { id: 3, id_add: 1, name: "Aros de cebolla" },
+    { id: 3, id_add: 1, name: "Aros de cebolla" }
   ],
   orderList: [],
+  favList: [],
+  registerList: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -314,47 +316,48 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         showOrder: state.showOrder === true ? false : true,
+        show_cart: action.show_cart
       };
     case "ORDER_READY":
       const index_order = state.data_products.findIndex(
-        (data_products) => data_products.id === action.id_ready
+        data_products => data_products.id === action.id_ready
       );
       const newArray_order = [...state.data_products];
       newArray_order[index_order].state_served = true;
       return {
         ...state,
-        data_products: newArray_order,
+        data_products: newArray_order
       };
     case "CLICK_TABLE":
       return {
         ...state,
-        select_table: action.select_table,
+        select_table: action.select_table
       };
     case "BACK_MENU":
       return {
         ...state,
-        showMenu: action.showMenu,
+        showMenu: action.showMenu
       };
     case "SHOW_DISH":
       return {
         ...state,
         showMenu: action.showMenu,
-        show_food: state.data_menu.filter((d) => d.id === action.id_food),
-        id_food: action.id_food,
+        show_food: state.data_menu.filter(d => d.id === action.id_food),
+        id_food: action.id_food
       };
     case "SELECT_CATEGORY":
       return {
         ...state,
         id_category: action.id_category,
         data_menu_f: state.data_menu.filter(
-          (d) => d.category === action.id_category
+          d => d.category === action.id_category
         ),
-        showMenu: action.showMenu,
+        showMenu: action.showMenu
       };
     case "LESS_FOOD":
       const newArray6 = [...state.orderList];
       const index4 = newArray6.findIndex(
-        (newArray6) => newArray6.product === action.product_resume
+        newArray6 => newArray6.product === action.product_resume
       );
       console.log(index4);
       if (newArray6.length > 1) {
@@ -364,7 +367,7 @@ const reducer = (state = initialState, action) => {
             ...state,
             orderList: newArray6,
             count_resume: state.count_resume - action.count_resume,
-            price_resume: state.price_resume - action.price_resume,
+            price_resume: state.price_resume - action.price_resume
           };
         } else {
           newArray6.splice(index4, 1);
@@ -372,7 +375,7 @@ const reducer = (state = initialState, action) => {
             ...state,
             orderList: newArray6,
             count_resume: state.count_resume - action.count_resume,
-            price_resume: state.price_resume - action.price_resume,
+            price_resume: state.price_resume - action.price_resume
           };
         }
       } else {
@@ -382,7 +385,7 @@ const reducer = (state = initialState, action) => {
             ...state,
             orderList: newArray6,
             count_resume: state.count_resume - action.count_resume,
-            price_resume: state.price_resume - action.price_resume,
+            price_resume: state.price_resume - action.price_resume
           };
         } else {
           console.log(newArray6);
@@ -394,7 +397,7 @@ const reducer = (state = initialState, action) => {
             showOrder: action.showOrder,
             show_cart: action.show_cart,
             count_resume: state.count_resume - action.count_resume,
-            price_resume: state.price_resume - action.price_resume,
+            price_resume: state.price_resume - action.price_resume
           };
         }
       }
@@ -402,7 +405,7 @@ const reducer = (state = initialState, action) => {
       const newArray4 = [...state.show_food];
       const newArray5 = [...state.orderList];
       const index3 = newArray5.findIndex(
-        (newArray5) => newArray5.product === action.product_resume
+        newArray5 => newArray5.product === action.product_resume
       );
       console.log(newArray5, index3, action.product_resume);
       if (newArray5.length > 0) {
@@ -413,7 +416,7 @@ const reducer = (state = initialState, action) => {
             product_resume: action.product_resume,
             orderList: state.orderList.concat(newArray4),
             count_resume: state.count_resume + action.count_resume,
-            price_resume: state.price_resume + action.price_resume,
+            price_resume: state.price_resume + action.price_resume
           };
         } else {
           const product_var = newArray5[index3].product;
@@ -423,7 +426,7 @@ const reducer = (state = initialState, action) => {
               ...state,
               orderList: newArray5,
               count_resume: state.count_resume + action.count_resume,
-              price_resume: state.price_resume + action.price_resume,
+              price_resume: state.price_resume + action.price_resume
             };
           } else {
             return {
@@ -432,7 +435,7 @@ const reducer = (state = initialState, action) => {
               product_resume: action.product_resume,
               orderList: state.orderList.concat(newArray4),
               count_resume: state.count_resume + action.count_resume,
-              price_resume: state.price_resume + action.price_resume,
+              price_resume: state.price_resume + action.price_resume
             };
           }
         }
@@ -443,12 +446,12 @@ const reducer = (state = initialState, action) => {
           product_resume: action.product_resume,
           orderList: state.orderList.concat(newArray4),
           count_resume: state.count_resume + action.count_resume,
-          price_resume: state.price_resume + action.price_resume,
+          price_resume: state.price_resume + action.price_resume
         };
       }
     case "DISPLAY_BUTTON":
       const index_display = state.data_products.findIndex(
-        (data_products) => data_products.id === action.button_display
+        data_products => data_products.id === action.button_display
       );
 
       const newArray_display = [...state.data_products];
@@ -460,11 +463,11 @@ const reducer = (state = initialState, action) => {
       }
       return {
         ...state,
-        data_products: newArray_display,
+        data_products: newArray_display
       };
     case "CLICK_ITEM":
       const index_item = state.data_products.findIndex(
-        (data_products) => data_products.id === action.check_id
+        data_products => data_products.id === action.check_id
       );
 
       const newArray_item = [...state.data_products];
@@ -477,11 +480,11 @@ const reducer = (state = initialState, action) => {
 
       return {
         ...state,
-        data_products: newArray_item,
+        data_products: newArray_item
       };
     case "CLICK_USER_DETAILS":
       const index_details = state.data_order.findIndex(
-        (data_order) => data_order.id === action.user_id
+        data_order => data_order.id === action.user_id
       );
 
       const newArray_details = [...state.data_order];
@@ -494,21 +497,21 @@ const reducer = (state = initialState, action) => {
 
       return {
         ...state,
-        data_order: newArray_details,
+        data_order: newArray_details
       };
     case "CLICK_REGISTER":
       return {
         ...state,
-        display_category: action.display_category,
+        display_category: action.display_category
       };
     case "CLICK_ACCOUNT":
       return {
         ...state,
-        display_category: action.display_category,
+        display_category: action.display_category
       };
     case "CLICK_PAID":
       const index_paid = state.data_order.findIndex(
-        (data_order) => data_order.id === action.user_paid
+        data_order => data_order.id === action.user_paid
       );
 
       const newArray_paid = [...state.data_order];
@@ -517,7 +520,7 @@ const reducer = (state = initialState, action) => {
 
       return {
         ...state,
-        data_order: newArray_paid,
+        data_order: newArray_paid
       };
     default:
       return state;

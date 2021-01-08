@@ -1,3 +1,6 @@
+.back_order {
+  width: 15vw;
+}
 .button_order {
   width: 40vw;
   height: 6vh;
@@ -7,6 +10,13 @@
   border-radius: 10px;
   box-shadow: 3px 2px 5px black;
   font-size: 3.5vh;
+}
+.button_back_order {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  padding-top: 1vh;
 }
 .container_product_order {
   display: flex;
@@ -44,10 +54,23 @@
   padding-top: 5vh;
   padding-bottom: 5vh;
 }
+.head_order {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.head_line {
+  padding-top: 2vh;
+  padding-bottom: 1vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr;
+}
 .line_order {
+  padding: 0;
+  margin: 0;
   border: 1;
-  border-color: rgba(0, 0, 0, 0.15);
-  top: 0;
+  border-color: rgba(0, 0, 0, 0.2);
 }
 .less_item {
   background-color: rgba(0, 0, 0, 0);
@@ -71,12 +94,13 @@
   background-color: white;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr 1fr 2fr;
 }
 .title_order {
-  font-weight: bold;
+  font-weight: 700;
   color: rgba(0, 0, 0, 0.6);
-  font-size: 2.5vh;
-  padding-left: 2vw;
+  font-size: 2.9vh;
+  padding: 0;
   text-align: left;
   margin: 0;
   border: 0;

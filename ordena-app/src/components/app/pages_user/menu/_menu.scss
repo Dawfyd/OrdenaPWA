@@ -25,8 +25,8 @@
   overflow: scroll;
   flex-grow: 1;
   position: fixed;
-  bottom: 55px;
-  height: 72vh;
+  bottom: 53px;
+  height: 93vh;
 }
 .page_menu {
   flex-direction: column;
@@ -54,4 +54,5 @@
 .resume_cart {
   position: fixed;
   display: block;
+  bottom: 0vh;
 }
