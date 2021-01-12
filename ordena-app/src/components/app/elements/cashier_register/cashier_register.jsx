@@ -83,18 +83,6 @@ const mapStateToProps = (state) => ({
   display_category: state.display_category,
 });
 const mapDispatchToProps = (dispatch) => ({
-  cashier_register() {
-    dispatch({
-      type: "CLICK_REGISTER",
-      display_category: true,
-    });
-  },
-  cashier_account() {
-    dispatch({
-      type: "CLICK_ACCOUNT",
-      display_category: false,
-    });
-  },
   order_check(p) {
     dispatch({
       type: "CLICK_ITEM",
