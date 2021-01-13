@@ -2,7 +2,7 @@ import React from "react";
 import num_table from "../../../../assets/images/num_table_home/num_table.svg";
 import icon_text from "../../../../assets/images/num_table_home/icon_text.svg";
 
-const NumTable = () => (
+const NumTable = ({ persons }) => (
   <div>
     <img src={num_table} className="num_table" alt="num" />
     <p className="text_num_table">12</p>

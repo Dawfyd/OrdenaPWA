@@ -8,6 +8,8 @@
   flex-direction: row;
 }
 .cashier_account_order {
+  min-height: 55px;
+  height: auto;
 }
 .cashier_account_user {
   display: block;
@@ -27,7 +29,6 @@
   display: flex;
   border: 0;
   border-radius: 3px 3px 0px 0px;
-  margin-bottom: 20px;
 }
 .content_collapsible_account {
   padding: 0;

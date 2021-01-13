@@ -3,10 +3,12 @@ import { connect } from "react-redux";
 import check from "../../../../assets/images/cashier_register/check.svg";
 
 function CashierRegister({
-  data_tables,
-  data_order,
-  data_user,
-  data_products,
+  spots,
+  orders,
+  persons,
+  requests,
+  products,
+  prices,
   order_ready,
   select_table,
   display_button,
@@ -14,24 +16,24 @@ function CashierRegister({
 }) {
   return (
     <div className="cashier_register_tables">
-      {data_tables
-        .filter((a) => a.number === select_table)
+      {spots
+        .filter((a) => a.number_spot === select_table)
         .map((d) => (
-          <div key={d.id}>
-            {data_order
-              .filter((b) => b.id_table === d.id)
+          <div key={d.id_spot}>
+            {orders
+              .filter((b) => b.id_spot === d.id_spot)
               .map((o) => (
-                <div className="cashier_register_order" key={o.id}>
-                  {data_user
-                    .filter((c) => c.id === o.id_user)
+                <div className="cashier_register_order" key={o.id_order}>
+                  {persons
+                    .filter((c) => c.id_person === o.id_person)
                     .map((j) => (
-                      <div className="cashier_register_user" key={j.id}>
-                        {data_products
-                          .filter((e) => e.id_order === o.id)
+                      <div className="cashier_register_user" key={j.id_person}>
+                        {requests
+                          .filter((e) => e.id_order === o.id_order)
                           .map((p) => (
                             <div
                               className="cashier_register_products"
-                              key={p.id}
+                              key={p.id_request}
                             >
                               <button
                                 onClick={() => order_check(p)}
@@ -52,11 +54,29 @@ function CashierRegister({
 
                               <div className="container_flex">
                                 <p className="cashier_item">
-                                  {p.unit_item} ud - {p.product}
+                                  {p.unit_request} ud -{" "}
+                                  {products
+                                    .filter(
+                                      (b) => b.id_product === p.id_product
+                                    )
+                                    .reduce(
+                                      (accumulator, b) => b.name_product,
+                                      0
+                                    )}
                                 </p>
-                                <p className="cashier_user">{j.name}</p>
+                                <p className="cashier_user">{j.username}</p>
                                 <p className="cashier_price">
-                                  ${formatNumber(p.price_item)}
+                                  $
+                                  {formatNumber(
+                                    prices
+                                      .filter(
+                                        (b) => b.id_product === p.id_product
+                                      )
+                                      .reduce(
+                                        (accumulator, b) => b.value_price,
+                                        0
+                                      )
+                                  )}
                                 </p>
                               </div>
                             </div>
@@ -75,10 +95,12 @@ function formatNumber(price_item) {
   return new Intl.NumberFormat("de-DE").format(price_item);
 }
 const mapStateToProps = (state) => ({
-  data_tables: state.data_tables,
-  data_products: state.data_products,
-  data_order: state.data_order,
-  data_user: state.data_user,
+  spots: state.spots,
+  requests: state.requests,
+  orders: state.orders,
+  persons: state.persons,
+  products: state.products,
+  prices: state.prices,
   select_table: state.select_table,
   display_category: state.display_category,
 });
@@ -86,7 +108,7 @@ const mapDispatchToProps = (dispatch) => ({
   order_check(p) {
     dispatch({
       type: "CLICK_ITEM",
-      check_id: p.id,
+      check_id: p.id_request,
     });
   },
 });

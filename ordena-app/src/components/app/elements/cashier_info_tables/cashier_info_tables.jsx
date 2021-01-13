@@ -4,7 +4,7 @@ import CashierRegister from "../cashier_register/cashier_register";
 import CashierAccount from "../cashier_account/cashier_account";
 
 function InfoTable({
-  data_tables,
+  spots,
   select_table,
   cashier_register,
   cashier_account,
@@ -12,15 +12,15 @@ function InfoTable({
 }) {
   return (
     <div className="info_cashier">
-      {data_tables
-        .filter((a) => a.id === select_table)
+      {spots
+        .filter((a) => a.number_spot === select_table)
         .map((d) => (
-          <div>
+          <div key={d.id_spot}>
             <button className="button_cashier" id="B1">
-              <p className="text_cashier">Mesa {d.number}</p>
+              <p className="text_cashier">Mesa {d.number_spot}</p>
             </button>
 
-            <div className="container_cashier_tables" key={d.id}>
+            <div className="container_cashier_tables">
               <button
                 className="button_register"
                 id="B1"
@@ -93,7 +93,7 @@ function InfoTable({
 }
 
 const mapStateToProps = (state) => ({
-  data_tables: state.data_tables,
+  spots: state.spots,
   select_table: state.select_table,
   display_category: state.display_category,
 });

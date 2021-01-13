@@ -3,35 +3,38 @@ import { connect } from "react-redux";
 import { RightOutlined, DownOutlined } from "@ant-design/icons";
 
 function InfoTable({
-  data_tables,
-  data_order,
-  data_products,
+  spots,
+  orders,
+  requests,
+  products,
+  prices,
+  persons,
   order_ready,
   select_table,
   display_button,
 }) {
   return (
     <div className="info_table">
-      {data_tables
-        .filter((a) => a.id === select_table)
+      {spots
+        .filter((a) => a.number_spot === select_table)
         .map((d) => (
-          <div key={d.id}>
-            <p className="number_info_table">Mesa {d.number}</p>
+          <div key={d.id_spot}>
+            <p className="number_info_table">Mesa {d.number_spot}</p>
             <hr className="separator_info_table" />
 
             <p className="product_info">Productos</p>
             <p className="price_info">Precio</p>
 
             <div className="container_grid_info">
-              {data_order
-                .filter((b) => b.id_table === d.id)
+              {orders
+                .filter((b) => b.id_spot === d.id_spot)
                 .map((o) => (
-                  <div className="container_grid_table" key={o.id}>
-                    {data_products
-                      .filter((e) => e.state_served === true)
-                      .filter((e) => e.id_table === d.id)
+                  <div className="container_grid_table" key={o.id_order}>
+                    {requests
+                      .filter((e) => e.state_served_request === true)
+                      .filter((e) => e.id_spot === d.id_spot)
                       .map((p) => (
-                        <div className="container_product" key={p.id}>
+                        <div className="container_product" key={p.id_request}>
                           <button
                             type="button"
                             className="collapsible_info"
@@ -45,10 +48,18 @@ function InfoTable({
                               )}
                             </p>
                             <li className="unit_item">
-                              {p.unit_item} ud - {p.product}
+                              {p.unit_request} ud -{" "}
+                              {products
+                                .filter((b) => b.id_product === p.id_product)
+                                .reduce((accumulator, b) => b.name_product, 0)}
                             </li>
                             <li className="price_item">
-                              ${formatNumber(p.price_item)}
+                              $
+                              {formatNumber(
+                                prices
+                                  .filter((b) => b.id_product === p.id_product)
+                                  .reduce((accumulator, b) => b.value_price, 0)
+                              )}
                             </li>
                           </button>
                           <div
@@ -59,7 +70,13 @@ function InfoTable({
                                 : { display: "block" }
                             }
                           >
-                            <p>hola1</p>
+                            <div>
+                              <p>
+                                {persons
+                                  .filter((j) => j.id_person === o.id_person)
+                                  .reduce((accumulator, b) => b.username, 0)}
+                              </p>
+                            </div>
                           </div>
                         </div>
                       ))}
@@ -67,9 +84,9 @@ function InfoTable({
                     <p
                       className="pending_order"
                       style={
-                        data_products
-                          .filter((e) => e.state_served === false)
-                          .filter((e) => e.id_table === d.id).length === 0
+                        requests
+                          .filter((e) => e.state_served_request === false)
+                          .filter((e) => e.id_spot === d.id_spot).length === 0
                           ? { display: "none" }
                           : { display: "flex" }
                       }
@@ -77,11 +94,11 @@ function InfoTable({
                       Pedido Pendiente
                     </p>
 
-                    {data_products
-                      .filter((f) => f.state_served === false)
-                      .filter((e) => e.id_table === d.id)
+                    {requests
+                      .filter((f) => f.state_served_request === false)
+                      .filter((e) => e.id_spot === d.id_spot)
                       .map((p) => (
-                        <div className="container_product" key={p.id}>
+                        <div className="container_product" key={p.id_request}>
                           <button
                             type="button"
                             className="collapsible_info"
@@ -95,7 +112,10 @@ function InfoTable({
                               )}
                             </p>
                             <li className="unit_item">
-                              {p.unit_item} ud - {p.product}
+                              {p.unit_request} ud -{" "}
+                              {products
+                                .filter((b) => b.id_product === p.id_product)
+                                .reduce((accumulator, b) => b.name_product, 0)}
                             </li>
                             <li className="price_item">
                               <input
@@ -114,19 +134,27 @@ function InfoTable({
                                 : { display: "block" }
                             }
                           >
-                            <p>Hola</p>
+                            <div>
+                              <p>
+                                {persons
+                                  .filter((j) => j.id_person === o.id_person)
+                                  .reduce((accumulator, b) => b.username, 0)}
+                              </p>
+                            </div>
                           </div>
                         </div>
                       ))}
                     <div className="total_table_div">
-                      <p className="product_total">Total Mesa {d.number}</p>
+                      <p className="product_total">
+                        Total Mesa {d.number_spot}
+                      </p>
                       <p className="price_total">
                         $
                         {formatNumber(
-                          data_order
-                            .filter((b) => b.id_table === d.id)
+                          orders
+                            .filter((b) => b.id_spot === d.id_spot)
                             .reduce(
-                              (accumulator, b) => accumulator + b.total_price,
+                              (accumulator, b) => accumulator + b.price_order,
                               0
                             )
                         )}
@@ -145,9 +173,12 @@ function formatNumber(price_item) {
 }
 
 const mapStateToProps = (state) => ({
-  data_tables: state.data_tables,
-  data_products: state.data_products,
-  data_order: state.data_order,
+  spots: state.spots,
+  requests: state.requests,
+  orders: state.orders,
+  products: state.products,
+  prices: state.prices,
+  persons: state.persons,
   select_table: state.select_table,
 });
 
@@ -155,13 +186,13 @@ const mapDispatchToProps = (dispatch) => ({
   order_ready(p) {
     dispatch({
       type: "ORDER_READY",
-      id_ready: p.id,
+      id_ready: p.id_request,
     });
   },
   display_button(p) {
     dispatch({
       type: "DISPLAY_BUTTON",
-      button_display: p.id,
+      button_display: p.id_request,
     });
   },
 });
