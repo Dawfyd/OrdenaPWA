@@ -5,16 +5,16 @@ import table_green from "../../../../assets/images/tables_list/table_green.svg";
 import table_purple from "../../../../assets/images/tables_list/table_purple.svg";
 import table_red from "../../../../assets/images/tables_list/table_red.svg";
 
-const TablesListA = ({ data_tables, info_table }) => (
+const TablesListA = ({ spots, info_table }) => (
   <div className="tables_list_admin">
-    {data_tables.map((d) => (
+    {spots.map((d) => (
       <div
-        key={d.id}
+        key={d.id_spot}
         className="order_tables_list_admin"
         style={
-          d.state_table === 1
+          d.state_spot === 1
             ? { order: "3" }
-            : d.state_table === 2
+            : d.state_spot === 2
             ? { order: "2" }
             : { order: "1" }
         }
@@ -22,16 +22,16 @@ const TablesListA = ({ data_tables, info_table }) => (
         <Avatar
           className="button_table_admin"
           src={
-            d.state_table === 1
+            d.state_spot === 1
               ? table_green
-              : d.state_table === 2
+              : d.state_spot === 2
               ? table_purple
               : table_red
           }
         />
 
         <p className="number_table_admin" onClick={() => info_table(d)}>
-          {d.number}
+          {d.number_spot}
         </p>
       </div>
     ))}
@@ -39,14 +39,14 @@ const TablesListA = ({ data_tables, info_table }) => (
 );
 
 const mapStateToProps = (state) => ({
-  data_tables: state.data_tables,
+  spots: state.spots,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   info_table(d) {
     dispatch({
       type: "CLICK_TABLE",
-      select_table: d.number,
+      select_table: d.number_spot,
     });
   },
 });
