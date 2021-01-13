@@ -1,0 +1,87 @@
+.container_request {
+  position: absolute;
+  height: 82.6vh;
+  width: 100vw;
+  bottom: 0vh;
+}
+.separator_request {
+  position: relative;
+  top: 2vh;
+  height: 1px;
+  background: #c8c9c7;
+  border: 0;
+  margin: 0;
+}
+.request_text {
+  position: relative;
+  top: 3vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  margin: 0;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+
+  text-align: center;
+
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.request_list {
+  position: relative;
+  top: 3vh;
+  height: 48vh;
+  width: 100vw;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.button_request {
+  padding: 0px 0px;
+  width: 38vw;
+  height: 10vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border: 0;
+  background: #ffffff;
+  box-shadow: 0 0 0;
+  margin: auto;
+}
+.icon_request {
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 5vh;
+  width: 10vw;
+}
+.text_icon {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.request_textbox {
+  position: relative;
+  top: 3vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  margin: 0;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  left: 4vw;
+  text-align: left;
+
+  color: rgba(0, 0, 0, 0.7);
+}

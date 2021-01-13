@@ -1,0 +1,33 @@
+.text_area {
+  position: absolute;
+  bottom: 7vh;
+  height: 12vh;
+  width: 80vw;
+  left: 10vw;
+  border-radius: 10px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  border: 1px solid #c8c9c7;
+  padding: 5px;
+}
+
+.submit_text {
+  position: absolute;
+  bottom: 2vh;
+  height: 4vh;
+  width: 20vw;
+  left: 70vw;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: #e6d9ef;
+  background: #9b26b6;
+  border-radius: 10px;
+  border: 1px solid #e6d9ef;
+}
