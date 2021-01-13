@@ -11,10 +11,9 @@
 }
 
 .page_chat {
-  display: flex;
   flex-direction: column;
-  position: relative;
-  position: absolute;
+
+  position: fixed;
   text-align: center;
   display: grid;
   height: 100vh;
