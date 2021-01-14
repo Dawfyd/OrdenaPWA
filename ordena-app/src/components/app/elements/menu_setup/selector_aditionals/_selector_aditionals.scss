@@ -1,0 +1,49 @@
+.order_card_selector_modifier {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1fr;
+}
+.button_modifier {
+  width: 100%;
+  height: 3vh;
+  font-size: 1.6vh;
+  font-weight: 500;
+  color: #32c755;
+  background-color: white;
+  text-align: left;
+  border: 0.2;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.button_selector_modifier {
+  width: 100%;
+  height: 4vh;
+  font-size: 1.8vh;
+  font-weight: 600;
+  color: #32c755;
+  background-color: white;
+  border: 0.2;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.container_options_selector_modifier {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.flechita_selector_adds {
+  padding-top: 1vh;
+}
+.order_button_modifier {
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  grid-template-rows: 1fr;
+}
+.title_selector_modifier {
+  padding-top: 0.5vh;
+  font-size: 1.8vh;
+  font-weight: 700;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.45);
+}
+.text_button_modifier {
+  padding-left: 1vw;
+  color: rgba(0, 0, 0, 0.45);
+}

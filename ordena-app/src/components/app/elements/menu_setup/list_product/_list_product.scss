@@ -1,0 +1,101 @@
+@mixin input {
+  border: 1;
+  border-color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.5);
+  width: 90%;
+}
+@mixin p {
+  padding-top: 2vh;
+}
+.ant-col-6 {
+  flex: 0;
+}
+.ant-form-item-label > label {
+  display: none;
+}
+.box_container_create_add {
+  padding-left: 2vw;
+  width: 90%;
+}
+.box_container_create_mod {
+  padding-left: 2vw;
+  width: 90%;
+}
+.container_list_product {
+  position: relative;
+  width: 100%;
+  height: 79vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: auto;
+}
+.container_photo_product {
+  height: 20vh;
+  width: 100%;
+  bottom: 0vh;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.container_create_add {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background-color: white;
+  padding: 1vh;
+}
+.container_create_mod {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background-color: white;
+  padding: 1vh;
+}
+.description_product_setup {
+  @include p;
+  margin: 0;
+  border: 0;
+}
+.div_button_create_mod {
+}
+.input_name_product_setup {
+  @include input;
+}
+.input_description_product_setup {
+  @include input;
+  height: 5vh;
+}
+.input_price_product_setup {
+  @include input;
+}
+
+.form_product_setup {
+  text-align: left;
+  font-size: 2vh;
+  color: rgba(0, 0, 0, 0.5);
+  padding-left: 2vw;
+}
+.name_product_setup {
+  @include p;
+  margin: 0;
+  border: 0;
+}
+.price_product_setup {
+  @include p;
+  margin: 0;
+  border: 0;
+}
+.photo_product {
+  padding: 0;
+  margin: 2vh;
+}
+.title_create_add {
+  text-align: left;
+  font-size: 2vh;
+  color: rgba(0, 0, 0, 0.5);
+  padding-left: 2vw;
+  margin: 0;
+  border: 0;
+}
+.title_create_mod {
+  text-align: left;
+  font-size: 2vh;
+  color: rgba(0, 0, 0, 0.5);
+  padding-left: 2vw;
+  margin: 0;
+  border: 0;
+}

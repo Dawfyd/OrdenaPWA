@@ -191,7 +191,7 @@ const arrays = {
       code_product: "0"
     }
   ],
-  Mods: [
+  Modifiers: [
     {
       id_Mod: 1,
       name_Mod: "Cebolla",
