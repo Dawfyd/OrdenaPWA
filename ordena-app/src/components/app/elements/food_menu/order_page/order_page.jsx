@@ -1,6 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import { RightOutlined, DownOutlined } from "@ant-design/icons";
+import {
+  RightOutlined,
+  DownOutlined,
+  ArrowLeftOutlined
+} from "@ant-design/icons";
 
 function OrderPage({
   ItemOrder,
@@ -11,15 +15,23 @@ function OrderPage({
   show_food,
   showMenu,
   lessFood,
+  show_Order
 }) {
   return (
     <div className="page_order_1">
-      {/*<div className='title_order'>
-      Resumen Ordena
-    </div>
-    <hr className='line_order'/> */}
+      <div className="head_order">
+        <div className="head_line">
+          <div className="back_order">
+            <button className="button_back_order" onClick={() => show_Order()}>
+              <ArrowLeftOutlined />
+            </button>
+          </div>
+          <div className="title_order">Resumen Ordena</div>
+        </div>
+        <hr className="line_order" />
+      </div>
       <div className="list_order">
-        {orderList.map((p) => (
+        {orderList.map(p => (
           <div className="container_product_order" key={p.id}>
             <button type="button" className="collapsible_info_order">
               <p className="icon_collapsible">
@@ -72,14 +84,14 @@ function formatNumber(price_item) {
   return new Intl.NumberFormat("de-DE").format(price_item);
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   orderList: state.orderList,
   data_products: state.data_products,
   price_resume: state.price_resume,
-  show_food: state.show_food,
+  show_food: state.show_food
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   showCart(p) {
     dispatch({
       type: "ADD_FOOD",
@@ -87,7 +99,7 @@ const mapDispatchToProps = (dispatch) => ({
       count_resume: 1,
       price_resume: p.price,
       product_resume: p.product,
-      unit_resume: 1,
+      unit_resume: 1
     });
   },
   lessFood(p) {
@@ -98,9 +110,16 @@ const mapDispatchToProps = (dispatch) => ({
       price_resume: p.price,
       product_resume: p.product,
       unit_resume: 1,
-      showOrder: false,
+      showOrder: false
     });
   },
+  show_Order() {
+    dispatch({
+      type: "SHOW_ORDER",
+      showOrder: true,
+      show_cart: true
+    });
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(OrderPage);

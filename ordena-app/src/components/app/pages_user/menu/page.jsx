@@ -29,11 +29,7 @@ function page({ show_cart, showOrder, show_Order, show_menu }) {
             <div
               className="resume_cart"
               style={
-                show_cart !== true
-                  ? { display: "none" }
-                  : showOrder === true
-                  ? { bottom: "72vh", display: "flex" }
-                  : { bottom: "0vh", display: "flex" }
+                show_cart !== true ? { display: "none" } : { display: "flex" }
               }
             >
               <Float_cart />
@@ -55,9 +51,9 @@ function page({ show_cart, showOrder, show_Order, show_menu }) {
     </Fragment>
   );
 }
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   show_cart: state.show_cart,
-  showOrder: state.showOrder,
+  showOrder: state.showOrder
 });
-const mapDispatchToProps = (dispatch) => ({});
+const mapDispatchToProps = dispatch => ({});
 export default connect(mapStateToProps, mapDispatchToProps)(page);

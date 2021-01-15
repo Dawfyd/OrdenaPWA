@@ -1,33 +1,60 @@
-.desc_food{
-  font-size: 2.3vh;
-  color: rgba(0,0,0,0.6);
-
+.button_back_food {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  padding-top: 1vh;
 }
-
-.img_food{
+.desc_food {
+  font-size: 2.3vh;
+  color: rgba(0, 0, 0, 0.6);
+}
+.div_button_back_food {
+  position: relative;
+  align-content: center;
+  margin: auto;
+  padding: 0;
+}
+.head_line_food {
+  padding-bottom: 0.5vh;
+  margin: 0;
+  border: 0;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr;
+}
+.head_page_food {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+.img_food {
   width: 99vw;
 }
-
-.line_food{
+.line_food {
+  margin: auto;
   border: 1;
-  border-color: rgba(0,0,0,0.15);
-  
+  border-color: rgba(0, 0, 0, 0.15);
 }
-
-.price_food{
+.page_food {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.price_food {
   font-weight: bold;
   font-size: 2.3vh;
-
 }
-
-
-.title_food{
-  font-weight: bold;
-  font-size: 3vh;
-
+.title_food {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 2.9vh;
+  padding: 0;
+  text-align: left;
+  margin: 0;
+  border: 0;
 }
-
-.text_food{
+.text_food {
   padding-left: 3vw;
   text-align: left;
 }

@@ -1,0 +1,76 @@
+.button_category_card {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 20fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 5vh;
+  border: 0.2;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0;
+  border-color: rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+.button_add_product {
+  width: 100%;
+  height: 5vh;
+  font-size: 1.8vh;
+  font-weight: 600;
+  color: #32c755;
+  background-color: white;
+  border: 0.2;
+  border-right: 0;
+  border-left: 0;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.button_options_category {
+  background-color: white;
+  border: 0.2;
+  border-left: 0;
+  border-bottom: 0;
+  border-right: 0;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.category_menu_setup {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+.card_list_category {
+  width: 100%;
+  height: 5vh;
+  border: 0.2;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.container_list_category {
+  width: 100%;
+  align-content: flex-end;
+  right: 0;
+  overflow: auto;
+}
+.div_button_add_product {
+  position: relative;
+  right: 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.flechita_list_category {
+  color: #32c755;
+  height: 100%;
+  width: 100%;
+}
+.order_card_list_category {
+  display: grid;
+  grid-template-columns: 15fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  text-align: left;
+}
+.title_list_category {
+  padding-top: 0.7vh;
+  padding-left: 0.5vw;
+  font-size: 1.8vh;
+  font-weight: 600;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.45);
+}
