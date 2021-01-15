@@ -22,11 +22,6 @@ function Forms_food({ id_food, showCart, show_food, orderList, showMenu }) {
       </div>
       <div className="buttons_order">
         <div className="button_space">
-          <button className="button_back" onClick={() => showMenu()}>
-            Volver
-          </button>
-        </div>
-        <div className="button_space">
           <button className="button_request" onClick={() => showCart(b)}>
             Añadir
           </button>
@@ -36,16 +31,16 @@ function Forms_food({ id_food, showCart, show_food, orderList, showMenu }) {
   ));
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   alt_food: state.alt_food,
   id_food: state.id_food,
   opt_food: state.opt_food,
   adds: state.adds,
   show_food: state.show_food,
-  orderList: state.orderList,
+  orderList: state.orderList
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   showCart(b) {
     dispatch({
       type: "ADD_FOOD",
@@ -53,15 +48,9 @@ const mapDispatchToProps = (dispatch) => ({
       count_resume: 1,
       price_resume: b.price,
       product_resume: b.product,
-      unit_resume: 1,
+      unit_resume: 1
     });
-  },
-  showMenu() {
-    dispatch({
-      type: "BACK_MENU",
-      showMenu: true,
-    });
-  },
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Forms_food);

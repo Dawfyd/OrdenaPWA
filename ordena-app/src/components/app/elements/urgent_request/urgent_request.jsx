@@ -26,7 +26,7 @@ function UrgentRequest() {
             className="icon_request"
             alt="icono servilletas"
           />
-          <p className="text_icon">servilletas</p>
+          <p className="text_icon">Servilletas</p>
         </button>
         <button className="button_request">
           <img src={icon_salt} className="icon_request" alt="icono sal" />

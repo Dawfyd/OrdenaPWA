@@ -1,21 +1,29 @@
-.button_plus{
+.button_plus {
   border: 0px;
   background-color: white;
 }
-.button_plus:hover{
+.button_plus:hover {
   border: 0px;
   background-color: gray;
 }
-
-.card_list{
-
+.button_register_fav {
+  width: 35vw;
+  height: 5vh;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  background-color: #9b26b6;
+  box-shadow: 2px 2px 5px black;
+  font-size: 3vh;
+  padding-bottom: 3vh;
+  margin: 0;
+}
+.card_list {
   position: relative;
   width: 100vw;
   height: 20vh;
-
 }
-
-.cost{
+.cost {
   position: absolute;
   top: 13vh;
   line-height: 2vh;
@@ -24,25 +32,24 @@
   font-style: normal;
   color: black;
 }
-
-.description{
+.description {
   position: absolute;
   line-height: 2.5vh;
   font-size: 3.9vw;
-  color: rgba(0,0,0,0.6);
+  color: rgba(0, 0, 0, 0.6);
   top: 4vh;
   width: 50vw;
 }
-
-.group_title{
+.desc_fav {
+  font-size: 4vw;
+}
+.group_title {
   position: absolute;
   font-size: 4.5vw;
-  color: rgba(0,0,0,0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
-
-.img_card
-{
-  position:absolute;
+.img_card {
+  position: absolute;
   width: 27.7vw;
   height: 15.6vh;
   left: 3vw;
@@ -50,33 +57,28 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
-
-.link_card{
+.link_card {
   background-color: white;
   border: 0px;
-
 }
-
-
-
-.order_card{
-  position:absolute;
+.order_card {
+  position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows:  1fr;
+  grid-template-rows: 1fr;
   text-align: left;
-
 }
-
-.plus{
+.plus {
   position: absolute;
   font-size: 4vh;
   right: 2vw;
   top: 10.2vh;
-  color: #9B26B6;
+  color: #9b26b6;
 }
-
-.text{
+.register_fav {
+  padding: 2vh;
+}
+.text {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
@@ -85,43 +87,51 @@
   width: 63.3vw;
   top: 2.2vh;
 }
-
-.title{
+.text_button_fav {
+  text-align: center;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+.title {
   position: absolute;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   font-style: normal;
   font-weight: 500;
   font-size: 5vw;
   line-height: 3.6vh;
 }
-.title_cards{
+.title_cards {
   position: relative;
   font-size: 5vw;
   font-weight: bold;
   text-align: left;
   left: 4vw;
-  color: rgba(0,0,0,0.6);
-
+  color: rgba(0, 0, 0, 0.6);
+}
+.title_fav {
+  font-size: 4.5vw;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+  padding: 2vh;
 }
 
-#separator_card{
+#separator_card {
   position: relative;
-  border-color: rgba(0,0,0,0.2);
+  border-color: rgba(0, 0, 0, 0.2);
   border: 1;
   padding: 0;
   margin: 0;
   width: 200vw;
   right: 5vw;
-  top:20vh;
-
+  top: 20vh;
 }
 
-#separator_title_card{
+#separator_title_card {
   position: relative;
-  border-color: rgba(0,0,0,0.2);
+  border-color: rgba(0, 0, 0, 0.2);
   border: 1;
   padding: 0;
   margin: 0;
-  top:5vh;
-
+  top: 5vh;
 }
