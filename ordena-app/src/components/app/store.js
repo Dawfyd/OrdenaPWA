@@ -578,7 +578,7 @@ const initialState = {
       state_modifier: true,
       id_product: 1,
       type_modifier: "P",
-      code_modifier: "1",
+      code_modifier: "10,1,4",
       optional_modifier: true,
       string_modifier: " "
     },
@@ -588,7 +588,7 @@ const initialState = {
       state_modifier: true,
       id_product: 1,
       type_modifier: "C",
-      code_modifier: "3",
+      code_modifier: "4,3,5,1",
       optional_modifier: true,
       string_modifier: " "
     },
@@ -628,7 +628,7 @@ const initialState = {
       state_modifier: true,
       id_product: 13,
       type_modifier: "P",
-      code_modifier: "13",
+      code_modifier: "13,2,1,10",
       optional_modifier: false,
       string_modifier: "Chocolate, Vainilla, Fresa"
     },
@@ -638,7 +638,7 @@ const initialState = {
       state_modifier: true,
       id_product: 13,
       type_modifier: "P",
-      code_modifier: "13",
+      code_modifier: "13,10,1",
       optional_modifier: true,
       string_modifier: " "
     }
@@ -665,7 +665,15 @@ const initialState = {
   show_ads: false,
   create_category: false,
   edit_category: false,
-  id_create_category: 0
+  id_create_category: 0,
+  codes_mods_temp: [
+    {
+      id_modifier: 1,
+      type_modifier: "",
+      code_modifier: ""
+    }
+  ],
+  codes_mods: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -676,17 +684,41 @@ const reducer = (state = initialState, action) => {
       const arrayTemp_1 = state.modifiers.filter(
         a => a.id_modifier === id_temp_3
       );
+      const index5 = state.modifiers.findIndex(
+        a => a.id_modifier === id_temp_3
+      );
       const tempType_1 = arrayTemp_1[0].type_modifier;
       if (tempType_1 === "C") {
-        console.log("holi");
+        const codeTemp_1 = arrayTemp_1[0].code_modifier.split(",");
+        const id_category_temp = state.id_category.toString();
+        var codeTemp_2 = codeTemp_1.concat(id_category_temp);
+        codeTemp_2 = codeTemp_2.join(",");
+        arrayTemp_1[0].code_modifier = codeTemp_2;
+        console.log(arrayTemp_1);
+        const arrayTemp_2 = state.modifiers;
+        arrayTemp_2[index5] = arrayTemp_1[0];
+        console.log(arrayTemp_2);
+        return {
+          ...state,
+          modifiers: arrayTemp_2
+        };
       }
       if (tempType_1 === "P") {
-        console.log("holi_2");
+        const codeTemp_3 = arrayTemp_1[0].code_modifier.split(",");
+        const id_food_temp = state.id_food.toString();
+        var codeTemp_4 = codeTemp_3.concat(id_food_temp);
+        codeTemp_4 = codeTemp_4.join(",");
+        arrayTemp_1[0].code_modifier = codeTemp_4;
+        console.log(arrayTemp_3);
+        const arrayTemp_3 = state.modifiers;
+        arrayTemp_3[index5] = arrayTemp_1[0];
+        console.log(arrayTemp_3);
+        return {
+          ...state,
+          modifiers: arrayTemp_3
+        };
       }
-      console.log(arrayTemp_1);
-      return {
-        ...state
-      };
+
     case "EDIT_CATEGORY":
       console.log(state.edit_category);
       return {

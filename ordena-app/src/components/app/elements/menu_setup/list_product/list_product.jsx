@@ -338,40 +338,46 @@ function ListProduct({
                   <div>
                     {modifiers
                       .filter(b => b.type_modifier === "P")
-                      .filter(k => parseInt(k.code_modifier) === id_create_food)
-                      .map(p => (
-                        <div key={p.id_modifier}>
-                          <button className="button_modifier">
-                            <div className="order_button_modifier">
-                              <div className="text_button_modifier">
-                                {p.name_modifier}
+                      .map(p =>
+                        p.code_modifier.includes(id_food) ? (
+                          <div key={p.id_modifier}>
+                            <button className="button_modifier">
+                              <div className="order_button_modifier">
+                                <div className="text_button_modifier">
+                                  {p.name_modifier}
+                                </div>
+                                <div>
+                                  <CheckSquareFilled />
+                                </div>
                               </div>
-                              <div>
-                                <CheckSquareFilled />
-                              </div>
-                            </div>
-                          </button>
-                        </div>
-                      ))}
+                            </button>
+                          </div>
+                        ) : (
+                          " "
+                        )
+                      )}
                   </div>
                   <div>
                     {modifiers
                       .filter(b => b.type_modifier === "C")
-                      .filter(k => parseInt(k.code_modifier) === id_category)
-                      .map(p => (
-                        <div key={p.id_modifier}>
-                          <button className="button_modifier">
-                            <div className="order_button_modifier">
-                              <div className="text_button_modifier">
-                                {p.name_modifier}
+                      .map(p =>
+                        p.code_modifier.includes(id_category) ? (
+                          <div key={p.id_modifier}>
+                            <button className="button_modifier">
+                              <div className="order_button_modifier">
+                                <div className="text_button_modifier">
+                                  {p.name_modifier}
+                                </div>
+                                <div>
+                                  <CheckSquareFilled />
+                                </div>
                               </div>
-                              <div>
-                                <CheckSquareFilled />
-                              </div>
-                            </div>
-                          </button>
-                        </div>
-                      ))}
+                            </button>
+                          </div>
+                        ) : (
+                          ""
+                        )
+                      )}
                     <br />
                   </div>
                   <div>
@@ -424,41 +430,47 @@ function ListProduct({
                     {products
                       .filter(c => c.id_category === 1)
                       .filter(b => b.type_product === "P")
-                      .filter(k => parseInt(k.code_product) === id_create_food)
-                      .map(p => (
-                        <div key={p.id_product}>
-                          <button className="button_modifier">
-                            <div className="order_button_modifier">
-                              <div className="text_button_modifier">
-                                {p.name_product}
+                      .map(p =>
+                        p.code_product.includes(id_food) ? (
+                          <div key={p.id_product}>
+                            <button className="button_modifier">
+                              <div className="order_button_modifier">
+                                <div className="text_button_modifier">
+                                  {p.name_product}
+                                </div>
+                                <div>
+                                  <CheckSquareFilled />
+                                </div>
                               </div>
-                              <div>
-                                <CheckSquareFilled />
-                              </div>
-                            </div>
-                          </button>
-                        </div>
-                      ))}
+                            </button>
+                          </div>
+                        ) : (
+                          ""
+                        )
+                      )}
                   </div>
                   <div>
                     {products
                       .filter(c => c.id_category === 1)
                       .filter(b => b.type_product === "C")
-                      .filter(k => parseInt(k.code_product) === id_category)
-                      .map(p => (
-                        <div key={p.id_product}>
-                          <button className="button_modifier">
-                            <div className="order_button_modifier">
-                              <div className="text_button_modifier">
-                                {p.name_product}
+                      .map(p =>
+                        p.code_product.includes(id_category) ? (
+                          <div key={p.id_product}>
+                            <button className="button_modifier">
+                              <div className="order_button_modifier">
+                                <div className="text_button_modifier">
+                                  {p.name_product}
+                                </div>
+                                <div>
+                                  <CheckSquareFilled />
+                                </div>
                               </div>
-                              <div>
-                                <CheckSquareFilled />
-                              </div>
-                            </div>
-                          </button>
-                        </div>
-                      ))}
+                            </button>
+                          </div>
+                        ) : (
+                          ""
+                        )
+                      )}
                     <br />
                   </div>
                   <div>
@@ -639,46 +651,46 @@ function ListProduct({
                                 <div>
                                   {modifiers
                                     .filter(b => b.type_modifier === "P")
-                                    .filter(
-                                      k => parseInt(k.code_modifier) === id_food
-                                    )
-                                    .map(p => (
-                                      <div key={p.id_modifier}>
-                                        <button className="button_modifier">
-                                          <div className="order_button_modifier">
-                                            <div className="text_button_modifier">
-                                              {p.name_modifier}
+                                    .map(p =>
+                                      p.code_modifier.includes(id_food) ? (
+                                        <div key={p.id_modifier}>
+                                          <button className="button_modifier">
+                                            <div className="order_button_modifier">
+                                              <div className="text_button_modifier">
+                                                {p.name_modifier}
+                                              </div>
+                                              <div>
+                                                <CheckSquareFilled />
+                                              </div>
                                             </div>
-                                            <div>
-                                              <CheckSquareFilled />
-                                            </div>
-                                          </div>
-                                        </button>
-                                      </div>
-                                    ))}
+                                          </button>
+                                        </div>
+                                      ) : (
+                                        " "
+                                      )
+                                    )}
                                 </div>
                                 <div>
                                   {modifiers
                                     .filter(b => b.type_modifier === "C")
-                                    .filter(
-                                      k =>
-                                        parseInt(k.code_modifier) ===
-                                        id_category
-                                    )
-                                    .map(p => (
-                                      <div key={p.id_modifier}>
-                                        <button className="button_modifier">
-                                          <div className="order_button_modifier">
-                                            <div className="text_button_modifier">
-                                              {p.name_modifier}
+                                    .map(p =>
+                                      p.code_modifier.includes(id_category) ? (
+                                        <div key={p.id_modifier}>
+                                          <button className="button_modifier">
+                                            <div className="order_button_modifier">
+                                              <div className="text_button_modifier">
+                                                {p.name_modifier}
+                                              </div>
+                                              <div>
+                                                <CheckSquareFilled />
+                                              </div>
                                             </div>
-                                            <div>
-                                              <CheckSquareFilled />
-                                            </div>
-                                          </div>
-                                        </button>
-                                      </div>
-                                    ))}
+                                          </button>
+                                        </div>
+                                      ) : (
+                                        ""
+                                      )
+                                    )}
                                   <br />
                                 </div>
                                 <div>
@@ -734,46 +746,47 @@ function ListProduct({
                                   {products
                                     .filter(c => c.id_category === 1)
                                     .filter(b => b.type_product === "P")
-                                    .filter(
-                                      k => parseInt(k.code_product) === id_food
-                                    )
-                                    .map(p => (
-                                      <div key={p.id_product}>
-                                        <button className="button_modifier">
-                                          <div className="order_button_modifier">
-                                            <div className="text_button_modifier">
-                                              {p.name_product}
+                                    .map(p =>
+                                      p.code_product.includes(id_food) ? (
+                                        <div key={p.id_product}>
+                                          <button className="button_modifier">
+                                            <div className="order_button_modifier">
+                                              <div className="text_button_modifier">
+                                                {p.name_product}
+                                              </div>
+                                              <div>
+                                                <CheckSquareFilled />
+                                              </div>
                                             </div>
-                                            <div>
-                                              <CheckSquareFilled />
-                                            </div>
-                                          </div>
-                                        </button>
-                                      </div>
-                                    ))}
+                                          </button>
+                                        </div>
+                                      ) : (
+                                        ""
+                                      )
+                                    )}
                                 </div>
                                 <div>
                                   {products
                                     .filter(c => c.id_category === 1)
                                     .filter(b => b.type_product === "C")
-                                    .filter(
-                                      k =>
-                                        parseInt(k.code_product) === id_category
-                                    )
-                                    .map(p => (
-                                      <div key={p.id_product}>
-                                        <button className="button_modifier">
-                                          <div className="order_button_modifier">
-                                            <div className="text_button_modifier">
-                                              {p.name_product}
+                                    .map(p =>
+                                      p.code_product.includes(id_category) ? (
+                                        <div key={p.id_product}>
+                                          <button className="button_modifier">
+                                            <div className="order_button_modifier">
+                                              <div className="text_button_modifier">
+                                                {p.name_product}
+                                              </div>
+                                              <div>
+                                                <CheckSquareFilled />
+                                              </div>
                                             </div>
-                                            <div>
-                                              <CheckSquareFilled />
-                                            </div>
-                                          </div>
-                                        </button>
-                                      </div>
-                                    ))}
+                                          </button>
+                                        </div>
+                                      ) : (
+                                        ""
+                                      )
+                                    )}
                                   <br />
                                 </div>
                                 <div>
@@ -964,46 +977,46 @@ function ListProduct({
                                 <div>
                                   {modifiers
                                     .filter(b => b.type_modifier === "P")
-                                    .filter(
-                                      k => parseInt(k.code_modifier) === id_food
-                                    )
-                                    .map(p => (
-                                      <div key={p.id_modifier}>
-                                        <button className="button_modifier">
-                                          <div className="order_button_modifier">
-                                            <div className="text_button_modifier">
-                                              {p.name_modifier}
+                                    .map(p =>
+                                      p.code_modifier.includes(id_food) ? (
+                                        <div key={p.id_modifier}>
+                                          <button className="button_modifier">
+                                            <div className="order_button_modifier">
+                                              <div className="text_button_modifier">
+                                                {p.name_modifier}
+                                              </div>
+                                              <div>
+                                                <CheckSquareFilled />
+                                              </div>
                                             </div>
-                                            <div>
-                                              <CheckSquareFilled />
-                                            </div>
-                                          </div>
-                                        </button>
-                                      </div>
-                                    ))}
+                                          </button>
+                                        </div>
+                                      ) : (
+                                        " "
+                                      )
+                                    )}
                                 </div>
                                 <div>
                                   {modifiers
                                     .filter(b => b.type_modifier === "C")
-                                    .filter(
-                                      k =>
-                                        parseInt(k.code_modifier) ===
-                                        id_category
-                                    )
-                                    .map(p => (
-                                      <div key={p.id_modifier}>
-                                        <button className="button_modifier">
-                                          <div className="order_button_modifier">
-                                            <div className="text_button_modifier">
-                                              {p.name_modifier}
+                                    .map(p =>
+                                      p.code_modifier.includes(id_category) ? (
+                                        <div key={p.id_modifier}>
+                                          <button className="button_modifier">
+                                            <div className="order_button_modifier">
+                                              <div className="text_button_modifier">
+                                                {p.name_modifier}
+                                              </div>
+                                              <div>
+                                                <CheckSquareFilled />
+                                              </div>
                                             </div>
-                                            <div>
-                                              <CheckSquareFilled />
-                                            </div>
-                                          </div>
-                                        </button>
-                                      </div>
-                                    ))}
+                                          </button>
+                                        </div>
+                                      ) : (
+                                        ""
+                                      )
+                                    )}
                                   <br />
                                 </div>
                                 <div>
@@ -1059,46 +1072,47 @@ function ListProduct({
                                   {products
                                     .filter(c => c.id_category === 1)
                                     .filter(b => b.type_product === "P")
-                                    .filter(
-                                      k => parseInt(k.code_product) === id_food
-                                    )
-                                    .map(p => (
-                                      <div key={p.id_product}>
-                                        <button className="button_modifier">
-                                          <div className="order_button_modifier">
-                                            <div className="text_button_modifier">
-                                              {p.name_product}
+                                    .map(p =>
+                                      p.code_product.includes(id_food) ? (
+                                        <div key={p.id_product}>
+                                          <button className="button_modifier">
+                                            <div className="order_button_modifier">
+                                              <div className="text_button_modifier">
+                                                {p.name_product}
+                                              </div>
+                                              <div>
+                                                <CheckSquareFilled />
+                                              </div>
                                             </div>
-                                            <div>
-                                              <CheckSquareFilled />
-                                            </div>
-                                          </div>
-                                        </button>
-                                      </div>
-                                    ))}
+                                          </button>
+                                        </div>
+                                      ) : (
+                                        ""
+                                      )
+                                    )}
                                 </div>
                                 <div>
                                   {products
                                     .filter(c => c.id_category === 1)
                                     .filter(b => b.type_product === "C")
-                                    .filter(
-                                      k =>
-                                        parseInt(k.code_product) === id_category
-                                    )
-                                    .map(p => (
-                                      <div key={p.id_product}>
-                                        <button className="button_modifier">
-                                          <div className="order_button_modifier">
-                                            <div className="text_button_modifier">
-                                              {p.name_product}
+                                    .map(p =>
+                                      p.code_product.includes(id_category) ? (
+                                        <div key={p.id_product}>
+                                          <button className="button_modifier">
+                                            <div className="order_button_modifier">
+                                              <div className="text_button_modifier">
+                                                {p.name_product}
+                                              </div>
+                                              <div>
+                                                <CheckSquareFilled />
+                                              </div>
                                             </div>
-                                            <div>
-                                              <CheckSquareFilled />
-                                            </div>
-                                          </div>
-                                        </button>
-                                      </div>
-                                    ))}
+                                          </button>
+                                        </div>
+                                      ) : (
+                                        ""
+                                      )
+                                    )}
                                   <br />
                                 </div>
                                 <div>
