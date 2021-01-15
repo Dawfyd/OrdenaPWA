@@ -1,24 +1,24 @@
 import { connect } from "react-redux";
 import React from "react";
-import Form_1 from "../form_1/form_1.jsx";
-import Form_0 from "../form_0/form_0.jsx";
-import Form_2 from "../form_2/form_2.jsx";
-import Form_3 from "../form_3/form_3.jsx";
+import Form1 from "../form_1/form_1.jsx";
+import Form0 from "../form_0/form_0.jsx";
+import Form2 from "../form_2/form_2.jsx";
+import Form3 from "../form_3/form_3.jsx";
 
-function Forms_food({ id_food, showCart, show_food, orderList }) {
-  return show_food.map(b => (
-    <div className="from_menu" key={b.id}>
-      <div className="form_1">
-        <Form_1 />
+function Forms_food({ id_food, showCart, show_food, orderList, showMenu }) {
+  return show_food.map((b) => (
+    <div key={b.id}>
+      <div>
+        <Form1 />
       </div>
-      <div className="form_2">
-        <Form_2 />
+      <div>
+        <Form2 />
       </div>
-      <div className="form_3">
-        <Form_3 />
+      <div>
+        <Form3 />
       </div>
-      <div className="form_0">
-        <Form_0 />
+      <div>
+        <Form0 />
       </div>
       <div className="buttons_order">
         <div className="button_space">

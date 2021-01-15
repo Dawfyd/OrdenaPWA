@@ -21,13 +21,14 @@ import account_admin from "./pages_admin/account_admin";
 import menu_admin from "./pages_admin/menu_admin";
 import menu_setup from "./pages_admin/menu_setup";
 import cashier_setup from "./pages_admin/cashier_setup";
+import spots_setup from "./pages_admin/spots_setup";
 
 const App = () => (
   <Provider store={store}>
     <div>
       <Switch>
         <Route path="/turn" component={turn} exact />
-        <Route path="/register" component={register} exact />
+        <Route path="/register/" component={register} />
         <Route path="/home" component={home} exact />
         <Route path="/menu" component={menu} exact />
         <Route path="/chat" component={chat} exact />
@@ -55,6 +56,7 @@ const App = () => (
         <Route path="/restaurant/menu_admin" component={menu_admin} />
         <Route path="/restaurant/menu_setup" component={menu_setup} />
         <Route path="/restaurant/cashier_setup" component={cashier_setup} />
+        <Route path="/restaurant/spots_setup" component={spots_setup} />
       </Switch>
     </div>
   </Provider>

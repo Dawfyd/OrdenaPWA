@@ -8,8 +8,14 @@ import jane from "../../assets/images/avatars/jane.png";
 import foto_1 from "../../assets/images/tarjets/hamburguesa.jpg";
 
 const initialState = {
-  menu: [],
-  navegador: [],
+  services: [
+    {
+      id_service: 1,
+      alias_service: "Rodriguez",
+      id_venue: 1,
+    },
+  ],
+
   posts: [
     { id: 1, text: "Menú" },
     { id: 2, text: "Favoritos" },
@@ -293,6 +299,52 @@ const initialState = {
     { id: 1, state_table: 1, number: 1, id_service: 1 },
     { id: 2, state_table: 2, number: 2, id_service: 1 }
   ],
+  spots: [
+    //data_tables
+    {
+      id_spot: 1, //id
+      state_spot: 2, //state_table
+      name_spot: "casinni",
+      number_spot: 1, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 2, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 2, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+  ],
+  orders: [
+    {
+      id_order: 1, // id
+      price_order: 24500, //total_price
+      state_order: false, //state_paid
+      id_person: 1, //id_user
+      id_spot: 1, //id_table
+      cashier_display: false,
+    },
+    {
+      id_order: 2, // id
+      price_order: 56000, //total_price
+      state_order: false, //state_paid
+      id_person: 2, //id_user
+      id_spot: 2, //id_table
+      cashier_display: false,
+    },
+    {
+      id_order: 3, // id
+      price_order: 20000, //total_price
+      state_order: false, //state_paid
+      id_person: 3, //id_user
+      id_spot: 1, //id_table
+      cashier_display: false,
+    },
+  ],
+
   data_order: [
     {
       id: 1,
@@ -318,6 +370,72 @@ const initialState = {
       state_paid: false,
       cashier_display: false
     }
+  ],
+  requests: [
+    //data_products
+    {
+      id_request: 1, //id
+      unit_request: 1, // unid_item
+      comentary_request: "Con muchas salsas",
+      state_served_request: true, //state_served
+      state_paid_request: false,
+      addition_request: "",
+      modifier_request: "",
+      id_product: 1,
+      id_order: 1,
+      id_spot: 1, //id_table
+      state_button: false,
+      state_check: false,
+    },
+    {
+      id_request: 2, //id
+      unit_request: 1, // unid_item
+      comentary_request: "Con muchas salsas",
+      state_served_request: false, //state_served
+      state_paid_request: false,
+      addition_request: "",
+      modifier_request: "",
+      id_product: 1,
+      id_order: 3,
+      id_spot: 1, //id_table
+      state_button: false,
+      state_check: false,
+    },
+    {
+      id_request: 3, //id
+      unit_request: 1, // unid_item
+      comentary_request: "Con muchas salsas",
+      state_served_request: true, //state_served
+      state_paid_request: false,
+      addition_request: "",
+      modifier_request: "",
+      id_product: 1,
+      id_order: 2,
+      id_spot: 2, //id_table
+      state_button: false,
+      state_check: false,
+    },
+  ],
+  products: [
+    {
+      id_product: 1,
+      id_category: 3,
+      name_product: "Hamburguesa Doble",
+      description_product:
+        "Hamburguesa doble carne angus 400g, salsa de la casa",
+      image_product: foto_1,
+      state_product: true,
+      type_product: "",
+      code_product: "",
+    },
+  ],
+  prices: [
+    {
+      id_price: 1,
+      value_price: 20000,
+      currency: "COP",
+      id_product: 1,
+    },
   ],
   data_products: [
     {
@@ -387,6 +505,52 @@ const initialState = {
       state_button: false,
       state_check: false
     }
+  ],
+  persons: [
+    {
+      id_person: 1,
+      username: "Jane Cooper",
+      photo_person: jane,
+      id_spot: 1,
+    },
+    {
+      id_person: 2,
+      username: "David Hoyos",
+      photo_person:
+        "https://lh3.googleusercontent.com/a-/AOh14GhYx-n5PDPFGmemzdi06rBLEpQt1Rc7y0iI93ZwzA=s96-c",
+      id_spot: 1,
+    },
+    {
+      id_person: 3,
+      username: "Robert Fox",
+      photo_person: robert,
+      id_spot: 1,
+    },
+    {
+      id_person: 4,
+      username: "Darrell Steward",
+      photo_person: darrell,
+      id_spot: 1,
+    },
+    {
+      id_person: 5,
+      username: "Kathryn Murphy",
+      photo_person: kathryn,
+      id_spot: 1,
+    },
+    {
+      id_person: 6,
+      username: "Leslie Alexander",
+      photo_person:
+        "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+      id_spot: 1,
+    },
+    {
+      id_person: 7,
+      username: "Cameron Williamson",
+      photo_person: cameron,
+      id_spot: 1,
+    },
   ],
   data_user: [
     {
@@ -552,6 +716,8 @@ const initialState = {
   price_resume: 0,
   temp_category: 0,
   create_product: false,
+  select_codeqr: 0,
+
   alt_food: [
     { id: 1, id_alt: 2, name: "Sal" },
     { id: 2, id_alt: 2, name: "Pimienta" },
@@ -569,6 +735,7 @@ const initialState = {
     { id: 3, id_add: 1, name: "Aros de cebolla" }
   ],
   orderList: [],
+
   favList: [],
   registerList: [],
   modifiers: [
@@ -674,10 +841,14 @@ const initialState = {
     }
   ],
   codes_mods: []
+
+  id_spot_register: 0,
+
 };
 
 const reducer = (state = initialState, action) => {
   console.log(action);
+
   switch (action.type) {
     case "ADD_MODIFIERS":
       const id_temp_3 = action.id_modifier;
@@ -776,19 +947,34 @@ const reducer = (state = initialState, action) => {
         show_cart: action.show_cart
       };
     case "ORDER_READY":
-      const index_order = state.data_products.findIndex(
-        data_products => data_products.id === action.id_ready
+
+      const index_order = state.requests.findIndex(
+        (requests) => requests.id_request === action.id_ready
+
       );
-      const newArray_order = [...state.data_products];
-      newArray_order[index_order].state_served = true;
+      const newArray_order = [...state.requests];
+      newArray_order[index_order].state_served_request = true;
       return {
         ...state,
-        data_products: newArray_order
+
+        requests: newArray_order,
+
       };
     case "CLICK_TABLE":
       return {
         ...state,
         select_table: action.select_table
+      };
+    case "SELECT_SPOT":
+      return {
+        ...state,
+        select_codeqr: action.select_codeqr,
+      };
+
+    case "SELECT_SERVICE":
+      return {
+        ...state,
+        select_codeqr: action.select_codeqr,
       };
     case "BACK_MENU":
       return {
@@ -909,11 +1095,13 @@ const reducer = (state = initialState, action) => {
         };
       }
     case "DISPLAY_BUTTON":
-      const index_display = state.data_products.findIndex(
-        data_products => data_products.id === action.button_display
+
+      const index_display = state.requests.findIndex(
+        (requests) => requests.id_request === action.button_display
+
       );
 
-      const newArray_display = [...state.data_products];
+      const newArray_display = [...state.requests];
 
       if (newArray_display[index_display].state_button === false) {
         newArray_display[index_display].state_button = true;
@@ -922,14 +1110,16 @@ const reducer = (state = initialState, action) => {
       }
       return {
         ...state,
-        data_products: newArray_display
+
+        requests: newArray_display,
       };
     case "CLICK_ITEM":
-      const index_item = state.data_products.findIndex(
-        data_products => data_products.id === action.check_id
+      const index_item = state.requests.findIndex(
+        (requests) => requests.id_request === action.check_id
+
       );
 
-      const newArray_item = [...state.data_products];
+      const newArray_item = [...state.requests];
 
       if (newArray_item[index_item].state_check === false) {
         newArray_item[index_item].state_check = true;
@@ -939,14 +1129,15 @@ const reducer = (state = initialState, action) => {
 
       return {
         ...state,
-        data_products: newArray_item
+        requests: newArray_item,
       };
     case "CLICK_USER_DETAILS":
-      const index_details = state.data_order.findIndex(
-        data_order => data_order.id === action.user_id
+      const index_details = state.orders.findIndex(
+        (orders) => orders.id_order === action.user_id
+
       );
 
-      const newArray_details = [...state.data_order];
+      const newArray_details = [...state.orders];
 
       if (newArray_details[index_details].cashier_display === false) {
         newArray_details[index_details].cashier_display = true;
@@ -956,7 +1147,8 @@ const reducer = (state = initialState, action) => {
 
       return {
         ...state,
-        data_order: newArray_details
+        orders: newArray_details,
+
       };
 
     case "CLICK_REGISTER":
@@ -970,17 +1162,19 @@ const reducer = (state = initialState, action) => {
         display_category: action.display_category
       };
     case "CLICK_PAID":
-      const index_paid = state.data_order.findIndex(
-        data_order => data_order.id === action.user_paid
+      const index_paid = state.orders.findIndex(
+        (orders) => orders.id_order === action.user_paid
+
       );
 
-      const newArray_paid = [...state.data_order];
+      const newArray_paid = [...state.orders];
 
-      newArray_paid[index_paid].state_paid = true;
+      newArray_paid[index_paid].state_order = true;
 
       return {
         ...state,
-        data_order: newArray_paid
+        orders: newArray_paid,
+
       };
 
       break;
