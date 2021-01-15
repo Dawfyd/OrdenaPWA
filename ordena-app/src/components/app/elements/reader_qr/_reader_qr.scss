@@ -5,7 +5,7 @@
   left: 15vw;
   width: 70vw;
   height: 10vh;
-  font-family: Quicksand;
+  font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 4.5vw;
@@ -15,7 +15,7 @@
   z-index: 2;
 }
 #ellipse_qr {
-  top: 28vh;
+  top: 20vh;
   width: 100vw;
   position: absolute;
   margin: 0;
@@ -25,8 +25,8 @@
 }
 
 .ellipse_turn_qr {
-  position: fixed;
-  top: 28vh;
+  position: absolute;
+  top: 0vh;
   height: 60vh;
   width: 100vw;
   left: 0;
@@ -35,14 +35,17 @@
 
 .ellipse_reader {
   background-position: center center;
-  height: 40vh;
-  width: 70vw;
+  position: absolute;
+  top: 8vh;
+  height: 42vh;
+  width: 72vw;
+  left: 14vw;
   z-index: -1;
 }
 
 .qr_reader {
-  position: fixed;
-  bottom: 24vh;
+  position: absolute;
+  top: 8vh;
   left: 12vw;
   width: 76vw;
   height: 40vh;
@@ -52,7 +55,7 @@
 @media only screen and (min-width: 600px) {
   /* For tablets: */
   #ellipse_qr {
-    top: 28vh;
+    top: 20vh;
     width: 100vw;
     position: absolute;
     margin: 0;
@@ -62,8 +65,8 @@
   }
 
   .ellipse_turn_qr {
-    position: fixed;
-    top: 27.5vh;
+    position: absolute;
+    top: 0vh;
     height: 60vh;
     width: 100vw;
     left: 0;
@@ -72,14 +75,17 @@
 
   .ellipse_reader {
     background-position: center center;
-    height: 40vh;
-    width: 70vw;
+    position: absolute;
+    top: 8vh;
+    height: 42vh;
+    width: 72vw;
+    left: 14vw;
     z-index: -1;
   }
 
   .qr_reader {
-    position: fixed;
-    bottom: 31vh;
+    position: absolute;
+    top: 10vh;
     left: 25vw;
     width: 50vw;
     height: 30vh;

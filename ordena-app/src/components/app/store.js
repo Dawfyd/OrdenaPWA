@@ -452,6 +452,7 @@ const initialState = {
   count_resume: 0,
   price_resume: 0,
   temp_category: 0,
+  select_codeqr: 0,
   alt_food: [
     { id: 1, id_alt: 2, name: "Sal" },
     { id: 2, id_alt: 2, name: "Pimienta" },
@@ -469,6 +470,7 @@ const initialState = {
     { id: 3, id_add: 1, name: "Aros de cebolla" },
   ],
   orderList: [],
+  id_spot_register: 0,
 };
 
 const reducer = (state = initialState, action) => {
@@ -494,6 +496,17 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         select_table: action.select_table,
+      };
+    case "SELECT_SPOT":
+      return {
+        ...state,
+        select_codeqr: action.select_codeqr,
+      };
+
+    case "SELECT_SERVICE":
+      return {
+        ...state,
+        select_codeqr: action.select_codeqr,
       };
     case "BACK_MENU":
       return {

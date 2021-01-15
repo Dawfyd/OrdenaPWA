@@ -8,7 +8,6 @@
 }
 
 .page_turn {
-  display: flex;
   flex-direction: column;
   position: fixed;
   text-align: center;
@@ -22,18 +21,18 @@
 }
 
 .table_num {
-  display: contents;
+  display: none;
   position: absolute;
 }
 .pre_order_turn {
-  display: block;
+  display: none;
   position: absolute;
   left: 23.6vw;
   top: 80vh;
 }
 .container_qr {
   //display none o block
-  display: none;
+  display: block;
   position: absolute;
   height: 82.6vh;
   width: 100vw;
