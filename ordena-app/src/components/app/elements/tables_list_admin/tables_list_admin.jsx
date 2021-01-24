@@ -5,7 +5,7 @@ import table_green from "../../../../assets/images/tables_list/table_green.svg";
 import table_purple from "../../../../assets/images/tables_list/table_purple.svg";
 import table_red from "../../../../assets/images/tables_list/table_red.svg";
 
-const TablesListA = ({ spots, info_table }) => (
+const TablesListA = ({ spots, InfoSpot }) => (
   <div className="tables_list_admin">
     {spots.map((d) => (
       <div
@@ -30,7 +30,7 @@ const TablesListA = ({ spots, info_table }) => (
           }
         />
 
-        <p className="number_table_admin" onClick={() => info_table(d)}>
+        <p className="number_table_admin" onClick={() => InfoSpot(d)}>
           {d.number_spot}
         </p>
       </div>
@@ -43,7 +43,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  info_table(d) {
+  InfoSpot(d) {
     dispatch({
       type: "CLICK_TABLE",
       select_table: d.number_spot,

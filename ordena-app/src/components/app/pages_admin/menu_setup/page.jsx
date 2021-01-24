@@ -7,8 +7,6 @@ import ListProduct from "../../elements/menu_setup/list_product/list_product.jsx
 import SelectorModifier from "../../elements/menu_setup/selector_modifiers/selector_modifiers.jsx";
 import EditCategory from "../../elements/menu_setup/edit_category/edit_category.jsx";
 
-import "../../styles.scss";
-
 function page({ id_category, id_create_category, create_category }) {
   console.log(id_category);
   return (
@@ -74,20 +72,20 @@ function page({ id_category, id_create_category, create_category }) {
     </div>
   );
 }
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   id_category: state.id_category,
   create_category: state.create_category,
-  id_create_category: state.id_create_category
+  id_create_category: state.id_create_category,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   showDish(d) {
     dispatch({
       type: "SHOW_DISH",
       showMenu: false,
-      id_food: d.id
+      id_food: d.id,
     });
-  }
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(page);

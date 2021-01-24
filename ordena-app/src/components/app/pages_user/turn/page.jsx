@@ -4,7 +4,6 @@ import PreOrder from "../../elements/pre_order/pre_order";
 import LogoOrdena from "../../elements/logo_ordena/logo";
 import NavUser from "../../elements/footer_nav_user/nav_user";
 import QrReader from "../../elements/reader_qr/reader_qr";
-import "../../styles.scss";
 
 function page(props) {
   return (

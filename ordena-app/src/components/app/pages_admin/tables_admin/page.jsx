@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import TablesList from "../../elements/tables_list/tables_list";
 import NavAdmin from "../../elements/footer_nav_admin/nav_admin";
-import "../../styles.scss";
 
 function page(props) {
   return (

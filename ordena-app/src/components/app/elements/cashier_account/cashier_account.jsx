@@ -12,8 +12,8 @@ function CashierAccount({
   products,
   prices,
   select_table,
-  display_account,
-  account_paid,
+  DisplayAccount,
+  AccountPaid,
 }) {
   return (
     <div>
@@ -35,7 +35,7 @@ function CashierAccount({
                         >
                           <p
                             className="icon_collapsible_account"
-                            onClick={() => display_account(o)}
+                            onClick={() => DisplayAccount(o)}
                           >
                             {o.cashier_display === false ? (
                               <RightOutlined />
@@ -45,16 +45,16 @@ function CashierAccount({
                           </p>
                           <li
                             className="text_name_cashier"
-                            onClick={() => display_account(o)}
+                            onClick={() => DisplayAccount(o)}
                           >
                             {j.username}
                           </li>
                           <li
                             className="total_price_account"
-                            onClick={() => display_account(o)}
+                            onClick={() => DisplayAccount(o)}
                           >
                             $
-                            {formatNumber(
+                            {FormatNumber(
                               orders
                                 .filter((b) => b.id_person === j.id_person)
                                 .filter((t) => t.id_order === o.id_order)
@@ -72,7 +72,7 @@ function CashierAccount({
                             }
                             className="pay_account"
                             alt="icon_home"
-                            onClick={() => account_paid(o)}
+                            onClick={() => AccountPaid(o)}
                           />
                         </button>
                         <div
@@ -103,7 +103,7 @@ function CashierAccount({
                                 </p>
                                 <p className="cashier_price_account">
                                   $
-                                  {formatNumber(
+                                  {FormatNumber(
                                     prices
                                       .filter(
                                         (b) => b.id_product === p.id_product
@@ -127,7 +127,7 @@ function CashierAccount({
   );
 }
 
-function formatNumber(price_item) {
+function FormatNumber(price_item) {
   return new Intl.NumberFormat("de-DE").format(price_item);
 }
 const mapStateToProps = (state) => ({
@@ -140,13 +140,13 @@ const mapStateToProps = (state) => ({
   select_table: state.select_table,
 });
 const mapDispatchToProps = (dispatch) => ({
-  display_account(o) {
+  DisplayAccount(o) {
     dispatch({
       type: "CLICK_USER_DETAILS",
       user_id: o.id_order,
     });
   },
-  account_paid(o) {
+  AccountPaid(o) {
     dispatch({
       type: "CLICK_PAID",
       user_paid: o.id_order,

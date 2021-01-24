@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import ListSpotsSetup from "../../elements/list_spots_setup/list_spots_setup";
 import InfoCodeQR from "../../elements/info_code_qr/selector_option";
 import LogoOrdena from "../../elements/logo_ordena/logo";
-import "../../styles.scss";
 
 function page(props) {
   return (

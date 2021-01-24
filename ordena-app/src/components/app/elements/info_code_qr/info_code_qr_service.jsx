@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import QRCode from "qrcode.react";
 
 function InfoCodeService({ spots, select_codeqr }) {
-  const downloadQRS = () => {
+  const DownloadQrs = () => {
     const canvas = document.getElementById("123456");
     const pngUrl = canvas
       .toDataURL("image/png")
@@ -32,7 +32,7 @@ function InfoCodeService({ spots, select_codeqr }) {
             size={320}
             level={"H"}
             includeMargin={true}
-            onClick={downloadQRS}
+            onClick={DownloadQrs}
           />
           <p className="text_download"> Click en el codigo QR para descargar</p>
         </div>

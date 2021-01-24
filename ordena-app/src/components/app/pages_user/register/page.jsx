@@ -6,18 +6,17 @@ import LoginFacebook from "../../elements/login/login_facebook";
 import LoginGoogle from "../../elements/login/login_google";
 import LogoOrdena from "../../elements/logo_ordena/logo";
 import NavUser from "../../elements/footer_nav_user/nav_user";
-import "../../styles.scss";
 
-function page({ props, id_spot_register, enter_page }) {
-  const currentRoute = window.location.pathname;
-  const match = matchPath(currentRoute, {
+function page({ props, id_spot_register, EnterPage }) {
+  const CurrentRoute = window.location.pathname;
+  const match = matchPath(CurrentRoute, {
     path: "/register/:id",
     exact: false,
     strict: false,
   });
 
   if (match == null) {
-  } else window.onload = enter_page(match);
+  } else window.onload = EnterPage(match);
 
   return (
     <Fragment>
@@ -45,7 +44,7 @@ const mapStateToProps = (state) => ({
   id_spot_register: state.id_spot_register,
 });
 const mapDispatchToProps = (dispatch) => ({
-  enter_page(match) {
+  EnterPage(match) {
     dispatch({
       type: "ENTER_PAGE",
       id_spot_enter: match.params.id,

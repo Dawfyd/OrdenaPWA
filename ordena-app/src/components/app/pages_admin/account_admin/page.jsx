@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import NavAdmin from "../../elements/footer_nav_admin/nav_admin";
 import LogoOrdena from "../../elements/logo_ordena/logo";
 import AccountAdmin from "../../elements/account_admin_list/account_admin_list";
-import "../../styles.scss";
 
 function page(props) {
   return (

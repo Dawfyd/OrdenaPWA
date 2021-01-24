@@ -18,14 +18,14 @@ import {
   Row,
   Modal,
   Avatar,
-  Typography
+  Typography,
 } from "antd";
 import {
   UploadOutlined,
   InboxOutlined,
   CheckSquareFilled,
   SmileOutlined,
-  UserOutlined
+  UserOutlined,
 } from "@ant-design/icons";
 const { Option } = Select;
 
@@ -34,17 +34,17 @@ const { Option } = Select;
 }
 const layout = {
   labelCol: {
-    span: 8
+    span: 8,
   },
   wrapperCol: {
-    span: 16
-  }
+    span: 16,
+  },
 };
 const tailLayout = {
   wrapperCol: {
     offset: 8,
-    span: 16
-  }
+    span: 16,
+  },
 };
 
 // reset form fields when modal is form, closed
@@ -65,7 +65,7 @@ const ModalForm_1 = ({ visible, onCancel }) => {
   const [form] = Form.useForm();
   useResetFormOnCloseModal({
     form,
-    visible
+    visible,
   });
 
   const onOk = () => {
@@ -86,8 +86,8 @@ const ModalForm_1 = ({ visible, onCancel }) => {
           label="Nombre"
           rules={[
             {
-              required: true
-            }
+              required: true,
+            },
           ]}
         >
           <Input />
@@ -98,8 +98,8 @@ const ModalForm_1 = ({ visible, onCancel }) => {
           label="Descripcion"
           rules={[
             {
-              required: true
-            }
+              required: true,
+            },
           ]}
         >
           <InputNumber />
@@ -112,7 +112,7 @@ const ModalForm_2 = ({ visible, onCancel }) => {
   const [form] = Form.useForm();
   useResetFormOnCloseModal({
     form,
-    visible
+    visible,
   });
 
   const onOk = () => {
@@ -134,8 +134,8 @@ const ModalForm_2 = ({ visible, onCancel }) => {
           label="Nombre"
           rules={[
             {
-              required: true
-            }
+              required: true,
+            },
           ]}
         >
           <Input />
@@ -147,8 +147,8 @@ const ModalForm_2 = ({ visible, onCancel }) => {
           label="Precio"
           rules={[
             {
-              required: true
-            }
+              required: true,
+            },
           ]}
         >
           <InputNumber />
@@ -160,8 +160,8 @@ const ModalForm_2 = ({ visible, onCancel }) => {
           label="Descripcion"
           rules={[
             {
-              required: true
-            }
+              required: true,
+            },
           ]}
         >
           <Input />
@@ -173,7 +173,7 @@ const ModalForm_2 = ({ visible, onCancel }) => {
 {
   /*Fin codigo nuevo*/
 }
-const normFile = e => {
+const normFile = (e) => {
   console.log("Upload event:", e);
 
   if (Array.isArray(e)) {
@@ -194,7 +194,7 @@ function ListProduct({
   id_create_food,
   products,
   actualizar_comp,
-  prices
+  prices,
 }) {
   const [visible_1, setVisible_1] = useState(false);
   const [visible_2, setVisible_2] = useState(false);
@@ -210,7 +210,7 @@ function ListProduct({
   const hideUserModal_2 = () => {
     setVisible_2(false);
   };
-  const onFinish = values => {
+  const onFinish = (values) => {
     console.log("Finish:", values);
   };
 
@@ -238,7 +238,7 @@ function ListProduct({
             initialValues={{
               "input-number": 10000,
               description_input: " ",
-              name_input: " "
+              name_input: " ",
             }}
           >
             <div className="container_photo_product">
@@ -271,8 +271,8 @@ function ListProduct({
                   rules={[
                     {
                       required: true,
-                      message: "Por favor ingrese el nombre del producto"
-                    }
+                      message: "Por favor ingrese el nombre del producto",
+                    },
                   ]}
                 >
                   <Input placeholder="Nombre del producto" />
@@ -287,8 +287,8 @@ function ListProduct({
                     {
                       required: true,
                       message:
-                        "Por favor escriba una descripción para su producto"
-                    }
+                        "Por favor escriba una descripción para su producto",
+                    },
                   ]}
                 >
                   <Input.TextArea />
@@ -300,8 +300,8 @@ function ListProduct({
                   rules={[
                     {
                       required: true,
-                      message: "Por favor asigne un precio para su producto"
-                    }
+                      message: "Por favor asigne un precio para su producto",
+                    },
                   ]}
                   label="InputNumber"
                   name="input-number"
@@ -319,8 +319,8 @@ function ListProduct({
                 <div className="container_create_mod">
                   <div>
                     {modifiers
-                      .filter(b => b.type_modifier === "T")
-                      .map(p => (
+                      .filter((b) => b.type_modifier === "T")
+                      .map((p) => (
                         <div key={p.id_modifier}>
                           <button className="button_modifier" type="button">
                             <div className="order_button_modifier">
@@ -337,8 +337,8 @@ function ListProduct({
                   </div>
                   <div>
                     {modifiers
-                      .filter(b => b.type_modifier === "P")
-                      .map(p =>
+                      .filter((b) => b.type_modifier === "P")
+                      .map((p) =>
                         p.code_modifier.includes(id_food) ? (
                           <div key={p.id_modifier}>
                             <button className="button_modifier">
@@ -359,8 +359,8 @@ function ListProduct({
                   </div>
                   <div>
                     {modifiers
-                      .filter(b => b.type_modifier === "C")
-                      .map(p =>
+                      .filter((b) => b.type_modifier === "C")
+                      .map((p) =>
                         p.code_modifier.includes(id_category) ? (
                           <div key={p.id_modifier}>
                             <button className="button_modifier">
@@ -389,7 +389,7 @@ function ListProduct({
                       <Button
                         htmlType="button"
                         style={{
-                          margin: "0 8px"
+                          margin: "0 8px",
                         }}
                         onClick={showUserModal_1}
                       >
@@ -409,9 +409,9 @@ function ListProduct({
                 <div className="container_create_add">
                   <div>
                     {products
-                      .filter(c => c.id_category === 1)
-                      .filter(b => b.type_product === "T")
-                      .map(p => (
+                      .filter((c) => c.id_category === 1)
+                      .filter((b) => b.type_product === "T")
+                      .map((p) => (
                         <div key={p.id_product}>
                           <button className="button_modifier" type="button">
                             <div className="order_button_modifier">
@@ -428,9 +428,9 @@ function ListProduct({
                   </div>
                   <div>
                     {products
-                      .filter(c => c.id_category === 1)
-                      .filter(b => b.type_product === "P")
-                      .map(p =>
+                      .filter((c) => c.id_category === 1)
+                      .filter((b) => b.type_product === "P")
+                      .map((p) =>
                         p.code_product.includes(id_food) ? (
                           <div key={p.id_product}>
                             <button className="button_modifier">
@@ -451,9 +451,9 @@ function ListProduct({
                   </div>
                   <div>
                     {products
-                      .filter(c => c.id_category === 1)
-                      .filter(b => b.type_product === "C")
-                      .map(p =>
+                      .filter((c) => c.id_category === 1)
+                      .filter((b) => b.type_product === "C")
+                      .map((p) =>
                         p.code_product.includes(id_category) ? (
                           <div key={p.id_product}>
                             <button className="button_modifier">
@@ -482,7 +482,7 @@ function ListProduct({
                       <Button
                         htmlType="button"
                         style={{
-                          margin: "0 8px"
+                          margin: "0 8px",
                         }}
                         onClick={showUserModal_2}
                       >
@@ -515,12 +515,12 @@ function ListProduct({
           style={id_food === 0 ? { display: "none" } : { display: "grid" }}
         >
           {products
-            .filter(a => a.id_product === id_food)
-            .map(b => (
+            .filter((a) => a.id_product === id_food)
+            .map((b) => (
               <div key={b.id_product}>
                 {prices
-                  .filter(c => c.product_id === id_food)
-                  .map(d => (
+                  .filter((c) => c.id_product === id_food)
+                  .map((d) => (
                     <div key={d.id_price}>
                       {" "}
                       <Form.Provider
@@ -541,7 +541,7 @@ function ListProduct({
                           initialValues={{
                             "input-number": d.value_price,
                             description_input: b.description_product,
-                            name_input: b.name_product
+                            name_input: b.name_product,
                           }}
                         >
                           <div className="container_photo_product">
@@ -578,8 +578,8 @@ function ListProduct({
                                   {
                                     required: true,
                                     message:
-                                      "Por favor ingrese el nombre del producto"
-                                  }
+                                      "Por favor ingrese el nombre del producto",
+                                  },
                                 ]}
                               >
                                 <Input placeholder="Nombre del producto" />
@@ -596,8 +596,8 @@ function ListProduct({
                                   {
                                     required: true,
                                     message:
-                                      "Por favor escriba una descripción para su producto"
-                                  }
+                                      "Por favor escriba una descripción para su producto",
+                                  },
                                 ]}
                               >
                                 <Input.TextArea />
@@ -610,8 +610,8 @@ function ListProduct({
                                   {
                                     required: true,
                                     message:
-                                      "Por favor asigne un precio para su producto"
-                                  }
+                                      "Por favor asigne un precio para su producto",
+                                  },
                                 ]}
                                 label="InputNumber"
                                 name="input-number"
@@ -629,8 +629,8 @@ function ListProduct({
                               <div className="container_create_mod">
                                 <div>
                                   {modifiers
-                                    .filter(b => b.type_modifier === "T")
-                                    .map(p => (
+                                    .filter((b) => b.type_modifier === "T")
+                                    .map((p) => (
                                       <div key={p.id_modifier}>
                                         <button
                                           className="button_modifier"
@@ -650,8 +650,8 @@ function ListProduct({
                                 </div>
                                 <div>
                                   {modifiers
-                                    .filter(b => b.type_modifier === "P")
-                                    .map(p =>
+                                    .filter((b) => b.type_modifier === "P")
+                                    .map((p) =>
                                       p.code_modifier.includes(id_food) ? (
                                         <div key={p.id_modifier}>
                                           <button className="button_modifier">
@@ -672,8 +672,8 @@ function ListProduct({
                                 </div>
                                 <div>
                                   {modifiers
-                                    .filter(b => b.type_modifier === "C")
-                                    .map(p =>
+                                    .filter((b) => b.type_modifier === "C")
+                                    .map((p) =>
                                       p.code_modifier.includes(id_category) ? (
                                         <div key={p.id_modifier}>
                                           <button className="button_modifier">
@@ -702,7 +702,7 @@ function ListProduct({
                                     <Button
                                       htmlType="button"
                                       style={{
-                                        margin: "0 8px"
+                                        margin: "0 8px",
                                       }}
                                       onClick={showUserModal_1}
                                     >
@@ -722,9 +722,9 @@ function ListProduct({
                               <div className="container_create_add">
                                 <div>
                                   {products
-                                    .filter(c => c.id_category === 1)
-                                    .filter(b => b.type_product === "T")
-                                    .map(p => (
+                                    .filter((c) => c.id_category === 1)
+                                    .filter((b) => b.type_product === "T")
+                                    .map((p) => (
                                       <div key={p.id_product}>
                                         <button
                                           className="button_modifier"
@@ -744,9 +744,9 @@ function ListProduct({
                                 </div>
                                 <div>
                                   {products
-                                    .filter(c => c.id_category === 1)
-                                    .filter(b => b.type_product === "P")
-                                    .map(p =>
+                                    .filter((c) => c.id_category === 1)
+                                    .filter((b) => b.type_product === "P")
+                                    .map((p) =>
                                       p.code_product.includes(id_food) ? (
                                         <div key={p.id_product}>
                                           <button className="button_modifier">
@@ -767,9 +767,9 @@ function ListProduct({
                                 </div>
                                 <div>
                                   {products
-                                    .filter(c => c.id_category === 1)
-                                    .filter(b => b.type_product === "C")
-                                    .map(p =>
+                                    .filter((c) => c.id_category === 1)
+                                    .filter((b) => b.type_product === "C")
+                                    .map((p) =>
                                       p.code_product.includes(id_category) ? (
                                         <div key={p.id_product}>
                                           <button className="button_modifier">
@@ -798,7 +798,7 @@ function ListProduct({
                                     <Button
                                       htmlType="button"
                                       style={{
-                                        margin: "0 8px"
+                                        margin: "0 8px",
                                       }}
                                       onClick={showUserModal_2}
                                     >
@@ -841,12 +841,12 @@ function ListProduct({
           style={id_food === 0 ? { display: "none" } : { display: "grid" }}
         >
           {products
-            .filter(a => a.id_product === id_food)
-            .map(b => (
+            .filter((a) => a.id_product === id_food)
+            .map((b) => (
               <div key={b.id_product}>
                 {prices
-                  .filter(c => c.product_id === id_food)
-                  .map(d => (
+                  .filter((c) => c.id_product === id_food)
+                  .map((d) => (
                     <div key={d.id_price}>
                       {" "}
                       <Form.Provider
@@ -867,7 +867,7 @@ function ListProduct({
                           initialValues={{
                             "input-number": d.value_price,
                             description_input: b.description_product,
-                            name_input: b.name_product
+                            name_input: b.name_product,
                           }}
                         >
                           <div className="container_photo_product">
@@ -904,8 +904,8 @@ function ListProduct({
                                   {
                                     required: true,
                                     message:
-                                      "Por favor ingrese el nombre del producto"
-                                  }
+                                      "Por favor ingrese el nombre del producto",
+                                  },
                                 ]}
                               >
                                 <Input placeholder="Nombre del producto" />
@@ -922,8 +922,8 @@ function ListProduct({
                                   {
                                     required: true,
                                     message:
-                                      "Por favor escriba una descripción para su producto"
-                                  }
+                                      "Por favor escriba una descripción para su producto",
+                                  },
                                 ]}
                               >
                                 <Input.TextArea />
@@ -936,8 +936,8 @@ function ListProduct({
                                   {
                                     required: true,
                                     message:
-                                      "Por favor asigne un precio para su producto"
-                                  }
+                                      "Por favor asigne un precio para su producto",
+                                  },
                                 ]}
                                 label="InputNumber"
                                 name="input-number"
@@ -955,8 +955,8 @@ function ListProduct({
                               <div className="container_create_mod">
                                 <div>
                                   {modifiers
-                                    .filter(b => b.type_modifier === "T")
-                                    .map(p => (
+                                    .filter((b) => b.type_modifier === "T")
+                                    .map((p) => (
                                       <div key={p.id_modifier}>
                                         <button
                                           className="button_modifier"
@@ -976,8 +976,8 @@ function ListProduct({
                                 </div>
                                 <div>
                                   {modifiers
-                                    .filter(b => b.type_modifier === "P")
-                                    .map(p =>
+                                    .filter((b) => b.type_modifier === "P")
+                                    .map((p) =>
                                       p.code_modifier.includes(id_food) ? (
                                         <div key={p.id_modifier}>
                                           <button className="button_modifier">
@@ -998,8 +998,8 @@ function ListProduct({
                                 </div>
                                 <div>
                                   {modifiers
-                                    .filter(b => b.type_modifier === "C")
-                                    .map(p =>
+                                    .filter((b) => b.type_modifier === "C")
+                                    .map((p) =>
                                       p.code_modifier.includes(id_category) ? (
                                         <div key={p.id_modifier}>
                                           <button className="button_modifier">
@@ -1028,7 +1028,7 @@ function ListProduct({
                                     <Button
                                       htmlType="button"
                                       style={{
-                                        margin: "0 8px"
+                                        margin: "0 8px",
                                       }}
                                       onClick={showUserModal_1}
                                     >
@@ -1048,9 +1048,9 @@ function ListProduct({
                               <div className="container_create_add">
                                 <div>
                                   {products
-                                    .filter(c => c.id_category === 1)
-                                    .filter(b => b.type_product === "T")
-                                    .map(p => (
+                                    .filter((c) => c.id_category === 1)
+                                    .filter((b) => b.type_product === "T")
+                                    .map((p) => (
                                       <div key={p.id_product}>
                                         <button
                                           className="button_modifier"
@@ -1070,9 +1070,9 @@ function ListProduct({
                                 </div>
                                 <div>
                                   {products
-                                    .filter(c => c.id_category === 1)
-                                    .filter(b => b.type_product === "P")
-                                    .map(p =>
+                                    .filter((c) => c.id_category === 1)
+                                    .filter((b) => b.type_product === "P")
+                                    .map((p) =>
                                       p.code_product.includes(id_food) ? (
                                         <div key={p.id_product}>
                                           <button className="button_modifier">
@@ -1093,9 +1093,9 @@ function ListProduct({
                                 </div>
                                 <div>
                                   {products
-                                    .filter(c => c.id_category === 1)
-                                    .filter(b => b.type_product === "C")
-                                    .map(p =>
+                                    .filter((c) => c.id_category === 1)
+                                    .filter((b) => b.type_product === "C")
+                                    .map((p) =>
                                       p.code_product.includes(id_category) ? (
                                         <div key={p.id_product}>
                                           <button className="button_modifier">
@@ -1124,7 +1124,7 @@ function ListProduct({
                                     <Button
                                       htmlType="button"
                                       style={{
-                                        margin: "0 8px"
+                                        margin: "0 8px",
                                       }}
                                       onClick={showUserModal_2}
                                     >
@@ -1163,7 +1163,7 @@ function ListProduct({
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   show_food: state.show_food,
   id_category: state.id_category,
   id_food: state.id_food,
@@ -1173,20 +1173,20 @@ const mapStateToProps = state => ({
   id_create_food: state.id_create_food,
   products: state.products,
   actualizar_comp: state.actualizar_comp,
-  prices: state.prices
+  prices: state.prices,
 });
 
 function formatNumber(price_item) {
   return new Intl.NumberFormat("de-DE").format(price_item);
 }
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   selectProduct(d) {
     dispatch({
       type: "SELECT_PRODUCT_SETUP",
-      id_food: d.id
+      id_food: d.id,
     });
-  }
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListProduct);

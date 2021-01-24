@@ -5,7 +5,6 @@ import NavAdmin from "../../elements/footer_nav_admin/nav_admin";
 import Search from "../../elements/search_bar/search.js";
 import FoodMenu from "../../elements/food_menu/menu_bar/menu_bar.jsx";
 import FloatCart from "../../elements/food_menu/float_cart/float_cart.jsx";
-import "../../styles.scss";
 
 function page({ show_cart }) {
   return (

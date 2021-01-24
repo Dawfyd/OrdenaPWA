@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import TablesList from "../../elements/tables_list/tables_list";
 import NavService from "../../elements/footer_nav_service/nav_service";
-import "../../styles.scss";
 
 function page(props) {
   return (

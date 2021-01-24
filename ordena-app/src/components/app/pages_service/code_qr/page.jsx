@@ -3,7 +3,6 @@ import NavService from "../../elements/footer_nav_service/nav_service";
 import LogoOrdena from "../../elements/logo_ordena/logo";
 import QrReaderService from "../../elements/reader_qr_service/reader_qr_service";
 import Return from "../../elements/return/return";
-import "../../styles.scss";
 
 function page(props) {
   return (

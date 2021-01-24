@@ -4,7 +4,7 @@ import QRCode from "qrcode.react";
 
 function InfoCodeQR({ spots, select_codeqr }) {
   let $ = "";
-  const downloadQR = () => {
+  const DownloadQrs = () => {
     const canvas = document.getElementById("12345");
     const pngUrl = canvas
       .toDataURL("image/png")
@@ -40,7 +40,7 @@ function InfoCodeQR({ spots, select_codeqr }) {
                   size={320}
                   level={"H"}
                   includeMargin={true}
-                  onClick={downloadQR}
+                  onClick={DownloadQrs}
                 />
                 <p className="text_download">
                   {" "}

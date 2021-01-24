@@ -6,13 +6,14 @@ import icon_tables_active from "../../../../assets/images/nav_user/icon_home_act
 import icon_info_table from "../../../../assets/images/nav_service/icon_info_table.svg";
 import icon_info_table_active from "../../../../assets/images/nav_service/icon_info_table_active.svg";
 import icon_chat_service from "../../../../assets/images/nav_user/icon_chat.svg";
+import icon_chat_service_active from "../../../../assets/images/nav_user/icon_chat_active.svg";
 import icon_code_qr from "../../../../assets/images/nav_service/icon_code_qr.svg";
 import icon_code_qr_active from "../../../../assets/images/nav_service/icon_code_qr_active.svg";
 import icon_account_service from "../../../../assets/images/nav_user/icon_account.svg";
 import icon_account_service_active from "../../../../assets/images/nav_user/icon_account_active.svg";
 
 function NavService() {
-  const currentRoute = window.location.pathname;
+  const CurrentRoute = window.location.pathname;
 
   return (
     <div>
@@ -23,7 +24,7 @@ function NavService() {
             <button className="button_tables" id="B1">
               <img
                 src={
-                  currentRoute === "/service/tables"
+                  CurrentRoute === "/service/tables"
                     ? icon_tables_active
                     : icon_tables
                 }
@@ -39,7 +40,7 @@ function NavService() {
             <button className="button_info_table" id="B2">
               <img
                 src={
-                  currentRoute === "/service/info_table"
+                  CurrentRoute === "/service/info_table"
                     ? icon_info_table_active
                     : icon_info_table
                 }
@@ -54,7 +55,11 @@ function NavService() {
           <Link to={"/service/chat_service"}>
             <button className="button_chat_service" id="B3">
               <img
-                src={icon_chat_service}
+                src={
+                  CurrentRoute === "/service/chat_service"
+                    ? icon_chat_service_active
+                    : icon_chat_service
+                }
                 className="icon_chat_service"
                 alt="icon_chat"
               />
@@ -67,7 +72,7 @@ function NavService() {
             <button className="button_code_qr" id="B4">
               <img
                 src={
-                  currentRoute === "/service/code_qr"
+                  CurrentRoute === "/service/code_qr"
                     ? icon_code_qr_active
                     : icon_code_qr
                 }
@@ -83,7 +88,7 @@ function NavService() {
             <button className="button_account_service" id="B5">
               <img
                 src={
-                  currentRoute === "/service/account_service"
+                  CurrentRoute === "/service/account_service"
                     ? icon_account_service_active
                     : icon_account_service
                 }
