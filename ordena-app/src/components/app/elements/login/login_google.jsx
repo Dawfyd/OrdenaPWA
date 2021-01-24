@@ -5,7 +5,7 @@ import IconGoogle from "../../../../assets/images/login/icon_google.svg";
 import GoogleLogin from "react-google-login";
 
 function LoginGoogle() {
-  const responseGoogle = (response_google) => {
+  const ResponseGoogle = (response_google) => {
     console.log(response_google);
     console.log(response_google.profileObj);
   };
@@ -32,8 +32,8 @@ function LoginGoogle() {
             />
           </div>
         )}
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}
+        onSuccess={ResponseGoogle}
+        onFailure={ResponseGoogle}
         cookiePolicy={"single_host_origin"}
       />
 

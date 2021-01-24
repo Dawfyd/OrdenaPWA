@@ -3,7 +3,6 @@ import LogoOrdena from "../../elements/logo_ordena/logo";
 import NavUser from "../../elements/footer_nav_user/nav_user";
 import NumTable from "../../elements/num_table_home/num_table_home";
 import AvatarHome from "../../elements/avatar_home/avatar_home";
-import "../../styles.scss";
 
 function page(props) {
   return (

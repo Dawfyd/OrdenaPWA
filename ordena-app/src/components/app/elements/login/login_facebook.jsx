@@ -4,7 +4,7 @@ import IconFacebook from "../../../../assets/images/login/icon_facebook.svg";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 
 function LoginFacebook() {
-  const responseFacebook = (response_facebook) => {
+  const ResponseFacebook = (response_facebook) => {
     console.log(response_facebook);
     console.log(response_facebook.name);
     console.log(response_facebook.email);
@@ -15,7 +15,7 @@ function LoginFacebook() {
       <FacebookLogin
         appId="2692092707691810"
         autoLoad={false}
-        callback={responseFacebook}
+        callback={ResponseFacebook}
         render={(renderProps) => (
           <div>
             <img

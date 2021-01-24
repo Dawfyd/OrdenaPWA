@@ -8,6 +8,7 @@ import icon_cutlery from "../../../../assets/images/urgent_request/icon_cutlery.
 import icon_clean from "../../../../assets/images/urgent_request/icon_clean.svg";
 import icon_cash from "../../../../assets/images/urgent_request/icon_cash.svg";
 import icon_card from "../../../../assets/images/urgent_request/icon_card.svg";
+import icon_pickup from "../../../../assets/images/urgent_request/icon_pickup.svg";
 import TextAreaHook from "../text_area/text_area_input";
 
 function UrgentRequest() {
@@ -19,6 +20,10 @@ function UrgentRequest() {
         <button className="button_request">
           <img src={icon_photo} className="icon_request" alt="icono foto" />
           <p className="text_icon">Foto</p>
+        </button>
+        <button className="button_request">
+          <img src={icon_pickup} className="icon_request" alt="icono recoger" />
+          <p className="text_icon">Recoger</p>
         </button>
         <button className="button_request">
           <img
@@ -58,7 +63,7 @@ function UrgentRequest() {
             className="icon_request"
             alt="icono dinero en efectivo"
           />
-          <p className="text_icon">Cuenta en efectivo</p>
+          <p className="text_icon">Cuenta en Efectivo</p>
         </button>
         <button className="button_request">
           <img
@@ -66,7 +71,7 @@ function UrgentRequest() {
             className="icon_request"
             alt="icono tarjeta de credito"
           />
-          <p className="text_icon">Cuenta con tarjeta</p>
+          <p className="text_icon">Cuenta con Tarjeta</p>
         </button>
       </div>
       <p className="request_textbox">¿Necesitas otra cosa?</p>

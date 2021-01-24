@@ -6,7 +6,6 @@ import Search from "../../elements/search_bar/search.js";
 import FoodMenu from "../../elements/food_menu/menu_bar/menu_bar.jsx";
 import Float_cart from "../../elements/food_menu/float_cart/float_cart.jsx";
 import OrderPage from "../../elements/food_menu/order_page/order_page.jsx";
-import "../../styles.scss";
 
 function page({ show_cart, showOrder, show_Order, show_menu }) {
   return (
@@ -51,9 +50,9 @@ function page({ show_cart, showOrder, show_Order, show_menu }) {
     </Fragment>
   );
 }
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   show_cart: state.show_cart,
-  showOrder: state.showOrder
+  showOrder: state.showOrder,
 });
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = (dispatch) => ({});
 export default connect(mapStateToProps, mapDispatchToProps)(page);

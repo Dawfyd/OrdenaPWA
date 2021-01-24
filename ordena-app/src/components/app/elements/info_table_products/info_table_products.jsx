@@ -9,9 +9,9 @@ function InfoTable({
   products,
   prices,
   persons,
-  order_ready,
   select_table,
-  display_button,
+  OrderReady,
+  DisplayButton,
 }) {
   return (
     <div className="info_table">
@@ -31,14 +31,14 @@ function InfoTable({
                 .map((o) => (
                   <div className="container_grid_table" key={o.id_order}>
                     {requests
-                      .filter((e) => e.state_served_request === true)
+                      .filter((e) => e.state_request === 3)
                       .filter((e) => e.id_spot === d.id_spot)
                       .map((p) => (
                         <div className="container_product" key={p.id_request}>
                           <button
                             type="button"
                             className="collapsible_info"
-                            onClick={() => display_button(p)}
+                            onClick={() => DisplayButton(p)}
                           >
                             <p className="icon_collapsible">
                               {p.state_button === false ? (
@@ -55,7 +55,7 @@ function InfoTable({
                             </li>
                             <li className="price_item">
                               $
-                              {formatNumber(
+                              {FormatNumber(
                                 prices
                                   .filter((b) => b.id_product === p.id_product)
                                   .reduce((accumulator, b) => b.value_price, 0)
@@ -85,7 +85,7 @@ function InfoTable({
                       className="pending_order"
                       style={
                         requests
-                          .filter((e) => e.state_served_request === false)
+                          .filter((e) => e.state_request !== 2)
                           .filter((e) => e.id_spot === d.id_spot).length === 0
                           ? { display: "none" }
                           : { display: "flex" }
@@ -95,14 +95,14 @@ function InfoTable({
                     </p>
 
                     {requests
-                      .filter((f) => f.state_served_request === false)
+                      .filter((f) => f.state_request !== 2)
                       .filter((e) => e.id_spot === d.id_spot)
                       .map((p) => (
                         <div className="container_product" key={p.id_request}>
                           <button
                             type="button"
                             className="collapsible_info"
-                            onClick={() => display_button(p)}
+                            onClick={() => DisplayButton(p)}
                           >
                             <p className="icon_collapsible">
                               {p.state_button === false ? (
@@ -120,7 +120,7 @@ function InfoTable({
                             <li className="price_item">
                               <input
                                 className="check_pending_order"
-                                onClick={() => order_ready(p)}
+                                onClick={() => OrderReady(p)}
                                 type="checkbox"
                                 value=""
                               />
@@ -150,7 +150,7 @@ function InfoTable({
                       </p>
                       <p className="price_total">
                         $
-                        {formatNumber(
+                        {FormatNumber(
                           orders
                             .filter((b) => b.id_spot === d.id_spot)
                             .reduce(
@@ -168,7 +168,7 @@ function InfoTable({
     </div>
   );
 }
-function formatNumber(price_item) {
+function FormatNumber(price_item) {
   return new Intl.NumberFormat("de-DE").format(price_item);
 }
 
@@ -183,13 +183,13 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  order_ready(p) {
+  OrderReady(p) {
     dispatch({
       type: "ORDER_READY",
       id_ready: p.id_request,
     });
   },
-  display_button(p) {
+  DisplayButton(p) {
     dispatch({
       type: "DISPLAY_BUTTON",
       button_display: p.id_request,

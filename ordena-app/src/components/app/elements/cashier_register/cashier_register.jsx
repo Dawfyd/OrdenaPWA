@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import check from "../../../../assets/images/cashier_register/check.svg";
+import icon_check from "../../../../assets/images/cashier_register/icon_check.svg";
+import icon_close from "../../../../assets/images/cashier_register/icon_close.svg";
+import Swal from "sweetalert2";
 
 function CashierRegister({
   spots,
@@ -12,7 +14,10 @@ function CashierRegister({
   order_ready,
   select_table,
   display_button,
-  order_check,
+  cancel_item,
+  check_ready,
+  OrderCheck,
+  CancelRequest,
 }) {
   return (
     <div className="cashier_register_tables">
@@ -36,18 +41,29 @@ function CashierRegister({
                               key={p.id_request}
                             >
                               <button
-                                onClick={() => order_check(p)}
+                                onClick={() => OrderCheck(p)}
                                 className="button_icon"
-                                id="B1"
+                                style={
+                                  p.state_request === 5
+                                    ? { borderColor: "#9B26B6" }
+                                    : p.state_request === 1
+                                    ? { borderColor: "rgba(0, 0, 0, 0.25)" }
+                                    : { borderColor: "#32c755" }
+                                }
                               >
                                 <img
-                                  src={check}
+                                  src={
+                                    p.state_request === 5
+                                      ? icon_close
+                                      : icon_check
+                                  }
+                                  onClick={() => CancelRequest(p)}
                                   className="icon_check"
                                   alt="icon_home"
                                   style={
-                                    p.state_check === true
-                                      ? { display: "block" }
-                                      : { display: "none" }
+                                    p.state_request === 1
+                                      ? { display: "none" }
+                                      : { display: "block" }
                                   }
                                 />
                               </button>
@@ -67,7 +83,7 @@ function CashierRegister({
                                 <p className="cashier_user">{j.username}</p>
                                 <p className="cashier_price">
                                   $
-                                  {formatNumber(
+                                  {FormatNumber(
                                     prices
                                       .filter(
                                         (b) => b.id_product === p.id_product
@@ -91,9 +107,10 @@ function CashierRegister({
   );
 }
 
-function formatNumber(price_item) {
+function FormatNumber(price_item) {
   return new Intl.NumberFormat("de-DE").format(price_item);
 }
+
 const mapStateToProps = (state) => ({
   spots: state.spots,
   requests: state.requests,
@@ -103,12 +120,35 @@ const mapStateToProps = (state) => ({
   prices: state.prices,
   select_table: state.select_table,
   display_category: state.display_category,
+  check_ready: state.check_ready,
+  check_id: state.check_id,
+  cancel_item: state.cancel_item,
 });
 const mapDispatchToProps = (dispatch) => ({
-  order_check(p) {
+  OrderCheck(p) {
     dispatch({
       type: "CLICK_ITEM",
       check_id: p.id_request,
+    });
+  },
+  CancelRequest(p) {
+    Swal.fire({
+      title: "Cancelar pedido",
+      text: "¿Estas seguro que deseas cancelar el pedido?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Aceptar",
+      confirmButtonColor: "#32C755",
+      cancelButtonText: "Cancelar",
+      cancelButtonColor: "#9B26B6",
+    }).then((result) => {
+      if (result.isConfirmed === true) {
+        return dispatch({
+          type: "CANCEL_ITEM",
+          cancel_item: true,
+          check_id: p.id_request,
+        });
+      }
     });
   },
 });

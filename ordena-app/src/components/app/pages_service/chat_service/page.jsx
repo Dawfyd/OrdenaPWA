@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import NavService from "../../elements/footer_nav_service/nav_service";
 import LogoOrdena from "../../elements/logo_ordena/logo";
-import "../../styles.scss";
 
 function page(props) {
   return (

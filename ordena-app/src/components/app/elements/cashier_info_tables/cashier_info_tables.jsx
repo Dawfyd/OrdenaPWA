@@ -6,9 +6,9 @@ import CashierAccount from "../cashier_account/cashier_account";
 function InfoTable({
   spots,
   select_table,
-  cashier_register,
-  cashier_account,
   display_category,
+  ClickRegister,
+  ClickAccount,
 }) {
   return (
     <div className="info_cashier">
@@ -24,7 +24,7 @@ function InfoTable({
               <button
                 className="button_register"
                 id="B1"
-                onClick={() => cashier_register()}
+                onClick={() => ClickRegister()}
                 style={
                   display_category === true
                     ? { background: "#32C755" }
@@ -45,7 +45,7 @@ function InfoTable({
               <button
                 className="button_account"
                 id="B1"
-                onClick={() => cashier_account()}
+                onClick={() => ClickAccount()}
                 style={
                   display_category === false
                     ? { background: "#32C755" }
@@ -99,13 +99,13 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  cashier_register() {
+  ClickRegister() {
     dispatch({
       type: "CLICK_REGISTER",
       display_category: true,
     });
   },
-  cashier_account() {
+  ClickAccount() {
     dispatch({
       type: "CLICK_ACCOUNT",
       display_category: false,

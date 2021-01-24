@@ -12,7 +12,7 @@ import icon_account_service from "../../../../assets/images/nav_user/icon_accoun
 import icon_account_service_active from "../../../../assets/images/nav_user/icon_account_active.svg";
 
 function NavAdmin() {
-  const currentRoute = window.location.pathname;
+  const CurrentRoute = window.location.pathname;
 
   return (
     <div>
@@ -23,7 +23,7 @@ function NavAdmin() {
             <button className="button_tables" id="B1">
               <img
                 src={
-                  currentRoute === "/restaurant/tables_admin"
+                  CurrentRoute === "/restaurant/tables_admin"
                     ? icon_tables_active
                     : icon_tables
                 }
@@ -39,7 +39,7 @@ function NavAdmin() {
             <button className="button_info_table" id="B2">
               <img
                 src={
-                  currentRoute === "/restaurant/info_table_admin"
+                  CurrentRoute === "/restaurant/info_table_admin"
                     ? icon_info_table_active
                     : icon_info_table
                 }
@@ -67,7 +67,7 @@ function NavAdmin() {
             <button className="button_code_qr" id="B4">
               <img
                 src={
-                  currentRoute === "/restaurant/code_qr_admin"
+                  CurrentRoute === "/restaurant/code_qr_admin"
                     ? icon_code_qr_active
                     : icon_code_qr
                 }
@@ -83,7 +83,7 @@ function NavAdmin() {
             <button className="button_account_service" id="B5">
               <img
                 src={
-                  currentRoute === "/restaurant/account_admin"
+                  CurrentRoute === "/restaurant/account_admin"
                     ? icon_account_service_active
                     : icon_account_service
                 }

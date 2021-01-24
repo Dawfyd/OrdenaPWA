@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const ListSpot = ({ spots, create_spot, select_spot, select_service }) => (
+const ListSpot = ({ spots, CreateSpot, SelectSpot, SelectService }) => (
   <div className="spot_setup_container">
     <p className="header_qr_text">Administra tus codigos QR</p>
 
-    <p className="service_qr_spot" onClick={() => select_service()}>
+    <p className="service_qr_spot" onClick={() => SelectService()}>
       Codigo QR para vincular meseros
     </p>
 
@@ -13,12 +13,12 @@ const ListSpot = ({ spots, create_spot, select_spot, select_service }) => (
 
     {spots.map((d) => (
       <div key={d.id_spot}>
-        <p className="service_qr_spot" onClick={() => select_spot(d)}>
+        <p className="service_qr_spot" onClick={() => SelectSpot(d)}>
           Mesa numero {d.number_spot}
         </p>
       </div>
     ))}
-    <button className="button_add_spot" onClick={() => create_spot()}>
+    <button className="button_add_spot" onClick={() => CreateSpot()}>
       <div>+ Agregar Mesa</div>
     </button>
   </div>
@@ -29,19 +29,19 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  create_spot() {
+  CreateSpot() {
     dispatch({
       type: "ADD_SPOT",
       add_spot: true,
     });
   },
-  select_spot(d) {
+  SelectSpot(d) {
     dispatch({
       type: "SELECT_SPOT",
       select_codeqr: d.number_spot,
     });
   },
-  select_service() {
+  SelectService() {
     dispatch({
       type: "SELECT_SERVICE",
       select_codeqr: 0,

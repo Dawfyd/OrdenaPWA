@@ -3,8 +3,6 @@ import LogoOrdena from "../../elements/logo_ordena/logo";
 import UrgentRequest from "../../elements/urgent_request/urgent_request";
 import NavUser from "../../elements/footer_nav_user/nav_user";
 
-import "../../styles.scss";
-
 function page(props) {
   return (
     <Fragment>
