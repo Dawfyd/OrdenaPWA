@@ -1,19 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Avatar } from "antd";
-import { Link } from "react-router-dom";
-import arrow_left from "../../../../assets/images/cashier_register/arrow.svg";
 import table_green from "../../../../assets/images/tables_list/table_green.svg";
 import table_purple from "../../../../assets/images/tables_list/table_purple.svg";
 import table_red from "../../../../assets/images/tables_list/table_red.svg";
 
-const TablesListA = ({ spots, InfoSpot }) => (
+const TablesListA = ({ spots, InfoSpot, select_table }) => (
   <div className="tables_list_admin">
     <div className="container_go_back_tables">
-      <Link to={"/restaurant/home"}>
-        <img src={arrow_left} className="go_back_arrow_tables" alt="arrow" />
-      </Link>
       <p className="header_title_tables">Mesas</p>
+      <button className="button_cashier_tables">
+        <p className="text_cashier_admin">Mesa {select_table}</p>
+      </button>
     </div>
 
     {spots.map((d) => (
@@ -49,6 +47,7 @@ const TablesListA = ({ spots, InfoSpot }) => (
 
 const mapStateToProps = (state) => ({
   spots: state.spots,
+  select_table: state.select_table,
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -1,9 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Avatar } from "antd";
-import { Link } from "react-router-dom";
 import table_green from "../../../../assets/images/tables_list/table_green.svg";
-import arrow_left from "../../../../assets/images/cashier_register/arrow.svg";
 import { CaretRightFilled, CaretDownFilled } from "@ant-design/icons";
 
 const ListSpot = ({
@@ -14,11 +12,6 @@ const ListSpot = ({
   select_codeqr,
 }) => (
   <div className="spot_setup_container">
-    <div className="container_go_back">
-      <Link to={"/restaurant/home"}>
-        <img src={arrow_left} className="go_back_arrow" alt="arrow" />
-      </Link>
-    </div>
     <p className="header_qr_text">Administra tus codigos QR</p>
 
     <button className="button_spots">

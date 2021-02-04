@@ -1,10 +1,3 @@
-.header_home_admin {
-  display: block;
-  position: absolute;
-  top: 0.5vh;
-  left: 1vw;
-}
-
 .page_home_admin {
   display: flex;
   flex-direction: column;
@@ -15,6 +8,20 @@
   left: 0px;
   top: 0px;
 }
+
+.logo_header_admin_home {
+  display: block;
+  position: absolute;
+  top: 0.5vh;
+  left: 1vw;
+}
+.options_header_admin_home {
+  position: absolute;
+  height: 9vh;
+  width: 70vw;
+  left: 30vw;
+}
+
 .container_home_admin {
   position: absolute;
   height: 91vh;
