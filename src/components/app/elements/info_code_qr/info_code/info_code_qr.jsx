@@ -22,7 +22,7 @@ function InfoCodeQR({ spots, select_codeqr }) {
         .filter((a) => a.number_spot === select_codeqr)
         .map((d) => (
           <div key={d.id_spot}>
-            <button className="button_cashier">
+            <button className="button_info_code_qr">
               <p className="text_cashier">Mesa {d.number_spot}</p>
             </button>
             <div className="info_code">
@@ -57,6 +57,7 @@ function InfoCodeQR({ spots, select_codeqr }) {
 const mapStateToProps = (state) => ({
   spots: state.spots,
   select_codeqr: state.select_codeqr,
+  add_spot: state.add_spot,
 });
 
 export default connect(mapStateToProps)(InfoCodeQR);

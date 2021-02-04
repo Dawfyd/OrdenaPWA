@@ -17,7 +17,7 @@ function InfoCodeService({ spots, select_codeqr }) {
   };
   return (
     <div className="container_info_code">
-      <button className="button_cashier">
+      <button className="button_info_code_qr">
         <p className="text_cashier">Meseros</p>
       </button>
       <div className="info_code">
@@ -40,5 +40,10 @@ function InfoCodeService({ spots, select_codeqr }) {
     </div>
   );
 }
+const mapStateToProps = (state) => ({
+  spots: state.spots,
+  select_codeqr: state.select_codeqr,
+  add_spot: state.add_spot,
+});
 
-export default connect()(InfoCodeService);
+export default connect(mapStateToProps)(InfoCodeService);

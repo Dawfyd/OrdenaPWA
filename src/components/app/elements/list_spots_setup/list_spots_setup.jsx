@@ -1,24 +1,73 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Avatar } from "antd";
+import { Link } from "react-router-dom";
+import table_green from "../../../../assets/images/tables_list/table_green.svg";
+import arrow_left from "../../../../assets/images/cashier_register/arrow.svg";
+import { CaretRightFilled, CaretDownFilled } from "@ant-design/icons";
 
-const ListSpot = ({ spots, CreateSpot, SelectSpot, SelectService }) => (
+const ListSpot = ({
+  spots,
+  CreateSpot,
+  SelectSpot,
+  SelectService,
+  select_codeqr,
+}) => (
   <div className="spot_setup_container">
+    <div className="container_go_back">
+      <Link to={"/restaurant/home"}>
+        <img src={arrow_left} className="go_back_arrow" alt="arrow" />
+      </Link>
+    </div>
     <p className="header_qr_text">Administra tus codigos QR</p>
 
-    <p className="service_qr_spot" onClick={() => SelectService()}>
-      Codigo QR para vincular meseros
-    </p>
+    <button className="button_spots">
+      <div
+        className="bar_list_spot"
+        style={
+          select_codeqr === 0
+            ? { background: "#9B26B6" }
+            : { background: "#32c755" }
+        }
+      >
+        {""}
+      </div>
+      <div
+        className="arrow_service_off"
+        style={select_codeqr === 0 ? { display: "none" } : { display: "flex" }}
+      >
+        <CaretRightFilled />
+      </div>
+      <div
+        className="arrow_service_on"
+        style={select_codeqr !== 0 ? { display: "none" } : { display: "flex" }}
+      >
+        <CaretDownFilled />
+      </div>
 
+      <p className="service_qr_spot" onClick={() => SelectService()}>
+        Codigo QR para vincular meseros
+      </p>
+    </button>
     <p className="service_qr_text">Configura tus mesas</p>
 
-    {spots.map((d) => (
-      <div key={d.id_spot}>
-        <p className="service_qr_spot" onClick={() => SelectSpot(d)}>
-          Mesa numero {d.number_spot}
-        </p>
-      </div>
-    ))}
-    <button className="button_add_spot" onClick={() => CreateSpot()}>
+    <div className="tables_spots_admin">
+      {spots.map((d) => (
+        <div
+          key={d.id_spot}
+          className="order_tables_spots_admin"
+          style={{ order: d.number_spot }}
+        >
+          <Avatar className="button_spots_admin" src={table_green} />
+
+          <p className="number_spots_admin" onClick={() => SelectSpot(d)}>
+            {d.number_spot}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <button className="button_added_spots" onClick={() => CreateSpot()}>
       <div>+ Agregar Mesa</div>
     </button>
   </div>
@@ -26,6 +75,8 @@ const ListSpot = ({ spots, CreateSpot, SelectSpot, SelectService }) => (
 
 const mapStateToProps = (state) => ({
   spots: state.spots,
+  select_codeqr: state.select_codeqr,
+  add_spot: state.add_spot,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -39,12 +90,14 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch({
       type: "SELECT_SPOT",
       select_codeqr: d.number_spot,
+      add_spot: false,
     });
   },
   SelectService() {
     dispatch({
       type: "SELECT_SERVICE",
       select_codeqr: 0,
+      add_spot: false,
     });
   },
 });

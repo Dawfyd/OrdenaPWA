@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Page from "./page";
 
-class Home extends Component {
+class MenuAdmin extends Component {
   render() {
     return <Page />;
   }
 }
-export default Home;
+export default MenuAdmin;

@@ -6,6 +6,7 @@ import icon_tables_active from "../../../../assets/images/nav_user/icon_home_act
 import icon_info_table from "../../../../assets/images/nav_service/icon_info_table.svg";
 import icon_info_table_active from "../../../../assets/images/nav_service/icon_info_table_active.svg";
 import icon_chat_service from "../../../../assets/images/nav_user/icon_chat.svg";
+import icon_chat_service_active from "../../../../assets/images/nav_user/icon_chat_active.svg";
 import icon_code_qr from "../../../../assets/images/nav_service/icon_code_qr.svg";
 import icon_code_qr_active from "../../../../assets/images/nav_service/icon_code_qr_active.svg";
 import icon_account_service from "../../../../assets/images/nav_user/icon_account.svg";
@@ -54,7 +55,11 @@ function NavAdmin() {
           <Link to={"/restaurant/chat_admin"}>
             <button className="button_chat_service" id="B3">
               <img
-                src={icon_chat_service}
+                src={
+                  CurrentRoute === "/restaurant/chat_admin"
+                    ? icon_chat_service_active
+                    : icon_chat_service
+                }
                 className="icon_chat_service"
                 alt="icon_chat"
               />
@@ -64,7 +69,7 @@ function NavAdmin() {
 
         <div>
           <Link to={"/restaurant/code_qr_admin"}>
-            <button className="button_code_qr" id="B4">
+            <button className="button_code_qr_admin" id="B4">
               <img
                 src={
                   CurrentRoute === "/restaurant/code_qr_admin"
@@ -80,7 +85,7 @@ function NavAdmin() {
 
         <div>
           <Link to={"/restaurant/account_admin"}>
-            <button className="button_account_service" id="B5">
+            <button className="button_account_service_admin" id="B5">
               <img
                 src={
                   CurrentRoute === "/restaurant/account_admin"

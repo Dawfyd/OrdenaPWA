@@ -6,12 +6,12 @@ import LogoOrdena from "../../elements/logo_ordena/logo";
 function page(props) {
   return (
     <Fragment>
-      <div className="page_cashier_admin">
-        <header className="header_cashier_admin">
+      <div className="page_spot_admin">
+        <header className="header_spot_admin">
           <LogoOrdena />
         </header>
 
-        <div className="container_cashier_admin">
+        <div className="container_spot_admin">
           <ListSpotsSetup />
         </div>
 

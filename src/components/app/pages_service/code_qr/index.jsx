@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Page from "./page";
 
-class Pago extends Component {
+class CodeQrService extends Component {
   render() {
     return <Page />;
   }
 }
-export default Pago;
+export default CodeQrService;

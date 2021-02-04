@@ -14,6 +14,9 @@ import InfoTable from "./pages_service/info_table";
 import ChatService from "./pages_service/chat_service";
 import CodeQr from "./pages_service/code_qr";
 import AccountService from "./pages_service/account_service";
+import HomeAdmin from "./pages_admin/home_admin";
+import RegisterAdmin from "./pages_admin/register_admin";
+import LoginAdmin from "./pages_admin/login_admin";
 import TablesAdmin from "./pages_admin/tables_admin";
 import InfoTableAdmin from "./pages_admin/info_table_admin";
 import ChatAdmin from "./pages_admin/chat_admin";
@@ -23,12 +26,13 @@ import MenuAdmin from "./pages_admin/menu_admin";
 import MenuSetup from "./pages_admin/menu_setup";
 import CashierSetup from "./pages_admin/cashier_setup";
 import SpotsSetup from "./pages_admin/spots_setup";
+import LandingPage from "./ordena_pages/landing_page";
 
 const App = () => (
   <Provider store={store}>
     <Switch>
       <Route path="/turn" component={Turn} exact />
-      <Route path="/register/" component={Register} />
+      <Route path="/register" component={Register} />
       <Route path="/home" component={Home} exact />
       <Route path="/menu" component={Menu} exact />
       <Route path="/chat" component={Chat} exact />
@@ -47,9 +51,14 @@ const App = () => (
       <Route path="/restaurant/code_qr_admin" component={CodeQrAdmin} />
       <Route path="/restaurant/account_admin" component={AccountAdmin} />
       <Route path="/restaurant/menu_admin" component={MenuAdmin} />
+
+      <Route path="/restaurant/register" component={RegisterAdmin} />
+      <Route path="/restaurant/login" component={LoginAdmin} />
       <Route path="/restaurant/menu_setup" component={MenuSetup} />
       <Route path="/restaurant/cashier_setup" component={CashierSetup} />
       <Route path="/restaurant/spots_setup" component={SpotsSetup} />
+      <Route path="/restaurant/home" component={HomeAdmin} />
+      <Route path="/" component={LandingPage} />
     </Switch>
   </Provider>
 );
