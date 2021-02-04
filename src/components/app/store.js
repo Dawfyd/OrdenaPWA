@@ -310,6 +310,14 @@ const initialState = {
       id_service: 1,
     },
     {
+      id_spot: 3, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 3, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
       id_spot: 2, //id
       state_spot: 1, //state_table
       name_spot: "casinni2",
@@ -694,6 +702,7 @@ const initialState = {
   temp_category: 0,
   create_product: false,
   select_codeqr: 0,
+  add_spot: false,
 
   alt_food: [
     { id: 1, id_alt: 2, name: "Sal" },
@@ -943,12 +952,19 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         select_codeqr: action.select_codeqr,
+        add_spot: action.add_spot,
       };
 
     case "SELECT_SERVICE":
       return {
         ...state,
         select_codeqr: action.select_codeqr,
+        add_spot: action.add_spot,
+      };
+    case "ADD_SPOT":
+      return {
+        ...state,
+        add_spot: action.add_spot,
       };
     case "BACK_MENU":
       return {

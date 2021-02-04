@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Page from "./page";
 
-class AccountWaiter extends Component {
+class HomeAdmin extends Component {
   render() {
     return <Page />;
   }
 }
-export default AccountWaiter;
+export default HomeAdmin;

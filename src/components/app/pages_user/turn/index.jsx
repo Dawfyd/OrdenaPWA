@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Page from "./page";
 
-class Turno extends Component {
+class Turn extends Component {
   render() {
     return <Page />;
   }
 }
-export default Turno;
+export default Turn;

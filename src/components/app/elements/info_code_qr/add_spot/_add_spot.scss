@@ -1,0 +1,22 @@
+.container_info_code {
+  position: absolute;
+  width: 44vw;
+  right: 1.5vw;
+  height: 85vh;
+  padding: 3vh;
+  bottom: 3.1vh;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background-color: white;
+  display: grid;
+}
+
+.button_add_spot {
+  position: absolute;
+  width: 20vw;
+  height: 6vh;
+  right: 1vw;
+  top: 1vw;
+  background: #9b26b6;
+  border-radius: 1vmax;
+  border: 1px solid #9b26b6;
+}

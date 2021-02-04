@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Page from "./page";
 
-class Cashier extends Component {
+class CashierSetup extends Component {
   render() {
     return <Page />;
   }
 }
-export default Cashier;
+export default CashierSetup;

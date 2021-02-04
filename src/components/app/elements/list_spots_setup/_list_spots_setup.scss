@@ -8,9 +8,21 @@
 
   border: 1px solid rgba(0, 0, 0, 0.25);
   background-color: white;
-  overflow: auto;
 }
-
+.container_go_back {
+  width: 7vh;
+  height: 7vh;
+  position: absolute;
+}
+.go_back_arrow {
+  position: absolute;
+  display: flex;
+  z-index: 2;
+  width: 4vh;
+  height: 4vh;
+  left: 1vw;
+  top: 1.5vh;
+}
 .header_qr_text {
   display: flex;
   width: 100%;
@@ -25,6 +37,7 @@
   margin: 0;
   align-items: center;
   justify-content: center;
+
   color: rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
@@ -47,12 +60,44 @@
   color: rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
-
+.button_spots {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 30fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 5vh;
+  margin: 0;
+  padding: 0;
+  border: 0.2;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.03);
+}
+.bar_list_spot {
+  width: 2vh;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.arrow_service_on {
+  margin: auto;
+  color: #9b26b6;
+}
+.arrow_service_off {
+  margin: auto;
+  color: #32c755;
+}
 .service_qr_spot {
   display: flex;
   width: 100%;
   position: relative;
-  height: 30px;
+  height: 100%;
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
@@ -63,15 +108,58 @@
   align-items: center;
   justify-content: flex-start;
   padding-left: 1vw;
-  color: rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  background: rgba(0, 0, 0, 0.03);
+  border: 0;
 }
-.button_add_spot {
+
+.tables_spots_admin {
+  position: relative;
+  width: 100%;
+  height: 58vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  display: grid;
+  grid-gap: 2vh;
+  grid-template-columns: repeat(auto-fit, minmax(11vw, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(9vh, 1fr));
+  background-color: white;
+}
+
+.order_tables_spots_admin {
+  position: relative;
+  margin: auto;
+  border: 0;
+  width: 70%;
+  height: auto;
+}
+
+.button_spots_admin {
+  width: 100%;
+  height: auto;
+}
+.number_spots_admin {
+  position: absolute;
+  bottom: 0%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: calc(100% + 3vmax);
+  line-height: 100%;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.button_added_spots {
   display: flex;
   width: 100%;
-  position: relative;
-  height: 50px;
+  bottom: 0;
+  position: absolute;
+  height: 53px;
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
@@ -80,12 +168,12 @@
   display: flex;
   margin: 0;
   background-color: white;
-  border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 0;
   color: #32c755;
   align-items: center;
   justify-content: center;
   padding: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
 }

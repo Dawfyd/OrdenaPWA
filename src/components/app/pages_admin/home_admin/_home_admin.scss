@@ -1,0 +1,25 @@
+.header_home_admin {
+  display: block;
+  position: absolute;
+  top: 0.5vh;
+  left: 1vw;
+}
+
+.page_home_admin {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  left: 0px;
+  top: 0px;
+}
+.container_home_admin {
+  position: absolute;
+  height: 91vh;
+  width: 100vw;
+  bottom: 0vh;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}

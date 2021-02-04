@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Page from "./page";
 
-class Menu extends Component {
+class InfoTable extends Component {
   render() {
     return <Page />;
   }
 }
-export default Menu;
+export default InfoTable;
