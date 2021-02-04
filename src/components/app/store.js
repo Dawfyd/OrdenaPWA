@@ -325,6 +325,118 @@ const initialState = {
       id_venue: 1,
       id_service: 1,
     },
+    {
+      id_spot: 4, //id
+      state_spot: 2, //state_table
+      name_spot: "casinni",
+      number_spot: 4, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 5, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 5, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 6, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 6, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 7, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 7, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 8, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 8, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 9, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 9, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 11, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 10, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 12, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 11, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 13, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 12, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 14, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 13, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 15, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 14, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 16, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 15, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 17, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 16, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 18, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 17, // number
+      id_venue: 1,
+      id_service: 1,
+    },
   ],
   orders: [
     {

@@ -16,10 +16,6 @@ function InfoTable({
         .filter((a) => a.number_spot === select_table)
         .map((d) => (
           <div key={d.id_spot}>
-            <button className="button_cashier" id="B1">
-              <p className="text_cashier">Mesa {d.number_spot}</p>
-            </button>
-
             <div className="container_cashier_tables">
               <button
                 className="button_register"

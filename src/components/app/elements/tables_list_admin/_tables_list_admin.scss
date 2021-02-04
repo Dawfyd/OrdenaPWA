@@ -19,15 +19,6 @@
   position: absolute;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
-.go_back_arrow_tables {
-  position: absolute;
-  display: flex;
-  z-index: 2;
-  width: 4vh;
-  height: 4vh;
-  left: 1vw;
-  top: 1.5vh;
-}
 .header_title_tables {
   display: flex;
   width: 100%;
@@ -44,6 +35,28 @@
   justify-content: center;
 
   color: rgba(0, 0, 0, 0.5);
+}
+.button_cashier_tables {
+  position: absolute;
+  width: 12vw;
+  height: 6vh;
+  right: 0.5vw;
+  top: 0.5vh;
+  background: #9b26b6;
+  border-radius: 1vmax;
+  border: 1px solid #9b26b6;
+}
+.text_cashier_admin {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.3vmax;
+  line-height: 2.5vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin: auto;
 }
 .order_tables_list_admin {
   position: relative;
@@ -73,4 +86,98 @@
   color: #ffffff;
   margin: 0;
   padding: 0;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .tables_list_admin {
+    position: absolute;
+    bottom: 1vh;
+    width: 20vw;
+    height: 89vh;
+    left: 1.5vw;
+    padding-top: 8vh;
+    padding-bottom: 3vh;
+    display: grid;
+    grid-gap: 1vh;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(6vh, 1fr));
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background-color: white;
+    overflow-x: auto;
+    border-radius: 1vh;
+  }
+  .container_go_back_tables {
+    width: 20vw;
+    height: 7vh;
+    position: absolute;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  }
+  .header_title_tables {
+    display: flex;
+    width: 100%;
+    top: 0;
+    position: relative;
+    height: 4vh;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4vw;
+    line-height: 2vh;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .button_cashier_tables {
+    position: absolute;
+    width: 90%;
+    height: 3vh;
+    left: 5%;
+    top: 3.5vh;
+    background: #9b26b6;
+    border-radius: 1vmax;
+    border: 1px solid #9b26b6;
+  }
+  .text_cashier_admin {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.5vw;
+    line-height: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    margin: auto;
+  }
+  .order_tables_list_admin {
+    position: relative;
+    margin: auto;
+    border: 0;
+    width: 70%;
+    height: auto;
+  }
+
+  .button_table_admin {
+    width: 80%;
+    height: auto;
+  }
+  .number_table_admin {
+    position: absolute;
+    bottom: 0%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: calc(100% + 2vmax);
+    line-height: 100%;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
 }

@@ -1,8 +1,14 @@
-.header_spot_admin {
+.logo_header_admin_spot {
   display: block;
   position: absolute;
   top: 0.5vh;
   left: 1vw;
+}
+.options_header_admin_spot {
+  position: absolute;
+  height: 9vh;
+  width: 70vw;
+  left: 30vw;
 }
 
 .page_spot_admin {

@@ -6,16 +6,6 @@
   left: 55vw;
 }
 
-.button_cashier {
-  position: absolute;
-  width: 12vw;
-  height: 6vh;
-  right: 1vw;
-  top: 1vw;
-  background: #9b26b6;
-  border-radius: 1vmax;
-  border: 1px solid #9b26b6;
-}
 .button_register {
   position: absolute;
   width: 19vw;
@@ -34,18 +24,7 @@
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 1.4vmax;
 }
-.text_cashier {
-  font-family: Quicksand;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 2.3vmax;
-  line-height: 2.5vmax;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  margin: auto;
-}
+
 .text_register {
   font-family: Quicksand;
   font-style: normal;
@@ -76,7 +55,7 @@
   right: 1.5vw;
   height: 85vh;
   padding: 3vh;
-  bottom: 3.2vh;
+  bottom: 3.1vh;
   border: 1px solid rgba(0, 0, 0, 0.25);
   background-color: white;
   display: grid;
@@ -89,4 +68,78 @@
   padding: 1.5vmax;
   bottom: 0vh;
   overflow: auto;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .info_cashier {
+    position: absolute;
+    top: 0vh;
+    width: 77vw;
+    height: 100vh;
+    left: 23vw;
+  }
+
+  .button_register {
+    position: absolute;
+    width: 30vw;
+    height: 7vh;
+    left: 1vh;
+    top: 1vh;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 1.4vmax;
+  }
+  .button_account {
+    position: absolute;
+    width: 30vw;
+    height: 7vh;
+    right: 1vh;
+    top: 1vh;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 1.4vmax;
+  }
+
+  .text_register {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.3vmax;
+    line-height: 2.5vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    margin: auto;
+  }
+  .text_account {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.3vmax;
+    line-height: 2.5vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    margin: auto;
+  }
+  .container_cashier_tables {
+    position: absolute;
+    width: 76vw;
+    right: 1.5vw;
+    height: 89vh;
+    padding: 1vh;
+    bottom: 1vh;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 1vh;
+    background-color: white;
+    display: grid;
+    grid-gap: 3vh;
+  }
+  .cashier_component {
+    position: absolute;
+    width: 76vw;
+    height: 80vh;
+    padding: 0.5vh;
+    bottom: 0vh;
+    overflow: auto;
+  }
 }
