@@ -1,6 +1,10 @@
 .header_home {
   display: block;
-  position: relative;
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+  padding: 2px;
   top: 0.5vh;
 }
 

@@ -80,18 +80,18 @@
 
   .button_register {
     position: absolute;
-    width: 30vw;
+    width: 32vw;
     height: 7vh;
-    left: 1vh;
+    left: 2vh;
     top: 1vh;
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 1.4vmax;
   }
   .button_account {
     position: absolute;
-    width: 30vw;
+    width: 32vw;
     height: 7vh;
-    right: 1vh;
+    right: 2vh;
     top: 1vh;
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 1.4vmax;
@@ -123,11 +123,11 @@
   }
   .container_cashier_tables {
     position: absolute;
-    width: 76vw;
+    width: 75.5vw;
     right: 1.5vw;
-    height: 89vh;
+    height: 89.3vh;
     padding: 1vh;
-    bottom: 1vh;
+    bottom: 1.5vw;
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 1vh;
     background-color: white;
@@ -136,9 +136,9 @@
   }
   .cashier_component {
     position: absolute;
-    width: 76vw;
+    width: 75.5vw;
     height: 80vh;
-    padding: 0.5vh;
+    padding: 1vh;
     bottom: 0vh;
     overflow: auto;
   }
