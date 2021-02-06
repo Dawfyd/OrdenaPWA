@@ -8,13 +8,14 @@
   padding-bottom: 3vh;
   display: grid;
   grid-gap: 3vh;
-  grid-template-columns: repeat(auto-fit, minmax(11vw, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(9vw, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(9vh, 1fr));
   border: 1px solid rgba(0, 0, 0, 0.25);
   background-color: white;
+  overflow: auto;
 }
 .container_go_back_tables {
-  width: 53vw;
+  width: 100%;
   height: 7vh;
   position: absolute;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
@@ -62,7 +63,7 @@
   position: relative;
   margin: auto;
   border: 0;
-  width: 70%;
+  width: 80%;
   height: auto;
 }
 
@@ -81,7 +82,7 @@
   font-family: Quicksand;
   font-style: normal;
   font-weight: bold;
-  font-size: calc(100% + 3vmax);
+  font-size: 3vmax;
   line-height: 100%;
   color: #ffffff;
   margin: 0;
@@ -90,9 +91,9 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .tables_list_admin {
     position: absolute;
-    bottom: 1vh;
+    bottom: 1.5vw;
     width: 20vw;
-    height: 89vh;
+    height: 89.3vh;
     left: 1.5vw;
     padding-top: 8vh;
     padding-bottom: 3vh;
@@ -131,7 +132,7 @@
   }
   .button_cashier_tables {
     position: absolute;
-    width: 90%;
+    width: 86%;
     height: 3vh;
     left: 5%;
     top: 3.5vh;

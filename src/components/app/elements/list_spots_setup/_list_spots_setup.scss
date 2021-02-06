@@ -106,9 +106,10 @@
   padding-bottom: 2vh;
   display: grid;
   grid-gap: 2vh;
-  grid-template-columns: repeat(auto-fit, minmax(11vw, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(9vh, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(8vw, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(12vh, 1fr));
   background-color: white;
+  overflow: auto;
 }
 
 .order_tables_spots_admin {

@@ -437,6 +437,38 @@ const initialState = {
       id_venue: 1,
       id_service: 1,
     },
+    {
+      id_spot: 19, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 14, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 20, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 15, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 21, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 16, // number
+      id_venue: 1,
+      id_service: 1,
+    },
+    {
+      id_spot: 22, //id
+      state_spot: 1, //state_table
+      name_spot: "casinni2",
+      number_spot: 17, // number
+      id_venue: 1,
+      id_service: 1,
+    },
   ],
   orders: [
     {

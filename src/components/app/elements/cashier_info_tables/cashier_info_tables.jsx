@@ -19,7 +19,6 @@ function InfoTable({
             <div className="container_cashier_tables">
               <button
                 className="button_register"
-                id="B1"
                 onClick={() => ClickRegister()}
                 style={
                   display_category === true
@@ -40,7 +39,6 @@ function InfoTable({
               </button>
               <button
                 className="button_account"
-                id="B1"
                 onClick={() => ClickAccount()}
                 style={
                   display_category === false
