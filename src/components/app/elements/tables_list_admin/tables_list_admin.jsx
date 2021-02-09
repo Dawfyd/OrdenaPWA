@@ -16,12 +16,12 @@ const TablesListA = ({ spots, InfoSpot, select_table }) => (
 
     {spots.map((d) => (
       <div
-        key={d.id_spot}
+        key={d.id}
         className="order_tables_list_admin"
         style={
-          d.state_spot === 1
+          d.state === 1
             ? { order: "3" }
-            : d.state_spot === 2
+            : d.state === 2
             ? { order: "2" }
             : { order: "1" }
         }
@@ -29,16 +29,16 @@ const TablesListA = ({ spots, InfoSpot, select_table }) => (
         <Avatar
           className="button_table_admin"
           src={
-            d.state_spot === 1
+            d.state === 1
               ? table_green
-              : d.state_spot === 2
+              : d.state === 2
               ? table_purple
               : table_red
           }
         />
 
         <p className="number_table_admin" onClick={() => InfoSpot(d)}>
-          {d.number_spot}
+          {d.number}
         </p>
       </div>
     ))}
@@ -54,7 +54,7 @@ const mapDispatchToProps = (dispatch) => ({
   InfoSpot(d) {
     dispatch({
       type: "CLICK_TABLE",
-      select_table: d.number_spot,
+      select_table: d.number,
     });
   },
 });

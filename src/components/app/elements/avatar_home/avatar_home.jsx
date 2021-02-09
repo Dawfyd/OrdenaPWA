@@ -8,9 +8,9 @@ const AvatarHome = ({ persons, services }) => (
       <hr id="separator_avatar" />
       <div className="avatar_list">
         {persons.map((d) => (
-          <div key={d.id_person} className="order_avatar">
+          <div key={d.id} className="order_avatar">
             <div>
-              <Avatar className="avatar" src={d.photo_person} />
+              <Avatar className="avatar" src={d.photo} />
             </div>
             <div className="text_name">{d.username}</div>
           </div>

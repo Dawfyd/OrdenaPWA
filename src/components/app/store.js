@@ -56,779 +56,352 @@ const initialState = {
 
   products: [
     {
-      id_product: 1,
-      name_product: "Hamburguesa Doble",
-      description_product:
-        "Hamburguesa doble carne angus 400g, salsa de la casa",
-      image_product: "urlphoto",
-      id_category: 4,
-      state_product: true,
-      type_product: "B",
-      code_product: "0",
+      id: 1,
+      name: "Hamburguesa Doble",
+      description: "Hamburguesa doble carne angus 400g, salsa de la casa",
+      image: "urlphoto",
+      state: true,
+      product_type_id: "",
       //state_button(cambiar button por otra cosa): false,//
       //alt: "Foto de {name_product}",
     },
     {
-      id_product: 2,
-      name_product: "Tocineta",
-      description_product: "50 gr",
-      image_product: " ",
-      id_category: 1,
-      state_product: true,
-      type_product: "C",
-      code_product: "3",
+      id: 2,
+      name: "Tocineta",
+      description: "50 gr",
+      image: " ",
+      state: true,
+      product_type_id: "",
       //state_button(cambiar button por otra cosa): false,//
       //alt: "Foto de {name_product}",
     },
     {
-      id_product: 3,
-      name_product: "Queso Americano",
-      description_product: "10 gr",
-      image_product: " ",
-      id_category: 1,
-      state_product: true,
-      type_product: "P",
-      code_product: "1",
+      id: 3,
+      name: "Queso Americano",
+      description: "10 gr",
+      image: " ",
+      state: true,
+      product_type_id: "",
     },
     {
-      id_product: 4,
-      name_product: "Salsa de la casa",
-      description_product: " ",
-      image_product: " ",
-      id_category: 1,
-      state_product: true,
-      type_product: "T",
-      code_product: "0",
+      id: 4,
+      name: "Salsa de la casa",
+      description: " ",
+      image: " ",
+      state: true,
+      product_type_id: "",
     },
     {
-      id_product: 5,
-      name_product: "Salsa Buffalo",
-      description_product: " ",
-      image_product: " ",
-      id_category: 1,
-      state_product: true,
-      type_product: "C",
-      code_product: "3",
+      id: 5,
+      name: "Salsa Buffalo",
+      description: " ",
+      image: " ",
+      state: true,
+      product_type_id: "",
     },
     {
-      id_product: 6,
-      name_product: "Carne Angus",
-      description_product: "200 gr",
-      image_product: " ",
-      id_category: 1,
-      state_product: true,
-      type_product: "P",
-      code_product: "1",
+      id: 6,
+      name: "Carne Angus",
+      description: "200 gr",
+      image: " ",
+      state: true,
+      product_type_id: "",
     },
     {
-      id_product: 7,
-      name_product: "Papas Fritas",
-      description_product:
+      id: 7,
+      name: "Papas Fritas",
+      description:
         "Deliciosas papas bien crujientes, fritas en aceite de olvia extra virgen",
-      image_product: "_url_papas_fritas",
-      id_category: 3,
-      state_product: true,
-      type_product: "B",
-      code_product: "0",
+      image: "_url_papas_fritas",
+      state: true,
+      product_type_id: "",
     },
     {
-      id_product: 8,
-      name_product: "Dedos de queso",
-      description_product:
-        "Exquisitos dedos de queso al horno, con especias finas",
-      image_product: "_url_dedos_queso",
-      id_category: 3,
-      state_product: true,
-      type_product: "B",
-      code_product: "0",
+      id: 8,
+      name: "Dedos de queso",
+      description: "Exquisitos dedos de queso al horno, con especias finas",
+      image: "_url_dedos_queso",
+      state: true,
+      product_type_id: "",
     },
     {
-      id_product: 9,
-      name_product: "Empanadas Vallunas",
-      description_product:
+      id: 9,
+      name: "Empanadas Vallunas",
+      description:
         "Deliciosas empanadas fritas en aceite de palma, con aji al gusto",
-      image_product: "_url_empanadas_vallunas",
-      id_category: 3,
-      state_product: true,
-      type_product: "B",
-      code_product: "0",
+      image: "_url_empanadas_vallunas",
+      state: true,
+      product_type_id: "",
     },
     {
-      id_product: 10,
-      name_product: "Bandeja Paisa",
-      description_product:
+      id: 10,
+      name: "Bandeja Paisa",
+      description:
         "Deliciosa bandeja paisa, con frijoles, chorizo, huevo frito, arroz, chicharron y aguacate",
-      image_product: "_url_bandeja_paisa",
-      id_category: 4,
-      state_product: true,
-      type_product: "B",
-      code_product: "0",
+      image: "_url_bandeja_paisa",
+      state: true,
+      product_type_id: "",
     },
     {
-      id_product: 11,
-      name_product: "Cerveza ClubColombia",
-      description_product:
+      id: 11,
+      name: "Cerveza ClubColombia",
+      description:
         "Cerveza nacional, con 3 sabores distintos; Roja, Dorada y Negra",
-      image_product: "_url_cerveza_club",
-      id_category: 7,
-      state_product: true,
-      type_product: "B",
-      code_product: "0",
+      image: "_url_cerveza_club",
+      state: true,
+      product_type_id: "",
     },
     {
-      id_product: 12,
-      name_product: "Juego de Naranja",
-      description_product:
+      id: 12,
+      name: "Juego de Naranja",
+      description:
         "Jugo natural recien exprimido con 1 parte de agua y 2 de fruta.",
-      image_product: "_url_juego_naranja",
-      id_category: 6,
-      state_product: true,
-      type_product: "B",
-      code_product: "0",
+      image: "_url_juego_naranja",
+      state: true,
+      product_type_id: "",
     },
     {
-      id_product: 13,
-      name_product: "Brownie con helado",
-      description_product:
+      id: 13,
+      name: "Brownie con helado",
+      description:
         "Exquisito brownie con helado al gusto, y salsa de chocolate por encima",
-      image_product: "_url_bandeja_paisa",
-      id_category: 8,
-      state_product: true,
-      type_product: "B",
-      code_product: "0",
+      image: "_url_bandeja_paisa",
+      state: true,
+      product_type_id: "",
     },
   ],
   prices: [
     {
-      id_price: 1,
-      value_price: 12000,
+      id: 1,
+      value: 12000,
       currency: "COP",
-      option_price: 1,
-      id_product: 1,
+      option: 1,
+      product_id: 1,
       //state_button(cambiar button por otra cosa): false,//
       //alt: "Foto de {name_product}",
     },
     {
-      id_price: 2,
-      value_price: 5000,
+      id: 2,
+      value: 5000,
       currency: "COP",
-      option_price: 1,
-      id_product: 2,
+      option: 1,
+      product_id: 2,
       //state_button(cambiar button por otra cosa): false,//
       //alt: "Foto de {name_product}",
     },
     {
-      id_price: 3,
-      value_price: 3000,
+      id: 3,
+      value: 3000,
       currency: "COP",
-      option_price: 1,
-      id_product: 3,
+      option: 1,
+      product_id: 3,
     },
     {
-      id_price: 4,
-      value_price: 500,
+      id: 4,
+      value: 500,
       currency: "COP",
-      option_price: 1,
-      id_product: 4,
+      option: 1,
+      product_id: 4,
     },
     {
-      id_price: 5,
-      value_price: 500,
+      id: 5,
+      value: 500,
       currency: "COP",
-      option_price: 1,
-      id_product: 5,
+      option: 1,
+      product_id: 5,
     },
     {
-      id_price: 6,
-      value_price: 6000,
+      id: 6,
+      value: 6000,
       currency: "COP",
-      option_price: 1,
-      id_product: 6,
+      option: 1,
+      product_id: 6,
     },
     {
-      id_price: 7,
-      value_price: 4000,
+      id: 7,
+      value: 4000,
       currency: "COP",
-      option_price: 1,
-      id_product: 7,
+      option: 1,
+      product_id: 7,
     },
     {
-      id_price: 8,
-      value_price: 8000,
+      id: 8,
+      value: 8000,
       currency: "COP",
-      option_price: 1,
-      id_product: 8,
+      option: 1,
+      product_id: 8,
     },
     {
-      id_price: 9,
-      value_price: 6000,
+      id: 9,
+      value: 6000,
       currency: "COP",
-      option_price: 1,
-      id_product: 9,
+      option: 1,
+      product_id: 9,
     },
     {
-      id_price: 10,
-      value_price: 18000,
+      id: 10,
+      value: 18000,
       currency: "COP",
-      option_price: 1,
-      id_product: 10,
+      option: 1,
+      product_id: 10,
     },
     {
-      id_price: 11,
-      value_price: 5000,
+      id: 11,
+      value: 5000,
       currency: "COP",
-      option_price: 1,
-      id_product: 11,
+      option: 1,
+      product_id: 11,
     },
     {
-      id_price: 12,
-      value_price: 4000,
+      id: 12,
+      value: 4000,
       currency: "COP",
-      option_price: 1,
-      id_product: 12,
+      option: 1,
+      product_id: 12,
     },
     {
-      id_price: 13,
-      value_price: 9000,
+      id: 13,
+      value: 9000,
       currency: "COP",
-      option_price: 1,
-      id_product: 13,
+      option: 1,
+      product_id: 13,
     },
   ],
-  data_tables: [
-    { id: 1, state_table: 1, number: 1, id_service: 1 },
-    { id: 2, state_table: 2, number: 2, id_service: 1 },
-  ],
+
   spots: [
     //data_tables
     {
-      id_spot: 1, //id
-      state_spot: 2, //state_table
-      name_spot: "casinni",
-      number_spot: 1, // number
-      id_venue: 1,
-      id_service: 1,
+      id: 1, //id
+      state: 2, //state_table
+      name: "casinni",
+      number: 1, // number
+      venue_id: 1,
     },
     {
-      id_spot: 3, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 3, // number
-      id_venue: 1,
-      id_service: 1,
+      id: 2, //id
+      state: 1, //state_table
+      name: "casinni2",
+      number: 2, // number
+      venue_id: 1,
     },
     {
-      id_spot: 2, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 2, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 4, //id
-      state_spot: 2, //state_table
-      name_spot: "casinni",
-      number_spot: 4, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 5, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 5, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 6, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 6, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 7, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 7, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 8, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 8, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 9, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 9, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 11, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 10, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 12, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 11, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 13, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 12, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 14, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 13, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 15, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 14, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 16, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 15, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 17, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 16, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 18, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 17, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 19, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 14, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 20, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 15, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 21, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 16, // number
-      id_venue: 1,
-      id_service: 1,
-    },
-    {
-      id_spot: 22, //id
-      state_spot: 1, //state_table
-      name_spot: "casinni2",
-      number_spot: 17, // number
-      id_venue: 1,
-      id_service: 1,
+      id: 3, //id
+      state: 1, //state_table
+      name: "casinni2",
+      number: 3, // number
+      venue_id: 1,
     },
   ],
   orders: [
     {
-      id_order: 1, // id
-      price_order: 24500, //total_price
-      state_order: false, //state_paid
-      id_person: 1, //id_user
-      id_spot: 1, //id_table
+      id: 1, // id
+      price: 24500, //total_price
+      state: false, //state_paid
+      person_id: 1, //id_user
+      spot_id: 1, //id_table
       cashier_display: false,
     },
     {
-      id_order: 2, // id
-      price_order: 56000, //total_price
-      state_order: false, //state_paid
-      id_person: 2, //id_user
-      id_spot: 2, //id_table
+      id: 2, // id
+      price: 56000, //total_price
+      state: false, //state_paid
+      person_id: 2, //id_user
+      spot_id: 1, //id_table
       cashier_display: false,
     },
     {
-      id_order: 3, // id
-      price_order: 20000, //total_price
-      state_order: false, //state_paid
-      id_person: 3, //id_user
-      id_spot: 1, //id_table
+      id: 3, // id
+      price: 20000, //total_price
+      state: false, //state_paid
+      person_id: 3, //id_user
+      spot_id: 1, //id_table
       cashier_display: false,
     },
   ],
 
-  data_order: [
-    {
-      id: 1,
-      id_table: 1,
-      id_user: 1,
-      total_price: 24500,
-      state_paid: false,
-      cashier_display: false,
-    },
-    {
-      id: 2,
-      id_table: 2,
-      id_user: 2,
-      total_price: 56000,
-      state_paid: false,
-      cashier_display: false,
-    },
-    {
-      id: 3,
-      id_table: 1,
-      id_user: 3,
-      total_price: 20000,
-      state_paid: false,
-      cashier_display: false,
-    },
-  ],
   requests: [
     //data_products
     {
-      id_request: 1, //id
-      unit_request: 1, // unid_item
-      comentary_request: "Con muchas salsas",
-      state_request: 3, //state_served
-      addition_request: "",
-      modifier_request: "",
-      id_product: 1,
-      id_order: 1,
-      id_spot: 1, //id_table
+      id: 1, //id
+      unit: 1, // unid_item
+      comentary: "Con muchas salsas",
+      state: 3, //state_served
+      product_id: 1,
+      order_id: 1,
+      spot_id: 1, //id_table
       state_button: false,
       state_check: false,
     },
     {
-      id_request: 2, //id
-      unit_request: 1, // unid_item
-      comentary_request: "Con muchas salsas",
-      state_request: 2, //state_served
-      addition_request: "",
-      modifier_request: "",
-      id_product: 10,
-      id_order: 3,
-      id_spot: 1, //id_table
+      id: 2, //id
+      unit: 1, // unid_item
+      comentary: "Con muchas salsas",
+      state: 2, //state_served
+      product_id: 10,
+      order_id: 2,
+      spot_id: 1, //id_table
       state_button: false,
       state_check: false,
     },
     {
-      id_request: 3, //id
-      unit_request: 1, // unid_item
-      comentary_request: "Con muchas salsas",
-      state_request: 5, //state_served
-      addition_request: "",
-      modifier_request: "",
-      id_product: 7,
-      id_order: 3,
-      id_spot: 1, //id_table
+      id: 3, //id
+      unit: 1, // unid_item
+      comentary: "Con muchas salsas",
+      state: 2, //state_serveds
+      product_id: 7,
+      order_id: 3,
+      spot_id: 1, //id_table
       state_button: false,
       state_check: false,
     },
   ],
 
-  data_products: [
-    {
-      id: 1,
-      product:
-        "Hamburguesa Doble super mega hiper doble con triple carne de serpiente",
-      unit_item: 1,
-      price_item: 22000,
-      state_served: true,
-      id_order: 1,
-      id_table: 1,
-      state_button: false,
-      state_check: false,
-    },
-    {
-      id: 2,
-      product: "Hamburguesa Americana",
-      unit_item: 1,
-      price_item: 26000,
-      state_served: true,
-      id_order: 2,
-      id_table: 2,
-      state_button: false,
-      state_check: false,
-    },
-    {
-      id: 3,
-      product: "Adicion Tocineta",
-      unit_item: 1,
-      price_item: 3000,
-      state_served: true,
-      id_order: 2,
-      id_table: 2,
-      state_button: false,
-      state_check: false,
-    },
-    {
-      id: 4,
-      product: "Coca Cola",
-      unit_item: 2,
-      price_item: 5000,
-      state_served: true,
-      id_order: 3,
-      id_table: 1,
-      state_button: false,
-      state_check: false,
-    },
-    {
-      id: 5,
-      product: "Perro Mexicano",
-      unit_item: 1,
-      price_item: 22000,
-      state_served: false,
-      id_order: 3,
-      id_table: 1,
-      state_button: false,
-      state_check: false,
-    },
-    {
-      id: 6,
-      product: "Manzana Postobon",
-      unit_item: 1,
-      price_item: 2500,
-      state_served: false,
-      id_order: 1,
-      id_table: 1,
-      state_button: false,
-      state_check: false,
-    },
-  ],
   persons: [
     {
-      id_person: 1,
+      id: 1,
       username: "Jane Cooper",
-      photo_person: jane,
-      id_spot: 1,
+      photo: jane,
+      spot_id: 1,
     },
     {
-      id_person: 2,
+      id: 2,
       username: "David Hoyos",
-      photo_person:
+      photo:
         "https://lh3.googleusercontent.com/a-/AOh14GhYx-n5PDPFGmemzdi06rBLEpQt1Rc7y0iI93ZwzA=s96-c",
-      id_spot: 1,
+      spot_id: 1,
     },
     {
-      id_person: 3,
+      id: 3,
       username: "Robert Fox",
-      photo_person: robert,
-      id_spot: 1,
+      photo: robert,
+      spot_id: 1,
     },
     {
-      id_person: 4,
+      id: 4,
       username: "Darrell Steward",
-      photo_person: darrell,
-      id_spot: 1,
+      photo: darrell,
+      spot_id: 1,
     },
     {
-      id_person: 5,
+      id: 5,
       username: "Kathryn Murphy",
-      photo_person: kathryn,
-      id_spot: 1,
+      photo: kathryn,
+      spot_id: 1,
     },
     {
-      id_person: 6,
+      id: 6,
       username: "Leslie Alexander",
-      photo_person:
-        "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-      id_spot: 1,
+      photo: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+      spot_id: 1,
     },
     {
-      id_person: 7,
+      id: 7,
       username: "Cameron Williamson",
-      photo_person: cameron,
-      id_spot: 1,
+      photo: cameron,
+      spot_id: 1,
     },
   ],
-  data_user: [
-    {
-      id: 1,
-      name: "Jane Cooper",
-      icon: jane,
 
-      //id_table: 1,
-    },
-    {
-      id: 2,
-      name: "David Hoyos",
-      icon:
-        "https://lh3.googleusercontent.com/a-/AOh14GhYx-n5PDPFGmemzdi06rBLEpQt1Rc7y0iI93ZwzA=s96-c",
-
-      //id_table: 1,
-    },
-    {
-      id: 3,
-      name: "Robert Fox",
-      icon: robert,
-
-      //id_table: 1,
-    },
-    {
-      id: 4,
-      name: "Darrell Steward",
-      icon: darrell,
-
-      //id_table: 1,
-    },
-    {
-      id: 5,
-      name: "Kathryn Murphy",
-      icon: kathryn,
-
-      //id_table: 1,
-    },
-    {
-      id: 6,
-      name: "Leslie Alexander",
-      icon: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-
-      //id_table: 1,
-    },
-    {
-      id: 7,
-      name: "Cameron Williamson",
-      icon: cameron,
-
-      //id_table: 1,
-    },
-  ],
-  data_menu: [
-    {
-      id: 1,
-      category: 3,
-      id_fav: true,
-      id_desc: true,
-      state_button: false,
-      unit_item: 1,
-      product: "Hamburguesa Doble",
-      msg: "Hamburguesa doble carne angus 400g, salsa de la casa",
-      price: 13500,
-      price_d: 12000,
-      alt: "Foto de una Hamburguesa con queso",
-      photo: foto_1,
-    },
-    {
-      id: 2,
-      category: 2,
-      id_fav: false,
-      id_desc: false,
-      state_button: false,
-      unit_item: 1,
-      product: "Papas Fritas",
-      msg:
-        "Deliciosas papas bien crujientes, fritas en aceite de olvia extra virgen",
-      price: 7000,
-      alt: "Foto de Papas fritas con paprica y sal",
-      photo: foto,
-    },
-    {
-      id: 3,
-      category: 2,
-      id_fav: true,
-      id_desc: false,
-      state_button: false,
-      unit_item: 1,
-      product: "Dedos de queso",
-      msg: "Exquisitos dedos de queso al horno, con especias finas",
-      price: 8000,
-      alt: "Foto de 4 dedos de queso en una canastica",
-      photo: foto,
-    },
-    {
-      id: 4,
-      category: 2,
-      id_fav: false,
-      id_desc: false,
-      state_button: false,
-      unit_item: 1,
-      product: "Empanadas Vallunas",
-      msg: "Deliciosas empanadas fritas en aceite de palma, con aji al gusto",
-      price: 9000,
-      alt: "Foto de 4 empanadas en una canasta",
-      photo: foto,
-    },
-    {
-      id: 5,
-      category: 3,
-      id_fav: false,
-      id_desc: false,
-      state_button: false,
-      unit_item: 1,
-      product: "Bandeja Paisa",
-      msg:
-        "Deliciosa bandeja paisa, con frijoles, chorizo, huevo frito, arroz, chicharron y aguacate",
-      price: 7000,
-      alt: "Foto de 4 empanadas en una canasta",
-      photo: foto,
-    },
-    {
-      id: 6,
-      category: 5,
-      id_fav: false,
-      id_desc: false,
-      state_button: false,
-      unit_item: 1,
-      product: "Cerveza ClubColombia",
-      msg: "Cerveza nacional, con 3 sabores distintos; Roja, Dorada y Negra",
-      price: 7000,
-      alt: "Foto de 4 empanadas en una canasta",
-      photo: foto,
-    },
-    {
-      id: 7,
-      category: 5,
-      id_fav: false,
-      id_desc: false,
-      state_button: false,
-      unit_item: 1,
-      product: "Jugo de Naranja",
-      msg: "Jugo natural recien exprimido con 1 parte de agua y 2 de fruta.",
-      price: 9000,
-      alt: "Foto de 4 empanadas en una canasta",
-      photo: foto,
-    },
-  ],
   display_category: true,
   select_table: 1,
   showMenu: true,
@@ -1021,7 +594,6 @@ const reducer = (state = initialState, action) => {
       }
 
     case "EDIT_CATEGORY":
-      console.log(state.edit_category);
       return {
         ...state,
         create_category: true,
@@ -1030,7 +602,6 @@ const reducer = (state = initialState, action) => {
       };
     case "CREATE_CATEGORY":
       const id_temp_2 = state.categorys.length + 1;
-      console.log(id_temp_2);
       return {
         ...state,
         create_category: true,
@@ -1078,10 +649,10 @@ const reducer = (state = initialState, action) => {
       };
     case "ORDER_READY":
       const index_order = state.requests.findIndex(
-        (requests) => requests.id_request === action.id_ready
+        (requests) => requests.id === action.id_ready
       );
       const newArray_order = [...state.requests];
-      newArray_order[index_order].state_request = 3;
+      newArray_order[index_order].state = 3;
       return {
         ...state,
 
@@ -1230,7 +801,7 @@ const reducer = (state = initialState, action) => {
       }
     case "DISPLAY_BUTTON":
       const index_display = state.requests.findIndex(
-        (requests) => requests.id_request === action.button_display
+        (requests) => requests.id === action.button_display
       );
 
       const newArray_display = [...state.requests];
@@ -1247,19 +818,19 @@ const reducer = (state = initialState, action) => {
       };
     case "CANCEL_ITEM":
       const index_cancel = state.requests.findIndex(
-        (requests) => requests.id_request === action.check_id
+        (requests) => requests.id === action.check_id
       );
 
       const newArray_cancel = [...state.requests];
 
       if (
-        newArray_cancel[index_cancel].state_request === 2 &&
+        newArray_cancel[index_cancel].state === 2 &&
         action.cancel_item === true
       ) {
-        newArray_cancel[index_cancel].state_request = 5;
+        newArray_cancel[index_cancel].state = 5;
       } else {
         if (action.cancel_item === true) {
-          newArray_cancel[index_cancel].state_request = 5;
+          newArray_cancel[index_cancel].state = 5;
         }
       }
 
@@ -1269,16 +840,16 @@ const reducer = (state = initialState, action) => {
       };
     case "CLICK_ITEM":
       const index_item = state.requests.findIndex(
-        (requests) => requests.id_request === action.check_id
+        (requests) => requests.id === action.check_id
       );
 
       const newArray_item = [...state.requests];
 
-      if (newArray_item[index_item].state_request === 1) {
-        newArray_item[index_item].state_request = 2;
+      if (newArray_item[index_item].state === 1) {
+        newArray_item[index_item].state = 2;
       } else {
         if (action.cancel_item === true) {
-          newArray_item[index_item].state_request = 5;
+          newArray_item[index_item].state = 5;
         }
       }
 
@@ -1288,7 +859,7 @@ const reducer = (state = initialState, action) => {
       };
     case "CLICK_USER_DETAILS":
       const index_details = state.orders.findIndex(
-        (orders) => orders.id_order === action.user_id
+        (orders) => orders.id === action.user_id
       );
 
       const newArray_details = [...state.orders];
@@ -1316,19 +887,18 @@ const reducer = (state = initialState, action) => {
       };
     case "CLICK_PAID":
       const index_paid = state.orders.findIndex(
-        (orders) => orders.id_order === action.user_paid
+        (orders) => orders.id === action.user_paid
       );
 
       const newArray_paid = [...state.orders];
 
-      newArray_paid[index_paid].state_order = true;
+      newArray_paid[index_paid].state = true;
 
       return {
         ...state,
         orders: newArray_paid,
       };
 
-      break;
     default:
       return state;
   }

@@ -16,10 +16,10 @@ function InfoTable({
   return (
     <div className="info_table">
       {spots
-        .filter((a) => a.number_spot === select_table)
+        .filter((a) => a.number === select_table)
         .map((d) => (
-          <div key={d.id_spot}>
-            <p className="number_info_table">Mesa {d.number_spot}</p>
+          <div key={d.id}>
+            <p className="number_info_table">Mesa {d.number}</p>
             <hr className="separator_info_table" />
 
             <p className="product_info">Productos</p>
@@ -27,14 +27,14 @@ function InfoTable({
 
             <div className="container_grid_info">
               {orders
-                .filter((b) => b.id_spot === d.id_spot)
+                .filter((b) => b.spot_id === d.id)
                 .map((o) => (
-                  <div className="container_grid_table" key={o.id_order}>
+                  <div className="container_grid_table" key={o.id}>
                     {requests
-                      .filter((e) => e.state_request === 3)
-                      .filter((e) => e.id_spot === d.id_spot)
+                      .filter((e) => e.state === 3)
+                      .filter((e) => e.spot_id === d.id)
                       .map((p) => (
-                        <div className="container_product" key={p.id_request}>
+                        <div className="container_product" key={p.id}>
                           <button
                             type="button"
                             className="collapsible_info"
@@ -48,17 +48,17 @@ function InfoTable({
                               )}
                             </p>
                             <li className="unit_item">
-                              {p.unit_request} ud -{" "}
+                              {p.unit} ud -{" "}
                               {products
-                                .filter((b) => b.id_product === p.id_product)
-                                .reduce((accumulator, b) => b.name_product, 0)}
+                                .filter((b) => b.id === p.product_id)
+                                .reduce((accumulator, b) => b.name, 0)}
                             </li>
                             <li className="price_item">
                               $
                               {FormatNumber(
                                 prices
-                                  .filter((b) => b.id_product === p.id_product)
-                                  .reduce((accumulator, b) => b.value_price, 0)
+                                  .filter((b) => b.id === p.product_id)
+                                  .reduce((accumulator, b) => b.value, 0)
                               )}
                             </li>
                           </button>
@@ -73,7 +73,7 @@ function InfoTable({
                             <div>
                               <p>
                                 {persons
-                                  .filter((j) => j.id_person === o.id_person)
+                                  .filter((j) => j.id === o.person_id)
                                   .reduce((accumulator, b) => b.username, 0)}
                               </p>
                             </div>
@@ -85,8 +85,8 @@ function InfoTable({
                       className="pending_order"
                       style={
                         requests
-                          .filter((e) => e.state_request !== 2)
-                          .filter((e) => e.id_spot === d.id_spot).length === 0
+                          .filter((e) => e.state !== 3)
+                          .filter((e) => e.spot_id === d.id).length === 0
                           ? { display: "none" }
                           : { display: "flex" }
                       }
@@ -95,29 +95,31 @@ function InfoTable({
                     </p>
 
                     {requests
-                      .filter((f) => f.state_request !== 2)
-                      .filter((e) => e.id_spot === d.id_spot)
+                      .filter((f) => f.state !== 3)
+                      .filter((e) => e.spot_id === d.id)
                       .map((p) => (
-                        <div className="container_product" key={p.id_request}>
-                          <button
-                            type="button"
-                            className="collapsible_info"
-                            onClick={() => DisplayButton(p)}
-                          >
-                            <p className="icon_collapsible">
+                        <div className="container_product" key={p.id}>
+                          <button type="button" className="collapsible_info">
+                            <p
+                              className="icon_collapsible"
+                              onClick={() => DisplayButton(p)}
+                            >
                               {p.state_button === false ? (
                                 <RightOutlined />
                               ) : (
                                 <DownOutlined />
                               )}
                             </p>
-                            <li className="unit_item">
-                              {p.unit_request} ud -{" "}
+                            <li
+                              className="unit_item_pending"
+                              onClick={() => DisplayButton(p)}
+                            >
+                              {p.unit} ud -{" "}
                               {products
-                                .filter((b) => b.id_product === p.id_product)
-                                .reduce((accumulator, b) => b.name_product, 0)}
+                                .filter((b) => b.id === p.product_id)
+                                .reduce((accumulator, b) => b.name, 0)}
                             </li>
-                            <li className="price_item">
+                            <li className="price_item_pending">
                               <input
                                 className="check_pending_order"
                                 onClick={() => OrderReady(p)}
@@ -137,7 +139,7 @@ function InfoTable({
                             <div>
                               <p>
                                 {persons
-                                  .filter((j) => j.id_person === o.id_person)
+                                  .filter((j) => j.id === o.person_id)
                                   .reduce((accumulator, b) => b.username, 0)}
                               </p>
                             </div>
@@ -145,16 +147,14 @@ function InfoTable({
                         </div>
                       ))}
                     <div className="total_table_div">
-                      <p className="product_total">
-                        Total Mesa {d.number_spot}
-                      </p>
+                      <p className="product_total">Total Mesa {d.number}</p>
                       <p className="price_total">
                         $
                         {FormatNumber(
                           orders
-                            .filter((b) => b.id_spot === d.id_spot)
+                            .filter((b) => b.spot_id === d.id)
                             .reduce(
-                              (accumulator, b) => accumulator + b.price_order,
+                              (accumulator, b) => accumulator + b.price,
                               0
                             )
                         )}
@@ -168,8 +168,8 @@ function InfoTable({
     </div>
   );
 }
-function FormatNumber(price_item) {
-  return new Intl.NumberFormat("de-DE").format(price_item);
+function FormatNumber(price) {
+  return new Intl.NumberFormat("de-DE").format(price);
 }
 
 const mapStateToProps = (state) => ({
@@ -186,13 +186,13 @@ const mapDispatchToProps = (dispatch) => ({
   OrderReady(p) {
     dispatch({
       type: "ORDER_READY",
-      id_ready: p.id_request,
+      id_ready: p.id,
     });
   },
   DisplayButton(p) {
     dispatch({
       type: "DISPLAY_BUTTON",
-      button_display: p.id_request,
+      button_display: p.id,
     });
   },
 });
