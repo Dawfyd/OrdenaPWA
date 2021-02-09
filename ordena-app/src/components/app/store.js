@@ -1,4 +1,3 @@
-import { createStore } from "redux";
 import foto from "../../assets/images/tarjets/Image.svg";
 import kathryn from "../../assets/images/avatars/kathryn.png";
 import robert from "../../assets/images/avatars/robert.png";
@@ -6,6 +5,7 @@ import cameron from "../../assets/images/avatars/cameron.png";
 import darrell from "../../assets/images/avatars/darrell.png";
 import jane from "../../assets/images/avatars/jane.png";
 import foto_1 from "../../assets/images/tarjets/hamburguesa.jpg";
+import { createStore } from "redux";
 
 const initialState = {
   menu: [],
@@ -573,7 +573,7 @@ const initialState = {
   registerList: [],
   modifiers: [
     {
-      id_modifier: 1,
+      id: 1,
       name_modifier: "Cebolla",
       state_modifier: true,
       id_product: 1,
@@ -583,7 +583,7 @@ const initialState = {
       string_modifier: " "
     },
     {
-      id_modifier: 2,
+      id: 2,
       name_modifier: "Tomate",
       state_modifier: true,
       id_product: 1,
@@ -593,7 +593,7 @@ const initialState = {
       string_modifier: " "
     },
     {
-      id_modifier: 3,
+      id: 3,
       name_modifier: "Lechuga",
       state_modifier: true,
       id_product: 1,
@@ -603,7 +603,7 @@ const initialState = {
       string_modifier: " "
     },
     {
-      id_modifier: 4,
+      id: 4,
       name_modifier: "Salsa de tomate",
       state_modifier: true,
       id_product: 1,
@@ -613,7 +613,7 @@ const initialState = {
       string_modifier: " "
     },
     {
-      id_modifier: 5,
+      id: 5,
       name_modifier: "Termino de carne",
       state_modifier: true,
       id_product: 1,
@@ -623,7 +623,7 @@ const initialState = {
       string_modifier: "Medio (1/2),Tres cuartos (3/4),Bien asado"
     },
     {
-      id_modifier: 6,
+      id: 6,
       name_modifier: "Sabor de helado",
       state_modifier: true,
       id_product: 13,
@@ -633,7 +633,7 @@ const initialState = {
       string_modifier: "Chocolate, Vainilla, Fresa"
     },
     {
-      id_modifier: 7,
+      id: 7,
       name_modifier: "Salsa de chocolate",
       state_modifier: true,
       id_product: 13,
@@ -666,27 +666,67 @@ const initialState = {
   create_category: false,
   edit_category: false,
   id_create_category: 0,
+  switch_opt_modifier: false,
+  show_create_mods: false,
   codes_mods_temp: [
     {
-      id_modifier: 1,
+      id: 1,
       type_modifier: "",
       code_modifier: ""
     }
   ],
-  codes_mods: []
+  codes_mods: [],
+  array_u1_temp: [
+    {
+      id: 0,
+      name_modifier: "",
+      state_modifier: true,
+      id_product: 0,
+      type_modifier: "P",
+      code_modifier: "",
+      optional_modifier: true,
+      string_modifier: ""
+    }
+  ]
 };
 
 const reducer = (state = initialState, action) => {
   console.log(action);
   switch (action.type) {
+    case "RECEIVE_DATA_1U":
+      const array_temp_values = action.array_temp_values;
+      const temp_u1_modifiers = [...state.modifiers];
+      const length_new_u1 = temp_u1_modifiers.length;
+      const id_new_u1 = temp_u1_modifiers[length_new_u1 - 1].id + 1;
+      console.log("dataU1", id_new_u1, array_temp_values);
+      const local_array_u1_temp = [...state.array_u1_temp];
+      local_array_u1_temp[0].id = id_new_u1;
+      local_array_u1_temp[0].name_modifier = array_temp_values.name;
+      local_array_u1_temp[0].code_modifier = state.id_food.toString();
+      console.log("dataU1_2", local_array_u1_temp);
+      temp_u1_modifiers.push(local_array_u1_temp[0]);
+      console.log("dataU1_3", temp_u1_modifiers);
+      return {
+        ...state,
+        modifiers: temp_u1_modifiers
+      };
+    case "RECEIVE_DATA_2A":
+      return {
+        ...state
+      };
+    case "RECEIVE_DATA_3M":
+      return {
+        ...state
+      };
+    case "SWITCH_MODIFIERS":
+      return {
+        ...state,
+        switch_opt_modifier: state.switch_opt_modifier === true ? false : true
+      };
     case "ADD_MODIFIERS":
-      const id_temp_3 = action.id_modifier;
-      const arrayTemp_1 = state.modifiers.filter(
-        a => a.id_modifier === id_temp_3
-      );
-      const index5 = state.modifiers.findIndex(
-        a => a.id_modifier === id_temp_3
-      );
+      const id_temp_3 = action.id_modifiers;
+      const arrayTemp_1 = state.modifiers.filter(a => a.id === id_temp_3);
+      const index5 = state.modifiers.findIndex(a => a.id === id_temp_3);
       const tempType_1 = arrayTemp_1[0].type_modifier;
       if (tempType_1 === "C") {
         const codeTemp_1 = arrayTemp_1[0].code_modifier.split(",");
@@ -695,12 +735,13 @@ const reducer = (state = initialState, action) => {
         codeTemp_2 = codeTemp_2.join(",");
         arrayTemp_1[0].code_modifier = codeTemp_2;
         console.log(arrayTemp_1);
-        const arrayTemp_2 = state.modifiers;
+        const arrayTemp_2 = [...state.modifiers];
         arrayTemp_2[index5] = arrayTemp_1[0];
         console.log(arrayTemp_2);
         return {
           ...state,
-          modifiers: arrayTemp_2
+          modifiers: arrayTemp_2,
+          actualizar_comp: state.actualizar_comp === true ? false : true
         };
       }
       if (tempType_1 === "P") {
@@ -709,16 +750,16 @@ const reducer = (state = initialState, action) => {
         var codeTemp_4 = codeTemp_3.concat(id_food_temp);
         codeTemp_4 = codeTemp_4.join(",");
         arrayTemp_1[0].code_modifier = codeTemp_4;
-        console.log(arrayTemp_3);
-        const arrayTemp_3 = state.modifiers;
+        console.log(arrayTemp_1);
+        const arrayTemp_3 = [...state.modifiers];
         arrayTemp_3[index5] = arrayTemp_1[0];
         console.log(arrayTemp_3);
         return {
           ...state,
-          modifiers: arrayTemp_3
+          modifiers: arrayTemp_3,
+          actualizar_comp: state.actualizar_comp === true ? false : true
         };
       }
-
     case "EDIT_CATEGORY":
       console.log(state.edit_category);
       return {
@@ -751,6 +792,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         show_mods: state.show_mods === false ? true : false
       };
+    case "SHOW_CREATE_MODIFIERS":
+      return {
+        ...state,
+        show_create_mods: state.show_create_mods === false ? true : false
+      };
     case "CREATE_PRODUCT_SETUP":
       const id_temp_1 = state.products.length + 1;
       console.log(id_temp_1);
@@ -760,7 +806,6 @@ const reducer = (state = initialState, action) => {
         id_food: action.id_food,
         id_create_food: id_temp_1
       };
-
     case "SELECT_PRODUCT_SETUP":
       console.log(state.actualizar_comp);
       return {

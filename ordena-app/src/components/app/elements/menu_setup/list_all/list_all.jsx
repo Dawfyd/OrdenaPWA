@@ -13,7 +13,8 @@ function ListAll({
   selectAdds,
   createCategory,
   id_category,
-  editCategory
+  editCategory,
+  selectModds
 }) {
   return (
     <div className="container_list_all">
@@ -97,6 +98,9 @@ function ListAll({
         <button
           className="button_add_category"
           onClick={() => createCategory()}
+          style={
+            id_category === 0 ? { color: "#9B26B6" } : { color: "#32c755" }
+          }
         >
           <div>+ Agregar Categoria</div>
         </button>
@@ -105,7 +109,7 @@ function ListAll({
         {/*----- COSAS ADICIONALES Y MODIFICADORES------*/}
         <br />
         {categorys
-          .filter(a => a.id <= 2)
+          .filter(a => a.id <= 1)
           .map(d => (
             <div className="card_list_all" key={d.id}>
               <div className="order_card_list_all">
@@ -113,7 +117,7 @@ function ListAll({
                   className="button_all_card"
                   key={d.id}
                   href="/dish"
-                  onClick={() => selectCategory(d)}
+                  onClick={() => selectAdds(d)}
                 >
                   <div
                     className="bar_list_all_selected"
@@ -170,6 +174,60 @@ function ListAll({
             </div>
           ))}
       </div>
+      <div>
+        <div className="order_card_list_all">
+          <button
+            className="button_all_card"
+            href="/dish"
+            onClick={() => selectModds()}
+          >
+            <div
+              className="bar_list_all_selected"
+              style={
+                id_category === -2
+                  ? { background: "#9B26B6" }
+                  : { background: "white" }
+              }
+            >
+              {""}
+            </div>
+            <div
+              className="flechita_list_all"
+              style={
+                id_category === -2 ? { display: "none" } : { display: "flex" }
+              }
+            >
+              <CaretRightFilled />
+            </div>
+            <div
+              className="flechita_list_all_d"
+              style={
+                id_category === -2 ? { display: "flex" } : { display: "none" }
+              }
+            >
+              <CaretDownFilled />
+            </div>
+
+            <div className="title_list_all">Modificadores</div>
+          </button>
+          <button className="button_options_category">
+            <div>
+              <EyeOutlined />
+            </div>
+          </button>
+          <button
+            className="button_options_category_1"
+            onClick={() => editCategory()}
+            style={
+              id_category === -2 ? { color: "#9B26B6" } : { color: "#32c755" }
+            }
+          >
+            <div>
+              <MoreOutlined />
+            </div>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
@@ -206,6 +264,12 @@ const mapDispatchToProps = dispatch => ({
       type: "EDIT_CATEGORY",
       something_to_show: 1,
       id_category: d.id
+    });
+  },
+  selectModds() {
+    dispatch({
+      type: "SELECT_CATEGORY",
+      id_category: -2
     });
   }
 });

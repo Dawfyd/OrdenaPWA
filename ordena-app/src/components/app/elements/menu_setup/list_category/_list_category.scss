@@ -17,11 +17,18 @@
   height: 5vh;
   font-size: 1.8vh;
   font-weight: 600;
-  color: #32c755;
   background-color: white;
   border: 0.2;
   border-right: 0;
   border-left: 0;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.button_options_product {
+  background-color: white;
+  border: 0.2;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0;
   border-color: rgba(0, 0, 0, 0.2);
 }
 .button_options_category {

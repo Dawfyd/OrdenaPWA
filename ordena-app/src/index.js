@@ -6,6 +6,10 @@ import App from "./components/app";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 
+import ApolloClient, { gql } from "apollo-boost";
+import { ApolloProvider } from "@apollo/client";
+import { Query } from "react-apollo";
+
 ReactDOM.render(
   <BrowserRouter>
     <App />

@@ -43,7 +43,7 @@ function EditCategory({
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
-          <p className="description_product_setup">{"Name Category:"}</p>
+          <p className="name_edit_category_setup">Nombre de la categoria</p>
           <Form.Item
             label="Name_Category"
             name="name_category"
@@ -65,50 +65,6 @@ function EditCategory({
         </Form>
       </div>
     );
-  }
-  if (edit_category === true) {
-    return (
-      <div>
-        {""}
-        {categorys
-          .filter(a => a.id === id_category)
-          .map(b => (
-            <div className="container_edit_category" key={b.id}>
-              <br />
-              <Form
-                {...layout}
-                name="editCategory"
-                initialValues={{
-                  name_category_e: b.name_category
-                }}
-                onFinish={onFinish}
-                onFinishFailed={onFinishFailed}
-              >
-                <p className="name_category_setup">{"Name Category:"}</p>
-                <Form.Item
-                  label="Name_Category"
-                  name="name_category_e"
-                  rules={[
-                    {
-                      required: true,
-                      message:
-                        "Por favor ingresa un nuevo nombre valido, para tu categoria"
-                    }
-                  ]}
-                >
-                  <Input />
-                </Form.Item>
-
-                <Form.Item {...tailLayout}>
-                  <Button type="primary" htmlType="submit">
-                    Editar
-                  </Button>
-                </Form.Item>
-              </Form>
-            </div>
-          ))}
-      </div>
-    );
   } else {
     return (
       <div>
@@ -126,7 +82,9 @@ function EditCategory({
                 onFinish={onFinish}
                 onFinishFailed={onFinishFailed}
               >
-                <p className="name_category_setup">{"Name Category:"}</p>
+                <p className="name_edit_category_setup">
+                  Nombre de la categoria
+                </p>
                 <Form.Item
                   label="Name_Category"
                   name="name_category_e"
@@ -142,7 +100,11 @@ function EditCategory({
                 </Form.Item>
 
                 <Form.Item {...tailLayout}>
-                  <Button type="primary" htmlType="submit">
+                  <Button
+                    type="primary"
+                    htmlType="submit"
+                    className="button_edit_category"
+                  >
                     Editar
                   </Button>
                 </Form.Item>

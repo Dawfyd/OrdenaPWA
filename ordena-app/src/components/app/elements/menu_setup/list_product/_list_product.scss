@@ -10,6 +10,9 @@
 .ant-col-6 {
   flex: 0;
 }
+.ant-btn {
+  margin: 0;
+}
 .ant-form-item-label > label {
   display: none;
 }
@@ -74,6 +77,35 @@
   margin: 0;
   border: 0;
 }
+.mods_unic_alt {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.mods_unic_alt:hover {
+  color: black;
+  background: rgb(241, 241, 241);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.mods_multi_alt {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.mods_multi_alt:hover {
+  color: black;
+  background: rgb(241, 241, 241);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.order_switch_type_modifier {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  width: 40vh;
+  padding-left: 5vh;
+}
 .price_product_setup {
   @include p;
   margin: 0;
@@ -98,4 +130,72 @@
   padding-left: 2vw;
   margin: 0;
   border: 0;
+}
+.text_button_mods_mult_alt {
+  font-size: 85%;
+}
+.text_button_mods_unic_alt {
+  font-size: 85%;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
