@@ -64,6 +64,15 @@ const initialState = {
       product_type_id: "",
       //state_button(cambiar button por otra cosa): false,//
       //alt: "Foto de {name_product}",
+      id_product: 1,
+      name_product: "Hamburguesa Doble",
+      description_product:
+        "Hamburguesa doble carne angus 400g, salsa de la casa",
+      image_product: "urlphoto",
+      id_category: 4,
+      state_product: true,
+      type_product: "B",
+      code_product: "0",
     },
     {
       id: 2,
@@ -74,6 +83,14 @@ const initialState = {
       product_type_id: "",
       //state_button(cambiar button por otra cosa): false,//
       //alt: "Foto de {name_product}",
+      id_product: 2,
+      name_product: "Tocineta",
+      description_product: "50 gr",
+      image_product: " ",
+      id_category: 1,
+      state_product: true,
+      type_product: "C",
+      code_product: "3",
     },
     {
       id: 3,
@@ -82,6 +99,14 @@ const initialState = {
       image: " ",
       state: true,
       product_type_id: "",
+      id_product: 3,
+      name_product: "Queso Americano",
+      description_product: "10 gr",
+      image_product: " ",
+      id_category: 1,
+      state_product: true,
+      type_product: "P",
+      code_product: "1",
     },
     {
       id: 4,
@@ -90,6 +115,15 @@ const initialState = {
       image: " ",
       state: true,
       product_type_id: "",
+
+      id_product: 4,
+      name_product: "Salsa de la casa",
+      description_product: " ",
+      image_product: " ",
+      id_category: 1,
+      state_product: true,
+      type_product: "T",
+      code_product: "0",
     },
     {
       id: 5,
@@ -98,6 +132,15 @@ const initialState = {
       image: " ",
       state: true,
       product_type_id: "",
+
+      id_product: 5,
+      name_product: "Salsa Buffalo",
+      description_product: " ",
+      image_product: " ",
+      id_category: 1,
+      state_product: true,
+      type_product: "C",
+      code_product: "3",
     },
     {
       id: 6,
@@ -106,6 +149,15 @@ const initialState = {
       image: " ",
       state: true,
       product_type_id: "",
+
+      id_product: 6,
+      name_product: "Carne Angus",
+      description_product: "200 gr",
+      image_product: " ",
+      id_category: 1,
+      state_product: true,
+      type_product: "P",
+      code_product: "1",
     },
     {
       id: 7,
@@ -115,6 +167,16 @@ const initialState = {
       image: "_url_papas_fritas",
       state: true,
       product_type_id: "",
+
+      id_product: 7,
+      name_product: "Papas Fritas",
+      description_product:
+        "Deliciosas papas bien crujientes, fritas en aceite de olvia extra virgen",
+      image_product: "_url_papas_fritas",
+      id_category: 3,
+      state_product: true,
+      type_product: "B",
+      code_product: "0",
     },
     {
       id: 8,
@@ -123,6 +185,16 @@ const initialState = {
       image: "_url_dedos_queso",
       state: true,
       product_type_id: "",
+
+      id_product: 8,
+      name_product: "Dedos de queso",
+      description_product:
+        "Exquisitos dedos de queso al horno, con especias finas",
+      image_product: "_url_dedos_queso",
+      id_category: 3,
+      state_product: true,
+      type_product: "B",
+      code_product: "0",
     },
     {
       id: 9,
@@ -132,6 +204,16 @@ const initialState = {
       image: "_url_empanadas_vallunas",
       state: true,
       product_type_id: "",
+
+      id_product: 9,
+      name_product: "Empanadas Vallunas",
+      description_product:
+        "Deliciosas empanadas fritas en aceite de palma, con aji al gusto",
+      image_product: "_url_empanadas_vallunas",
+      id_category: 3,
+      state_product: true,
+      type_product: "B",
+      code_product: "0",
     },
     {
       id: 10,
@@ -141,6 +223,16 @@ const initialState = {
       image: "_url_bandeja_paisa",
       state: true,
       product_type_id: "",
+
+      id_product: 10,
+      name_product: "Bandeja Paisa",
+      description_product:
+        "Deliciosa bandeja paisa, con frijoles, chorizo, huevo frito, arroz, chicharron y aguacate",
+      image_product: "_url_bandeja_paisa",
+      id_category: 4,
+      state_product: true,
+      type_product: "B",
+      code_product: "0",
     },
     {
       id: 11,
@@ -150,6 +242,16 @@ const initialState = {
       image: "_url_cerveza_club",
       state: true,
       product_type_id: "",
+
+      id_product: 11,
+      name_product: "Cerveza ClubColombia",
+      description_product:
+        "Cerveza nacional, con 3 sabores distintos; Roja, Dorada y Negra",
+      image_product: "_url_cerveza_club",
+      id_category: 7,
+      state_product: true,
+      type_product: "B",
+      code_product: "0",
     },
     {
       id: 12,
@@ -159,6 +261,16 @@ const initialState = {
       image: "_url_juego_naranja",
       state: true,
       product_type_id: "",
+
+      id_product: 12,
+      name_product: "Juego de Naranja",
+      description_product:
+        "Jugo natural recien exprimido con 1 parte de agua y 2 de fruta.",
+      image_product: "_url_juego_naranja",
+      id_category: 6,
+      state_product: true,
+      type_product: "B",
+      code_product: "0",
     },
     {
       id: 13,
@@ -168,6 +280,16 @@ const initialState = {
       image: "_url_bandeja_paisa",
       state: true,
       product_type_id: "",
+
+      id_product: 13,
+      name_product: "Brownie con helado",
+      description_product:
+        "Exquisito brownie con helado al gusto, y salsa de chocolate por encima",
+      image_product: "_url_bandeja_paisa",
+      id_category: 8,
+      state_product: true,
+      type_product: "B",
+      code_product: "0",
     },
   ],
   prices: [
@@ -179,6 +301,11 @@ const initialState = {
       product_id: 1,
       //state_button(cambiar button por otra cosa): false,//
       //alt: "Foto de {name_product}",
+
+      id_price: 1,
+      value_price: 12000,
+
+      option_price: 1,
     },
     {
       id: 2,
@@ -188,6 +315,9 @@ const initialState = {
       product_id: 2,
       //state_button(cambiar button por otra cosa): false,//
       //alt: "Foto de {name_product}",
+      id_price: 2,
+      value_price: 5000,
+      option_price: 1,
     },
     {
       id: 3,
@@ -195,6 +325,10 @@ const initialState = {
       currency: "COP",
       option: 1,
       product_id: 3,
+      id_price: 3,
+      value_price: 3000,
+
+      option_price: 1,
     },
     {
       id: 4,
@@ -202,6 +336,9 @@ const initialState = {
       currency: "COP",
       option: 1,
       product_id: 4,
+      id_price: 4,
+      value_price: 500,
+      option_price: 1,
     },
     {
       id: 5,
@@ -209,6 +346,10 @@ const initialState = {
       currency: "COP",
       option: 1,
       product_id: 5,
+
+      id_price: 5,
+      value_price: 500,
+      option_price: 1,
     },
     {
       id: 6,
@@ -216,6 +357,10 @@ const initialState = {
       currency: "COP",
       option: 1,
       product_id: 6,
+
+      id_price: 6,
+      value_price: 6000,
+      option_price: 1,
     },
     {
       id: 7,
@@ -223,6 +368,10 @@ const initialState = {
       currency: "COP",
       option: 1,
       product_id: 7,
+
+      id_price: 7,
+      value_price: 4000,
+      option_price: 1,
     },
     {
       id: 8,
@@ -230,6 +379,10 @@ const initialState = {
       currency: "COP",
       option: 1,
       product_id: 8,
+
+      id_price: 8,
+      value_price: 8000,
+      option_price: 1,
     },
     {
       id: 9,
@@ -237,6 +390,11 @@ const initialState = {
       currency: "COP",
       option: 1,
       product_id: 9,
+
+      id_price: 9,
+      value_price: 6000,
+
+      option_price: 1,
     },
     {
       id: 10,
@@ -244,6 +402,10 @@ const initialState = {
       currency: "COP",
       option: 1,
       product_id: 10,
+
+      id_price: 10,
+      value_price: 18000,
+      option_price: 1,
     },
     {
       id: 11,
@@ -251,6 +413,11 @@ const initialState = {
       currency: "COP",
       option: 1,
       product_id: 11,
+
+      id_price: 11,
+      value_price: 5000,
+
+      option_price: 1,
     },
     {
       id: 12,
@@ -258,6 +425,11 @@ const initialState = {
       currency: "COP",
       option: 1,
       product_id: 12,
+
+      id_price: 12,
+      value_price: 4000,
+
+      option_price: 1,
     },
     {
       id: 13,
@@ -265,6 +437,10 @@ const initialState = {
       currency: "COP",
       option: 1,
       product_id: 13,
+
+      id_price: 13,
+      value_price: 9000,
+      option_price: 1,
     },
   ],
 
@@ -399,6 +575,253 @@ const initialState = {
       username: "Cameron Williamson",
       photo: cameron,
       spot_id: 1,
+    },
+  ],
+  data_tables: [
+    { id: 1, state_table: 1, number: 1, id_service: 1 },
+    { id: 2, state_table: 2, number: 2, id_service: 1 },
+  ],
+  data_order: [
+    {
+      id: 1,
+      id_table: 1,
+      id_user: 1,
+      total_price: 24500,
+      state_paid: false,
+      cashier_display: false,
+    },
+    {
+      id: 2,
+      id_table: 2,
+      id_user: 2,
+      total_price: 56000,
+      state_paid: false,
+      cashier_display: false,
+    },
+    {
+      id: 3,
+      id_table: 1,
+      id_user: 3,
+      total_price: 20000,
+      state_paid: false,
+      cashier_display: false,
+    },
+  ],
+  data_products: [
+    {
+      id: 1,
+      product:
+        "Hamburguesa Doble super mega hiper doble con triple carne de serpiente",
+      unit_item: 1,
+      price_item: 22000,
+      state_served: true,
+      id_order: 1,
+      id_table: 1,
+      state_button: false,
+      state_check: false,
+    },
+    {
+      id: 2,
+      product: "Hamburguesa Americana",
+      unit_item: 1,
+      price_item: 26000,
+      state_served: true,
+      id_order: 2,
+      id_table: 2,
+      state_button: false,
+      state_check: false,
+    },
+    {
+      id: 3,
+      product: "Adicion Tocineta",
+      unit_item: 1,
+      price_item: 3000,
+      state_served: true,
+      id_order: 2,
+      id_table: 2,
+      state_button: false,
+      state_check: false,
+    },
+    {
+      id: 4,
+      product: "Coca Cola",
+      unit_item: 2,
+      price_item: 5000,
+      state_served: true,
+      id_order: 3,
+      id_table: 1,
+      state_button: false,
+      state_check: false,
+    },
+    {
+      id: 5,
+      product: "Perro Mexicano",
+      unit_item: 1,
+      price_item: 22000,
+      state_served: false,
+      id_order: 3,
+      id_table: 1,
+      state_button: false,
+      state_check: false,
+    },
+    {
+      id: 6,
+      product: "Manzana Postobon",
+      unit_item: 1,
+      price_item: 2500,
+      state_served: false,
+      id_order: 1,
+      id_table: 1,
+      state_button: false,
+      state_check: false,
+    },
+  ],
+  data_user: [
+    {
+      id: 1,
+      name: "Jane Cooper",
+      icon: jane,
+
+      //id_table: 1,
+    },
+    {
+      id: 2,
+      name: "David Hoyos",
+      icon:
+        "https://lh3.googleusercontent.com/a-/AOh14GhYx-n5PDPFGmemzdi06rBLEpQt1Rc7y0iI93ZwzA=s96-c",
+
+      //id_table: 1,
+    },
+    {
+      id: 3,
+      name: "Robert Fox",
+      icon: robert,
+
+      //id_table: 1,
+    },
+    {
+      id: 4,
+      name: "Darrell Steward",
+      icon: darrell,
+
+      //id_table: 1,
+    },
+    {
+      id: 5,
+      name: "Kathryn Murphy",
+      icon: kathryn,
+
+      //id_table: 1,
+    },
+    {
+      id: 6,
+      name: "Leslie Alexander",
+      icon: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+
+      //id_table: 1,
+    },
+    {
+      id: 7,
+      name: "Cameron Williamson",
+      icon: cameron,
+
+      //id_table: 1,
+    },
+  ],
+  data_menu: [
+    {
+      id: 1,
+      category: 3,
+      id_fav: true,
+      id_desc: true,
+      state_button: false,
+      unit_item: 1,
+      product: "Hamburguesa Doble",
+      msg: "Hamburguesa doble carne angus 400g, salsa de la casa",
+      price: 13500,
+      price_d: 12000,
+      alt: "Foto de una Hamburguesa con queso",
+      photo: foto_1,
+    },
+    {
+      id: 2,
+      category: 2,
+      id_fav: false,
+      id_desc: false,
+      state_button: false,
+      unit_item: 1,
+      product: "Papas Fritas",
+      msg:
+        "Deliciosas papas bien crujientes, fritas en aceite de olvia extra virgen",
+      price: 7000,
+      alt: "Foto de Papas fritas con paprica y sal",
+      photo: foto,
+    },
+    {
+      id: 3,
+      category: 2,
+      id_fav: true,
+      id_desc: false,
+      state_button: false,
+      unit_item: 1,
+      product: "Dedos de queso",
+      msg: "Exquisitos dedos de queso al horno, con especias finas",
+      price: 8000,
+      alt: "Foto de 4 dedos de queso en una canastica",
+      photo: foto,
+    },
+    {
+      id: 4,
+      category: 2,
+      id_fav: false,
+      id_desc: false,
+      state_button: false,
+      unit_item: 1,
+      product: "Empanadas Vallunas",
+      msg: "Deliciosas empanadas fritas en aceite de palma, con aji al gusto",
+      price: 9000,
+      alt: "Foto de 4 empanadas en una canasta",
+      photo: foto,
+    },
+    {
+      id: 5,
+      category: 3,
+      id_fav: false,
+      id_desc: false,
+      state_button: false,
+      unit_item: 1,
+      product: "Bandeja Paisa",
+      msg:
+        "Deliciosa bandeja paisa, con frijoles, chorizo, huevo frito, arroz, chicharron y aguacate",
+      price: 7000,
+      alt: "Foto de 4 empanadas en una canasta",
+      photo: foto,
+    },
+    {
+      id: 6,
+      category: 5,
+      id_fav: false,
+      id_desc: false,
+      state_button: false,
+      unit_item: 1,
+      product: "Cerveza ClubColombia",
+      msg: "Cerveza nacional, con 3 sabores distintos; Roja, Dorada y Negra",
+      price: 7000,
+      alt: "Foto de 4 empanadas en una canasta",
+      photo: foto,
+    },
+    {
+      id: 7,
+      category: 5,
+      id_fav: false,
+      id_desc: false,
+      state_button: false,
+      unit_item: 1,
+      product: "Jugo de Naranja",
+      msg: "Jugo natural recien exprimido con 1 parte de agua y 2 de fruta.",
+      price: 9000,
+      alt: "Foto de 4 empanadas en una canasta",
+      photo: foto,
     },
   ],
 
@@ -544,6 +967,18 @@ const initialState = {
     },
   ],
   codes_mods: [],
+  array_u1_temp: [
+    {
+      id: 0,
+      name_modifier: "",
+      state_modifier: true,
+      id_product: 0,
+      type_modifier: "P",
+      code_modifier: "",
+      optional_modifier: true,
+      string_modifier: "",
+    },
+  ],
   check_ready: false,
 
   id_spot_register: 0,
@@ -553,14 +988,40 @@ const reducer = (state = initialState, action) => {
   console.log(action);
 
   switch (action.type) {
+    case "RECEIVE_DATA_1U":
+      const array_temp_values = action.array_temp_values;
+      const temp_u1_modifiers = [...state.modifiers];
+      const length_new_u1 = temp_u1_modifiers.length;
+      const id_new_u1 = temp_u1_modifiers[length_new_u1 - 1].id + 1;
+      console.log("dataU1", id_new_u1, array_temp_values);
+      const local_array_u1_temp = [...state.array_u1_temp];
+      local_array_u1_temp[0].id = id_new_u1;
+      local_array_u1_temp[0].name_modifier = array_temp_values.name;
+      local_array_u1_temp[0].code_modifier = state.id_food.toString();
+      console.log("dataU1_2", local_array_u1_temp);
+      temp_u1_modifiers.push(local_array_u1_temp[0]);
+      console.log("dataU1_3", temp_u1_modifiers);
+      return {
+        ...state,
+        modifiers: temp_u1_modifiers,
+      };
+    case "RECEIVE_DATA_2A":
+      return {
+        ...state,
+      };
+    case "RECEIVE_DATA_3M":
+      return {
+        ...state,
+      };
+    case "SWITCH_MODIFIERS":
+      return {
+        ...state,
+        switch_opt_modifier: state.switch_opt_modifier === true ? false : true,
+      };
     case "ADD_MODIFIERS":
-      const id_temp_3 = action.id_modifier;
-      const arrayTemp_1 = state.modifiers.filter(
-        (a) => a.id_modifier === id_temp_3
-      );
-      const index5 = state.modifiers.findIndex(
-        (a) => a.id_modifier === id_temp_3
-      );
+      const id_temp_3 = action.id_modifiers;
+      const arrayTemp_1 = state.modifiers.filter((a) => a.id === id_temp_3);
+      const index5 = state.modifiers.findIndex((a) => a.id === id_temp_3);
       const tempType_1 = arrayTemp_1[0].type_modifier;
       if (tempType_1 === "C") {
         const codeTemp_1 = arrayTemp_1[0].code_modifier.split(",");
@@ -569,12 +1030,13 @@ const reducer = (state = initialState, action) => {
         codeTemp_2 = codeTemp_2.join(",");
         arrayTemp_1[0].code_modifier = codeTemp_2;
         console.log(arrayTemp_1);
-        const arrayTemp_2 = state.modifiers;
+        const arrayTemp_2 = [...state.modifiers];
         arrayTemp_2[index5] = arrayTemp_1[0];
         console.log(arrayTemp_2);
         return {
           ...state,
           modifiers: arrayTemp_2,
+          actualizar_comp: state.actualizar_comp === true ? false : true,
         };
       }
       if (tempType_1 === "P") {
@@ -583,17 +1045,18 @@ const reducer = (state = initialState, action) => {
         var codeTemp_4 = codeTemp_3.concat(id_food_temp);
         codeTemp_4 = codeTemp_4.join(",");
         arrayTemp_1[0].code_modifier = codeTemp_4;
-        console.log(arrayTemp_3);
-        const arrayTemp_3 = state.modifiers;
+        console.log(arrayTemp_1);
+        const arrayTemp_3 = [...state.modifiers];
         arrayTemp_3[index5] = arrayTemp_1[0];
         console.log(arrayTemp_3);
         return {
           ...state,
           modifiers: arrayTemp_3,
+          actualizar_comp: state.actualizar_comp === true ? false : true,
         };
       }
-
     case "EDIT_CATEGORY":
+      console.log(state.edit_category);
       return {
         ...state,
         create_category: true,
@@ -622,6 +1085,12 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         show_mods: state.show_mods === false ? true : false,
+      };
+
+    case "SHOW_CREATE_MODIFIERS":
+      return {
+        ...state,
+        show_create_mods: state.show_create_mods === false ? true : false,
       };
     case "CREATE_PRODUCT_SETUP":
       const id_temp_1 = state.products.length + 1;
