@@ -47,14 +47,14 @@ const ListSpot = ({
     <div className="tables_spots_admin">
       {spots.map((d) => (
         <div
-          key={d.id_spot}
+          key={d.id}
           className="order_tables_spots_admin"
-          style={{ order: d.number_spot }}
+          style={{ order: d.number }}
         >
           <Avatar className="button_spots_admin" src={table_green} />
 
           <p className="number_spots_admin" onClick={() => SelectSpot(d)}>
-            {d.number_spot}
+            {d.number}
           </p>
         </div>
       ))}
@@ -82,7 +82,7 @@ const mapDispatchToProps = (dispatch) => ({
   SelectSpot(d) {
     dispatch({
       type: "SELECT_SPOT",
-      select_codeqr: d.number_spot,
+      select_codeqr: d.number,
       add_spot: false,
     });
   },

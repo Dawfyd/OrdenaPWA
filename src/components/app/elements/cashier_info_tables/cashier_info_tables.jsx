@@ -13,9 +13,9 @@ function InfoTable({
   return (
     <div className="info_cashier">
       {spots
-        .filter((a) => a.number_spot === select_table)
+        .filter((a) => a.number === select_table)
         .map((d) => (
-          <div key={d.id_spot}>
+          <div key={d.id}>
             <div className="container_cashier_tables">
               <button
                 className="button_register"

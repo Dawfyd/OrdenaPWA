@@ -19,11 +19,11 @@ function InfoCodeQR({ spots, select_codeqr }) {
   return (
     <div className="container_info_code">
       {spots
-        .filter((a) => a.number_spot === select_codeqr)
+        .filter((a) => a.number === select_codeqr)
         .map((d) => (
-          <div key={d.id_spot}>
+          <div key={d.id}>
             <button className="button_info_code_qr">
-              <p className="text_cashier">Mesa {d.number_spot}</p>
+              <p className="text_cashier">Mesa {d.number}</p>
             </button>
             <div className="info_code">
               <p className="text_codeqr">
@@ -33,10 +33,7 @@ function InfoCodeQR({ spots, select_codeqr }) {
               <div>
                 <QRCode
                   id="12345"
-                  value={$.concat(
-                    "http://www.ordena.com.co/register/",
-                    d.id_spot
-                  )}
+                  value={$.concat("http://www.ordena.com.co/register/", d.id)}
                   size={320}
                   level={"H"}
                   includeMargin={true}

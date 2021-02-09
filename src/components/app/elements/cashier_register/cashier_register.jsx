@@ -22,29 +22,29 @@ function CashierRegister({
   return (
     <div className="cashier_register_tables">
       {spots
-        .filter((a) => a.number_spot === select_table)
+        .filter((a) => a.number === select_table)
         .map((d) => (
-          <div key={d.id_spot}>
+          <div key={d.id}>
             {orders
-              .filter((b) => b.id_spot === d.id_spot)
+              .filter((b) => b.spot_id === d.id)
               .map((o) => (
-                <div className="cashier_register_order" key={o.id_order}>
+                <div className="cashier_register_order" key={o.id}>
                   {persons
-                    .filter((c) => c.id_person === o.id_person)
+                    .filter((c) => c.id === o.person_id)
                     .map((j) => (
-                      <div className="cashier_register_user" key={j.id_person}>
+                      <div className="cashier_register_user" key={j.id}>
                         {requests
-                          .filter((e) => e.id_order === o.id_order)
+                          .filter((e) => e.order_id === o.id)
                           .map((p) => (
                             <div
                               className="cashier_register_products"
-                              key={p.id_request}
+                              key={p.id}
                             >
                               <button
                                 onClick={() => OrderCheck(p)}
                                 className="button_icon"
                                 style={
-                                  p.state_request === 5
+                                  p.state === 5
                                     ? { borderColor: "#9B26B6" }
                                     : p.state_request === 1
                                     ? { borderColor: "rgba(0, 0, 0, 0.25)" }
@@ -52,16 +52,12 @@ function CashierRegister({
                                 }
                               >
                                 <img
-                                  src={
-                                    p.state_request === 5
-                                      ? icon_close
-                                      : icon_check
-                                  }
+                                  src={p.state === 5 ? icon_close : icon_check}
                                   onClick={() => CancelRequest(p)}
                                   className="icon_check"
                                   alt="icon_home"
                                   style={
-                                    p.state_request === 1
+                                    p.state === 1
                                       ? { display: "none" }
                                       : { display: "block" }
                                   }
@@ -70,15 +66,10 @@ function CashierRegister({
 
                               <div className="container_flex">
                                 <p className="cashier_item">
-                                  {p.unit_request} ud -{" "}
+                                  {p.unit} ud -{" "}
                                   {products
-                                    .filter(
-                                      (b) => b.id_product === p.id_product
-                                    )
-                                    .reduce(
-                                      (accumulator, b) => b.name_product,
-                                      0
-                                    )}
+                                    .filter((b) => b.id === p.product_id)
+                                    .reduce((accumulator, b) => b.name, 0)}
                                 </p>
                                 <p className="cashier_user">{j.username}</p>
                                 <p className="cashier_price">
@@ -86,12 +77,9 @@ function CashierRegister({
                                   {FormatNumber(
                                     prices
                                       .filter(
-                                        (b) => b.id_product === p.id_product
+                                        (b) => b.product_id === p.product_id
                                       )
-                                      .reduce(
-                                        (accumulator, b) => b.value_price,
-                                        0
-                                      )
+                                      .reduce((accumulator, b) => b.value, 0)
                                   )}
                                 </p>
                               </div>
@@ -107,8 +95,8 @@ function CashierRegister({
   );
 }
 
-function FormatNumber(price_item) {
-  return new Intl.NumberFormat("de-DE").format(price_item);
+function FormatNumber(price) {
+  return new Intl.NumberFormat("de-DE").format(price);
 }
 
 const mapStateToProps = (state) => ({
@@ -128,7 +116,7 @@ const mapDispatchToProps = (dispatch) => ({
   OrderCheck(p) {
     dispatch({
       type: "CLICK_ITEM",
-      check_id: p.id_request,
+      check_id: p.id,
     });
   },
   CancelRequest(p) {
@@ -146,7 +134,7 @@ const mapDispatchToProps = (dispatch) => ({
         return dispatch({
           type: "CANCEL_ITEM",
           cancel_item: true,
-          check_id: p.id_request,
+          check_id: p.id,
         });
       }
     });
