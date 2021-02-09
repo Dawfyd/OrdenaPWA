@@ -6,13 +6,19 @@ import ListCategory from "../../elements/menu_setup/list_category/list_category.
 import ListProduct from "../../elements/menu_setup/list_product/list_product.jsx";
 import SelectorModifier from "../../elements/menu_setup/selector_modifiers/selector_modifiers.jsx";
 import EditCategory from "../../elements/menu_setup/edit_category/edit_category.jsx";
+import OptionHeader from "../../elements/options_header_admin/options_header_admin";
 
 function page({ id_category, id_create_category, create_category }) {
   console.log(id_category);
   return (
     <div className="page_setup_menu">
-      <header className="header_setup_menu">
-        <LogoOrdena />
+      <header>
+        <div className="logo_header_admin_menu">
+          <LogoOrdena />
+        </div>
+        <div className="options_header_admin_menu">
+          <OptionHeader />
+        </div>
       </header>
       <div className="container_setup_menu">
         <div className="div_menu_setup">
