@@ -8,16 +8,18 @@
 
 .number_info_table {
   position: absolute;
-  left: 3vw;
-  width: 94vw;
+  padding-left: 3vw;
+  width: 100%;
   text-align: left;
   font-family: Quicksand;
   font-style: normal;
   font-weight: bold;
   font-size: 5.6vw;
   line-height: 6vh;
+  height: 6vh;
   margin: 0;
   color: rgba(0, 0, 0, 0.8);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.25);
 }
 
 .separator_info_table {
@@ -41,7 +43,7 @@
   align-items: center;
   height: 9.5vh;
   width: 47vw;
-  left: 2vw;
+  left: 3vw;
   top: 6vh;
 }
 
@@ -59,13 +61,13 @@
   align-items: center;
   height: 9.5vh;
   width: 47vw;
-  right: 2vw;
+  right: 3vw;
   top: 6vh;
 }
 .container_grid_info {
   position: absolute;
-  width: 98vw;
-  left: 1vw;
+  width: 96vw;
+  left: 2vw;
   top: 15.5vh;
   height: 76.5vh;
   display: flex;
@@ -74,7 +76,7 @@
   position: absolute;
   display: flex;
   grid-gap: 1px;
-  width: 98vw;
+  width: 96vw;
   left: 0vw;
   top: 0vh;
   height: auto;
@@ -110,24 +112,26 @@
 .unit_item {
   color: rgba(0, 0, 0, 0.7);
   justify-content: flex-start;
-  width: 68vw;
+  width: 72%;
   text-align: left;
 }
 .price_item {
   color: rgba(0, 0, 0, 0.7);
   justify-content: flex-end;
-  width: 22.7vw;
+  width: 22%;
+  padding-right: 1vw;
 }
 .unit_item_pending {
   color: rgba(0, 0, 0, 0.7);
   justify-content: flex-start;
-  width: 85vw;
+  width: 85%;
   text-align: left;
 }
 .price_item_pending {
   color: rgba(0, 0, 0, 0.7);
   justify-content: flex-end;
-  width: 5vw;
+  width: 8.5%;
+  padding-right: 1vw;
 }
 .pending_order {
   font-family: Quicksand;
@@ -142,17 +146,17 @@
   height: 9.5vh;
   color: #9b26b6;
   position: relative;
-  left: 2vw;
+  padding-left: 1vw;
 }
 .check_pending_order {
-  width: 5vw;
-  height: 3vh;
+  width: 4.6vw;
+  height: 4.6vw;
 }
 
 .price_total {
-  font-family: Quicksand;
+  font-family: Poppins;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 5vw;
   line-height: 3vh;
   display: flex;
@@ -160,10 +164,11 @@
   justify-content: flex-end;
   align-items: center;
   height: 9.5vh;
-  width: 25.7vw;
-  padding-right: 2vw;
+  width: 24.7vw;
+  padding-right: 1vw;
 }
 .product_total {
+  color: rgba(0, 0, 0, 0.8);
   font-family: Quicksand;
   font-style: normal;
   font-weight: 600;
@@ -174,15 +179,15 @@
   justify-content: flex-start;
   align-items: center;
   height: 9.5vh;
-  width: 72vw;
-  padding-left: 2vw;
+  width: 71vw;
+  padding-left: 1vw;
 }
 
 .collapsible_info {
   background-color: #fafafa;
   cursor: pointer;
   padding: 0px;
-  width: 98vw;
+  width: 100%;
   outline: none;
   height: auto;
   display: flex;

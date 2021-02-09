@@ -20,8 +20,6 @@ function InfoTable({
         .map((d) => (
           <div key={d.id}>
             <p className="number_info_table">Mesa {d.number}</p>
-            <hr className="separator_info_table" />
-
             <p className="product_info">Productos</p>
             <p className="price_info">Precio</p>
 

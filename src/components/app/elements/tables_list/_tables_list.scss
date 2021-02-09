@@ -1,11 +1,35 @@
+.container_header_tables {
+  width: 100%;
+  height: 92vh;
+  position: absolute;
+  bottom: 0vh;
+}
+.header_title_tables_list {
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: 6vh;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 32px;
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .tables_list {
   position: absolute;
-  bottom: 5vh;
-  width: 84vw;
+  bottom: 2vh;
+  width: 88vw;
   height: 82vh;
-  left: 8vw;
+  left: 6vw;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 8px;
   grid-template-columns: repeat(auto-fit, minmax(18.75vw, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(5.2vh, 1fr));
   align-items: center;
