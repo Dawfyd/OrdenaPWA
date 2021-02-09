@@ -12,7 +12,25 @@
   background-color: white;
   text-align: left;
   border: 0.2;
+  border-right: 0;
   border-color: rgba(0, 0, 0, 0.2);
+}
+.button_modifier:hover {
+  background-color: rgb(241, 241, 241);
+}
+.button_modifier_plus {
+  width: 100%;
+  height: 3vh;
+  font-size: 1.6vh;
+  font-weight: 500;
+  color: #32c755;
+  background-color: white;
+  text-align: left;
+  border: 0.2;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.button_modifier_plus:hover {
+  background-color: rgb(241, 241, 241);
 }
 .button_selector_modifier {
   width: 100%;
@@ -23,6 +41,9 @@
   background-color: white;
   border: 0.2;
   border-color: rgba(0, 0, 0, 0.2);
+}
+.button_selector_modifier:hover {
+  background-color: rgb(241, 241, 241);
 }
 .container_options_selector_modifier {
   display: grid;
@@ -38,7 +59,7 @@
 }
 .title_selector_modifier {
   padding-top: 0.5vh;
-  font-size: 1.8vh;
+  font-size: 10vw;
   font-weight: 700;
   text-align: left;
   color: rgba(0, 0, 0, 0.45);

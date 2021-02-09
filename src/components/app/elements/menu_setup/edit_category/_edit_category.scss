@@ -1,3 +1,18 @@
+.ant-btn-primary {
+  background: #9b26b6;
+  border-color: #9b26b6;
+}
+.ant-btn-primary:hover {
+  background: #c03ede;
+  border-color: #c03ede;
+}
+.ant-btn {
+  font-size: 110%;
+  border-radius: 0px;
+}
+.button_edit_category {
+  border-radius: 5px;
+}
 .container_create_category {
   width: 50vw;
   align-content: flex-end;
@@ -9,4 +24,9 @@
   align-content: flex-end;
   right: 0;
   overflow: auto;
+}
+.name_edit_category_setup {
+  font-size: 5fr;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
 }
