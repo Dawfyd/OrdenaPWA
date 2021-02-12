@@ -11,7 +11,7 @@
   color: #32c755;
   background-color: white;
   text-align: left;
-  border: 0.2;
+  border: 0.1;
   border-right: 0;
   border-color: rgba(0, 0, 0, 0.2);
 }
@@ -26,7 +26,7 @@
   color: #32c755;
   background-color: white;
   text-align: left;
-  border: 0.2;
+  border: 0.1;
   border-color: rgba(0, 0, 0, 0.2);
 }
 .button_modifier_plus:hover {
@@ -39,7 +39,7 @@
   font-weight: 600;
   color: #32c755;
   background-color: white;
-  border: 0.2;
+  border: 0.1;
   border-color: rgba(0, 0, 0, 0.2);
 }
 .button_selector_modifier:hover {
@@ -66,5 +66,5 @@
 }
 .text_button_modifier {
   padding-left: 1vw;
-  color: rgba(0, 0, 0, 0.45);
+  color: rgba(0, 0, 0, 1);
 }
