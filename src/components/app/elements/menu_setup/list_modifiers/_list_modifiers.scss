@@ -6,9 +6,14 @@
   color: #32c755;
   background-color: white;
   text-align: left;
-  border: 0.2;
+  border: 0.1;
   border-color: rgba(0, 0, 0, 0.2);
 }
 .button_list_modifier:hover {
   background-color: rgb(241, 241, 241);
+}
+.text_button_modifier_list {
+  padding-left: 1vw;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.8);
 }

@@ -21,7 +21,7 @@ import {
   Modal,
   Avatar,
   Typography,
-  Divider,
+  Divider
 } from "antd";
 import {
   UploadOutlined,
@@ -29,7 +29,7 @@ import {
   CheckSquareFilled,
   SmileOutlined,
   CaretDownFilled,
-  UserOutlined,
+  UserOutlined
 } from "@ant-design/icons";
 const { Option } = Select;
 {
@@ -53,7 +53,7 @@ const ModalForm1 = ({ visible, onCancel }) => {
   const [form] = Form.useForm();
   useResetFormOnCloseModal({
     form,
-    visible,
+    visible
   });
   const onOk = () => {
     form.submit();
@@ -77,8 +77,8 @@ const ModalForm1 = ({ visible, onCancel }) => {
           label="Nombre"
           rules={[
             {
-              required: true,
-            },
+              required: true
+            }
           ]}
         >
           <Input />
@@ -89,8 +89,8 @@ const ModalForm1 = ({ visible, onCancel }) => {
           label="Descripcion"
           rules={[
             {
-              required: true,
-            },
+              required: true
+            }
           ]}
         >
           <Input />
@@ -103,7 +103,7 @@ const ModalForm2 = ({ visible, onCancel }) => {
   const [form] = Form.useForm();
   useResetFormOnCloseModal({
     form,
-    visible,
+    visible
   });
   const onOk = () => {
     form.submit();
@@ -128,8 +128,8 @@ const ModalForm2 = ({ visible, onCancel }) => {
           label="Nombre"
           rules={[
             {
-              required: true,
-            },
+              required: true
+            }
           ]}
         >
           <Input />
@@ -141,8 +141,8 @@ const ModalForm2 = ({ visible, onCancel }) => {
           label="Precio"
           rules={[
             {
-              required: true,
-            },
+              required: true
+            }
           ]}
         >
           <InputNumber />
@@ -154,8 +154,8 @@ const ModalForm2 = ({ visible, onCancel }) => {
           label="Descripcion"
           rules={[
             {
-              required: true,
-            },
+              required: true
+            }
           ]}
         >
           <Input />
@@ -168,7 +168,7 @@ const ModalForm3 = ({ visible, onCancel }) => {
   const [form] = Form.useForm();
   useResetFormOnCloseModal({
     form,
-    visible,
+    visible
   });
   const onOk = () => {
     form.submit();
@@ -192,8 +192,8 @@ const ModalForm3 = ({ visible, onCancel }) => {
           label="Nombre"
           rules={[
             {
-              required: true,
-            },
+              required: true
+            }
           ]}
         >
           <Input />
@@ -211,8 +211,8 @@ const ModalForm3 = ({ visible, onCancel }) => {
             label="Alternativas"
             rules={[
               {
-                required: true,
-              },
+                required: true
+              }
             ]}
           >
             <Input />
@@ -224,8 +224,8 @@ const ModalForm3 = ({ visible, onCancel }) => {
           label="Descripcion"
           rules={[
             {
-              required: false,
-            },
+              required: false
+            }
           ]}
         >
           <Input />
@@ -237,7 +237,7 @@ const ModalForm3 = ({ visible, onCancel }) => {
 {
   /*Fin codigo nuevo*/
 }
-const normFile = (e) => {
+const normFile = e => {
   console.log("Upload event:", e);
 
   if (Array.isArray(e)) {
@@ -265,6 +265,7 @@ function ListProduct({
   ReceiveDataForm3,
   show_create_mods,
   ShowCreateMods,
+  product_created
 }) {
   const [visible1, setvisible1] = useState(false);
   const [visible2, setvisible2] = useState(false);
@@ -296,7 +297,7 @@ function ListProduct({
   const hideUserModal3 = () => {
     setvisible3(false);
   };
-  const onFinish = (values) => {
+  const onFinish = values => {
     console.log("Finish_1:", values);
   };
 
@@ -331,7 +332,7 @@ function ListProduct({
             initialValues={{
               "input-number": 10000,
               description_input: " ",
-              name_input: " ",
+              name_input: " "
             }}
           >
             <div className="container_photo_product">
@@ -355,7 +356,7 @@ function ListProduct({
               </div>
             </div>
             <div className="form_product_setup">
-              <div>
+              <div className="div_name_product_setup">
                 <br />
                 <p className="name_product_setup">{"Nombre:"}</p>
                 <Form.Item
@@ -364,14 +365,14 @@ function ListProduct({
                   rules={[
                     {
                       required: true,
-                      message: "Por favor ingrese el nombre del producto",
-                    },
+                      message: "Por favor ingrese el nombre del producto"
+                    }
                   ]}
                 >
                   <Input placeholder="Nombre del producto" />
                 </Form.Item>
               </div>
-              <div>
+              <div className="div_description_product_setup">
                 <p className="description_product_setup">{"Descripción:"}</p>
                 <Form.Item
                   name="description_input"
@@ -380,21 +381,21 @@ function ListProduct({
                     {
                       required: true,
                       message:
-                        "Por favor escriba una descripción para su producto",
-                    },
+                        "Por favor escriba una descripción para su producto"
+                    }
                   ]}
                 >
                   <Input.TextArea />
                 </Form.Item>
               </div>
-              <div>
+              <div className="div_price_product_setup">
                 <p className="price_product_setup">{"Precio:"}</p>
                 <Form.Item
                   rules={[
                     {
                       required: true,
-                      message: "Por favor asigne un precio para su producto",
-                    },
+                      message: "Por favor asigne un precio para su producto"
+                    }
                   ]}
                   label="InputNumber"
                   name="input-number"
@@ -403,139 +404,7 @@ function ListProduct({
                 </Form.Item>
               </div>
             </div>
-            <div className="div_container_create_mod">
-              <div className="container_title_create_mod">
-                <br />
-                <p className="title_create_mod">Modificadores</p>
-              </div>
-              <div className="box_container_create_mod">
-                <div className="container_create_mod">
-                  <div>
-                    <ListModifier />
-                  </div>
-                  <div>
-                    <SelectorModifier />
-                  </div>
 
-                  <div>
-                    <br />
-                    <button
-                      className="button_selector_modifier"
-                      onClick={() => ShowCreateMods()}
-                      type="button"
-                    >
-                      <div className="order_card_selector_modifier">
-                        <div
-                          style={
-                            show_create_mods === true
-                              ? { color: "#9B26B6" }
-                              : { color: "#32c755" }
-                          }
-                        >
-                          <div
-                            className="flechita_selector_modifier"
-                            style={
-                              show_create_mods === true
-                                ? { display: "flex" }
-                                : { display: "none" }
-                            }
-                          >
-                            <CaretDownFilled />
-                          </div>
-                          <div
-                            className="flechita_selector_modifier"
-                            style={
-                              show_create_mods === true
-                                ? { display: "none" }
-                                : { display: "flex" }
-                            }
-                          >
-                            <CaretRightFilled />
-                          </div>
-                        </div>
-                        <div className="title_selector_modifier">
-                          Crear Modificadores
-                        </div>
-                      </div>
-                    </button>
-                    <div>
-                      <div
-                        className="button_mod_multiple"
-                        style={
-                          show_create_mods === true
-                            ? { display: "flex" }
-                            : { display: "none" }
-                        }
-                      >
-                        <Button
-                          className="mods_multi_alt"
-                          htmlType="button"
-                          style={{
-                            margin: "0 8px",
-                          }}
-                          onClick={showUserModal_3}
-                        >
-                          <div className="text_button_mods_mult_alt">
-                            Modificadores con alternativa multiple
-                          </div>
-                        </Button>
-                      </div>
-                      <div
-                        className="button_mod_single"
-                        style={
-                          show_create_mods === true
-                            ? { display: "flex" }
-                            : { display: "none" }
-                        }
-                      >
-                        <Button
-                          className="mods_unic_alt"
-                          htmlType="button"
-                          style={{
-                            margin: "0 8px",
-                          }}
-                          onClick={showUserModal_1}
-                        >
-                          <div className="text_button_mods_unic_alt">
-                            Modificadores con alternativa unica
-                          </div>
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="div_container_create_add">
-              <div className="container_title_create_add">
-                <br />
-                <p className="title_create_add">Adiciones</p>
-              </div>
-              <div className="box_container_create_add">
-                <div className="container_create_add">
-                  <div>
-                    <ListAditional />
-                  </div>
-                  <div>
-                    <SelectorAditional />
-                  </div>
-                  <div>
-                    <br />
-                    <div>
-                      <Button
-                        htmlType="button"
-                        style={{
-                          margin: "0 8px",
-                        }}
-                        onClick={showUserModal_2}
-                      >
-                        + Crear Adicionales
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div>
               <br />
               <Form.Item>
@@ -549,6 +418,148 @@ function ListProduct({
           <ModalForm2 visible={visible2} onCancel={hideUserModal2} />
           <ModalForm3 visible={visible3} onCancel={hideUserModal3} />
         </Form.Provider>
+        <div
+          className="div_mod_adds_create_menu_setup"
+          style={
+            product_created === false
+              ? { display: "none" }
+              : { display: "grid" }
+          }
+        >
+          <div className="div_container_create_mod">
+            <div className="container_title_create_mod">
+              <br />
+              <p className="title_create_mod">Modificadores</p>
+            </div>
+            <div className="box_container_create_mod">
+              <div className="container_create_mod">
+                <div>
+                  <ListModifier />
+                </div>
+                <div>
+                  <SelectorModifier />
+                </div>
+
+                <div>
+                  <br />
+                  <button
+                    className="button_selector_modifier"
+                    onClick={() => ShowCreateMods()}
+                    type="button"
+                  >
+                    <div className="order_card_selector_modifier">
+                      <div
+                        style={
+                          show_create_mods === true
+                            ? { color: "#9B26B6" }
+                            : { color: "#32c755" }
+                        }
+                      >
+                        <div
+                          className="flechita_selector_modifier"
+                          style={
+                            show_create_mods === true
+                              ? { display: "flex" }
+                              : { display: "none" }
+                          }
+                        >
+                          <CaretDownFilled />
+                        </div>
+                        <div
+                          className="flechita_selector_modifier"
+                          style={
+                            show_create_mods === true
+                              ? { display: "none" }
+                              : { display: "flex" }
+                          }
+                        >
+                          <CaretRightFilled />
+                        </div>
+                      </div>
+                      <div className="title_selector_modifier">
+                        Crear Modificadores
+                      </div>
+                    </div>
+                  </button>
+                  <div>
+                    <div
+                      className="button_mod_multiple"
+                      style={
+                        show_create_mods === true
+                          ? { display: "flex" }
+                          : { display: "none" }
+                      }
+                    >
+                      <Button
+                        className="mods_multi_alt"
+                        htmlType="button"
+                        style={{
+                          margin: "0 8px"
+                        }}
+                        onClick={showUserModal_3}
+                      >
+                        <div className="text_button_mods_mult_alt">
+                          Modificadores con alternativa multiple
+                        </div>
+                      </Button>
+                    </div>
+                    <div
+                      className="button_mod_single"
+                      style={
+                        show_create_mods === true
+                          ? { display: "flex" }
+                          : { display: "none" }
+                      }
+                    >
+                      <Button
+                        className="mods_unic_alt"
+                        htmlType="button"
+                        style={{
+                          margin: "0 8px"
+                        }}
+                        onClick={showUserModal_1}
+                      >
+                        <div className="text_button_mods_unic_alt">
+                          Modificadores con alternativa unica
+                        </div>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="div_container_create_add">
+            <div className="container_title_create_add">
+              <br />
+              <p className="title_create_add">Adiciones</p>
+            </div>
+            <div className="box_container_create_add">
+              <div className="container_create_add">
+                <div>
+                  <ListAditional />
+                </div>
+                <div>
+                  <SelectorAditional />
+                </div>
+                <div>
+                  <br />
+                  <div>
+                    <Button
+                      htmlType="button"
+                      style={{
+                        margin: "0 8px"
+                      }}
+                      onClick={showUserModal_2}
+                    >
+                      + Crear Adicionales
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   } else {
@@ -558,12 +569,12 @@ function ListProduct({
         style={id_food === 0 ? { display: "none" } : { display: "grid" }}
       >
         {products
-          .filter((a) => a.id_product === id_food)
-          .map((b) => (
+          .filter(a => a.id_product === id_food)
+          .map(b => (
             <div key={b.id_product}>
               {prices
-                .filter((c) => c.product_id === id_food)
-                .map((d) => (
+                .filter(c => c.product_id === id_food)
+                .map(d => (
                   <div key={d.id_price}>
                     {" "}
                     <Form.Provider
@@ -591,7 +602,7 @@ function ListProduct({
                         initialValues={{
                           "input-number": d.value_price,
                           description_input: b.description_product,
-                          name_input: b.name_product,
+                          name_input: b.name_product
                         }}
                       >
                         <div className="container_photo_product">
@@ -615,7 +626,7 @@ function ListProduct({
                           </div>
                         </div>
                         <div className="form_product_setup">
-                          <div>
+                          <div className="div_name_product_setup">
                             <br />
                             <p className="name_product_setup">{"Nombre:"}</p>
                             <Form.Item
@@ -625,14 +636,14 @@ function ListProduct({
                                 {
                                   required: true,
                                   message:
-                                    "Por favor ingrese el nombre del producto",
-                                },
+                                    "Por favor ingrese el nombre del producto"
+                                }
                               ]}
                             >
                               <Input placeholder="Nombre del producto" />
                             </Form.Item>
                           </div>
-                          <div>
+                          <div className="div_description_product_setup">
                             <p className="description_product_setup">
                               {"Descripción:"}
                             </p>
@@ -643,22 +654,22 @@ function ListProduct({
                                 {
                                   required: true,
                                   message:
-                                    "Por favor escriba una descripción para su producto",
-                                },
+                                    "Por favor escriba una descripción para su producto"
+                                }
                               ]}
                             >
                               <Input.TextArea />
                             </Form.Item>
                           </div>
-                          <div>
+                          <div className="div_price_product_setup">
                             <p className="price_product_setup">{"Precio:"}</p>
                             <Form.Item
                               rules={[
                                 {
                                   required: true,
                                   message:
-                                    "Por favor asigne un precio para su producto",
-                                },
+                                    "Por favor asigne un precio para su producto"
+                                }
                               ]}
                               label="InputNumber"
                               name="input-number"
@@ -734,7 +745,7 @@ function ListProduct({
                                       className="mods_multi_alt"
                                       htmlType="button"
                                       style={{
-                                        margin: "0 8px",
+                                        margin: "0 8px"
                                       }}
                                       onClick={showUserModal_3}
                                     >
@@ -755,7 +766,7 @@ function ListProduct({
                                       className="mods_unic_alt"
                                       htmlType="button"
                                       style={{
-                                        margin: "0 8px",
+                                        margin: "0 8px"
                                       }}
                                       onClick={showUserModal_1}
                                     >
@@ -788,7 +799,7 @@ function ListProduct({
                                   <Button
                                     htmlType="button"
                                     style={{
-                                      margin: "0 8px",
+                                      margin: "0 8px"
                                     }}
                                     onClick={showUserModal_2}
                                   >
@@ -830,7 +841,7 @@ function ListProduct({
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   show_food: state.show_food,
   id_category: state.id_category,
   id_food: state.id_food,
@@ -843,52 +854,53 @@ const mapStateToProps = (state) => ({
   prices: state.prices,
   switch_opt_modifier: state.switch_opt_modifier,
   show_create_mods: state.show_create_mods,
+  product_created: state.product_created
 });
 
 function FormatNumber(price_item) {
   return new Intl.NumberFormat("de-DE").format(price_item);
 }
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   ShowMods() {
     dispatch({
       type: "SHOW_MODIFIERS",
-      something_to_show: 1,
+      something_to_show: 1
     });
   },
   SwitchMods() {
     dispatch({
       type: "SWITCH_MODIFIERS",
-      something_to_show: 1,
+      something_to_show: 1
     });
   },
   ReceiveDataForm1(values) {
     dispatch({
       type: "RECEIVE_DATA_1U",
       something_to_show: "1U",
-      array_temp_values: values,
+      array_temp_values: values
     });
   },
   ReceiveDataForm2(values) {
     dispatch({
       type: "RECEIVE_DATA_2A",
       something_to_show: "2A",
-      array_temp_values: values,
+      array_temp_values: values
     });
   },
   ReceiveDataForm3(values) {
     dispatch({
       type: "RECEIVE_DATA_3M",
       something_to_show: "3M",
-      array_temp_values: values,
+      array_temp_values: values
     });
   },
   ShowCreateMods() {
     dispatch({
       type: "SHOW_CREATE_MODIFIERS",
-      something_to_show: 1,
+      something_to_show: 1
     });
-  },
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListProduct);
