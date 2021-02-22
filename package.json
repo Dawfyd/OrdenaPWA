@@ -6,7 +6,7 @@
     "@ant-design/icons": "4.5.0",
     "@apollo/client": "3.3.11",
     "@testing-library/jest-dom": "5.11.9",
-    "@testing-library/react": "11.2.2",
+    "@testing-library/react": "11.2.5",
     "@testing-library/user-event": "12.5.0",
     "antd": "4.9.4",
     "express": "^4.17.1",
