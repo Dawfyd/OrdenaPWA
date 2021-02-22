@@ -38,7 +38,9 @@
 @import "elements/urgent_request/_urgent_request.scss";
 @import "elements/text_area/_text_area_input.scss";
 @import "elements/home_admin/_home_admin.scss";
+@import "elements/landing_page/home_landing/_home_landing.scss";
 @import "elements/options_header_admin/_options_header_admin.scss";
+@import "elements/options_header_landing/_options_header_landing.scss";
 @import "pages_user/turn/_turn.scss";
 @import "pages_user/register/_register.scss";
 @import "pages_user/home/_home.scss";
@@ -61,3 +63,4 @@
 @import "./pages_admin/cashier_setup/_cashier_admin.scss";
 @import "./pages_admin/spots_setup/_spots_setup.scss";
 @import "./pages_admin/home_admin/_home_admin.scss";
+@import "./ordena_pages/landing_page/_landing_page.scss";
