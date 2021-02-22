@@ -28,7 +28,7 @@
     "serve": "11.3.2",
     "serve-static": "^1.14.1",
     "sweetalert2": "10.15.5",
-    "web-vitals": "0.2.4",
+    "web-vitals": "1.1.0",
     "workbox-background-sync": "5.1.4",
     "workbox-broadcast-update": "5.1.4",
     "workbox-cacheable-response": "5.1.4",
