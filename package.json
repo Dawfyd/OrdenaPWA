@@ -7,7 +7,7 @@
     "@apollo/client": "3.3.11",
     "@testing-library/jest-dom": "5.11.9",
     "@testing-library/react": "11.2.5",
-    "@testing-library/user-event": "12.7.1",
+    "@testing-library/user-event": "12.7.3",
     "antd": "4.12.3",
     "express": "4.17.1",
     "graphql": "15.5.0",
