@@ -1,11 +1,17 @@
-.header_home_admin {
+.logo_header_landing {
   display: block;
   position: absolute;
-  top: 0.5vh;
+  top: 1vh;
   left: 1vw;
+  height: 7vh;
 }
-
-.page_home_admin {
+.options_header_landing {
+  position: absolute;
+  height: 9vh;
+  width: 70vw;
+  left: 30vw;
+}
+.page_landing {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -15,11 +21,30 @@
   left: 0px;
   top: 0px;
 }
-.container_home_admin {
+.container_landing {
   position: absolute;
   height: 91vh;
   width: 100vw;
   bottom: 0vh;
   background: rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.25);
+  overflow: auto;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .logo_header_landing {
+    display: block;
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    width: 30vw;
+    height: 9vh;
+    padding: 5px;
+  }
+  .options_header_landing {
+    position: absolute;
+    height: 9vh;
+    width: 70vw;
+    left: 30vw;
+  }
 }
