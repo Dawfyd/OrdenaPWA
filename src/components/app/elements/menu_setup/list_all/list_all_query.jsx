@@ -1,36 +1,23 @@
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { connect } from "react-redux";
+import { graphql } from "react-apollo";
+import { gql } from "apollo-boost";
+import ListAll from "./list_all.jsx";
 
-const ALL_CATEGORYS = gql`
+const ALL_CATEGORYS = graphql(gql`
   query {
-    categories {
+    categories(
+      findAllCategoriesInput: { companyUuid: "f9U4JIdp6RKKvPCeAkhr_" }
+    ) {
       id
       name
       description
-      state
+      avaliable
     }
   }
-`;
+`);
 
-const MUTATION_NAME_CATEGORYS = gql`
-  mutation {
-    updateCategory(updateCategoryInput: { id: 1, name: "Ent" }) {
-      id
-      name
-    }
-  }
-`;
-
-const AllListQueryMenu = SaveDataMenuSetupFromDB => {
-  const { data, loading, error } = useQuery(ALL_CATEGORYS);
-  const categorys = data;
-  const { data, loading, error } = useQuery(ALL_CATEGORYS);
-  const categorys = data;
-  const { data, loading, error } = useQuery(ALL_CATEGORYS);
-  const categorys = data;
-};
-
-const AllListMutationCategorys = () => {};
+const ListCategorysDB = ALL_CATEGORYS(ListAll);
 
 const mapStateToProps = state => ({
   id_food: state.id_food,
@@ -38,16 +25,12 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  SaveDataMenuSetupFromDB(d) {
+  SaveDataMenuSetupFromDB(categorys) {
     dispatch({
-      type: "SELECT_CATEGORY",
-      id_category: d.id,
-      id_food: 0
+      type: "RECEIVE_CATEGORYS_DB",
+      db_categorys: categorys
     });
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  AllListQueryMenu,
-  AllListMutationCategorys
-);
+export default connect(mapStateToProps, mapDispatchToProps)(ListCategorysDB);
