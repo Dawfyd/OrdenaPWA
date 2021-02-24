@@ -9,20 +9,19 @@
 }
 
 .footer_code_qr {
+  position: fixed;
   display: block;
+  bottom: 0px;
 }
 
 .page_code_qr {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   position: fixed;
   text-align: center;
-  display: grid;
   height: 100vh;
   width: 100vw;
   left: 0px;
   top: 0px;
-
   grid-template-rows: 12fr 1fr;
   grid-template-columns: 1fr;
 }
@@ -30,15 +29,13 @@
   display: flex;
   position: absolute;
   height: auto;
-  top: 80vh;
+  top: 73vh;
   left: 35vw;
 }
 
 .container_code_qr {
-  //display none o block
-  display: block;
   position: absolute;
-  height: 82.6vh;
+  height: 81.5vh;
   width: 100vw;
   bottom: 8vh;
 }

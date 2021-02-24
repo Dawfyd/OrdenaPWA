@@ -1,0 +1,231 @@
+.button_back_home {
+  position: absolute;
+  top: 70vh;
+  left: 5vw;
+  height: 7vh;
+  width: 30vw;
+  background: #ffffff;
+  border: 1px solid #9b26b6;
+  color: #9b26b6;
+  border-radius: 1vmax;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vmax;
+  line-height: 3.5vmax;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  z-index: 1;
+}
+.button_agree_user {
+  position: absolute;
+  top: 58vh;
+  right: 5vw;
+  height: 7vh;
+  width: 30vw;
+  background: #ffffff;
+  border: 1px solid #32c755;
+  color: #32c755;
+  border-radius: 1vmax;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vmax;
+  line-height: 3.5vmax;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+}
+.form_user_register {
+  width: 100%;
+  height: 80vh;
+  top: 12vh;
+  position: absolute;
+}
+@mixin input_user {
+  width: 92vw;
+  height: 7.8vh;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  margin: 0;
+  margin-bottom: 16px;
+  border: 1px solid #c8c9c7;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 5vw;
+  line-height: 3.5vh;
+  text-align: left;
+}
+
+.name_user_input {
+  @include input_user;
+}
+
+.email_user_input {
+  @include input_user;
+}
+.cellphone_user_input {
+  @include input_user;
+}
+.password_user_input {
+  @include input_user;
+}
+
+.form_group {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  top: 2vh;
+}
+
+.form_group li {
+  position: relative;
+  display: inline-table;
+}
+
+.check {
+  vertical-align: top;
+  width: 3.5vw;
+  height: 2.5vh;
+  margin: 1vh 3vw 2vh 3vw;
+}
+
+input [type="checkbox"]:checked {
+  display: inline-block;
+  width: auto;
+  margin: 0 10px 0 0;
+}
+.article_data {
+  width: 86vw;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4vw;
+  line-height: 3.5vh;
+  text-align: left;
+  margin: 0;
+  color: #7c878e;
+}
+
+@media only screen and (min-width: 900px) {
+  .button_back_home {
+    position: absolute;
+    top: 70vh;
+    left: 5vw;
+    height: 9vh;
+    width: 30vw;
+    background: #ffffff;
+    border: 1px solid #9b26b6;
+    color: #9b26b6;
+    border-radius: 1vmax;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3vmax;
+    line-height: 3.5vmax;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    z-index: 1;
+  }
+  .button_agree_user {
+    position: absolute;
+    top: 58vh;
+    right: 5vw;
+    height: 9vh;
+    width: 30vw;
+    background: #ffffff;
+    border: 1px solid #32c755;
+    color: #32c755;
+    border-radius: 1vmax;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3vmax;
+    line-height: 3.5vmax;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+  }
+  .form_user_register {
+    width: 100%;
+    height: 80vh;
+    top: 12vh;
+    position: absolute;
+  }
+  @mixin input_user {
+    width: 82vw;
+    height: 7.8vh;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    margin: 0;
+    margin-bottom: 16px;
+    border: 1px solid #c8c9c7;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2vmax;
+    line-height: 3vmax;
+    text-align: left;
+  }
+
+  .name_user_input {
+    @include input_user;
+  }
+
+  .email_user_input {
+    @include input_user;
+  }
+  .cellphone_user_input {
+    @include input_user;
+  }
+  .password_user_input {
+    @include input_user;
+  }
+
+  .form_group {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    top: 2vh;
+  }
+
+  .form_group li {
+    position: relative;
+    display: inline-table;
+  }
+
+  .check {
+    vertical-align: top;
+    width: 2vmax;
+    height: 2vmax;
+    margin: 1vh 3vw 2vh 3vw;
+  }
+
+  input [type="checkbox"]:checked {
+    display: inline-block;
+    width: auto;
+    margin: 0 10px 0 0;
+  }
+  .article_data {
+    width: 80vw;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2vmax;
+    line-height: 2.5vmax;
+    text-align: left;
+    margin: 0;
+    color: #7c878e;
+  }
+}

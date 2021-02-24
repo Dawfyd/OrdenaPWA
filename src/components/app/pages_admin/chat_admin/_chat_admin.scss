@@ -15,19 +15,14 @@
 }
 
 .page_chat_admin {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  position: absolute;
   text-align: center;
-  display: grid;
+  display: block;
+  position: fixed;
   height: 100vh;
   width: 100vw;
-  left: 0px;
-  top: 0px;
-
-  grid-template-rows: 12fr 1fr;
-  grid-template-columns: 1fr;
+  left: 0vw;
+  right: 0vw;
+  top: 0vh;
 }
 .container_chat_admin {
   position: absolute;

@@ -14,14 +14,14 @@
 @media only screen and (min-width: 900px) {
   .App-logo {
     padding: 5px;
-    height: 7.2vh;
-    width: 16.5vw;
+    height: 100%;
+    width: auto;
   }
 
   .header_logo {
     position: relative;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     background-color: #ffffff;
   }
 }
