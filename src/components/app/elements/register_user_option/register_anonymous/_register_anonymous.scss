@@ -1,0 +1,138 @@
+.form_user_register {
+  width: 100%;
+  height: 80vh;
+  top: 12vh;
+  position: absolute;
+}
+.name_user_input_alias {
+  position: absolute;
+  top: 40vh;
+  left: 4vw;
+  width: 92vw;
+  height: 7.8vh;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  margin: 0;
+  margin-bottom: 16px;
+  border: 1px solid #c8c9c7;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 5vw;
+  line-height: 3.5vh;
+  text-align: left;
+}
+.button_enter {
+  position: absolute;
+  top: 58vh;
+  right: 5vw;
+  height: 7vh;
+  width: 30vw;
+  background: #ffffff;
+  border: 1px solid #32c755;
+  color: #32c755;
+  border-radius: 1vmax;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vmax;
+  line-height: 3.5vmax;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+}
+
+.form_group {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  top: 2vh;
+}
+
+.article_anonymous {
+  position: absolute;
+  top: 15vh;
+  left: 10vw;
+  width: 80vw;
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 2.6vmax;
+  line-height: 3vmax;
+  text-align: center;
+  margin: 0;
+  color: #7c878e;
+}
+@media only screen and (min-width: 900px) {
+  .form_user_register {
+    width: 100%;
+    height: 80vh;
+    top: 12vh;
+    position: absolute;
+  }
+  .name_user_input_alias {
+    position: absolute;
+    top: 40vh;
+    left: 9vw;
+    width: 82vw;
+    height: 7.8vh;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    margin: 0;
+    margin-bottom: 16px;
+    border: 1px solid #c8c9c7;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2vmax;
+    line-height: 3vmax;
+    text-align: left;
+  }
+  .button_enter {
+    position: absolute;
+    top: 58vh;
+    right: 5vw;
+    height: 9vh;
+    width: 30vw;
+    background: #ffffff;
+    border: 1px solid #32c755;
+    color: #32c755;
+    border-radius: 1vmax;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3vmax;
+    line-height: 3.5vmax;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+  }
+
+  .form_group {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    top: 2vh;
+  }
+
+  .article_anonymous {
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+    width: 60vw;
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 2vmax;
+    line-height: 2.5vmax;
+    text-align: center;
+    margin: 0;
+    color: #7c878e;
+  }
+}

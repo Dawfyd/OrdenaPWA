@@ -15,22 +15,19 @@
 }
 
 .page_home {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   position: fixed;
   text-align: center;
-  display: grid;
   height: 100vh;
   width: 100vw;
   left: 0px;
   top: 0px;
-
   grid-template-rows: 12fr 1fr;
   grid-template-columns: 1fr;
 }
 .container_home {
   position: absolute;
-  height: 82.6vh;
+  height: 81.5vh;
   width: 100vw;
   bottom: 8vh;
 }

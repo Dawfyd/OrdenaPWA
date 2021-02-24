@@ -1,13 +1,24 @@
-.button_option_home {
+@mixin button_home_admin {
   background: #ffffff;
-
   position: absolute;
   top: 2vh;
   height: 5vh;
   width: 5vh;
   padding: 0;
-  left: 26vw;
   border: 0;
+}
+@mixin text_home_admin {
+  position: absolute;
+  top: 2vh;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vmax;
+  line-height: 5vh;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0;
   z-index: 1;
 }
 .icon_option_home {
@@ -15,84 +26,55 @@
   width: 3.5vh;
   margin: auto;
 }
+
+.button_option_home {
+  @include button_home_admin;
+  left: 26vw;
+}
 .text_option_home {
-  position: absolute;
+  @include text_home_admin;
   left: 30vw;
-  top: 2vh;
-  font-family: Quicksand;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 2.5vh;
-  line-height: 5vh;
-  display: flex;
-  align-items: center;
-  color: rgba(0, 0, 0, 0.8);
-  margin: 0;
-  z-index: 1;
 }
-
 .button_option_account {
-  background: #ffffff;
-
-  position: absolute;
-  top: 2vh;
-  height: 5vh;
-  width: 5vh;
-  padding: 0;
+  @include button_home_admin;
   left: 41vw;
-  border: 0;
 }
-
 .text_option_account {
-  position: absolute;
-  left: 46vw;
-  top: 2vh;
-  font-family: Quicksand;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 2.5vh;
-  line-height: 5vh;
-  display: flex;
-  align-items: center;
-  color: rgba(0, 0, 0, 0.7);
-  margin: 0;
+  @include text_home_admin;
+  left: 45vw;
 }
 .button_option_logout {
-  background: #ffffff;
-  position: absolute;
-  top: 2vh;
-  height: 5vh;
-  width: 5vh;
-  padding: 0;
+  @include button_home_admin;
   left: 58vw;
-  border: 0;
 }
-
 .text_option_logout {
-  position: absolute;
+  @include text_home_admin;
   left: 62vw;
-  top: 2vh;
-  font-family: Quicksand;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 2.5vh;
-  line-height: 5vh;
-  display: flex;
-  align-items: center;
-  color: rgba(0, 0, 0, 0.7);
-  margin: 0;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .button_option_home {
+  @mixin button_home_admin {
     background: #ffffff;
     position: absolute;
-    top: 1.7vh;
+    top: 2vh;
     height: 5vh;
     width: 5vh;
     padding: 0;
-    left: 4vw;
     border: 0;
+  }
+  @mixin text_home_admin {
+    position: absolute;
+    left: 12vw;
+    top: 2vh;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.8vw;
+    line-height: 5vh;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0;
     z-index: 1;
   }
   .icon_option_home {
@@ -100,71 +82,29 @@
     width: 3vh;
     margin: auto;
   }
+
+  .button_option_home {
+    @include button_home_admin;
+    left: 4vw;
+  }
   .text_option_home {
-    position: absolute;
+    @include text_home_admin;
     left: 12vw;
-    top: 2vh;
-    font-family: Quicksand;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2vh;
-    line-height: 5vh;
-    display: flex;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.8);
-    margin: 0;
-    z-index: 1;
   }
-
   .button_option_account {
-    background: #ffffff;
-
-    position: absolute;
-    top: 1.7vh;
-    height: 5vh;
-    width: 5vh;
-    padding: 0;
-    left: 25vw;
-    border: 0;
+    @include button_home_admin;
+    left: 26vw;
   }
-
   .text_option_account {
-    position: absolute;
-    left: 33vw;
-    top: 2vh;
-    font-family: Quicksand;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2vh;
-    line-height: 5vh;
-    display: flex;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.8);
-    margin: 0;
+    @include text_home_admin;
+    left: 34vw;
   }
   .button_option_logout {
-    background: #ffffff;
-    position: absolute;
-    top: 1.7vh;
-    height: 5vh;
-    width: 5vh;
-    padding: 0;
-    left: 50vw;
-    border: 0;
+    @include button_home_admin;
+    left: 51vw;
   }
-
   .text_option_logout {
-    position: absolute;
-    left: 58vw;
-    top: 2vh;
-    font-family: Quicksand;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2vh;
-    line-height: 5vh;
-    display: flex;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.8);
-    margin: 0;
+    @include text_home_admin;
+    left: 59vw;
   }
 }
