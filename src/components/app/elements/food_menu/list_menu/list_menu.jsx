@@ -12,7 +12,7 @@ function TargetList({
   posts,
   favList
 }) {
-  if (id_category === 0) {
+  if (id_category === -1) {
     return (
       <div>
         {categorys_menu.map(a => (
@@ -72,7 +72,7 @@ function TargetList({
       </div>
     );
   }
-  if (id_category === 1) {
+  if (id_category === 0) {
     if (favList.length > 0) {
       return (
         <div>

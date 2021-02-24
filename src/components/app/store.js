@@ -17,12 +17,10 @@ const initialState = {
   ],
 
   posts: [
-    { id: 1, text: "Menú" },
-    { id: 2, text: "Favoritos" },
-    { id: 3, text: "Entradas" },
-    { id: 4, text: "Platos Fuertes" },
-    { id: 5, text: "Para Compartir" },
-    { id: 6, text: "Bebidas" },
+
+    { id: -1, name: "Menú" },
+    { id: -2, name: "Favoritos" }
+
   ],
   categorys_menu: [
     { id: 1, text: "Descuentos" },
@@ -1014,6 +1012,18 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
       };
+    case "RECEIVE_CATEGORYS_DB":
+      console.log(action.db_categorys);
+      const length_posts_1 = state.posts.length;
+      console.log(length_posts_1);
+      if (length_posts_1 < 3) {
+        return {
+          ...state,
+          posts: state.posts.concat(action.db_categorys)
+        };
+        console.log(state.posts);
+      }
+      console.log(state.posts);
     case "SWITCH_MODIFIERS":
       return {
         ...state,
