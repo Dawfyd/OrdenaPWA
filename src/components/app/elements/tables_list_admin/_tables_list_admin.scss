@@ -84,7 +84,7 @@
   font-weight: bold;
   font-size: 3vmax;
   line-height: 100%;
-  color: #ffffff;
+  color: rgba(0, 0, 0, 0.5);
   margin: 0;
   padding: 0;
 }
@@ -175,9 +175,9 @@
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
-    font-size: calc(100% + 2vmax);
+    font-size: calc(100% + 1vmax);
     line-height: 100%;
-    color: #ffffff;
+    color: rgba(0, 0, 0, 0.5);
     margin: 0;
     padding: 0;
   }

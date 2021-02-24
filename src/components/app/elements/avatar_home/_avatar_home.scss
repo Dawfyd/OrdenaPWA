@@ -59,23 +59,23 @@
   color: #000000;
 }
 .text_service {
-  left: 27.5vw;
   align-items: center;
   text-align: center;
-  position: fixed;
+  justify-content: center;
+  position: relative;
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
-  font-size: 5vw;
+  font-size: 2.5vmax;
   line-height: 3.2vh;
-  width: 45vw;
+  width: 60vw;
   color: #7c878e;
-  bottom: 9vh;
-  margin: 0;
+  margin: auto;
 }
 .text_service_box {
+  display: block;
   position: absolute;
-  height: 15vh;
+  height: 14vh;
   width: 100vw;
   top: 67vh;
   background: #ffffff;

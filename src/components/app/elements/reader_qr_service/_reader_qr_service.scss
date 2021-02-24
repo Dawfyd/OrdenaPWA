@@ -1,7 +1,7 @@
 /* For mobile phones: */
 .qr_ready_service {
   position: absolute;
-  top: 15vh;
+  top: 5vh;
   left: 10vw;
   width: 80vw;
   height: 10vh;
@@ -15,7 +15,7 @@
   z-index: 2;
 }
 #ellipse_qr_service {
-  top: 20vh;
+  top: 8vh;
   width: 100vw;
   position: absolute;
   margin: 0;
@@ -36,7 +36,7 @@
 .ellipse_reader_service {
   background-position: center center;
   position: absolute;
-  top: 8vh;
+  top: 8.5vh;
   height: 42vh;
   width: 72vw;
   left: 14vw;
@@ -45,7 +45,7 @@
 
 .qr_reader_service {
   position: absolute;
-  top: 8vh;
+  top: 9vh;
   left: 12vw;
   width: 76vw;
   height: 40vh;

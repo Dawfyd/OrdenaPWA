@@ -31,3 +31,40 @@
   background: rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.25);
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .logo_header_admin_home {
+    display: block;
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    width: 30vw;
+    height: 9vh;
+    padding: 5px;
+  }
+  .options_header_admin_home {
+    position: absolute;
+    height: 9vh;
+    width: 70vw;
+    left: 30vw;
+  }
+
+  .page_home_admin {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    left: 0px;
+    top: 0px;
+  }
+  .container_home_admin {
+    position: absolute;
+    height: 91vh;
+    width: 100%;
+    bottom: 0vh;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+  }
+}

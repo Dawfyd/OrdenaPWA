@@ -1,13 +1,11 @@
 .header_register {
   display: block;
-  position: relative;
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+  padding: 2px;
   top: 0.5vh;
-}
-
-.footer_register {
-  position: fixed;
-  display: none;
-  bottom: 0px;
 }
 
 .page_register {
@@ -24,8 +22,10 @@
   grid-template-rows: 12fr 1fr;
   grid-template-columns: 1fr;
 }
-
-.login_register {
+.container_register_option {
+  display: block;
   position: absolute;
-  top: 3vh;
+  height: 90vh;
+  width: 100vw;
+  top: 10vh;
 }

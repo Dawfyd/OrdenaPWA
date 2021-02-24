@@ -14,7 +14,6 @@ import TextAreaHook from "../text_area/text_area_input";
 function UrgentRequest() {
   return (
     <div className="container_request">
-      <hr className="separator_request" />
       <p className="request_text">¿Cómo te podemos ayudar?</p>
       <div className="request_list">
         <button className="button_request">

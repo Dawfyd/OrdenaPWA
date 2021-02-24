@@ -1,16 +1,10 @@
 .container_request {
   position: absolute;
-  height: 82.6vh;
+  display: block;
+  height: 92vh;
   width: 100vw;
-  bottom: 0vh;
-}
-.separator_request {
-  position: relative;
-  top: 2vh;
-  height: 1px;
-  background: #c8c9c7;
-  border: 0;
-  margin: 0;
+  top: 0vh;
+  left: 0vw;
 }
 .request_text {
   position: relative;
@@ -71,7 +65,7 @@
 
 .request_textbox {
   position: relative;
-  top: 3vh;
+  top: 4vh;
   padding-top: 1vh;
   padding-bottom: 1vh;
   margin: 0;

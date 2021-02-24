@@ -1,0 +1,143 @@
+@mixin text_register_user_option {
+  width: 100vw;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  border: 0;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 5vw;
+  line-height: 3.5vh;
+}
+
+.text_register_user {
+  @include text_register_user_option;
+  top: 15.5vh;
+}
+.text_register_anonymous {
+  @include text_register_user_option;
+  top: 35.5vh;
+  width: 75vw;
+}
+.text_login_user {
+  @include text_register_user_option;
+  top: 55vh;
+}
+
+@mixin button_register_option {
+  position: absolute;
+  border-radius: 1.5vmax;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4vmax;
+  line-height: 4.5vmax;
+  align-items: center;
+}
+.button_register_user {
+  @include button_register_option;
+  background: #9b26b6;
+  border: 1px solid #9b26b6;
+  color: #ffffff;
+  border-radius: 2vmax;
+  top: 20vh;
+  width: 60vw;
+  height: 8vh;
+  left: 20vw;
+}
+.button_anonymous_user {
+  @include button_register_option;
+  background: #ffffff;
+  border: 2px solid #9b26b6;
+  color: #9b26b6;
+  top: 47vh;
+  width: 60vw;
+  height: 8vh;
+  left: 20vw;
+}
+.button_login_user {
+  @include button_register_option;
+  background: #32c755;
+  border: 1px solid #32c755;
+  color: #ffffff;
+  top: 70vh;
+  width: 60vw;
+  height: 8vh;
+  left: 20vw;
+}
+
+@media only screen and (min-width: 900px) {
+  @mixin text_register_user_option {
+    width: 100vw;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    border: 0;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2vmax;
+    line-height: 2vmax;
+  }
+
+  .text_register_user {
+    @include text_register_user_option;
+    top: 14vh;
+  }
+  .text_register_anonymous {
+    @include text_register_user_option;
+    top: 37.5vh;
+    width: 75vw;
+  }
+  .text_login_user {
+    @include text_register_user_option;
+    top: 57vh;
+  }
+
+  @mixin button_register_option {
+    position: absolute;
+    border-radius: 1vmax;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.5vmax;
+    line-height: 3.5vmax;
+    align-items: center;
+  }
+  .button_register_user {
+    @include button_register_option;
+    background: #9b26b6;
+    border: 1px solid #9b26b6;
+    color: #ffffff;
+    border-radius: 1vmax;
+    top: 20vh;
+    width: 30vw;
+    height: 9vh;
+    left: 35vw;
+  }
+  .button_anonymous_user {
+    @include button_register_option;
+    background: #ffffff;
+    border: 2px solid #9b26b6;
+    color: #9b26b6;
+    top: 47vh;
+    width: 30vw;
+    height: 9vh;
+    left: 35vw;
+  }
+  .button_login_user {
+    @include button_register_option;
+    background: #32c755;
+    border: 1px solid #32c755;
+    color: #ffffff;
+    top: 70vh;
+    width: 30vw;
+    height: 9vh;
+    left: 35vw;
+  }
+}

@@ -51,20 +51,19 @@
 
 .number_table {
   position: absolute;
-
   bottom: 0%;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-family: Quicksand;
   font-style: normal;
   font-weight: bold;
-  font-size: calc(200% + 3vmax);
+  font-size: 300%;
   line-height: 100%;
-  color: #000000;
+  color: rgba(0, 0, 0, 0.5);
   margin: 0;
   padding: 0;
+  padding-top: 5px;
 }
