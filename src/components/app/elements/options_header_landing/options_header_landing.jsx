@@ -14,7 +14,7 @@ function OptionHeaderLanding() {
         </Link>
       </div>
       <div>
-        <Link to={"/restaurant/login"}>
+        <Link to={"/restaurant/home"}>
           <p className="text_option_login">Ingresar</p>
         </Link>
       </div>

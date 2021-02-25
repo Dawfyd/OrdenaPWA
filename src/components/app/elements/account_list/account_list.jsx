@@ -5,9 +5,7 @@ const Account = () => (
   <div className="container_account_list">
     <div className="container_list">
       <div>
-        <Link to={"/account/myaccount"}>
-          <p className="account_title">Mi Cuenta</p>
-        </Link>
+        <p className="account_title">Mi Cuenta</p>
       </div>
 
       <div>
@@ -17,9 +15,7 @@ const Account = () => (
       </div>
 
       <div>
-        <Link to={"/account/suggestions"}>
-          <p className="account_title">Sugerencias</p>
-        </Link>
+        <p className="account_title">Sugerencias</p>
       </div>
 
       <div>
