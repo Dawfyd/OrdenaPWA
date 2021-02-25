@@ -10,8 +10,13 @@ const HomeSelect = () => (
         </button>
       </Link>
     </div>
-    <div></div>
-    <div></div>
+    <div>
+      <Link to={"/register"}>
+        <button className="button_landing_app">
+          <p className="text_landing_app">Ingresar como Usuario</p>
+        </button>
+      </Link>
+    </div>
   </div>
 );
 

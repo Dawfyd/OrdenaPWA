@@ -62,7 +62,9 @@ const Register = ({ register_option, BackHome }) => {
         </ul>
 
         <div>
-          <button className="button_agree_user">Aceptar</button>
+          <Link to={"/home"}>
+            <button className="button_agree_user">Aceptar</button>
+          </Link>
         </div>
       </form>
     </div>

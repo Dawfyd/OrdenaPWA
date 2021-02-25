@@ -26,7 +26,9 @@ const RegisterAnonymous = ({ register_option, BackHome }) => {
         </div>
 
         <div>
-          <button className="button_enter">Entrar</button>
+          <Link to={"/home"}>
+            <button className="button_enter">Entrar</button>
+          </Link>
         </div>
       </form>
       <article className="article_anonymous">
