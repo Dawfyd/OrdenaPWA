@@ -1,25 +1,84 @@
-.button_landing_register {
-  position: absolute;
-  width: 25vw;
-  height: 10vh;
-  top: 35vh;
-  left: 6.25vw;
-  background: #9b26b6;
-  background-color: #9b26b6;
-  border-radius: 10px;
-  border: 1px solid #e6d9ef;
-}
-.text_landing_register {
+@mixin text_landing {
   font-family: Quicksand;
   font-style: normal;
   font-weight: bold;
-  font-size: 2vw;
-  line-height: 2vh;
+  font-size: 2vmax;
+  line-height: 2vmax;
   align-items: center;
   text-align: center;
   height: auto;
   width: 100%;
   margin: auto;
-  color: #e6d9ef;
+  color: #ffffff;
   padding: auto;
+}
+
+@mixin button_landing {
+  position: absolute;
+  width: 25vw;
+  height: 10vh;
+  background: #9b26b6;
+  background-color: #9b26b6;
+  border-radius: 10px;
+  border: 1px solid #e6d9ef;
+}
+
+.button_landing_register {
+  @include button_landing;
+  top: 35vh;
+  left: 6.25vw;
+}
+.text_landing_register {
+  @include text_landing;
+}
+.button_landing_app {
+  @include button_landing;
+  top: 35vh;
+  left: 37.5vw;
+}
+.text_landing_app {
+  @include text_landing;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  @mixin text_landing {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5vmax;
+    line-height: 2.6vmax;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    margin: auto;
+    color: #ffffff;
+    padding: auto;
+  }
+
+  @mixin button_landing {
+    position: absolute;
+    background: #9b26b6;
+    background-color: #9b26b6;
+    border-radius: 10px;
+    border: 1px solid #e6d9ef;
+    width: 60vw;
+    height: 8vh;
+    left: 20vw;
+  }
+
+  .button_landing_register {
+    @include button_landing;
+    top: 15vh;
+  }
+  .text_landing_register {
+    @include text_landing;
+  }
+  .button_landing_app {
+    @include button_landing;
+    top: 35vh;
+  }
+  .text_landing_app {
+    @include text_landing;
+  }
 }

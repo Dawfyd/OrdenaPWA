@@ -36,6 +36,9 @@
   font-size: 4vmax;
   line-height: 4.5vmax;
   align-items: center;
+  width: 60vw;
+  height: 8vh;
+  left: 20vw;
 }
 .button_register_user {
   @include button_register_option;
@@ -44,9 +47,6 @@
   color: #ffffff;
   border-radius: 2vmax;
   top: 20vh;
-  width: 60vw;
-  height: 8vh;
-  left: 20vw;
 }
 .button_anonymous_user {
   @include button_register_option;
@@ -54,9 +54,6 @@
   border: 2px solid #9b26b6;
   color: #9b26b6;
   top: 47vh;
-  width: 60vw;
-  height: 8vh;
-  left: 20vw;
 }
 .button_login_user {
   @include button_register_option;
@@ -64,9 +61,6 @@
   border: 1px solid #32c755;
   color: #ffffff;
   top: 70vh;
-  width: 60vw;
-  height: 8vh;
-  left: 20vw;
 }
 
 @media only screen and (min-width: 900px) {

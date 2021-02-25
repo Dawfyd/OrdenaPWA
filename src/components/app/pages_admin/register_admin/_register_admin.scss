@@ -1,0 +1,32 @@
+.header_register_admin {
+  display: block;
+  position: fixed;
+  top: 1vh;
+  left: 0vw;
+  padding-left: 1vw;
+  height: 7vh;
+  width: 100vw;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.page_register_admin {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  text-align: center;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  left: 0px;
+  top: 0px;
+  grid-template-rows: 12fr 1fr;
+  grid-template-columns: 1fr;
+}
+.container_register_admin {
+  display: block;
+  position: absolute;
+  height: 90vh;
+  width: 100vw;
+  top: 10vh;
+}
