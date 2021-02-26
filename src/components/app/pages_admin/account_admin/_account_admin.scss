@@ -7,6 +7,9 @@
   padding: 2px;
   top: 0.5vh;
 }
+.options_account_admin {
+  display: none;
+}
 
 .footer_account_admin {
   position: fixed;
@@ -28,4 +31,64 @@
   height: 82.6vh;
   width: 100vw;
   bottom: 8vh;
+}
+.text_view_not_available {
+  display: none;
+}
+@media only screen and (min-width: 900px) {
+  .header_account_admin {
+    display: block;
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    height: 7vh;
+  }
+  .options_account_admin {
+    position: absolute;
+    height: 9vh;
+    width: 70vw;
+    left: 30vw;
+    display: block;
+  }
+
+  .view_not_available {
+    position: absolute;
+    display: block;
+    height: 91vh;
+    width: 100vw;
+    bottom: 0vh;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background-image: url("../../../../assets/background/back1.jpg");
+    background-position: 50% 50%;
+  }
+  .text_view_not_available {
+    position: absolute;
+    display: block;
+    top: 25vh;
+    left: 20vw;
+    width: 60vw;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5vmax;
+    line-height: 6vmax;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    margin: auto;
+    color: #9b26b6;
+    padding: auto;
+  }
+  .footer_account_admin {
+    position: fixed;
+    display: none;
+    bottom: 0px;
+  }
+  .container_account_admin {
+    position: absolute;
+    height: 82.6vh;
+    width: 100vw;
+    bottom: 8vh;
+    display: none;
+  }
 }

@@ -4,7 +4,7 @@
   background: #9b26b6;
   background-color: #9b26b6;
   border-radius: 10px;
-  border: 1px solid #e6d9ef;
+  border: 1px solid #9b26b6;
   position: absolute;
 }
 
@@ -18,15 +18,23 @@
   text-align: center;
   height: auto;
   width: 100%;
-  margin: auto;
+  margin: 0;
   color: #ffffff;
-  padding: auto;
+  padding: 0;
+}
+.button_select_app {
+  @include button_select;
+  top: 20vh;
+  left: 15vw;
+}
+.text_app {
+  @include text_select;
 }
 
 .button_select_cashier {
   @include button_select;
-  top: 35vh;
-  left: 6.25vw;
+  top: 50vh;
+  left: 15vw;
 }
 
 .text_cashier {
@@ -34,16 +42,16 @@
 }
 .button_select_menu {
   @include button_select;
-  top: 35vh;
-  left: 37.5vw;
+  top: 20vh;
+  right: 15vw;
 }
 .text_menu_setup {
   @include text_select;
 }
 .button_select_spots {
   @include button_select;
-  top: 35vh;
-  right: 6.25vw;
+  top: 50vh;
+  right: 15vw;
 }
 .text_spots_setup {
   @include text_select;
@@ -57,7 +65,7 @@
     background: #9b26b6;
     background-color: #9b26b6;
     border-radius: 10px;
-    border: 1px solid #e6d9ef;
+    border: 1px solid #9b26b6;
     position: absolute;
   }
 
@@ -65,20 +73,28 @@
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
-    font-size: 2.5vmax;
-    line-height: 2.6vmax;
+    font-size: 2.8vmax;
+    line-height: 2.8vmax;
     align-items: center;
     text-align: center;
     height: auto;
     width: 100%;
-    margin: auto;
+    margin: 0;
     color: #ffffff;
-    padding: auto;
+    padding: 0;
+  }
+
+  .button_select_app {
+    @include button_select;
+    top: 15vh;
+  }
+  .text_app {
+    @include text_select;
   }
 
   .button_select_cashier {
     @include button_select;
-    top: 15vh;
+    top: 30vh;
   }
 
   .text_cashier {
@@ -86,14 +102,14 @@
   }
   .button_select_menu {
     @include button_select;
-    top: 35vh;
+    top: 45vh;
   }
   .text_menu_setup {
     @include text_select;
   }
   .button_select_spots {
     @include button_select;
-    top: 55vh;
+    top: 60vh;
   }
   .text_spots_setup {
     @include text_select;

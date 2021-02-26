@@ -1,21 +1,19 @@
 .container_admin_register {
   position: absolute;
-  height: 90vh;
+  height: 91.9vh;
   width: 100vw;
   top: 0vh;
 }
 
 .text_register_admin {
-  position: absolute;
-  top: 0vh;
-  left: 10vw;
   width: 80vw;
-  height: 6vh;
+  height: 7vh;
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
   font-size: 2vmax;
   line-height: 3vmax;
+  padding-top: 0.6vh;
   text-align: left;
   color: rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
@@ -24,8 +22,8 @@
 .form_admin_register {
   width: 80vw;
   left: 10vw;
-  height: 55vh;
-  top: 8vh;
+  height: 70vh;
+  padding-top: 1vh;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
@@ -33,7 +31,7 @@
 }
 .div_container_admin {
   width: 26.5vw;
-  height: 14vh;
+  height: 15vh;
   display: grid;
   grid-gap: 1px;
   grid-template-columns: 1fr;
@@ -106,7 +104,7 @@
 
 .button_back_admin {
   position: absolute;
-  top: 70vh;
+  top: 74vh;
   left: 10vw;
   height: 9vh;
   width: 30vw;
@@ -127,7 +125,7 @@
 }
 .button_next_admin {
   position: absolute;
-  top: 70vh;
+  top: 74vh;
   right: 10vw;
   height: 9vh;
   width: 30vw;
@@ -145,12 +143,121 @@
   margin: auto;
   padding: 0;
 }
-@media only screen and (min-width: 900px) {
-  .button_back_home {
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .container_admin_register {
     position: absolute;
-    top: 70vh;
+    height: 100%;
+    width: 100vw;
+    top: 0vh;
+  }
+
+  .text_register_admin {
+    width: 94vw;
+    height: 6vh;
+    padding-left: 5vw;
+    padding-top: 1vh;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3vmax;
+    line-height: 3vmax;
+    text-align: left;
+
+    color: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  }
+
+  .form_admin_register {
+    width: 94vw;
+    left: 3vw;
+    height: 72vh;
+    top: 0vh;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow: auto;
+    border-bottom: 1px solid #c8c9c7;
+  }
+  .div_container_admin {
+    width: 100%;
+    height: 12vh;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 45% 55%;
+    align-items: center;
+    padding: 8px 16px 8px;
+  }
+  .div_container_input {
+    height: 100%;
+  }
+
+  .span_admin {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8vmax;
+    line-height: 2vmax;
+    text-align: left;
+    margin: 0px 0px 2px;
+    padding: 0px 2px;
+    width: 100%;
+    color: #7c878e;
+  }
+  .register_admin_input {
+    width: 100%;
+    height: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0;
+    border: 1px solid #c8c9c7;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.2vmax;
+    line-height: 2.3vmax;
+    text-align: left;
+  }
+  .register_admin_input_short {
+    width: 25%;
+    height: 100%;
+    margin: 0;
+    border: 1px solid #c8c9c7;
+    box-sizing: border-box;
+    border-radius: 10px 0px 0px 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.2vmax;
+    line-height: 2.3vmax;
+    text-align: left;
+    padding: 0 8px 0 8px;
+  }
+  .register_admin_input_large {
+    width: 75%;
+    height: 100%;
+    margin: 0;
+    border: 1px solid #c8c9c7;
+    box-sizing: border-box;
+    border-radius: 0px 10px 10px 0px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.2vmax;
+    line-height: 2.3vmax;
+    text-align: left;
+    padding: 0 8px 0 8px;
+  }
+
+  .button_back_admin {
+    position: absolute;
+    top: 2vh;
     left: 5vw;
-    height: 9vh;
+    height: 7vh;
     width: 30vw;
     background: #ffffff;
     border: 1px solid #9b26b6;
@@ -159,19 +266,19 @@
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
-    font-size: 3vmax;
-    line-height: 3.5vmax;
+    font-size: 2.8vmax;
+    line-height: 3vmax;
     align-items: center;
     text-align: center;
     margin: auto;
     padding: 0;
     z-index: 1;
   }
-  .button_agree_user {
+  .button_next_admin {
     position: absolute;
-    top: 58vh;
+    top: 2vh;
     right: 5vw;
-    height: 9vh;
+    height: 7vh;
     width: 30vw;
     background: #ffffff;
     border: 1px solid #32c755;
@@ -180,84 +287,167 @@
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
-    font-size: 3vmax;
-    line-height: 3.5vmax;
+    font-size: 2.8vmax;
+    line-height: 3vmax;
     align-items: center;
     text-align: center;
     margin: auto;
     padding: 0;
+    z-index: 1;
   }
-  .form_user_register {
-    width: 100%;
-    height: 80vh;
-    top: 12vh;
+  .footer_button_register {
+    position: fixed;
+    bottom: 0;
+    height: 12vh;
+    width: 100vw;
+  }
+}
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 890px) {
+  .container_admin_register {
     position: absolute;
+    height: 100%;
+    width: 100vw;
+    top: 0vh;
   }
-  @mixin input_user {
-    width: 82vw;
-    height: 7.8vh;
-    padding-left: 2.5vw;
-    padding-right: 2.5vw;
+
+  .text_register_admin {
+    width: 90vw;
+    height: 5vh;
+    padding-top: 0.6vh;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5vmax;
+    line-height: 3vmax;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  }
+
+  .form_admin_register {
+    width: 92vw;
+    left: 4vw;
+    height: 75vh;
+    top: 0vh;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .div_container_admin {
+    width: 50%;
+    height: 10vh;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 45% 55%;
+    align-items: center;
+    padding: 8px 16px 8px;
+  }
+  .div_container_input {
+    height: 100%;
+  }
+
+  .span_admin {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4vmax;
+    line-height: 1.5vmax;
+    text-align: left;
+    margin: 0px 0px 4px;
+    padding: 0px 8px;
+    width: 100%;
+    color: #7c878e;
+  }
+  .register_admin_input {
+    width: 100%;
+    height: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
     margin: 0;
-    margin-bottom: 16px;
     border: 1px solid #c8c9c7;
     box-sizing: border-box;
     border-radius: 10px;
     font-family: Poppins;
     font-style: normal;
-    font-weight: 400;
-    font-size: 2vmax;
-    line-height: 3vmax;
+    font-weight: 500;
+    font-size: 1.8vmax;
+    line-height: 2vmax;
     text-align: left;
   }
-
-  .name_user_input {
-    @include input_user;
-  }
-
-  .email_user_input {
-    @include input_user;
-  }
-  .cellphone_user_input {
-    @include input_user;
-  }
-  .password_user_input {
-    @include input_user;
-  }
-
-  .form_group {
-    position: relative;
-    padding: 0;
+  .register_admin_input_short {
+    width: 25%;
+    height: 100%;
     margin: 0;
-    top: 2vh;
-  }
-
-  .form_group li {
-    position: relative;
-    display: inline-table;
-  }
-
-  .check {
-    vertical-align: top;
-    width: 2vmax;
-    height: 2vmax;
-    margin: 1vh 3vw 2vh 3vw;
-  }
-
-  input [type="checkbox"]:checked {
-    display: inline-block;
-    width: auto;
-    margin: 0 10px 0 0;
-  }
-  .article_data {
-    width: 80vw;
+    border: 1px solid #c8c9c7;
+    box-sizing: border-box;
+    border-radius: 10px 0px 0px 10px;
     font-family: Poppins;
     font-style: normal;
-    font-weight: normal;
-    font-size: 2vmax;
-    line-height: 2.5vmax;
+    font-weight: 500;
+    font-size: 1.8vmax;
+    line-height: 2vmax;
     text-align: left;
+    padding: 0 8px 0 8px;
+  }
+  .register_admin_input_large {
+    width: 75%;
+    height: 100%;
     margin: 0;
-    color: #7c878e;
+    border: 1px solid #c8c9c7;
+    box-sizing: border-box;
+    border-radius: 0px 10px 10px 0px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8vmax;
+    line-height: 2vmax;
+    text-align: left;
+    padding: 0 8px 0 8px;
+  }
+
+  .button_back_admin {
+    position: absolute;
+    top: 79vh;
+    left: 5vw;
+    height: 8vh;
+    width: 30vw;
+    background: #ffffff;
+    border: 1px solid #9b26b6;
+    color: #9b26b6;
+    border-radius: 1vmax;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.8vmax;
+    line-height: 3vmax;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    z-index: 1;
+  }
+  .button_next_admin {
+    position: absolute;
+    top: 79vh;
+    right: 5vw;
+    height: 8vh;
+    width: 30vw;
+    background: #ffffff;
+    border: 1px solid #32c755;
+    color: #32c755;
+    border-radius: 1vmax;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.8vmax;
+    line-height: 3vmax;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    z-index: 1;
   }
 }
