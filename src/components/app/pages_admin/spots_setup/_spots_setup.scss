@@ -24,9 +24,72 @@
 }
 .container_spot_admin {
   position: absolute;
+  display: block;
   height: 91vh;
   width: 100vw;
   bottom: 0vh;
   background: rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.text_view_not_available_phone {
+  display: none;
+}
+.view_not_available_phone {
+  display: none;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .logo_header_admin_spot {
+    display: block;
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    width: 30vw;
+    height: 9vh;
+    padding: 5px;
+  }
+  .options_header_admin_spot {
+    position: absolute;
+    height: 9vh;
+    width: 70vw;
+    left: 30vw;
+  }
+  .container_spot_admin {
+    position: absolute;
+    height: 91vh;
+    width: 100vw;
+    bottom: 0vh;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    display: none;
+  }
+  .view_not_available_phone {
+    position: absolute;
+    display: block;
+    height: 91vh;
+    width: 100vw;
+    bottom: 0vh;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    background-image: url("../../../../assets/background/back1phone.jpg");
+    background-position: 50% -1px;
+    background-size: cover;
+  }
+  .text_view_not_available_phone {
+    position: absolute;
+    display: block;
+    top: 30vh;
+    left: 10vw;
+    width: 80vw;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5vmax;
+    line-height: 6vmax;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    margin: auto;
+    color: #9b26b6;
+    padding: auto;
+  }
 }

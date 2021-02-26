@@ -18,11 +18,18 @@ function page(props) {
         </header>
 
         <div className="container_spot_admin">
-          <ListSpotsSetup />
-        </div>
+          <div>
+            <ListSpotsSetup />
+          </div>
 
-        <div>
-          <InfoCodeQR />
+          <div>
+            <InfoCodeQR />
+          </div>
+        </div>
+        <div className="view_not_available_phone">
+          <p className="text_view_not_available_phone">
+            Funcionalidad solo disponible desde PC
+          </p>
         </div>
       </div>
     </Fragment>

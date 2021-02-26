@@ -1,32 +1,51 @@
-.header_register_admin {
+.logo_header_register_admin {
   display: block;
-  position: fixed;
+  position: absolute;
   top: 1vh;
-  left: 0vw;
-  padding-left: 1vw;
+  left: 1vw;
   height: 7vh;
-  width: 100vw;
-  text-align: left;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.options_header_register_admin {
+  position: absolute;
+  height: 8vh;
+  width: 70vw;
+  left: 30vw;
 }
 
 .page_register_admin {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   text-align: center;
-  display: grid;
   height: 100vh;
   width: 100vw;
   left: 0px;
   top: 0px;
-  grid-template-rows: 12fr 1fr;
-  grid-template-columns: 1fr;
 }
 .container_register_admin {
   display: block;
   position: absolute;
-  height: 90vh;
+  height: 92vh;
   width: 100vw;
-  top: 10vh;
+  top: 8vh;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 899px) {
+  .options_header_admin_home {
+    position: absolute;
+    display: none;
+    height: 8vh;
+    width: 70vw;
+    left: 30vw;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .options_header_register_admin {
+    position: absolute;
+    display: none;
+    height: 8vh;
+    width: 70vw;
+    left: 30vw;
+  }
 }
