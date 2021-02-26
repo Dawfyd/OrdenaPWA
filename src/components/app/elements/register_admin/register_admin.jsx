@@ -4,9 +4,14 @@ import { connect } from "react-redux";
 
 function RegisterAdmin({
   stated_register,
-  ClickNext,
-  ClickBack,
-  ClickNextStep,
+  ClickBackInfo,
+  ClickModel,
+  ClickBackModel,
+  ClickDocs,
+  ClickBackDocs,
+  ClickVenue,
+  ClickBackVenue,
+  ClickSubmit,
 }) {
   return (
     <div>
@@ -17,8 +22,8 @@ function RegisterAdmin({
             stated_register === 0 ? { display: "flex" } : { display: "none" }
           }
         >
-          <span className="text_register_admin">Datos Generales</span>
           <div className="form_admin_register">
+            <span className="text_register_admin">Datos Generales</span>
             <div className="div_container_admin">
               <span className="span_admin">
                 Nombre del restaurante que aparecera en el app
@@ -82,7 +87,7 @@ function RegisterAdmin({
             </div>
             <div className="div_container_admin">
               <span className="span_admin">
-                Identificacion del representante legal
+                Identificación del representante legal
               </span>
               <div className="div_container_input">
                 <select className="register_admin_input_short">
@@ -119,7 +124,7 @@ function RegisterAdmin({
             </div>
             <div className="div_container_admin">
               <span className="span_admin">
-                Correo electronico del representente legal
+                Correo electronico del representante legal
               </span>
               <input
                 className="register_admin_input"
@@ -158,11 +163,11 @@ function RegisterAdmin({
               ></input>
             </div>
           </div>
-          <div>
+          <div className="footer_button_register">
             <button
               className="button_next_admin"
               type="button"
-              onClick={() => ClickNext()}
+              onClick={() => ClickModel()}
             >
               Siguiente
             </button>
@@ -185,15 +190,64 @@ function RegisterAdmin({
             <button
               className="button_next_admin"
               type="button"
-              onClick={() => ClickNextStep()}
+              onClick={() => ClickDocs()}
             >
               Siguiente
             </button>
-            HOLAA
+            Soy la vista de politica de tratamiento de datos y terminos y
+            condiciones
             <button
               className="button_back_admin"
               type="button"
-              onClick={() => ClickBack()}
+              onClick={() => ClickBackInfo()}
+            >
+              Regresar
+            </button>
+          </div>
+        </div>
+        <div
+          className=""
+          style={
+            stated_register === 2 ? { display: "block" } : { display: "none" }
+          }
+        >
+          <div>
+            <button
+              className="button_next_admin"
+              type="button"
+              onClick={() => ClickVenue()}
+            >
+              Siguiente
+            </button>
+            Soy la vista para cargar documentos (RUT y CC representante legal)
+            <button
+              className="button_back_admin"
+              type="button"
+              onClick={() => ClickBackModel()}
+            >
+              Regresar
+            </button>
+          </div>
+        </div>
+        <div
+          className=""
+          style={
+            stated_register === 3 ? { display: "block" } : { display: "none" }
+          }
+        >
+          <div>
+            <button
+              className="button_next_admin"
+              type="button"
+              onClick={() => ClickSubmit()}
+            >
+              Siguiente
+            </button>
+            Soy de los datos de la sede
+            <button
+              className="button_back_admin"
+              type="button"
+              onClick={() => ClickBackDocs()}
             >
               Regresar
             </button>
@@ -208,21 +262,39 @@ const mapStateToProps = (state) => ({
   stated_register: state.stated_register,
 });
 const mapDispatchToProps = (dispatch) => ({
-  ClickNext() {
+  ClickModel() {
     dispatch({
       type: "CLICK_NEXT",
       stated_register: 1,
     });
   },
-  ClickBack() {
+  ClickBackInfo() {
     dispatch({
       type: "CLICK_RETURN",
       stated_register: 0,
     });
   },
-  ClickNextStep() {
+  ClickDocs() {
     dispatch({
       type: "CLICK_NEXT",
+      stated_register: 2,
+    });
+  },
+  ClickBackModel() {
+    dispatch({
+      type: "CLICK_RETURN",
+      stated_register: 1,
+    });
+  },
+  ClickVenue() {
+    dispatch({
+      type: "CLICK_NEXT",
+      stated_register: 3,
+    });
+  },
+  ClickBackDocs() {
+    dispatch({
+      type: "CLICK_RETURN",
       stated_register: 2,
     });
   },

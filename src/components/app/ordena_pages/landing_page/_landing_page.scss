@@ -26,9 +26,12 @@
   height: 91vh;
   width: 100vw;
   bottom: 0vh;
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.25);
+
   overflow: auto;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  background-image: url("../../../../assets/background/back1.jpg");
+  background-position: 50% 50%;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -46,5 +49,18 @@
     height: 9vh;
     width: 70vw;
     left: 30vw;
+  }
+  .container_landing {
+    position: absolute;
+    height: 91vh;
+    width: 100vw;
+    bottom: 0vh;
+
+    overflow: auto;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    background-image: url("../../../../assets/background/back1phone.jpg");
+    background-position: 50% -1px;
+    background-size: cover;
   }
 }

@@ -1,0 +1,20 @@
+.steps_stated {
+  position: absolute;
+  top: 2vh;
+  left: 0vw;
+  height: 5vh;
+  width: 60vw;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+}
+.anticon {
+  color: #7c878e;
+}
+.ant-steps-item-finish
+  > .ant-steps-item-container
+  > .ant-steps-item-content
+  > .ant-steps-item-title::after {
+  background: #9b26b6;
+  height: 2px;
+}
